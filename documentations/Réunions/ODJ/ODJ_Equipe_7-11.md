@@ -33,6 +33,3 @@ Bouyssou Melvin, *Développeur*
 
 1. Récapitulatif de la dernière réunion  
 2. Récapitulatif des avancées sur le projets  
-3. Réalisation de la merde dans laquelle on est vraiment … 😢
-
-[image1]: <data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAnAAAAAICAYAAAB5/cImAAAAnUlEQVR4Xu3WMQ1CURREwS8LB6hAACVecIASFFCjABMkkNcuLSy5yRSj4Zztdj2/+K3L4w4fnqcdjHc87IE/2HI2+L4MNywZQpgoowJ0GLiCDDcsGUKYKKMCdBi4ggw3LBlCmCijAnQYuIIMNywZQpgoowJ0GLiCDDcsGUKYKKMCdBi4ggw3LBlCmCijAnQYuIIMNywZQpgoowJ0vAEJ5tqW7xehrgAAAABJRU5ErkJggg==>
