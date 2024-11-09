@@ -102,7 +102,7 @@ De plus ce fichier `README.adoc` devra être à jour des informations suivantes 
 - Lien vers la doc technique
 - Lien vers la doc utilisateur
 - https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/doc-conception/doc-concept-v1.adoc[Lien vers la doc conception (tous les diagrammes)]
-- Liste des (ou lien vers les) User Stories (ToDo/Ongoing/Done) et % restant
+- https://github.com/orgs/IUT-Blagnac/projects/255/views/1[Lien vers le backlog (issues et user stories)]
 - Tests unitaires et plans de test
 - Indicateurs de qualité du code (dette technique)
 - ... tout autre élément que vous jugerez utiles pour démontrer la qualité de votre application
