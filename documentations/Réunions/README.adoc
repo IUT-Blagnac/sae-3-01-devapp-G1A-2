@@ -20,6 +20,6 @@
 [cols="1,1,1", options="header"]
 |===
 | Date | Ordre du jour | Compte-rendu
-| 7/11/2024 | https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/R%C3%A9unions/ODJ/ODJ_Equipe_7-11.md[Lien vers l'ordre du jour] | Lien vers le compte-rendu
+| 7/11/2024 | https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/R%C3%A9unions/ODJ/ODJ_Equipe_7-11.md[Lien vers l'ordre du jour] | https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/R%C3%A9unions/CR_R%C3%A9u/CR_hebdomadaire_7-11.md[Lien vers le compte-rendu]
 
 |===
