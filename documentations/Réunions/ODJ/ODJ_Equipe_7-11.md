@@ -1,4 +1,3 @@
-![][image1]
 
 # **Ordre du jour interne à l'équipe**
 
