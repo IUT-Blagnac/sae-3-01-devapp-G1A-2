@@ -1,6 +1,6 @@
 # **Ordre du jour en tant que client**
 
-## 8 nov. 2024 11:30
+## 8 nov. 2024 11:30, salle B105
 
 **─**
 
