@@ -1,6 +1,6 @@
 # **Ordre du jour en tant que client**
 
-## 7 nov. 2024 16:30, Télétravail
+## 8 nov. 2024 11:30
 
 **─**
 
