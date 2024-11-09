@@ -83,3 +83,6 @@ image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/document
 
 *Diagramme du diagramme séquence n°2 :*
 Use Case administrateur
+
+=== Diagramme de navigation du site web
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/diagrammes/navigation/diagramme_navigation.png[width=1000]
