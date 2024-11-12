@@ -56,22 +56,36 @@ Projet est réalisé par::
 Tuteur/tutrice enseignant(e) de l'équipe:: mailto:jean-michel.bruel@univ-tlse2.fr[JMB]
 
 == Réalisations 
-- Lien vers la partie site web
-- Lien vers la partie base de données
-- Lien vers la partie IoT
+- Release dernière version : A venir
+- https://github.com/orgs/IUT-Blagnac/projects/255/views/1[Lien vers le backlog]
 
-== Contexte général
+== Projet Site Web
+
+=== Contexte général
 
 La Roue Tourne, PME française de réparation de vélos, est devenue une référence dans son domaine, avec des magasins dans plusieurs grandes villes, dont Toulouse, Paris, Lyon, Agen et Angers. Fondée en 2012 par quatre passionnés, l’entreprise a connu une croissance rapide grâce à l’augmentation de l’usage du vélo, particulièrement lors du confinement et des Jeux Olympiques de 2024, qui ont favorisé les déplacements à vélo. Désireuse de répondre aux nouvelles attentes de mobilité durable, La Roue Tourne souhaite désormais élargir son offre en se diversifiant. En plus de la réparation, elle propose déjà la vente d’accessoires et la location de vélos en magasin.
 
 Pour faire face à une concurrence accrue et toucher une clientèle plus large, l’entreprise envisage de lancer un site e-commerce afin de vendre des vélos neufs et reconditionnés, des accessoires, des équipements, et même des vêtements. Ce site permettra de renforcer sa présence sur le marché et de capter de nouvelles parts de marché, optimisant ainsi son retour sur investissement. La Roue Tourne a donc lancé un appel d’offres pour développer cette plateforme de vente en ligne, un projet stratégique visant à ancrer sa position dans un secteur en pleine expansion, tout en capitalisant sur la montée de l’intérêt pour la mobilité douce.
 
-== Gestion de projet & Qualité
+=== Gestion de projet & Qualité
 - Version courante : https://github.com/IUT-Blagnac/sae3-01-template/releases/tag/v0.1.2[v0.1.2]
 - Lien vers la doc technique
 - Lien vers la doc utilisateur
 - https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/doc-conception/doc-concept-v1.adoc[Lien vers la doc conception (tous les diagrammes)]
 - https://github.com/orgs/IUT-Blagnac/projects/255/views/1[Lien vers le backlog (issues et user stories)]
+- Lien vers le cahier de tests
+- Indicateurs de qualité du code (dette technique)
+- ...
+
+== Projet IoT
+
+=== Contexte général
+
+La Roue Tourne, PME spécialisée dans la réparation et la vente de vélos, est implantée dans plusieurs grandes villes françaises et souhaite élargir son activité en lançant un site e-commerce pour toucher une clientèle plus large et rester compétitive. En parallèle, l’entreprise prévoit d’installer un réseau de capteurs dans ses magasins et entrepôts pour recueillir des données en temps réel, telles que la température, l’humidité, la qualité de l’air et la détection de présence, afin d'améliorer la sécurité et l’efficacité opérationnelle. Ces informations, transmises au serveur toutes les 10 minutes, permettront d’optimiser la gestion et la croissance de l’entreprise dans un marché en pleine expansion.
+
+=== Gestion de projet & Qualité
+- Lien vers la doc technique
+- Lien vers la doc utilisateur
 - Lien vers le cahier de tests
 - Indicateurs de qualité du code (dette technique)
 - ...
