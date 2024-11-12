@@ -57,7 +57,7 @@ Tuteur/tutrice enseignant(e) de l'équipe:: mailto:jean-michel.bruel@univ-tlse2.
 
 == Réalisations 
 - Release dernière version : A venir
-- https://github.com/orgs/IUT-Blagnac/projects/255/views/1[Lien vers le backlog]
+- https://github.com/orgs/IUT-Blagnac/projects/255/views/1[Lien vers le backlog (issues et user stories)]
 
 == Projet Site Web
 
@@ -72,7 +72,6 @@ Pour consolider sa position face à une concurrence accrue et aux attentes crois
 - Lien vers la doc technique
 - Lien vers la doc utilisateur
 - https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/doc-conception/doc-concept-v1.adoc[Lien vers la doc conception (tous les diagrammes)]
-- https://github.com/orgs/IUT-Blagnac/projects/255/views/1[Lien vers le backlog (issues et user stories)]
 - Lien vers le cahier de tests
 - Indicateurs de qualité du code (dette technique)
 - ...
