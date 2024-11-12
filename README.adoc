@@ -1,4 +1,4 @@
-= SAÉ 3.01 2024-2025
+  = SAÉ 3.01 2024-2025
 :icons: font
 :models: models
 :experimental:
@@ -76,7 +76,7 @@ Pour faire face à une concurrence accrue et toucher une clientèle plus large, 
 - Indicateurs de qualité du code (dette technique)
 - ...
 
-== Évaluation hebdomadaire
+== Évaluations hebdomadaires
 Voici un exemple d'évaluation (à remplacer) :
 
 ifdef::env-github[]
