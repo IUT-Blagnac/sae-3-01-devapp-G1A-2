@@ -61,10 +61,10 @@
 | ville | Varchar(128) | Ville
 | pays | Varchar(128) | Pays
 
-.4+| *Mode de paiement*
-| idModePaiement | Integer | Identifiant du mode de paiement
+.4+| *ModePaiement*
+| idModePaiement | Entier(2) | Identifiant du mode de paiement
 | nomPaiement | Varchar(20) | Nom du mode de paiement
-| descriptionPaiement | Varchar(200) | Description du mode de paiement
+| descPaiement | Varchar(200) | Description du mode de paiement
 | bon ici je sais pas comment faire :x | |
 
 .3+| *StatutCommande*
