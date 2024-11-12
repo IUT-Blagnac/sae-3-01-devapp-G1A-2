@@ -4,7 +4,7 @@
 |===
 | Table | Colonne | Type | Description
 
-.12+| *Produit*
+.13+| *Produit*
 | idProduit | Entier(4) | Identifiant du produit
 | nomProduit | Varchar(128) | Nom du produit
 | descProd | Varchar(200) | Description du produit
@@ -15,6 +15,7 @@
 | taille | Char(2) | Taille du produit
 | poids | Decimal(10,2) | Poids du produit
 | genre | Char(1) | Genre du produit (H, F, J) 
+| qteStock | Entier(5) | Stock actuel du produit
 | idCategorie | Integer | Identifiant de la catégorie du produit
 | idMarque | Integer | Identifiant de la marque du produit
 
@@ -91,11 +92,6 @@
 | idImage | Entier(10) | Identifiant de l'image
 | url | Varchar(200) | URL de l'image
 | idProduit | Entier(10) | Identifiant du produit
-
-.3+| *Stock*
-| idStock | Entier(10) | Identifiant du stock
-| qteS | Entier(5) | Quantité en stock
-| idProduit | Integer | Identifiant du produit
 
 .3+| *Consultation*
 | idConsulter | Entier(10) | Identifiant de l'article à consulter
