@@ -42,72 +42,42 @@ image:https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg[License: MP
 
 WARNING: Ce dépôt présente le projet à développer dans le cadre de la SAÉ 3.01 du BUT2 Informatique de l'IUT de Blagnac.
 
-Ce fichier `README.adoc` (dont vous lisez sûrement le rendu HTML automatiquement effectué par GitHUb), fait partie du dépôt initial cloné à partir du lien GitHub classroom qui vous a été donné en cours (https://classroom.github.com/a/fePVlfpN).
-Vous trouverez le dépôt "template" qui a servi de base ici : https://github.com/IUT-Blagnac/sae3-01-template. En complément du cours Moodle de la SAE 3.01 (cf. <<liensUtiles>>), ce dépôt template vous permet d'accéder à des exemples d'https://github.com/IUT-Blagnac/sae3-01-template/issues[issues], de https://github.com/IUT-Blagnac/sae3-01-template/releases[releases], ou d'autres artefacts à venir.
-
 toc::[]
 
 == Equipe
 
 Projet est réalisé par::
-- https://github.com/NicodeH[Nicolas Ho]
-- https://github.com/luca-gchs[Luca Gaches]
-- https://github.com/summerflamme[Robin Gourgues]
-- https://github.com/Melllvin[Melvin Bouyssou]
+- https://github.com/NicodeH[Nicolas Ho] : Scrum Master
+- https://github.com/luca-gchs[Luca Gaches] : Développeur
+- https://github.com/summerflamme[Robin Gourgues] : Développeur
+- https://github.com/Melllvin[Melvin Bouyssou] : Product Owner
 
 
 Tuteur/tutrice enseignant(e) de l'équipe:: mailto:jean-michel.bruel@univ-tlse2.fr[JMB]
 
+== Réalisations 
+- Lien vers la partie site web
+- Lien vers la partie base de données
+- Lien vers la partie IoT
+
 == Contexte général
 
-TIP: Cette partie de votre `README.adoc` peut être supprimée ou mise ailleurs.
+La Roue Tourne, PME française de réparation de vélos, est devenue une référence dans son domaine, avec des magasins dans plusieurs grandes villes, dont Toulouse, Paris, Lyon, Agen et Angers. Fondée en 2012 par quatre passionnés, l’entreprise a connu une croissance rapide grâce à l’augmentation de l’usage du vélo, particulièrement lors du confinement et des Jeux Olympiques de 2024, qui ont favorisé les déplacements à vélo. Désireuse de répondre aux nouvelles attentes de mobilité durable, La Roue Tourne souhaite désormais élargir son offre en se diversifiant. En plus de la réparation, elle propose déjà la vente d’accessoires et la location de vélos en magasin.
 
-=== Dépôt initial
-
-Ce dépôt initial a été créé pour que tous les groupes de 2ème année aient les mêmes informations de départ.
-
-Vous y trouverez des fichiers qui peuvent être supprimés s'ils ne vous sont pas utiles :
-
-- `.gitignore` => un fichier minimaliste des éléments à ne pas pousser en général sur vos dépôts (utiliser la commande `git add -f` pour forcer l'ajout d'un fichier Jar qui ne bougera plus, pour archive par exemple).
-- `.github` => le répertoire qui contient des éléments de gestion de projet :
-** `workflows` => le repertoire qui contient les actions à lancer à chaque push sur votre repo. 
-*** `blank.yml` => un exemple bidon mais dont vous pourrez vérifier l’exécution correcte (1er tag)
-** `ISSUE_TEMPLATE` => le repertoire qui contient quelques templates pour vos issues.
-*** `us.yml` => Exemple de template pour les User Stories
-*** `bug.yml` => Exemple de template pour les issues de bug report
-
-TIP: Adaptez ces fichiers à votre projet et à votre organisation. Et inspirez-vous en pour en ajouter.
-
-[[liensUtiles]]
-=== Liens utiles
-
-- Le https://webetud.iut-blagnac.fr/course/view.php?id=841[cours Moodle] sur la SAE
-- Le dépôt https://github.com/IUT-Blagnac/sae3-01-template[template] qui sert de base à tous les dépôts étudiants.
-- Le lien https://classroom.github.com/a/OUF7gxEa[classroom] si besoin.
-
-TIP: Pensez à utiliser les salons Discord dédiés pour poser vos questions.
-
-== Réalisations 
-
-TIP: Mettez ici toutes les informations nécessaire à l'utilisation de votre dépôt (comment on installe votre application, où sont les docs, etc.)
+Pour faire face à une concurrence accrue et toucher une clientèle plus large, l’entreprise envisage de lancer un site e-commerce afin de vendre des vélos neufs et reconditionnés, des accessoires, des équipements, et même des vêtements. Ce site permettra de renforcer sa présence sur le marché et de capter de nouvelles parts de marché, optimisant ainsi son retour sur investissement. La Roue Tourne a donc lancé un appel d’offres pour développer cette plateforme de vente en ligne, un projet stratégique visant à ancrer sa position dans un secteur en pleine expansion, tout en capitalisant sur la montée de l’intérêt pour la mobilité douce.
 
 == Gestion de projet & Qualité
-
-Chaque sprint (semaine) vous devrez livrer une nouvelle version de votre application (release).
-Utilisez pour cela les fonctionnalités de GitHub pour les https://docs.github.com/en/repositories/releasing-projects-on-github[Releases].
-
-De plus ce fichier `README.adoc` devra être à jour des informations suivantes :
-
 - Version courante : https://github.com/IUT-Blagnac/sae3-01-template/releases/tag/v0.1.2[v0.1.2]
 - Lien vers la doc technique
 - Lien vers la doc utilisateur
 - https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/doc-conception/doc-concept-v1.adoc[Lien vers la doc conception (tous les diagrammes)]
 - https://github.com/orgs/IUT-Blagnac/projects/255/views/1[Lien vers le backlog (issues et user stories)]
-- Tests unitaires et plans de test
+- Lien vers le cahier de tests
 - Indicateurs de qualité du code (dette technique)
-- ... tout autre élément que vous jugerez utiles pour démontrer la qualité de votre application
+- ...
 
-Voici un exemple d'évaluation :
+== Évaluation hebdomadaire
+Voici un exemple d'évaluation (à remplacer) :
 
 ifdef::env-github[]
 image:https://docs.google.com/spreadsheets/d/e/2PACX-1vTc3HJJ9iSI4aa2I9a567wX1AUEmgGrQsPl7tHGSAJ_Z-lzWXwYhlhcVIhh5vCJxoxHXYKjSLetP6NS/pubchart?oid=1850914734&amp;format=image[link=https://docs.google.com/spreadsheets/d/e/2PACX-1vTc3HJJ9iSI4aa2I9a567wX1AUEmgGrQsPl7tHGSAJ_Z-lzWXwYhlhcVIhh5vCJxoxHXYKjSLetP6NS/pubchart?oid=1850914734&amp;format=image]
@@ -122,7 +92,7 @@ endif::[]
 == Historique des journées de télétravail
 
 === À venir
-- **06/11/2024** : de 9h30 à 12h30
+- ...
 
 === Passées
-- ...
+- **06/11/2024** : de 9h30 à 12h30
