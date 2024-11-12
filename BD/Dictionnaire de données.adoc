@@ -98,6 +98,11 @@
 | idProduit | Integer | Identifiant du produit
 | qte | Integer | Quantité en stock
 
+.3+| *Consultation*
+| idAConsulter | Integer | Identifiant de l'article à consulter
+| idProduit | Integer | Identifiant du produit
+| idUtilisateur | Integer | Identifiant de l'utilisateur
+
 |===
 
 # Le fonctionnement des commandes n'est pas définitif, il est possible que des modifications soient apportées
