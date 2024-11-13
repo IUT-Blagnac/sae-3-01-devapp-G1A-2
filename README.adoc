@@ -105,7 +105,7 @@ endif::[]
 == Historique des journées de télétravail
 
 === À venir
-- ...
+- **14/11/2024** : de 9h30 à 12h30
 
 === Passées
 - **06/11/2024** : de 9h30 à 12h30
