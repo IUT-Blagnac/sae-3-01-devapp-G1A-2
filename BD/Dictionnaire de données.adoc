@@ -46,13 +46,53 @@
 | nomRole | Varchar(20) | Nom du rôle
 | descriptionRole | Varchar(128) | Description du rôle
 
+.5+| *Adresse*
+| idAdr | Entier(10) | Identifiant de l'adresse
+| adresse | Varchar(128) | Adresse
+| codePostal | Char(5) | Code postal
+| ville | Varchar(128) | Ville
+| pays | Varchar(128) | Pays
+
+.3+| *ModePaiement*
+| idModePaiement | Entier(2) | Identifiant du mode de paiement
+| nomPaiement | Varchar(20) | Nom du mode de paiement
+| descPaiement | Varchar(200) | Description du mode de paiement
+
+.7+| *MoyenPaiement*
+| idMoyenPaiement | Entier(10) | Identifiant du moyen de paiement
+| numCarte | Char(16) | Numéro de la carte
+| dateExp | Date(8) | Date d'expiration de la carte
+| nomCarte | Varchar(128) | Nom sur la carte
+| cryptogramme | Char(3) | Cryptogramme de la carte
+| idModePaiement | Entier(2) | Identifiant du mode de paiement
+| idUtilisateur | Entier(10) | Identifiant de l'utilisateur
+
+
+.3+| *StatutCommande*
+| idStatut | Entier(2) | Identifiant du statut de la commande
+| nomStatut | Varchar(20) | Nom du statut de la commande (en attente, en cours, ...)
+| descStatut | Varchar(128) | Description du statut de la commande (utilisé pour l'affichage en détail de la commande (un clique sur l'état de la commande et on afficherait la description pour apporter + de détails))
+
+.3+| *Panier*
+| idPanier | Entier(10) | Identifiant du panier de la commande
+| dateCrea | Date(8) | Date d'ajout du produit dans le panier
+| idUtilisateur | Entier(10) | Identifiant de l'utilisateur ayant le panier
+
+.6+| *ProduitPanier*
+| idProduitPanier | Entier(10) | Identifiant du produit dans le panier
+| qtePP | Entier(5) | Quantité du produit dans le panier
+| prixAchat | Decimal(10,2) | Prix d'achat du produit
+| idPanier | Entier(10) | Identifiant du panier
+| idProduit | Entier(10) | Identifiant du produit
+| idCommande | Entier(10) | Identifiant de la commande
+
 .7+| *Commande*
 | idCommande | Entier(10) | Identifiant de la commande
 | dateCommande | Date(8) | Date de la commande
 | idUtilisateur | Integer | Identifiant de l'utilisateur ayant passé la commande
 | idAdrLivraison | Integer | Identifiant de l'adresse de livraison
 | idAdrFacturation | Integer | Identifiant de l'adresse de facturation
-| idModePaiement | Integer | Identifiant du mode de paiement
+| idMoyenPaiement | Integer | Identifiant du mode de paiement
 | idStatut | Integer | Identifiant du statut de la commande
 
 .5+| *Adresse*
@@ -62,11 +102,10 @@
 | ville | Varchar(128) | Ville
 | pays | Varchar(128) | Pays
 
-.4+| *ModePaiement*
+.3+| *ModePaiement*
 | idModePaiement | Entier(2) | Identifiant du mode de paiement
 | nomPaiement | Varchar(20) | Nom du mode de paiement
 | descPaiement | Varchar(200) | Description du mode de paiement
-| bon ici je sais pas comment faire :x | |
 
 .3+| *StatutCommande*
 | idStatut | Entier(2) | Identifiant du statut de la commande
