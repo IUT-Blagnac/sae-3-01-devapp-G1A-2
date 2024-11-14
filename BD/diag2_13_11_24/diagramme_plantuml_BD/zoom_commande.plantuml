@@ -1,0 +1,26 @@
+@startuml
+class "Commande" {
+  - IDCommande : INTEGER
+  - DateCommande : DATE
+  - IDUtilisateur : INTEGER
+  - IDStatut : INTEGER
+  - IDModePaiement : INTEGER
+}
+
+class "StatutCommande" {
+  - IDStatut : INTEGER
+  - NomStatut : VARCHAR(20)
+  - DescStatut : VARCHAR(128)
+}
+
+class "Adresse" {
+  - IDAdr : INTEGER
+  - Adresse : VARCHAR(128)
+  - CodePostal : CHAR(5)
+  - Ville : VARCHAR(128)
+  - Pays : VARCHAR(128)
+}
+
+Commande "1" -- "1..*" StatutCommande
+Commande "0..*" -- "1" Adresse
+@enduml
