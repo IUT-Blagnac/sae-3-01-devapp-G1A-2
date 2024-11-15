@@ -1,0 +1,7 @@
+{
+  "topic" : ["AM107/by-room/#", "solaredge/blagnac/#"],
+  "server" : "mqtt.iut-blagnac.fr",
+  "salle" : ["all"],
+  "data" : {"temperature":  30, "humidity" :  30, "co2" :  1800, "illumination" :  20},
+  "frequence" : 60
+}
