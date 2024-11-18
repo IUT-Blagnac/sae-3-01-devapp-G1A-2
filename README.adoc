@@ -103,7 +103,7 @@ ifndef::env-github[]
 endif::[]
 
 === retour sprint 1 EP
-Issues/Backlog :  Il faut une finalité dans certaies de vos US, et affecter une priorité et une estimation (à droite une fois l'US ouverte). Les issues/task peuvent toutes être rattachées à une US (ex. initialisation php à Connexion par ex). Il manque les liens vers les docs dans le readme. J'ai les critères d'acceptabilité mais pas de lien vers le cahier de tests.  J'ai uniquement la conception. Pas de release pour le sprint 1.
+Issues/Backlog :  Il faut une finalité dans certaines de vos US, et affecter une priorité et une estimation (à droite une fois l'US ouverte). Sinon bien.  Les issues/task peuvent toutes être rattachées à une US (ex. initialisation php à Connexion par ex). DOC /Il manque les liens vers les docs dans le readme. J'ai uniquement la conception. Tests: J'ai les critères d'acceptabilité mais pas de lien vers le cahier de tests.  release : Pas de release pour le sprint 1.
 
 == Historique des journées de télétravail
 
