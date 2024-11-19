@@ -52,11 +52,11 @@
                 include("connect.inc.php");
 
                 try {
-                    $req = $conn->prepare("SELECT * FROM Role ");
+                    $req = $conn->prepare("SELECT * FROM ROLE ");
                     $req->execute();
 
                     while ($row = $req->fetch(PDO::FETCH_ASSOC)) {
-                        echo "Nom de la catégorie : " . htmlspecialchars($row['nomRole']) . "<br>";
+                        echo "Nom de la catégorie : " . htmlspecialchars($row['NOMROLE']) . "<br>";
                     }
                 } catch (PDOException $e) {
                     echo "Erreur dans la requête : " . $e->getMessage();
