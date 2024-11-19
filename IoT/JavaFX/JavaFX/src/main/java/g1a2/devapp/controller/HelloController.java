@@ -1,4 +1,4 @@
-package g1a2.devapp;
+package g1a2.devapp.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
