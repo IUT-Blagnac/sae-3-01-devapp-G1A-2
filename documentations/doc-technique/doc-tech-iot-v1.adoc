@@ -1,0 +1,65 @@
+= Documentation Technique
+:doctype: book
+:toc: left
+:toclevels: 3
+:sectnums:
+
+== Page de garde
+*Nom de l'application :* {nom_de_l_application}
+*Version :* {version}
+*Auteur(s) :* {nom_des_auteurs}
+*Date :* {date}
+
+== Sommaire
+:toc:
+
+== Présentation rapide de l’application
+- **Description générale :** {description_generale}
+- **Use Case global :**
+  * Types d’utilisateurs : {types_d_utilisateurs}
+  * Spécificités : {specificites}
+
+== Architecture
+
+=== Architecture générale
+- Sous-systèmes :
+  * {description_sous_systeme_1}
+  * {description_sous_systeme_2}
+- Rôles des éléments :
+  * Fichier de données : {role_fichier_donnees}
+  * Fichier de configuration : {role_fichier_configuration}
+  * Parties de l'application : {description_parties_application}
+
+=== Ressources externes utilisées
+- **APIs :**
+  * {nom_api_1} : {lien_api_1} ({lien_documentation_api_1})
+  * {nom_api_2} : {lien_api_2} ({lien_documentation_api_2})
+- **Autres ressources :** {description_ressources}
+
+=== Structuration en packages
+- **Structure des packages :**
+  * {nom_package_1} : {description_package_1}
+  * {nom_package_2} : {description_package_2}
+- **Principes de structuration :** {principes_structuration}
+- **Patterns utilisés :** {description_patterns}
+
+=== Éléments essentiels à connaître
+- Description des spécificités techniques :
+  * Threads utilisés : {description_threads}
+  * Structure récurrente des classes : {description_structure}
+- Diagramme de séquence :
+  image::diagramme_sequence.png[Diagramme de séquence, width=600]
+
+== Fonctionnalités développées
+
+=== Fonctionnalité 1 : {nom_fonctionnalite_1}
+- **Description :** {description_fonctionnalite_1}
+- **Classes impliquées :** {classes_impliquees_fonctionnalite_1}
+- **Spécificités techniques :**
+  * {description_specifications_fonctionnalite_1}
+- Diagramme de séquence (si applicable) :
+  image::diagramme_sequence_fonctionnalite_1.png[Diagramme de séquence, width=600]
+- Extraits de code significatifs :
+  ```java
+  // Exemple de code pour {fonctionnalite_1}
+  {code_exemple}
