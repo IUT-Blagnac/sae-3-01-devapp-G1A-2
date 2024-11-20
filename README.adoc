@@ -53,7 +53,7 @@ Projet est réalisé par::
 - https://github.com/Melllvin[Melvin Bouyssou] : Product Owner
 
 
-Tuteur/tutrice enseignant(e) de l'équipe:: mailto:jean-michel.bruel@univ-tlse2.fr[JMB]
+Tuteur/tutrice enseignant(e) de l'équipe:: mailto:esther.pendaries@univ-tlse2.fr[Esther Pendaries]
 
 == Réalisations 
 - Release dernière version : A venir
@@ -69,10 +69,10 @@ Pour consolider sa position face à une concurrence accrue et aux attentes crois
 
 === Gestion de projet & Qualité
 - Version courante : https://github.com/IUT-Blagnac/sae3-01-template/releases/tag/v0.1.2[v0.1.2]
-- Lien vers la doc technique
-- Lien vers la doc utilisateur
+- https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/doc-technique/doc-tech-site-v1.adoc[Lien vers la doc technique du site web]
+- https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/doc-utilisateur/doc-utilisateur-v1.adoc[Lien vers la doc utilisateur du site web]
 - https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/doc-conception/doc-concept-v1.adoc[Lien vers la doc conception (tous les diagrammes)]
-- https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/doc-technique/doc-tech-site-v1.adoc[Lien vers le cahier de tests]
+- https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/doc-technique/doc-tech-site-v1.adoc[Lien vers le cahier de tests du site web]
 - Indicateurs de qualité du code (dette technique)
 - ...
 
@@ -83,8 +83,8 @@ Pour consolider sa position face à une concurrence accrue et aux attentes crois
 Style & Semelle, PME spécialisée dans la conception et la vente de chaussures, est implantée dans plusieurs grandes villes françaises et souhaite élargir son activité en lançant un site e-commerce pour toucher une clientèle plus large et rester compétitive. En parallèle, l’entreprise prévoit d’installer un réseau de capteurs dans ses magasins et entrepôts pour recueillir des données en temps réel, telles que la température, l’humidité, la qualité de l’air et la détection de présence, afin d'améliorer la sécurité et l’efficacité opérationnelle. Ces informations, transmises au serveur toutes les 10 minutes, permettront d’optimiser la gestion et la croissance de l’entreprise dans un marché en pleine expansion.
 
 === Gestion de projet & Qualité
-- Lien vers la doc technique
-- Lien vers la doc utilisateur
+- https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/doc-technique/doc-tech-iot-v1.adoc[Lien vers la doc technique du système IOT]
+- https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/doc-utilisateur/doc-utilisateur-iot.adoc[Lien vers la doc utilisateur du système IOT]
 - https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/doc-test/doc-test-iot-v1.adoc[Lien vers le cahier de tests]
 - Indicateurs de qualité du code (dette technique)
 - ...
