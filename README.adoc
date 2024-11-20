@@ -85,7 +85,7 @@ Style & Semelle, PME spécialisée dans la conception et la vente de chaussures,
 === Gestion de projet & Qualité
 - Lien vers la doc technique
 - Lien vers la doc utilisateur
-- Lien vers le cahier de tests
+- https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/doc-test/doc-test-iot-v1.adoc[Lien vers le cahier de tests]
 - Indicateurs de qualité du code (dette technique)
 - ...
 
@@ -108,7 +108,7 @@ Issues/Backlog :  Il faut une finalité dans certaines de vos US, et affecter un
 == Historique des journées de télétravail
 
 === À venir
-  - ...
+  - **21/11/2024** : de 8h00 à 12h30
 
 === Passées
 - **06/11/2024** : de 9h30 à 12h30
