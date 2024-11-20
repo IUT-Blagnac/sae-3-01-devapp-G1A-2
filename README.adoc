@@ -75,6 +75,9 @@ Pour consolider sa position face à une concurrence accrue et aux attentes crois
 - https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/doc-utilisateur/doc-utilisateur-site.adoc[Lien vers la doc utilisateur du site web]
 - https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/doc-conception/doc-concept-v1.adoc[Lien vers la doc conception (tous les diagrammes)]
 - https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/doc-test/doc-test-site-v1.adoc[Lien vers le cahier de tests du site web]
+- https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/BD/BD_V3/Dictionnaire_des_donnees.adoc[Lien vers le dictionnaire de la BD]
+- https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/BD/BD_V3/SAE301.sql[Lien vers le script de création de la BD]
+- https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/tree/master/documentations/doc-client[Lien vers les doc PDF fournis par les clients]
 
 == Projet IoT
 
@@ -83,9 +86,11 @@ Pour consolider sa position face à une concurrence accrue et aux attentes crois
 Style & Semelle, PME spécialisée dans la conception et la vente de chaussures, est implantée dans plusieurs grandes villes françaises et souhaite élargir son activité en lançant un site e-commerce pour toucher une clientèle plus large et rester compétitive. En parallèle, l’entreprise prévoit d’installer un réseau de capteurs dans ses magasins et entrepôts pour recueillir des données en temps réel, telles que la température, l’humidité, la qualité de l’air et la détection de présence, afin d'améliorer la sécurité et l’efficacité opérationnelle. Ces informations, transmises au serveur toutes les 10 minutes, permettront d’optimiser la gestion et la croissance de l’entreprise dans un marché en pleine expansion.
 
 === Gestion de projet & Qualité
-- https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/doc-technique/doc-tech-iot-v1.adoc[Lien vers la doc technique du système IOT]
-- https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/doc-utilisateur/doc-utilisateur-iot.adoc[Lien vers la doc utilisateur du système IOT]
+- https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/doc-technique/doc-tech-iot-v1.adoc[Lien vers la doc technique du système IoT]
+- https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/doc-utilisateur/doc-utilisateur-iot.adoc[Lien vers la doc utilisateur du système IoT]
 - https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/doc-test/doc-test-iot-v1.adoc[Lien vers le cahier de tests]
+- https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/tree/master/IoT/Java[Lien vers le répertoire du code Java]
+- https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/tree/master/IoT/Python[Lien vers le répertoire du code Python]
 
 == Évaluations hebdomadaires
 Evaluation bi-hedomadaire 
