@@ -1,4 +1,4 @@
-= Cahier de Tests - Application IoT
+= Cahier de Tests - Site web
 :toc:
 :toc-title: Sommaire
 
@@ -16,87 +16,53 @@ Projet : Gestion entrepôt +
 
 == 1. Contexte Général
 
-=== a) Présentation de l’entreprise
+Le projet vise à développer un site e-commerce pour la vente de chaussures, axé sur :
 
-**Style & Semelle** est une PME spécialisée dans la conception et la vente de chaussures. Elle possède :
+- Une expérience utilisateur optimisée et une ergonomie intuitive.
 
-- Plusieurs magasins répartis sur le territoire,
+- Une navigation fluide grâce à un design responsive adapté à tous les types d’écrans (mobiles, tablettes, ordinateurs).
 
-- Plusieurs entrepôts nécessitant une gestion efficace pour l’optimisation des stocks et la sécurité.
+- Une gestion simplifiée pour les administrateurs.
 
-=== b) Environnement technologique et besoins
+**Principales caractéristiques :**
 
-L’entreprise a récemment installé un réseau de capteurs IoT pour collecter des données environnementales critiques, telles que :
+- **Large éventail de produits :** Organisation en catégories et sous-catégories.  
 
-- **Température** : Pour préserver la qualité des matériaux,
+- **Technologies utilisées :** PHP, HTML5, CSS3, et MySQL.  
 
-- **Humidité** : Pour éviter la détérioration des stocks,
+- **Architecture modulaire :** Garantissant flexibilité et maintenabilité.  
 
-- **Qualité de l’air (CO²)** : Pour garantir des conditions de travail optimales,
-
-- **Détection de présence** : Pour améliorer la sécurité.
-
-Les données collectées sont transmises à un serveur central toutes les 10 minutes, mais elles ne sont pas encore exploitées de manière optimale.
-
-Il devient donc impératif de développer une solution complète permettant de :
-
-- **Analyser** et **visualiser** les données collectées,
-
-- **Optimiser** les processus opérationnels,
-
-- **Renforcer** la sécurité et l’efficacité énergétique.
-
-=== c) Enjeux du projet
-
-Ce projet est au cœur de la stratégie de croissance de **Style & Semelle**, en alignant innovation technologique et efficacité opérationnelle.
-
-Les principaux enjeux incluent :
-
-- Exploiter efficacement le potentiel des données IoT,
-
-- Garantir une interface utilisateur intuitive pour faciliter l’utilisation,
-
-- Créer un système robuste et évolutif pour accompagner la croissance de l’entreprise.
+- **Dimension écoresponsable :** Adoption de pratiques d’écoconception pour minimiser l’impact environnemental.  
 
 == 2. Objectifs du Projet
 
-=== a) Vision générale
+**a) Plateforme intuitive :**
 
-Le projet vise à concevoir une application IoT fonctionnelle intégrant Java et Python pour :
+- Navigation simplifiée, adaptée aux utilisateurs novices ou expérimentés.  
 
-- **Consulter en temps réel** les données collectées par les capteurs,
+- Recherche efficace pour accéder rapidement aux produits.  
 
-- **Connecter le système IoT au serveur** central de l’entreprise,
+**b) Gestion administrative :**
 
-- **Afficher les données dans une IHM claire et ergonomique**.
+- Tableau de bord pour gérer produits, commandes, clients et paramètres.  
 
-=== b) Livrables principaux
+- Facilité de création et mise à jour des catégories et fiches produits.  
 
-L’application comportera trois éléments majeurs :
+**c) Design moderne et adaptable :**
 
-1. **Interface Homme-Machine (IHM)** :
+- Compatibilité avec divers appareils grâce au design responsive.  
 
-- Développée en JavaFX.
+- Contenus visuels en haute résolution (images, icônes, vidéos).  
 
-- Permet de configurer le système via un fichier JSON.
+**d) Robustesse technique :**
 
-2. **Traitement des données** :
+- Architecture modulaire pour un développement évolutif.  
 
-- Script Python chargé d’extraire et de formater les données depuis le serveur.
+- Compatibilité avec les navigateurs récents (Chrome, Firefox, Safari, Edge).  
 
-3. **Affichage des données** :
+**e) Approche durable :**
 
-- L’IHM en Java lira et présentera les données de manière claire et organisée.
-
-=== c) Résultats attendus
-
-Le système doit :
-
-- Garantir une synchronisation fluide entre la collecte et l’affichage des données,
-
-- Offrir une expérience utilisateur simple mais performante,
-
-- Assurer la robustesse et l’évolutivité de l’architecture technique.
+- Intégration de principes d’écoconception pour optimiser la consommation énergétique.  
 
 == 3. Test des Fonctionnalités Techniques
 
@@ -117,6 +83,6 @@ Le système doit :
 
 == 4. Annexes
 
-- Documentation utilisateur : Lien vers la documentation utilisateur finale.
+- Documentation utilisateur : Lien vers la documentation utilisateur.
 
-- Ressources techniques : Documentation sur les capteurs, API utilisées, et configurations du réseau MQTT.
+- Ressources techniques : Liens sur les documents techniques.
