@@ -72,7 +72,7 @@ Pour consolider sa position face à une concurrence accrue et aux attentes crois
 - Lien vers la doc technique
 - Lien vers la doc utilisateur
 - https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/doc-conception/doc-concept-v1.adoc[Lien vers la doc conception (tous les diagrammes)]
-- Lien vers le cahier de tests
+- https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/doc-technique/doc-tech-site-v1.adoc[Lien vers le cahier de tests]
 - Indicateurs de qualité du code (dette technique)
 - ...
 
