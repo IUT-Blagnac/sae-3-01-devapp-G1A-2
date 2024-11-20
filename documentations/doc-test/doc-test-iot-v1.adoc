@@ -1,0 +1,122 @@
+= Cahier de Tests - Application IoT
+:toc:
+:toc-title: Sommaire
+
+Version de l'application : 1 +
+
+Date : 19/11/2024 +
+
+Equipe : 1A-2 +
+
+Client : Style & Semelle +
+
+Projet : Gestion entrepôt +
+
+<<<
+
+== 1. Contexte Général
+
+=== a) Présentation de l’entreprise
+
+**Style & Semelle** est une PME spécialisée dans la conception et la vente de chaussures. Elle possède :
+
+- Plusieurs magasins répartis sur le territoire,
+
+- Plusieurs entrepôts nécessitant une gestion efficace pour l’optimisation des stocks et la sécurité.
+
+=== b) Environnement technologique et besoins
+
+L’entreprise a récemment installé un réseau de capteurs IoT pour collecter des données environnementales critiques, telles que :
+
+- **Température** : Pour préserver la qualité des matériaux,
+
+- **Humidité** : Pour éviter la détérioration des stocks,
+
+- **Qualité de l’air (CO²)** : Pour garantir des conditions de travail optimales,
+
+- **Détection de présence** : Pour améliorer la sécurité.
+
+Les données collectées sont transmises à un serveur central toutes les 10 minutes, mais elles ne sont pas encore exploitées de manière optimale.
+
+Il devient donc impératif de développer une solution complète permettant de :
+
+- **Analyser** et **visualiser** les données collectées,
+
+- **Optimiser** les processus opérationnels,
+
+- **Renforcer** la sécurité et l’efficacité énergétique.
+
+=== c) Enjeux du projet
+
+Ce projet est au cœur de la stratégie de croissance de **Style & Semelle**, en alignant innovation technologique et efficacité opérationnelle.
+
+Les principaux enjeux incluent :
+
+- Exploiter efficacement le potentiel des données IoT,
+
+- Garantir une interface utilisateur intuitive pour faciliter l’utilisation,
+
+- Créer un système robuste et évolutif pour accompagner la croissance de l’entreprise.
+
+== 2. Objectifs du Projet
+
+=== a) Vision générale
+
+Le projet vise à concevoir une application IoT fonctionnelle intégrant Java et Python pour :
+
+- **Consulter en temps réel** les données collectées par les capteurs,
+
+- **Connecter le système IoT au serveur** central de l’entreprise,
+
+- **Afficher les données dans une IHM claire et ergonomique**.
+
+=== b) Livrables principaux
+
+L’application comportera trois éléments majeurs :
+
+1. **Interface Homme-Machine (IHM)** :
+
+- Développée en JavaFX.
+
+- Permet de configurer le système via un fichier JSON.
+
+2. **Traitement des données** :
+
+- Script Python chargé d’extraire et de formater les données depuis le serveur.
+
+3. **Affichage des données** :
+
+- L’IHM en Java lira et présentera les données de manière claire et organisée.
+
+=== c) Résultats attendus
+
+Le système doit :
+
+- Garantir une synchronisation fluide entre la collecte et l’affichage des données,
+
+- Offrir une expérience utilisateur simple mais performante,
+
+- Assurer la robustesse et l’évolutivité de l’architecture technique.
+
+== 3. Test des Fonctionnalités Techniques
+
+=== a) Sprint 1 (semaines 46-47)
+
+[cols="1,1,1,1", options="header"]
+|===
+| Test(s) | Préconditions | Conditions nécessaires | Résultats attendus
+
+| A FAIRE
+| A FAIRE
+| A FAIRE
+| A FAIRE
+
+|===
+
+<<<
+
+== 4. Annexes
+
+- Documentation utilisateur : Lien vers la documentation utilisateur.
+
+- Ressources techniques : Documentation sur les capteurs, API utilisées, et configurations du réseau MQTT.
