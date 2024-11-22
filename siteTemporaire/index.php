@@ -31,12 +31,8 @@
                             <a class="nav-link" href="index.php"> Accueil </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="ConsultPrix.php"> Consulter les produits par prix </a>
+                            <a class="nav-link" href="inscription.php"> Crée un compte </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href=" ConsultCat.php"> Consulter les produits par catalogue</a>
-                        </li>
-
                     </ul>
                 </div>
             </nav>
@@ -61,9 +57,6 @@
                 } catch (PDOException $e) {
                     echo "Erreur dans la requête : " . $e->getMessage();
                 }
-                echo "<br>";
-                echo "<a href='inscription.php'<p>Crée un compte</p></a>";     
-
                 ?>
 
             </main>
