@@ -1,3 +1,5 @@
+<?php require_once 'includes/header.php'; ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -62,7 +64,7 @@
                     echo "Erreur dans la requête : " . $e->getMessage();
                 }
                 echo "<br>";
-                echo "<a href='inscription.php'<p>Crée un compte</p></a>";     
+                echo "<a href='inscription.php'<p>Crée un compte</p></a>";
 
                 ?>
 
