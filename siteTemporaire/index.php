@@ -44,7 +44,7 @@
             <!-- Contenu principal -->
             <main role="main" class="col-md-9 ms-sm-auto col-lg-10 px-4">
                 <h1>
-                    <center>Bienvenue sur mon site</center>
+                    <center>Bienvenue Chez Style & Semelle</center>
                 </h1>
                 <p>Je suis le site officiel </p>
                 <p>Je suis le vrai </p>
@@ -61,6 +61,9 @@
                 } catch (PDOException $e) {
                     echo "Erreur dans la requête : " . $e->getMessage();
                 }
+                echo "<br>";
+                echo "<a href='inscription.php'<p>Crée un compte</p></a>";     
+
                 ?>
 
             </main>

@@ -56,8 +56,11 @@ Projet est réalisé par::
 Tuteur/tutrice enseignant(e) de l'équipe:: mailto:esther.pendaries@univ-tlse2.fr[Esther Pendaries]
 
 == Réalisations 
-- Release dernière version : A venir
-- https://github.com/orgs/IUT-Blagnac/projects/255/views/1[Lien vers le backlog (issues et user stories)]
+- Release dernière version : https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/releases/tag/Release[Pré-release]
+
+=== Lien vers le backlog (issues et user stories)
+- https://github.com/orgs/IUT-Blagnac/projects/255/views/1[Version sur GitHub]
+- https://docs.google.com/document/d/1J_kucdoQiKU-orUsIV7MT6ZbSjl2neShu-Lsgn_EwIQ/edit?usp=sharing[Version Google Document]
 
 == Projet Site Web
 
@@ -68,13 +71,13 @@ Style & Semelle est une entreprise française de chaussures, fondée en 2005 par
 Pour consolider sa position face à une concurrence accrue et aux attentes croissantes des clients pour le numérique, Style & Semelle souhaite rénover et optimiser son site e-commerce. L’appel d’offres lancé vise à créer une expérience utilisateur plus fluide, avec des fonctionnalités innovantes comme la personnalisation et un parcours client optimisé, pour fidéliser et attirer davantage de jeunes acheteurs en ligne. Le projet inclut la refonte de son design avec un CFDT (Cahier des Charges Fonctionnel Détaillé) précisant les besoins techniques et les exigences de performance. En renforçant ainsi son offre numérique, Style & Semelle aspire à capter de nouvelles parts de marché tout en affirmant son identité de marque responsable et moderne.
 
 === Gestion de projet & Qualité
-- Version courante : https://github.com/IUT-Blagnac/sae3-01-template/releases/tag/v0.1.2[v0.1.2]
 - https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/doc-technique/doc-tech-site-v1.adoc[Lien vers la doc technique du site web]
-- https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/doc-utilisateur/doc-utilisateur-v1.adoc[Lien vers la doc utilisateur du site web]
+- https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/doc-utilisateur/doc-utilisateur-site.adoc[Lien vers la doc utilisateur du site web]
 - https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/doc-conception/doc-concept-v1.adoc[Lien vers la doc conception (tous les diagrammes)]
-- https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/doc-technique/doc-tech-site-v1.adoc[Lien vers le cahier de tests du site web]
-- Indicateurs de qualité du code (dette technique)
-- ...
+- https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/doc-test/doc-test-site-v1.adoc[Lien vers le cahier de tests du site web]
+- https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/BD/BD_V3/Dictionnaire_des_donnees.adoc[Lien vers le dictionnaire de la BD]
+- https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/BD/BD_V3/SAE301.sql[Lien vers le script de création de la BD]
+- https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/tree/master/documentations/doc-client[Lien vers les doc PDF fournis par les clients]
 
 == Projet IoT
 
@@ -83,11 +86,11 @@ Pour consolider sa position face à une concurrence accrue et aux attentes crois
 Style & Semelle, PME spécialisée dans la conception et la vente de chaussures, est implantée dans plusieurs grandes villes françaises et souhaite élargir son activité en lançant un site e-commerce pour toucher une clientèle plus large et rester compétitive. En parallèle, l’entreprise prévoit d’installer un réseau de capteurs dans ses magasins et entrepôts pour recueillir des données en temps réel, telles que la température, l’humidité, la qualité de l’air et la détection de présence, afin d'améliorer la sécurité et l’efficacité opérationnelle. Ces informations, transmises au serveur toutes les 10 minutes, permettront d’optimiser la gestion et la croissance de l’entreprise dans un marché en pleine expansion.
 
 === Gestion de projet & Qualité
-- https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/doc-technique/doc-tech-iot-v1.adoc[Lien vers la doc technique du système IOT]
-- https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/doc-utilisateur/doc-utilisateur-iot.adoc[Lien vers la doc utilisateur du système IOT]
+- https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/doc-technique/doc-tech-iot-v1.adoc[Lien vers la doc technique du système IoT]
+- https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/doc-utilisateur/doc-utilisateur-iot.adoc[Lien vers la doc utilisateur du système IoT]
 - https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/doc-test/doc-test-iot-v1.adoc[Lien vers le cahier de tests]
-- Indicateurs de qualité du code (dette technique)
-- ...
+- https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/tree/master/IoT/Java[Lien vers le répertoire du code Java]
+- https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/tree/master/IoT/Python[Lien vers le répertoire du code Python]
 
 == Évaluations hebdomadaires
 Evaluation bi-hedomadaire 
