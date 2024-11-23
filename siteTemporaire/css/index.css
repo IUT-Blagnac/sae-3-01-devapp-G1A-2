@@ -1,0 +1,122 @@
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 8rem 0;
+    margin-bottom: 3rem;
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Featured Products */
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.product-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease;
+    padding-top: 10px;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+/* version avec des ombres quand la souris passe au-dessus des produits */
+
+/* Supprimer la transformation et ajouter une ombre plus marquée
+.product-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    transition: box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2); /* Accentuer l'ombre */
+    /* transform: none; /* Enlever translateY pour éviter le dépassement 
+} */
+
+
+
+/* Product Card Images */
+.product-card img {
+    width: 100%;
+    height: 250px; /* Hauteur fixe pour uniformiser la taille des images */
+    object-fit: cover; /* Remplit le conteneur tout en recadrant */
+    border-radius: 8px 8px 0 0;
+}
+
+
+
+.product-info {
+    padding: 1.5rem;
+}
+
+.product-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.price {
+    color: #e44d26;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.add-to-cart {
+    width: 100%;
+    background-color: #333;
+    border: none;
+}
+
+.add-to-cart:hover {
+    background-color: #222;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 60px;  /* taille des deux conteneurs des fleches du carousel */
+    height: 60px; 
+}
+
+/* Modifier la position interne des icônes avec position:absolute */
+.carousel-control-prev-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    background-size: 100%, 100%;
+    border-radius: 50%;
+    /*changer la taille de la fleche gauche du carousel */
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    right: -15px; 
+    top: 180px;
+}
+
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    background-size: 100%, 100%;
+    border-radius: 50%;
+    /*changer la taille de la fleche gauche du carousel, attention aussi changer la taille du conteneur si augmentation trop importante */
+    width: 60px;
+    height: 60px;
+    /* changer la position des fleches */
+    position: absolute;
+    left: -15px; 
+    top: 180px;
+}
