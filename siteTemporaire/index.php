@@ -1,4 +1,6 @@
-<?php require_once 'includes/header.php'; ?>
+<?php
+require_once 'includes/header.php';
+?>
 
 <div class="container-fluid hero-section">
     <div class="row">
