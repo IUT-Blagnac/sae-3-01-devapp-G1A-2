@@ -1,0 +1,342 @@
+{
+    "C002": {
+        "temperature": [
+            20.1
+        ],
+        "humidity": [
+            56
+        ],
+        "co2": [
+            543
+        ],
+        "illumination": [
+            1
+        ],
+        "timestamp": [
+            "2024-11-25 16:45:52"
+        ]
+    },
+    "E001": {
+        "temperature": [
+            20.6
+        ],
+        "humidity": [
+            59
+        ],
+        "co2": [
+            462
+        ],
+        "illumination": [
+            0
+        ],
+        "timestamp": [
+            "2024-11-25 16:46:14"
+        ]
+    },
+    "B108": {
+        "temperature": [
+            19
+        ],
+        "humidity": [
+            63.5
+        ],
+        "co2": [
+            1919
+        ],
+        "illumination": [
+            1
+        ],
+        "timestamp": [
+            "2024-11-25 16:46:54"
+        ]
+    },
+    "C102": {
+        "temperature": [
+            19.2
+        ],
+        "humidity": [
+            60.5
+        ],
+        "co2": [
+            606
+        ],
+        "illumination": [
+            1
+        ],
+        "timestamp": [
+            "2024-11-25 16:47:20"
+        ]
+    },
+    "E007": {
+        "temperature": [
+            22.2
+        ],
+        "humidity": [
+            58
+        ],
+        "co2": [
+            1108
+        ],
+        "illumination": [
+            64
+        ],
+        "timestamp": [
+            "2024-11-25 16:47:24"
+        ]
+    },
+    "amphi1": {
+        "temperature": [
+            20.6
+        ],
+        "humidity": [
+            57
+        ],
+        "co2": [
+            448
+        ],
+        "illumination": [
+            1
+        ],
+        "timestamp": [
+            "2024-11-25 16:47:50"
+        ]
+    },
+    "B203": {
+        "temperature": [
+            24.1
+        ],
+        "humidity": [
+            64.5
+        ],
+        "co2": [
+            3083
+        ],
+        "illumination": [
+            43
+        ],
+        "timestamp": [
+            "2024-11-25 16:47:50"
+        ]
+    },
+    "E208": {
+        "temperature": [
+            21.6
+        ],
+        "humidity": [
+            58.5
+        ],
+        "co2": [
+            836
+        ],
+        "illumination": [
+            36
+        ],
+        "timestamp": [
+            "2024-11-25 16:47:54"
+        ]
+    },
+    "E210": {
+        "temperature": [
+            21
+        ],
+        "humidity": [
+            58
+        ],
+        "co2": [
+            498
+        ],
+        "illumination": [
+            0
+        ],
+        "timestamp": [
+            "2024-11-25 16:48:21"
+        ]
+    },
+    "B103": {
+        "temperature": [
+            21.1
+        ],
+        "humidity": [
+            57
+        ],
+        "co2": [
+            3214
+        ],
+        "illumination": [
+            1
+        ],
+        "timestamp": [
+            "2024-11-25 16:48:23"
+        ]
+    },
+    "E207": {
+        "temperature": [
+            21.7
+        ],
+        "humidity": [
+            61
+        ],
+        "co2": [
+            1247
+        ],
+        "illumination": [
+            70
+        ],
+        "timestamp": [
+            "2024-11-25 16:48:49"
+        ]
+    },
+    "E101": {
+        "temperature": [
+            21.5
+        ],
+        "humidity": [
+            57.5
+        ],
+        "co2": [
+            785
+        ],
+        "illumination": [
+            68
+        ],
+        "timestamp": [
+            "2024-11-25 16:48:50"
+        ]
+    },
+    "E100": {
+        "temperature": [
+            24.8
+        ],
+        "humidity": [
+            45
+        ],
+        "co2": [
+            764
+        ],
+        "illumination": [
+            1
+        ],
+        "timestamp": [
+            "2024-11-25 16:49:20"
+        ]
+    },
+    "C006": {
+        "temperature": [
+            18.7
+        ],
+        "humidity": [
+            63.5
+        ],
+        "co2": [
+            1228
+        ],
+        "illumination": [
+            1
+        ],
+        "timestamp": [
+            "2024-11-25 16:49:21"
+        ]
+    },
+    "hall-amphi": {
+        "temperature": [
+            19.8
+        ],
+        "humidity": [
+            61
+        ],
+        "co2": [
+            607
+        ],
+        "illumination": [
+            6
+        ],
+        "timestamp": [
+            "2024-11-25 16:49:21"
+        ]
+    },
+    "E103": {
+        "temperature": [
+            20.7
+        ],
+        "humidity": [
+            63
+        ],
+        "co2": [
+            1251
+        ],
+        "illumination": [
+            40
+        ],
+        "timestamp": [
+            "2024-11-25 16:49:51"
+        ]
+    },
+    "E102": {
+        "temperature": [
+            20.5
+        ],
+        "humidity": [
+            59
+        ],
+        "co2": [
+            620
+        ],
+        "illumination": [
+            1
+        ],
+        "timestamp": [
+            "2024-11-25 16:49:52"
+        ]
+    },
+    "hall-entr\u00e9e-principale": {
+        "temperature": [
+            20.3
+        ],
+        "humidity": [
+            59.5
+        ],
+        "co2": [
+            579
+        ],
+        "illumination": [
+            4
+        ],
+        "timestamp": [
+            "2024-11-25 16:49:53"
+        ]
+    },
+    "B110": {
+        "temperature": [
+            20.3
+        ],
+        "humidity": [
+            61
+        ],
+        "co2": [
+            657
+        ],
+        "illumination": [
+            47
+        ],
+        "timestamp": [
+            "2024-11-25 16:49:54"
+        ]
+    },
+    "B106": {
+        "temperature": [
+            19.9
+        ],
+        "humidity": [
+            64
+        ],
+        "co2": [
+            1576
+        ],
+        "illumination": [
+            1
+        ],
+        "timestamp": [
+            "2024-11-25 16:50:11"
+        ]
+    }
+}
