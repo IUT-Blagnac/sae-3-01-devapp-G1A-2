@@ -1,0 +1,36 @@
+{
+    "C002": {
+        "temperature": [
+            20.1
+        ],
+        "humidity": [
+            56
+        ],
+        "co2": [
+            543
+        ],
+        "illumination": [
+            1
+        ],
+        "timestamp": [
+            "2024-11-25 16:45:52"
+        ]
+    },
+    "E001": {
+        "temperature": [
+            20.6
+        ],
+        "humidity": [
+            59
+        ],
+        "co2": [
+            462
+        ],
+        "illumination": [
+            0
+        ],
+        "timestamp": [
+            "2024-11-25 16:46:14"
+        ]
+    }
+}

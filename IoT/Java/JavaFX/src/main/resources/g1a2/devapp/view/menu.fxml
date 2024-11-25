@@ -38,7 +38,7 @@
                               <Insets top="10.0" />
                            </padding>
                         </Label>
-                        <TextField fx:id="server" editable="false" text="texte à chopper dans le config" />
+                        <TextField fx:id="tfServer" editable="false" text="texte à chopper dans le config" />
                      </children>
                      <VBox.margin>
                         <Insets top="10.0" />

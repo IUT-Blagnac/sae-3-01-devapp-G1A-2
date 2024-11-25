@@ -15,9 +15,9 @@ os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 def verifFichier():
     fichiers = {
-        "resultatAM107.json": {},
-        "resultatSolar.json": {},
-        "alerteAM107.json": {},
+        "../resultat/resultatAM107.json": {},
+        "../resultat/resultatSolar.json": {},
+        "../resultat/alerteAM107.json": {},
     }
     for fichier, contenu in fichiers.items():
         try:
@@ -35,7 +35,7 @@ def config():
     """
     print("Chargement de la config...")
     try:
-        with open("config.json", 'r') as file:
+        with open("../config.json", 'r') as file:
             data = json.load(file)
             global server, topic, salle, dataVoulu, frequence
             topic = [{"type": "AM107", "topic": t} if "AM107" in t else {"type": "SolarEdge", "topic": t} for t in data.get("topic")]
@@ -49,7 +49,7 @@ def config():
         # Créer un fichier de configuration par défaut
         print(f"Erreur lors du chargement de la config : {e}")
         print("Création d'un fichier de configuration par défaut...")
-        with open("config.json", 'w') as file:
+        with open("../config.json", 'w') as file:
             data = {
                 "server": "mqtt.iut-blagnac.fr",
                 "topic" : ["AM107/by-room/#", "solaredge/blagnac/#"],
@@ -86,7 +86,7 @@ def on_message_print(type, message):
 
 
 def alerteAM107(room, capteur, valeur):
-    with open("alerteAM107.json", "r+") as file:
+    with open("../resultat/alerteAM107.json", "r+") as file:
         try:
             content = file.read()
             if content:
@@ -114,7 +114,7 @@ def alerteAM107(room, capteur, valeur):
         file.truncate()
 
 def traitement_am107(data):
-    with open("resultatAM107.json", "r+") as file:
+    with open("../resultat/resultatAM107.json", "r+") as file:
         try:
             content = file.read()
             if content:
@@ -171,7 +171,7 @@ Fonction qui traite les données SolarEdge.
 '''
 def traitement_solaredge(data):
     # Charger le fichier JSON existant
-    with open("resultatSolar.json", "r+") as file:
+    with open("../resultat/resultatSolar.json", "r+") as file:
         try:
             content = file.read()
             fichierJson = json.loads(content) if content else {}
