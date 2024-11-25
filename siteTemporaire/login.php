@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -33,9 +36,8 @@
         <a href="inscription.php">Pas encore inscrit ?</a>
 
         <a href="index.php">Se connecter en tant qu'invité</a>
-        
+
         <?php
-        session_start();
         if (isset($_SESSION["is_logged_in"]) && $_POST["logout"] == "true") {
             session_destroy();
             echo '<div class="alert alert-success mt-3" role="alert">Vous avez été déconnecté.</div>';

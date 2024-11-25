@@ -1,8 +1,9 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="fr">
-<?php
-    session_start();
-?>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,33 +37,33 @@
 
                 <!-- Icônes utilisateur et panier alignés à gauche -->
                 <div class="d-flex align-items-center" style="gap: 1.5rem;">
-                <!-- Dropdown pour l'utilisateur -->
-                <div class="dropdown">
-                    <a href="#" class="nav-icon me-3" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="color: #333; font-size: 1.7rem;">
-                        <i class="bi bi-person"></i>
+                    <!-- Dropdown pour l'utilisateur -->
+                    <div class="dropdown">
+                        <a href="#" class="nav-icon me-3" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="color: #333; font-size: 1.7rem;">
+                            <i class="bi bi-person"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                            <?php if (isset($_SESSION['user'])): ?>
+                                <li>
+                                    <p class="dropdown-item disabled">Bonjour, <?php echo $_SESSION['user']['PRENOM']; ?></p>
+                                    <a class="dropdown-item" href="#">Mon profil</a>
+                                    <form action="login.php" method="post">
+                                        <input type="hidden" name="logout" value="true">
+                                        <button type="submit" class="dropdown-item">Déconnexion</button>
+                                    </form>
+                                </li>
+                            <?php else: ?>
+                                <li><a class="dropdown-item" href="login.php">Connexion</a></li>
+                            <?php endif; ?>
+                        </ul>
+                    </div>
+
+                    <!-- Icône du panier -->
+                    <a href="#" class="nav-icon me-3" style="color: #333; font-size: 1.7rem;">
+                        <i class="bi bi-cart"></i>
                     </a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
-                        <?php if (isset($_SESSION['user'])): ?>
-                            <li>
-                                <p class="dropdown-item disabled">Bonjour, <?php echo $_SESSION['user']['PRENOM']; ?></p>
-                                <a class="dropdown-item" href="#">Mon profil</a>
-                                <form action="login.php" method="post">
-                                    <input type="hidden" name="logout" value="true">
-                                    <button type="submit" class="dropdown-item">Déconnexion</button>
-                                </form>
-                            </li>
-                        <?php else: ?>
-                            <li><a class="dropdown-item" href="login.php">Connexion</a></li>
-                        <?php endif; ?>
-                    </ul>
+
                 </div>
-
-                <!-- Icône du panier -->
-                <a href="#" class="nav-icon me-3" style="color: #333; font-size: 1.7rem;">
-                    <i class="bi bi-cart"></i>
-                </a>
-
-            </div>
         </nav>
 
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark category-nav">
