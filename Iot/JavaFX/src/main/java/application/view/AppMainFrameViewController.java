@@ -92,6 +92,9 @@ public class AppMainFrameViewController {
     @FXML
     private Button buttonTestConnection;
 
+    @FXML
+    private Button launchSolarEdgeBtn;
+
     // Actions
 
     @FXML
@@ -133,6 +136,11 @@ public class AppMainFrameViewController {
             System.out.println("Erreur lors de l'écriture dans le fichier de configuration");
             e.printStackTrace();
         }
+    }
+
+    @FXML
+    private void doLaunchSolarEdge() {
+        System.out.println("Lancement de l'application Solar Edge");
     }
 
     /**
