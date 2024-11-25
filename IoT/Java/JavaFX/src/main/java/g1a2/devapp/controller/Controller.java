@@ -35,8 +35,10 @@ public class Controller {
     
     private void loadConfig() {
         ObjectMapper mapper = new ObjectMapper();
+        this.tfServer.setText("localhost");
         try {
-            Config config = mapper.readValue(new File("config.json"), Config.class);
+            System.out.println("Working Directory = " + System.getProperty("user.dir"));
+            Config config = mapper.readValue(new File("../../config.json"), Config.class);
             tfServer.setText(config.getServer());
             tfServer.setEditable(true);
             tfServer.setDisable(false);
