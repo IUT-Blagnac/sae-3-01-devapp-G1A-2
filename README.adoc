@@ -111,8 +111,9 @@ Issues/Backlog :  Il faut une finalité dans certaines de vos US, et affecter un
 == Historique des journées de télétravail
 
 === À venir
-  - **21/11/2024** : de 8h00 à 12h30
+  - **28/11/2024** : de 11h00 à 12h30
 
 === Passées
 - **06/11/2024** : de 9h30 à 12h30
 - **14/11/2024** : de 9h30 à 12h30
+- **21/11/2024** : de 8h00 à 12h30
