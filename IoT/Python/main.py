@@ -3,12 +3,15 @@ import threading
 import paho.mqtt.subscribe as subscribe
 from datetime import datetime
 import time
+import os
 
 server = str()
 topic = list()
 salle = list()
 dataVoulu = dict()
 frequence = int()
+
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 def verifFichier():
     fichiers = {
@@ -34,7 +37,7 @@ def config():
     try:
         with open("config.json", 'r') as file:
             data = json.load(file)
-            global server, topic, salle, dataVoulu, seuil
+            global server, topic, salle, dataVoulu, frequence
             topic = [{"type": "AM107", "topic": t} if "AM107" in t else {"type": "SolarEdge", "topic": t} for t in data.get("topic")]
             server = data.get("server")
             salle = data.get("salle")
