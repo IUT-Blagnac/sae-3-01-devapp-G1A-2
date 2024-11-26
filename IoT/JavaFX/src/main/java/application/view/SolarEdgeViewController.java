@@ -59,7 +59,7 @@ public class SolarEdgeViewController {
      * Affichage de la fenêtre.
      */
     public void displayDialog() {
-        this.containingStage.show();
+        this.containingStage.showAndWait();
     }
 
     /*
@@ -82,10 +82,13 @@ public class SolarEdgeViewController {
         return null;
     }
 
-    // // Attributs FXML
+    // Attributs FXML
 
     @FXML
-    private LineChart graphicSolar;
+    private LineChart<String, Number> graphicSolar; // changer le type String au besoin
+
+    // @FXML
+    // private Button stopThreadBtn;
 
     // @FXML
     // private TextField tfServer;
@@ -179,7 +182,14 @@ public class SolarEdgeViewController {
 
         if (AlertUtilities.confirmYesCancel(this.containingStage, "Quitter l'application",
                 "Etes vous sur de vouloir quitter l'appli ?", null, AlertType.CONFIRMATION)) {
+            this.sEdgeBorderPane.doStopSolarEdge();
             this.containingStage.close();
         }
     }
+
+    // @FXML
+    // private void stopThread() {
+    // this.sEdgeBorderPane.doStopSolarEdge();
+    // }
+
 }

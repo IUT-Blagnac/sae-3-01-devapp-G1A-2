@@ -1,46 +1,55 @@
 package application.control;
 
+import application.tools.StageManagement;
 import application.view.AppMainFrameViewController;
 import application.view.SolarEdgeViewController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.scene.layout.BorderPane;
 
 public class SolarEdgeBorderPane {
 
     // Stage de la fenêtre principale construite par DailyBankMainFrame
-    private Stage dbmfStage;
+    private Stage solarStage;
     private SolarEdgeViewController seViewController;
+    private Thread t;
+    private MyRun r;
 
     /**
      * Constructeur
      */
-    public SolarEdgeBorderPane(Stage parentStage) {
-
-        this.dbmfStage = parentStage;
+    public SolarEdgeBorderPane(Stage _parentStage) {
 
         try {
 
             // Chargement du source fxml
             FXMLLoader loader = new FXMLLoader(
-                    AppMainFrameViewController.class.getResource("solaredge.fxml"));
+                    SolarEdgeViewController.class.getResource("solaredge.fxml"));
             BorderPane root = loader.load();
 
             // Paramétrage du Stage : feuille de style, titre
             Scene scene = new Scene(root, root.getPrefWidth() + 20, root.getPrefHeight() + 10);
             // scene.getStylesheets().add(DailyBankApp.class.getResource("application.css").toExternalForm());
 
-            this.dbmfStage.setScene(scene);
-            this.dbmfStage.setTitle("Fenêtre solar edge ");
+            this.solarStage = new Stage();
+            // this.solarStage.initModality(Modality.WINDOW_MODAL);
+            this.solarStage.initOwner(_parentStage);
+            StageManagement.manageCenteringStage(_parentStage, this.solarStage);
+            this.solarStage.setScene(scene);
+            this.solarStage.setTitle("Fenêtre Solar Edge");
 
             // Récupération du contrôleur et initialisation (stage, contrôleur de dialogue,
             // état courant)
             seViewController = loader.getController();
-            seViewController.initContext(this.dbmfStage, this);
+            seViewController.initContext(this.solarStage, this);
 
-            // dbmfViewController.displayDialog();
+            // Création du thread
+            this.r = new MyRun();
+            this.t = new Thread(r);
+            t.start();
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -50,6 +59,32 @@ public class SolarEdgeBorderPane {
 
     public void doSolarEdge() {
         this.seViewController.displayDialog();
+
+    }
+
+    public void doStopSolarEdge() {
+        this.r.stop();
+    }
+
+    // TEST THREAD DE LA CLASSE
+    public static class MyRun implements Runnable {
+        private boolean enCours;
+
+        public MyRun() {
+            this.enCours = true;
+        }
+
+        public void run() {
+            while (this.enCours) {
+                System.out.println("On est dans le thread du solar edge");
+
+            }
+            // On nettoie ici
+        }
+
+        public void stop() {
+            this.enCours = false;
+        }
     }
 
 }
