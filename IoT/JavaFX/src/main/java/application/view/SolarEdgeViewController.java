@@ -6,36 +6,32 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import application.control.AppMainFrame;
 import application.control.SolarEdgeBorderPane;
 import application.tools.AlertUtilities;
 import javafx.fxml.FXML;
+import javafx.scene.chart.LineChart;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import model.Config;
 
-/**
- * Controller JavaFX de la view dailybankmainframe.
- *
- */
-public class AppMainFrameViewController {
+public class SolarEdgeViewController {
 
-    private ArrayList<String> topic;
-    private String server;
-    private List<String> salle = new ArrayList<>();
-    private int frequence;
-    private HashMap<String, Integer> data;
-    private ObjectMapper mapper;
-    private Config config;
+    // private ArrayList<String> topic;
+    // private String server;
+    // private List<String> salle = new ArrayList<>();
+    // private int frequence;
+    // private HashMap<String, Integer> data;
+    // private ObjectMapper mapper;
+    // private Config config;
 
     // Contrôleur de Dialogue associé à AppMainFrameController
-    private AppMainFrame dbmfDialogController;
+    private SolarEdgeBorderPane sEdgeBorderPane;
 
     // Fenêtre physique ou est la scène contenant le fichier xml contrôlé par this
     private Stage containingStage;
@@ -53,8 +49,8 @@ public class AppMainFrameViewController {
      *                         de navigation ou calcul
      * @param _dbstate         Etat courant de l'application
      */
-    public void initContext(Stage _containingStage, AppMainFrame _dbmf) {
-        this.dbmfDialogController = _dbmf;
+    public void initContext(Stage _containingStage, SolarEdgeBorderPane _dbmf) {
+        this.sEdgeBorderPane = _dbmf;
         this.containingStage = _containingStage;
         this.configure();
     }
@@ -86,65 +82,62 @@ public class AppMainFrameViewController {
         return null;
     }
 
-    // Attributs FXML
+    // // Attributs FXML
 
     @FXML
-    private TextField tfServer;
-    @FXML
-    private Button buttonTestConnection;
+    private LineChart graphicSolar;
 
-    @FXML
-    private Button launchSolarEdgeBtn;
+    // @FXML
+    // private TextField tfServer;
+    // @FXML
+    // private Button buttonTestConnection;
+
+    // @FXML
+    // private Button launchSolarEdgeBtn;
 
     // Actions
 
     @FXML
     public void initialize() {
         System.out.println("Controlleur chargé avec succès");
-        loadConfig();
+        // loadConfig();
     }
 
-    private void loadConfig() {
-        this.tfServer.setText("localhost");
-        try {
-            mapper = new ObjectMapper();
-            config = mapper.readValue(new File("../config.json"), Config.class);
-            salle = config.getSalle();
-            tfServer.setText(config.getServer());
-            tfServer.setEditable(true);
-            tfServer.setDisable(false);
-            tfServer.setPromptText(config.getServer());
-            config.setSalle(salle);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+    // private void loadConfig() {
+    // this.tfServer.setText("localhost");
+    // try {
+    // mapper = new ObjectMapper();
+    // config = mapper.readValue(new File("../config.json"), Config.class);
+    // salle = config.getSalle();
+    // tfServer.setText(config.getServer());
+    // tfServer.setEditable(true);
+    // tfServer.setDisable(false);
+    // tfServer.setPromptText(config.getServer());
+    // config.setSalle(salle);
+    // } catch (IOException e) {
+    // e.printStackTrace();
+    // }
+    // }
 
-    @FXML
-    private void saveConfig() {
-        ObjectMapper mapper = new ObjectMapper();
-        Config config = new Config();
-        config.setServer(tfServer.getText());
-        config.setSalle(salle);
-        config.setFrequence(frequence);
-        config.setData(data);
-        config.setTopic(topic);
-        try {
-            mapper.writeValue(new File("../../config.json"), config);
-            System.out.println("Configuration enregistrée");
-            System.out.println(config);
-        } catch (IOException e) {
-            System.out.println("Erreur lors de l'écriture dans le fichier de configuration");
-            e.printStackTrace();
-        }
-    }
-
-    @FXML
-    private void doLaunchSolarEdge() {
-        System.out.println("Lancement de l'application Solar Edge");
-        this.dbmfDialogController.solarDisplay();
-
-    }
+    // @FXML
+    // private void saveConfig() {
+    // ObjectMapper mapper = new ObjectMapper();
+    // Config config = new Config();
+    // config.setServer(tfServer.getText());
+    // config.setSalle(salle);
+    // config.setFrequence(frequence);
+    // config.setData(data);
+    // config.setTopic(topic);
+    // try {
+    // mapper.writeValue(new File("../../config.json"), config);
+    // System.out.println("Configuration enregistrée");
+    // System.out.println(config);
+    // } catch (IOException e) {
+    // System.out.println("Erreur lors de l'écriture dans le fichier de
+    // configuration");
+    // e.printStackTrace();
+    // }
+    // }
 
     /**
      * @FXML
@@ -189,6 +182,4 @@ public class AppMainFrameViewController {
             this.containingStage.close();
         }
     }
-
-
 }
