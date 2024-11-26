@@ -107,7 +107,7 @@ public class AppMainFrameViewController {
         this.tfServer.setText("localhost");
         try {
             mapper = new ObjectMapper();
-            config = mapper.readValue(new File("../../config.json"), Config.class);
+            config = mapper.readValue(new File("../config.json"), Config.class);
             salle = config.getSalle();
             tfServer.setText(config.getServer());
             tfServer.setEditable(true);
