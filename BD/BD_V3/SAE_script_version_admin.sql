@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : mysql
--- Généré le : mar. 19 nov. 2024 à 15:03
+-- Généré le : lun. 25 nov. 2024 à 10:14
 -- Version du serveur : 8.0.40
 -- Version de PHP : 8.2.8
 
@@ -297,6 +297,13 @@ CREATE TABLE `UTILISATEUR` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
+-- Déchargement des données de la table `UTILISATEUR`
+--
+
+INSERT INTO `UTILISATEUR` (`IDUTILISATEUR`, `IDROLE`, `NOM`, `PRENOM`, `EMAIL`, `PASSWORD`, `TELEPHONE`, `DATENAISSANCE`, `DATEINSCRIPTION`) VALUES
+(1, 1, 'admin', 'admin', 'lol@gmail.com', '9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08', '0606060606', '1999-01-01', '2024-11-19');
+
+--
 -- Index pour les tables déchargées
 --
 
@@ -470,7 +477,7 @@ ALTER TABLE `STATUTCOMMANDE`
 -- AUTO_INCREMENT pour la table `UTILISATEUR`
 --
 ALTER TABLE `UTILISATEUR`
-  MODIFY `IDUTILISATEUR` int NOT NULL AUTO_INCREMENT;
+  MODIFY `IDUTILISATEUR` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
