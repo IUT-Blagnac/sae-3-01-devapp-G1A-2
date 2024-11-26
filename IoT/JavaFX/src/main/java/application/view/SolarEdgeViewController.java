@@ -20,7 +20,15 @@ import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import model.Config;
 
-public class SolarEdgeViewController {
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.chart.LineChart;
+import javafx.scene.chart.XYChart;
+
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class SolarEdgeViewController implements Initializable {
 
     // private ArrayList<String> topic;
     // private String server;
@@ -35,6 +43,9 @@ public class SolarEdgeViewController {
 
     // Fenêtre physique ou est la scène contenant le fichier xml contrôlé par this
     private Stage containingStage;
+
+    @FXML
+    private LineChart<String, Integer> lineChart;
 
     // Données de la fenêtre
 
@@ -191,5 +202,29 @@ public class SolarEdgeViewController {
     // private void stopThread() {
     // this.sEdgeBorderPane.doStopSolarEdge();
     // }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        // Création et ajout de données fictives au graphique
+        XYChart.Series<String, Integer> serie = new XYChart.Series<>();
+        serie.setName("Évolution de l'énergie récupérée");
+
+        // Ajout de données fictives (heures de la journée et watts)
+        serie.getData().add(new XYChart.Data<>("00:00", 50));
+        serie.getData().add(new XYChart.Data<>("02:00", 75));
+        serie.getData().add(new XYChart.Data<>("04:00", 60));
+        serie.getData().add(new XYChart.Data<>("06:00", 90));
+        serie.getData().add(new XYChart.Data<>("08:00", 120));
+        serie.getData().add(new XYChart.Data<>("10:00", 200));
+        serie.getData().add(new XYChart.Data<>("12:00", 300));
+        serie.getData().add(new XYChart.Data<>("14:00", 250));
+        serie.getData().add(new XYChart.Data<>("16:00", 400));
+        serie.getData().add(new XYChart.Data<>("18:00", 350));
+        serie.getData().add(new XYChart.Data<>("20:00", 220));
+        serie.getData().add(new XYChart.Data<>("22:00", 150));
+
+        // Ajouter la série au graphique
+        lineChart.getData().add(serie);
+    }
 
 }
