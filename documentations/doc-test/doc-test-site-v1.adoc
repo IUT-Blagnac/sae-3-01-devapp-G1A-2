@@ -70,7 +70,7 @@ Le projet vise à développer un site e-commerce pour la vente de chaussures, ax
 
 [cols="1,1,1,1", options="header"]
 |===
-| Test(s) | Préconditions | Conditions nécessaires | Résultats attendus
+| Test(s) | Préconditions | Conditions nécessaires | Résultat(s)
 
 | Création d'un compte client
 | Ne pas être déjà connecté et être sur la page de création de compte
