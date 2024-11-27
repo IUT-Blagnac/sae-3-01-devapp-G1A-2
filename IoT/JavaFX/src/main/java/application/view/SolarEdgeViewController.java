@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.JsonNode;
 
 import application.control.AppMainFrame;
 import application.control.SolarEdgeBorderPane;
@@ -111,11 +112,11 @@ public class SolarEdgeViewController implements Initializable {
 
     // Actions
 
-    @FXML
-    public void initialize() {
-        System.out.println("Controlleur chargé avec succès");
-        // loadConfig();
-    }
+    // @FXML
+    // public void initialize() {
+    //     System.out.println("Controlleur chargé avec succès");
+    //     // loadConfig();
+    // }
 
     // private void loadConfig() {
     // this.tfServer.setText("localhost");
@@ -205,26 +206,58 @@ public class SolarEdgeViewController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        System.out.println("Controlleur chargé avec succès");
+
         // Création et ajout de données fictives au graphique
         XYChart.Series<String, Integer> serie = new XYChart.Series<>();
         serie.setName("Évolution de l'énergie récupérée");
 
-        // Ajout de données fictives (heures de la journée et watts)
-        serie.getData().add(new XYChart.Data<>("00:00", 50));
-        serie.getData().add(new XYChart.Data<>("02:00", 75));
-        serie.getData().add(new XYChart.Data<>("04:00", 60));
-        serie.getData().add(new XYChart.Data<>("06:00", 90));
-        serie.getData().add(new XYChart.Data<>("08:00", 120));
-        serie.getData().add(new XYChart.Data<>("10:00", 200));
-        serie.getData().add(new XYChart.Data<>("12:00", 300));
-        serie.getData().add(new XYChart.Data<>("14:00", 250));
-        serie.getData().add(new XYChart.Data<>("16:00", 400));
-        serie.getData().add(new XYChart.Data<>("18:00", 350));
-        serie.getData().add(new XYChart.Data<>("20:00", 220));
-        serie.getData().add(new XYChart.Data<>("22:00", 150));
+        try {
+            ObjectMapper mapper = new ObjectMapper();
+        
+            JsonNode root = mapper.readTree(new File("../resultat/resultatSolar.json"));
+            JsonNode currentPower = root.get("currentPower");
+            JsonNode lastUpdateTime = root.get("lastUpdateTime");
 
-        // Ajouter la série au graphique
+            if (lastUpdateTime.size() == currentPower.size()) {
+                for (int i = 0; i<lastUpdateTime.size(); i++) {
+                    String date = lastUpdateTime.get(i).asText();
+                    double energie = currentPower.get(i).asDouble();
+
+                    System.out.println("Affichages des données");
+                    System.out.println("Date : " + date);
+                    System.out.println("Energie : " + energie);
+
+                    // Ajouter les valeurs dans les données graphiques
+                    serie.getData().add(new XYChart.Data<>(date, (int) energie));
+                }
+            }
+            else {
+                System.out.println("Les tailles des tableaux ne sont pas égales");
+            }
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+
         lineChart.getData().add(serie);
+
+        // // Ajout de données fictives (heures de la journée et watts)
+        // serie.getData().add(new XYChart.Data<>("00:00", 50));
+        // serie.getData().add(new XYChart.Data<>("02:00", 75));
+        // serie.getData().add(new XYChart.Data<>("04:00", 60));
+        // serie.getData().add(new XYChart.Data<>("06:00", 90));
+        // serie.getData().add(new XYChart.Data<>("08:00", 120));
+        // serie.getData().add(new XYChart.Data<>("10:00", 200));
+        // serie.getData().add(new XYChart.Data<>("12:00", 300));
+        // serie.getData().add(new XYChart.Data<>("14:00", 250));
+        // serie.getData().add(new XYChart.Data<>("16:00", 400));
+        // serie.getData().add(new XYChart.Data<>("18:00", 350));
+        // serie.getData().add(new XYChart.Data<>("20:00", 220));
+        // serie.getData().add(new XYChart.Data<>("22:00", 150));
+
+        // // Ajouter la série au graphique
+        // lineChart.getData().add(serie);
     }
 
 }
