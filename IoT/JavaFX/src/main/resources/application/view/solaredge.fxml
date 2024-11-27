@@ -16,13 +16,13 @@
       </Text>
    </top>
    <center>
-      <LineChart fx:id="graphicSolar" title="Evolution production solaire" BorderPane.alignment="CENTER">
-        <xAxis>
-          <CategoryAxis side="BOTTOM" />
-        </xAxis>
-        <yAxis>
-          <NumberAxis side="LEFT" />
-        </yAxis>
+      <LineChart fx:id="lineChart" title="Évolution de l'énergie" BorderPane.alignment="CENTER">
+         <xAxis>
+            <CategoryAxis side="BOTTOM" label="Heures" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis side="LEFT" label="Énergie (W)" />
+         </yAxis>
       </LineChart>
    </center>
 </BorderPane>
