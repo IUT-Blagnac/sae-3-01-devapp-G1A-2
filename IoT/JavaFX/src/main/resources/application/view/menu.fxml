@@ -15,6 +15,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <VBox prefHeight="496.0" prefWidth="789.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.AppMainFrameViewController">
    <children>
@@ -123,45 +124,68 @@
                            </GridPane.margin>
                         </CheckBox>
                         <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="107.0" text="Seuil" GridPane.columnIndex="1" />
-                        <TextField GridPane.columnIndex="2" />
+                        <TextField GridPane.columnIndex="2">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin></TextField>
                         <CheckBox mnemonicParsing="false" prefHeight="18.0" prefWidth="108.0" text="Humidité" GridPane.rowIndex="1">
                            <padding>
                               <Insets left="5.0" />
                            </padding>
                         </CheckBox>
                         <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="107.0" text="Seuil" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <TextField GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <TextField GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin></TextField>
                         <CheckBox mnemonicParsing="false" prefHeight="18.0" prefWidth="108.0" text="Activité" GridPane.rowIndex="2">
                            <padding>
                               <Insets left="5.0" />
                            </padding>
                         </CheckBox>
                         <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="107.0" text="Seuil" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                        <TextField GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <TextField GridPane.columnIndex="2" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin></TextField>
                         <CheckBox mnemonicParsing="false" prefHeight="18.0" prefWidth="108.0" text="CO2" GridPane.rowIndex="3">
                            <padding>
                               <Insets left="5.0" />
                            </padding>
                         </CheckBox>
                         <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="107.0" text="Seuil" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                        <TextField GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                        <TextField GridPane.columnIndex="2" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin></TextField>
                         <CheckBox mnemonicParsing="false" prefHeight="18.0" prefWidth="108.0" text="Luminosité" GridPane.rowIndex="4">
                            <padding>
                               <Insets left="5.0" />
                            </padding>
                         </CheckBox>
                         <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="107.0" text="Seuil" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                        <TextField GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                        <TextField GridPane.columnIndex="2" GridPane.rowIndex="4">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin></TextField>
                         <CheckBox mnemonicParsing="false" prefHeight="18.0" prefWidth="108.0" text="Pression" GridPane.rowIndex="5">
                            <padding>
                               <Insets left="5.0" />
                            </padding>
                         </CheckBox>
                         <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="107.0" text="Seuil" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                        <TextField GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                        <TextField GridPane.columnIndex="2" GridPane.rowIndex="5">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin></TextField>
                      </children>
                   </GridPane>
                   <Button mnemonicParsing="false" text="Capturer les valeurs">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#saveConfig" text="Valider la configuration">
                      <VBox.margin>
                         <Insets top="10.0" />
                      </VBox.margin>
@@ -193,7 +217,12 @@
       </HBox>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#saveConfig" text="Valider la configuration" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="fréquence (ms)" wrappingWidth="81.33666944503784">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Text>
+            <TextField fx:id="champFrequenceSaisie" prefHeight="26.0" prefWidth="91.0" />
          </children>
       </HBox>
    </children>

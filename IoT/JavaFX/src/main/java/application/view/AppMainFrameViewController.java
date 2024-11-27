@@ -11,6 +11,7 @@ import application.control.SolarEdgeBorderPane;
 import application.tools.AlertUtilities;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.text.Text;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
@@ -29,7 +30,7 @@ public class AppMainFrameViewController {
     private ArrayList<String> topic;
     private String server;
     private List<String> salle = new ArrayList<>();
-    private int frequence;
+    private int frequence; // TO CHANGE
     private HashMap<String, Integer> data;
     private ObjectMapper mapper;
     private Config config;
@@ -96,6 +97,9 @@ public class AppMainFrameViewController {
     @FXML
     private Button launchSolarEdgeBtn;
 
+    @FXML
+    private TextField champFrequenceSaisie;
+
     // Actions
 
     @FXML
@@ -120,6 +124,25 @@ public class AppMainFrameViewController {
         }
     }
 
+    /**
+     * Méthode permettant de mettre à jour les champs de la page principale
+     */
+    private void updateChamps() {
+        // pour l'instant on ne traite que le champ fréquence
+        // Récupération du texte depuis le TextField
+        String valeurTexte = this.champFrequenceSaisie.getText();
+
+        // Conversion en entier
+        try {
+            int frequence = Integer.parseInt(valeurTexte);
+            System.out.println("frequence saisie : " + frequence);
+
+        } catch (NumberFormatException e) {
+            System.err.println("Erreur : la valeur saisie n'est pas un nombre entier valide !");
+        }
+
+    }
+
     @FXML
     private void saveConfig() {
         ObjectMapper mapper = new ObjectMapper();
@@ -142,6 +165,7 @@ public class AppMainFrameViewController {
     @FXML
     private void doLaunchSolarEdge() {
         System.out.println("Lancement de l'application Solar Edge");
+        this.updateChamps();
         this.dbmfDialogController.solarDisplay();
 
     }
@@ -189,6 +213,5 @@ public class AppMainFrameViewController {
             this.containingStage.close();
         }
     }
-
 
 }
