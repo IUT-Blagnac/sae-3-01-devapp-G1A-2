@@ -77,7 +77,7 @@ public class SolarEdgeBorderPane {
         public void run() {
             while (this.enCours) {
                 System.out.println("On est dans le thread du solar edge");
-
+                
             }
             // On nettoie ici
         }
