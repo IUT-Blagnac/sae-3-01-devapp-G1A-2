@@ -3,10 +3,14 @@
 :toc-title: Sommaire
 
 Version du site : 1 +
+
 Date : 27/11/2024 +
-Équipe : G1A2
+
+Équipe : G1A2 +
+
 Client : Style & Semelle +
-Projet : Site d'e-commerce 
+
+Projet : Site d'e-commerce +
 
 <<<
 
@@ -34,366 +38,55 @@ Enfin, ce projet vise à offrir une plateforme évolutive, capable d’intégrer
 == 2. Consulter le site web
 === a) Prérequis
 
-Il est nécessaire d'avoir une connexion internet et un navigateur qui permet d'aller sur un site en http (pas en https) pour accéder au site.
-Afin d'accéder à son compte il faut en avoir déjà créé un, sinon il sera possible d'en créer un sur le site.
+Pour pouvoir consulter le site web, vous devoir avoir à minima une connexion à Internet et un navigateur web pour pouvoir accéder au site de Style & Semelle. 
+Ensuite, pour accéder à toutes les fonctionnalités (non admin) il faut créer et posséder un compte.
 
 === b) Aller sur le site
 
-Cliquez sur http://193.54.227.164/~SAESYS08/[ce lien] pour accéder au site web de VidéoFest.
+http://193.54.227.208/~R2024SAE3009/index.php[Lien vers le site web]
 
-== 3. Utiliser le site web
+== 3. Utilisation du site web
 
 === a) Explications des rôles
 
 Il y a 3 rôles différents pour les utilisateurs du site : +
 
-* l'*utilisateur sans compte*, ou qui n'est pas encore connecté : il peut visualiser les produits, contacter l'entreprise et voir les informations de l'entreprise +
-* le *client connecté* : il faire tout ce qu'un utilisateur non connecté fait et en plus visualiser ses informations, les modifier, se déconnecter, supprimer le compte, créer un panier, le visualiser, commander et payer +
-* l'*administrateur connecté* : il peut modifier un produit existant, le supprimer et en créer un nouveau +
+* *L'utilisateur sans compte/pas connecté* considéré comme un visiteur : il peut créer un compte, rechercher un ou plusieurs produits et visualiser le détail d'un produit  +
+* *L'utilisateur connecté* considéré comme un client : Il possède les mêmes actions qu'un visiteur mais avec des fonctionnalités en plus comme par exemple, consulter ses commandes passées, ses derniers produits consultés, la gestion de son panier. +
+* *L'administrateur* : Il peut afficher, supprimer, modifier et ajouter des produits dans le catalogue du site d'e-commerce via à un tableau de bord +
 
 === b) Utilisateur non connecté
 
-==== Créer un compte 
+==== Connexion à un compte 
 
-Pour créer un compte, il faut d'abord tenter de se connecter, soit par l'icone en haut à gauche du site :
+Pour créer un compte, il faut cliquer sur l'icône en haut à droite de la page puis sur *"Connexion"* :
 
-image::images/iconeConnexion.png[]
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/icôneUser.PNG[width=800, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/icôneUser.PNG"] 
 
-Soit par le menu :
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/boutonFormulaireConnexion.PNG[width=800, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/boutonFormulaireConnexion.PNG"] 
 
-image::images/menu.png[]
+Ensuite que vous arrivez sur le formulaire de connexion cliquer sur *"Pas encore inscrit ?"* :
 
-Ensuite sur la page de connexion, il faut cliquer sur "Créer un compte " :
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/lienInscription.PNG[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/lienInscription.PNG"] 
 
-image::images/boutonCreerCompte.png[]
+Vous arriverez sur la page d'inscription suivante :
 
-Ce qui nous amène au formulaire de création de compte : 
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/formulaireInscription.PNG[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/formulaireInscription.PNG"] 
 
-image::images/formCreation.png[]
+Tous les champs du formulaire doivent être remplis, le nom et le prénom ne peuvent pas contenir de chiffres ou de caractères spéciaux, l’adresse mail devra avoir le bon format et être disponible, le mot de passe doit respecter le minimum demandé et etc. Ensuite il faut cliquer sur "Valider" et si jamais une erreur est faite, un message explicatif s’affichera dans le cas contraire le compte sera créé et vous redirigera sur la page de connexion.
 
-Tous les champs doivent être remplis, le nom et le prénom ne peuvent pas contenir de chiffres ou de caractères spéciaux, l'adresse mail doit avoir un format valide, le mot de passe doit respecter les normes RGPD (https://www.donneespersonnelles.fr/generateur-de-mot-de-passe[voici un générateur de mot de passe aux normes]), et la vérification du mot de passe doit être égale au mot de passe voulu. Ensuite il faut cliquer sur "Continuer" et si jamais une erreur est faite, un message explicatif s'affichera. S'il n'y a pas d'erreur le compte sera créé et on sera redirigé vers la page principale du site.
+==== Connexion/Déconnexion à un compte 
 
-==== Visualiser les produits par catégorie
+Pour se connecter un compte, il faut cliquer sur l'icône en haut à droite de la page puis sur *"Connexion"* :
 
-Pour choisir la catégorie de produits il faut ouvrir le menu :
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/icôneUser.PNG[width=800, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/icôneUser.PNG"] 
 
-image::images/menu.png[]
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/boutonFormulaireConnexion.PNG[width=800, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/boutonFormulaireConnexion.PNG"] 
 
-Puis cliquer sur "Nos produits" pour que les différentes catégories s'affichent
+Ensuite que vous arrivez sur le formulaire de connexion remplissez-le avec un email valide et le bon mot de passe et cliquer sur *"Connexion"*. Vous pouvez aussi cocher sur *"Se souvenir de moi"* pour éviter de se connecter à chaque fois :
 
-image::images/menuCategorie.png[]
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/connexionCompte.PNG[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/connexionCompte.PNG"] 
 
-Ensuite il faut cliquer sur la catégorie voulue pour arriver sur cette page d'affichage des produits :  
+Pour se connecter un compte, il faut cliquer sur l'icône en haut à droite de la page puis sur *"Déconnexion"* :
 
-image::images/produitsParCategorie.png[]
-
-
-==== Visualiser les produits par sous-catégorie
-
-Pour choisir la sous-catégorie de produits il faut d'abord avoir choisis une catégorie parente, puis cliquer sur la sous catégorie voulue : 
-
-image::images/boutonSousCategorie.png[]
-
-Ensuite, les produits s'affichent :  
-
-image::images/produitsParSousCategorie.png[]
-
-
-==== Rechercher un produit par nom
-
-Pour chercher un produit par son nom ou sa marque il faut taper la recherche dans la barre de recherche : 
-
-image::images/barreRecherche.png[]
-
-Ensuite il faut cliquer sur la touche "Entrée" ou sur l'icone de loupe afin d'afficher les produits correspondants : 
-
-image::images/produitsParNom.png[]
-
-Si jamais il n'y a pas de produits correspondants, un message explicite sera affiché :
-
-image::images/rechercheFail.png[]
-
-
-==== Visualiser un produit
-
-Pour voir un produit, il faut d'abord avoir fait une recherche (par nom ou par catégorie), puis il faut cliquer sur le bouton "Voir plus" du produit voulu. 
-
-image::images/boutonVoirPlus.png[]
-
-Ensuite le produit s'affiche ainsi que ses informations : 
-
-image::images/produit.png[
-
-
-==== Contacter l'entreprise
-
-Pour contacter l'entreprise, il faut cliquer sur le lien "Nous contacter" en bas de page :
-
-image::images/lienContact.png[]
-
-Ensuite un formulaire s'affiche et il faut remplir tous les champs puis cliquer sur le bouton "Envoyer" pour valider votre message : 
-
-image::images/contact.png[]
-
-Si le message s'est bien envoyé, une alerte le confirme : 
-
-image::images/popupContact.png[]
-
-
-==== Consulter les informations sur l'entreprise
-
-Pour consulter les informations sur l'entreprise, il faut cliquer sur le lien "Notre entreprise" en bas de page :
-
-image::images/lienEntreprise.png[]
-
-Une page d'informations sur l'entrerise s'affiche : 
-
-image::images/entreprise.png[]
-
-
-==== Voir les articles populaires (les plus vendus)
-
-Pour voir les articles populaires, il faut aller sur la page principale du site, soit en cliquant sur le logo  :
-
-image::images/logo.png[]
-
-Soit par le menu en cliquant sur "Accueil" :
-
-image::images/menu.png[]
-
-Ensuite les produits les plus vendus s'affichent : 
-
-image::images/populaires.png[]
-
-
-=== c) Client
-
-==== Se connecter
-
-Pour se connecter, il faut d'abord aller sur la page de connexion, soit par l'icone en haut à gauche du site :
-
-image::images/iconeConnexion.png[]
-
-Soit par le menu :
-
-image::images/menu.png[]
-
-Ce qui nous amène au formulaire de connexion : 
-
-image::images/formulaireConnexion.png[]
-
-Tous les champs doivent être remplis, un compte avec cette adresse mail doit déjà exister, et le mot de passe doit être le même que celui enregistré précédemment. Il est possible de cocher la case "Se souvenir de moi", qui permettra à l'aide d'un cookie de stocker l'adresse mail pour se reconnecter plus tard. Ensuite il faut cliquer sur "Continuer" et si jamais une erreur est faite, un message explicatif s'affichera. S'il n'y a pas d'erreur le client sera connecté et redirigé vers la
-
-==== Se déconnecter
-
-Pour se déconnecter, il faut d'abord être connecté et être sur la page de visualisation de compte, soit par l'icone en haut à gauche :
-
-image::images/iconeConnexion.png[]
-
-Soit par le menu :
-
-image::images/menu.png[]
-
-Ce qui nous amène à la page de visualisation du compte, d'où il faut cliquer sur le bouton "Déconnexion" : 
-
-image::images/boutonDeconnexion.png[]
-
-Le client est alors déconnecté et redirigé vers la page principale.
-
-==== Voir ses informations
-
-Pour voir ses informations de compte, il faut d'abord être connecté et ensuite aller sur la page de visualisation de compte, soit par l'icone en haut à gauche :
-
-image::images/iconeConnexion.png[]
-
-Soit par le menu :
-
-image::images/menu.png[]
-
-Ce qui nous amène à la page de visualisation du compte : 
-
-image::images/compte.png[]
-
-Le client peut alors visualiser ses informations.
-
-==== Modifier ses informations
-
-Pour modifier ses informations de compte, il faut d'abord être connecté et être sur la page de visualisation de compte, soit par l'icone en haut à gauche :
-
-image::images/iconeConnexion.png[]
-
-Soit par le menu :
-
-image::images/menu.png[]
-
-Ce qui nous amène à la page de visualisation du compte, d'où il faut cliquer sur "Modifier mes informations" : 
-
-image::images/boutonModifInfos.png[]
-
-On arrive alors sur un formulaire dont les champs sont préremplis : 
-
-image::images/modificationCompte.png[]
-
-Il suffit de modifier les informations voulues, attention si l'adresse mail est modifié il se peut qu'un autre compte utilise déjà cette adresse mail, et les champs doivent être valides, l'adresse n'est pas obligatoire. Ensuite il faut cliquer sur "Continuer" et si jamais une erreur est faite, un message explicatif s'affichera. S'il n'y a pas d'erreur les informations seront mises à jour et le client sera redirigé vers la page de visualisation de son compte.
-
-==== Modifier son mot de passe
-
-Pour modifier son mot de passe, il faut d'abord être connecté et être sur la page de visualisation de compte, soit par l'icone en haut à gauche :
-
-image::images/iconeConnexion.png[]
-
-Soit par le menu :
-
-image::images/menu.png[]
-
-Ce qui nous amène à la page de visualisation du compte, d'où il faut cliquer sur "Modifier mon mot de passe" : 
-
-image::images/boutonModifMdp.png[]
-
-On arrive alors sur un formulaire pour faire la modification : 
-
-image::images/modificationMdp.png[]
-
-Il faut saisir l'ancien mot de passe, le nouveau et sa vérification, attention le mot de passe doit respecter les normes RGPD (https://www.donneespersonnelles.fr/generateur-de-mot-de-passe[générateur]). Ensuite il faut cliquer sur "Modifier" et si jamais une erreur est faite, un message explicatif s'affichera. S'il n'y a pas d'erreur les informations seront mises à jour et le client sera redirigé vers la page de visualisation de son compte.
-
-==== Supprimer son compte
-
-Pour supprimer son compte, il faut d'abord être connecté et être sur la page de visualisation de compte, soit par l'icone en haut à gauche :
-
-image::images/iconeConnexion.png[]
-
-Soit par le menu :
-
-image::images/menu.png[]
-
-Ce qui nous amène à la page de visualisation du compte, d'où il faut cliquer sur "Supprimer mon compte" : 
-
-image::images/boutonSupprimerCompte.png[]
-
-Un pop-up s'affichera : 
-
-image::images/popupConfirmation.png[]
-
-En cliquant sur "Annuler", alors la suppression ne sera pas faite, en revanche en cliquant sur "Ok", le compte et les données liées seront supprimées, le client sera déconnecté puis redirigé vers la page principale avec une popup informative :
-
-image::images/popupInformation.png[]
-
-
-==== Mettre un article au panier
-
-Pour mettre un article au panier, il faut d'abord avoir fait une recherche de produits, puis avoir cliqué sur le lien "Voir plus" du produit voulu. Ensuite dans la partie droite de la page, il faut sélectionner la quantité et la couleur voulue, puis cliquer sur le bouton "Ajouter au panier"; 
-
-image::images/boutonAjoutPanier.png[]
-
-Ensuite pour visualiser le panier, il faut cliquer sur l'icone de panier en haut à droite de le page : 
-
-image::images/boutonPanier.png[]
-
-Puis le panier s'affiche : 
-
-image::images/panier.png[]
-
-
-==== Modifier la quantité d'un article du panier
-
-Il faut d'abord aller sur le panier en cliquant sur l'icone de panier : 
-
-image::images/boutonPanier.png[]
-
-Ensuite il faut sélectionner la quantité voulue sur un article et cliquer sur "Modifier" pour enregistrer les modifications : 
-
-image::images/boutonModifQte.png[]
-
-Si jamais il n'y a pas assez de stock il ne sera pas possible de modifier la quantité voulue :
-
-image::images/rupture.png[]
-
-
-==== Supprimer un article du panier
-
-Il faut d'abord aller sur le panier en cliquant sur l'icone de panier : 
-
-image::images/boutonPanier.png[]
-
-Ensuite il faut cliquer sur l'icone poubelle afin de supprimer l'article de votre panier : 
-
-image::images/boutonSupprimerPanier.png[]
-
-
-==== Entrer l'adresse de livraison
-
-Il faut d'abord aller sur le panier et cliquer sur le bouton "Passer commande" : 
-
-image::images/lienCommander.png[]
-
-Ensuite il faudra rentrer l'adresse de livraison dans un formulaire, puis cliquer sur "Continuer" :
-
-image::images/adresse.png[]
-
-
-==== Payer la commande
-
-Il faut d'abord avoir entré son adresse et cliqué sur "Continuer" : 
-
-image::images/adresse.png[]
-
-Ensuite, il faut cliquer sur le bouton "Payer"
-
-image::images/paiement.png[]
-
-Si la commande s'est enregistrée avec succès, alors une alerte le confirme : 
-
-image::images/popupCommande.png[]
-
-
-=== d) Administrateur
-
-==== Ajouter un nouveau produit
-
-Pour ajouter un nouveau produit, il faut d'abord être connecté et ensuite aller sur la page de visualisation de compte, soit par l'icone en haut à gauche :
-
-image::images/iconeConnexion.png[]
-
-Soit par le menu :
-
-image::images/menu.png[]
-
-Puis il faut cliquer sur le bouton "Ajouter un produit" : 
-
-image::images/boutonAjoutProduit.png[]
-
-Ensuite un formulaire doit être entièrement remplis avec les informations d'un produit, ainsi que son stock. Il faut cocher sur les couleurs disponibles pour l'article puis ensuite ajouter la quantité en stock. :
-
-image::images/ajoutStock.png[]
-
-Une fois que tout est bien remplis, il faut cliquer sur le bouton "Ajouter", puis une alerte confirmera l'ajout du produit : 
-
-image::images/popupAjoutProduit.png[]
-
-
-==== Modifier un produit
-
-Pour modifier un produit existant , il faut d'abord aller sur la page du produit à modifier, puis cliquer sur le bouton "Modifier le produit" :
-
-image::images/boutonModifProduit.png[]
-
-Ensuite un formulaire pré-remplis s'affiche et chaque information est modifiable : 
-
-image::images/modifProduit.png[]
-
-En cliquant sur "Modifier", cela valide les changements.
-
-
-==== Supprimer un produit
-
-Pour supprimer un produit existant , il faut d'abord aller sur la page du produit à supprimer, puis cliquer sur le bouton "Supprimer le produit" :
-
-image::images/boutonSupprimerProduit.png[]
-
-Ensuite une alerte demande à l'utilisateur la confirmation de la suppression : 
-
-image::images/popupSupprimerProduit.png[]
-
-En cliquant sur "OK", cela confirme la suppression et une alerte précise si la transaction a bien été enregistrée : 
-
-image::images/popupSuppressionFaite.png[]
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/boutonDeconnexion.PNG[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/boutonDeconnexion.PNG"] 
