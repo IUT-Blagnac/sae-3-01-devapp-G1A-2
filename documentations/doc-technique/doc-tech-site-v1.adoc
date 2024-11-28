@@ -4,7 +4,7 @@
 
 Version du site : 1 +
 Date : 27/11/2024 +
-Groupe : G1A2
+Groupe : G1A2 +
 Client : Style & Semelle +
 Projet : Site d'e-commerce 
 
