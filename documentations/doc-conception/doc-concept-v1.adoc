@@ -1,12 +1,12 @@
-= Mon Projet GitHub
-Auteur: MonNom
-:doctype: book
-:icons: font
-:source-highlighter: highlightjs
-:toc: left
-:toc-title: Table des Matières
-:sectnums:
-:imagesdir: ./images
+= Document de conception
+:toc:
+:toc-title: Sommaire
+
+Date : 19/11/2024 +
+
+Equipe : 1A-2 +
+
+Client : Style & Semelle +
 
 == Diagrammes
 
