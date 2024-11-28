@@ -1,65 +1,73 @@
-= Documentation Technique IoT
-:doctype: book
-:toc: left
-:toclevels: 3
-:sectnums:
-
-== Page de garde
-*Nom de l'application :* {nom_de_l_application}
-*Version :* {version}
-*Auteur(s) :* {nom_des_auteurs}
-*Date :* {date}
-
-== Sommaire
+= Documentation technique site web
 :toc:
+:toc-title: Sommaire
 
-== Présentation rapide de l’application
-- **Description générale :** {description_generale}
-- **Use Case global :**
-  * Types d’utilisateurs : {types_d_utilisateurs}
-  * Spécificités : {specificites}
+Version du site : 1 +
+Date : 27/11/2024 +
+Groupe : G1A2 +
+Client : Style & Semelle +
+Projet : Site d'e-commerce 
 
-== Architecture
+<<<
 
-=== Architecture générale
-- Sous-systèmes :
-  * {description_sous_systeme_1}
-  * {description_sous_systeme_2}
-- Rôles des éléments :
-  * Fichier de données : {role_fichier_donnees}
-  * Fichier de configuration : {role_fichier_configuration}
-  * Parties de l'application : {description_parties_application}
+== 1. Description du Projet
+=== a) Équipe
 
-=== Ressources externes utilisées
-- **APIs :**
-  * {nom_api_1} : {lien_api_1} ({lien_documentation_api_1})
-  * {nom_api_2} : {lien_api_2} ({lien_documentation_api_2})
-- **Autres ressources :** {description_ressources}
+Product Owner : Melvin Bouyssou +
+Scrum Master : Nicolas +
+Développeurs : Luca Gaches et Robin Gourgues +
 
-=== Structuration en packages
-- **Structure des packages :**
-  * {nom_package_1} : {description_package_1}
-  * {nom_package_2} : {description_package_2}
-- **Principes de structuration :** {principes_structuration}
-- **Patterns utilisés :** {description_patterns}
+=== b) Contexte du projet
 
-=== Éléments essentiels à connaître
-- Description des spécificités techniques :
-  * Threads utilisés : {description_threads}
-  * Structure récurrente des classes : {description_structure}
-- Diagramme de séquence :
-  image::diagramme_sequence.png[Diagramme de séquence, width=600]
+Style & Semelle est une entreprise spécialisée dans la vente de chaussures et d’accessoires de mode. Pour garantir une gestion optimale de ses entrepôts, l’entreprise souhaite exploiter les données provenant de capteurs installés sur ses sites de stockage. +
+Ces capteurs mesurent plusieurs paramètres environnementaux critiques, tels que : +
 
-== Fonctionnalités développées
+- Température : pour éviter les dégradations liées à la chaleur ou au froid.
+- Humidité : pour préserver les matériaux sensibles comme le cuir.
+- Lumière : pour protéger les produits contre une exposition prolongée.
+- Concentration de poussières : pour assurer une conservation optimale.
+Par ailleurs, des capteurs de mouvement et de présence sont utilisés pour des raisons de sécurité, mais leurs données ne sont actuellement pas exploitées. Les capteurs envoient toutes les 15 minutes leurs informations à un serveur central. +
+Cependant, aucune infrastructure n’est en place pour centraliser, analyser et utiliser ces données de manière cohérente et automatisée. Style & Semelle souhaite développer une solution technique pour répondre à ce besoin.
 
-=== Fonctionnalité 1 : {nom_fonctionnalite_1}
-- **Description :** {description_fonctionnalite_1}
-- **Classes impliquées :** {classes_impliquees_fonctionnalite_1}
-- **Spécificités techniques :**
-  * {description_specifications_fonctionnalite_1}
-- Diagramme de séquence (si applicable) :
-  image::diagramme_sequence_fonctionnalite_1.png[Diagramme de séquence, width=600]
-- Extraits de code significatifs :
-  ```java
-  // Exemple de code pour {fonctionnalite_1}
-  {code_exemple}
+=== c) Objectifs du projet
+
+L’objectif est de développer une application modulaire en Java et Python pour exploiter les données des capteurs des entrepôts de Style & Semelle. Elle permettra de :
+
+- Configurer les données à surveiller via une interface graphique en Java.
+- Collecter les données depuis le serveur des capteurs grâce à un module Python, et les enregistrer dans un fichier.
+- Afficher les données de manière claire et lisible via l’IHM Java.
+- Cette solution vise à optimiser la gestion des entrepôts et renforcer leur sécurité en exploitant les données environnementales et de présence.
+
+== 2. Architecture
+
+=== a) Architecture Générale
+
+L’application est installée sur la machine du responsable des entrepôts et comporte deux modules : +
+
+- Affichage des données : Développé en Java 1.8 avec JavaFX pour l’IHM et org.json pour gérer les fichiers JSON de configuration.
+- Récupération des données : Implémenté en Python 3.6+ utilisant le module paho-mqtt pour communiquer avec les capteurs via le protocole MQTT.
+- Les modules échangent des informations via des fichiers JSON, assurant une communication fluide entre la configuration, la collecte et l’affichage des données. + 
+
+=== b) Diagramme de l'architecture
+
+Voici le diagramme correspondant à l'architecture de l'application :
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/architecture.png[width=800, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/architecture.png"]
+
+L'interface Java permet de paramétrer le fichier de configuration, qui sera lu par l'application Python pour récupérer les données des capteurs. Ensuite ces données sont écrites dans des fichiers qui seront lus par Java pour afficher les données.
+
+=== c) Ressources externes
+
+Pour en savoir plus pour connaître les différentes fonctionnalités du point de vue de l'utilisateur. + 
+Cliquer sur ce lien vers la doc utilisateur : https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/doc-utilisateur/doc-utilisateur-iot.adoc +
+
+=== d) Structuration du code source
+
+La structuration des packages suit le model MVC : un package view contient les vues et les controleurs correspondants. Le package model contient ce qui est lié aux données (écriture et lecture des fichiers). Et la classe principale qui lance l'application est à l'extérieur de ces packages.
+
+Arborescence des fichiers :
+
+=== e) Diagramme de classe de l’application Java
+
+== 3. Fonctionnalités
+
