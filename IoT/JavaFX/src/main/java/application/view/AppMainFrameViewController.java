@@ -327,7 +327,7 @@ public class AppMainFrameViewController {
     }
 
     @FXML
-    private void dechargeConfig() {
+    private void dochargeConfig() {
         ObjectMapper mapper = new ObjectMapper();
         Config config = new Config();
         config.setServer(tfServer.getText());
@@ -353,6 +353,9 @@ public class AppMainFrameViewController {
             System.out.println("Erreur lors de l'écriture dans le fichier de configuration");
             e.printStackTrace();
         }
+
+        // lancement de la fenêtre AM107 (provisoirement ici mais peut-être bougé)
+        this.dbmfDialogController.am107Display();
     }
 
     @FXML

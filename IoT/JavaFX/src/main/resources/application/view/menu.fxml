@@ -39,7 +39,7 @@
                               <Insets top="10.0" />
                            </padding>
                         </Label>
-                        <TextField fx:id="tfServer" editable="false" text="texte à chopper dans le config" />
+                        <TextField fx:id="tfServer" editable="false" prefHeight="26.0" prefWidth="177.0" text="texte à chopper dans le config" />
                      </children>
                      <VBox.margin>
                         <Insets top="10.0" />
@@ -223,7 +223,7 @@
                            </GridPane.margin></TextField>
                      </children>
                   </GridPane>
-                  <Button mnemonicParsing="false" onAction="#dechargeConfig" text="Valider la configuration">
+                  <Button mnemonicParsing="false" onAction="#dochargeConfig" text="Valider la configuration et lancer">
                      <VBox.margin>
                         <Insets top="10.0" />
                      </VBox.margin>

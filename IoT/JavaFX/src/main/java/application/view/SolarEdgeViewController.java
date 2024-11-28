@@ -193,7 +193,7 @@ public class SolarEdgeViewController {
     private void doQuit() {
 
         if (AlertUtilities.confirmYesCancel(this.containingStage, "Quitter l'application",
-                "Etes vous sur de vouloir quitter l'appli ?", null, AlertType.CONFIRMATION)) {
+                "Etes vous sur de vouloir quitter la fenêtre ?", null, AlertType.CONFIRMATION)) {
             this.sEdgeBorderPane.doStopSolarEdge();
             this.containingStage.close();
         }

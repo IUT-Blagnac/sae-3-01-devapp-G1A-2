@@ -64,4 +64,8 @@ public class AppMainFrame extends Application {
         sd.doSolarEdge();
     }
 
+    public void am107Display() {
+        Am107BorderPane am = new Am107BorderPane(this.dbmfStage);
+        am.doAm107();
+    }
 }
