@@ -4,6 +4,7 @@
 
 Version du site : 1 +
 Date : 27/11/2024 +
+Groupe : G1A2 +
 Client : Style & Semelle +
 Projet : Site d'e-commerce 
 
@@ -48,9 +49,58 @@ Arborescence des fichiers :
 
 Voici le diagramme de classe structurant la base de données :
 
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/diagramme-classes.png[width=800, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/diagramme-classes.png"]
+
+
 
 == 3. Fonctionnalités
 
-=== a) Sprint 1 (sem 47-48)
+=== a) Les Use Case 
+
+* Client/Visiteur +
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/diagrammes/use_case/UC%20Client_Visiteur.png[width=800, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/diagrammes/use_case/UC%20Client_Visiteur.png"]
+
+* Administrateur +
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/diagrammes/use_case/UC_Admin.png[width=800, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/diagrammes/use_case/UC_Admin.png"]
+
+=== b) Sprint 1 (sem 47-48)
+
+==== Connexion et déconnexion
+
+User Story : 
+
+En tant qu'utilisateur du site web, je veux pouvoir me connecter à mon compte et rester connecter X temps et me déconnecter afin de facilité et sécuriser l'accès à mon compte.
+
+Pages web concernées : +
+
+* header.php
+* login.php
+* deconnexion.php
+* traitementLogin.php
+
+==== Création compte client
+
+User Story : 
+
+En tant qu'utilisateur, je dois pouvoir me créer un compte client afin de m'y connecter, sauvegarder mon panier ou valide ma commande.
+
+Pages web concernées : +
+
+* login.php
+* inscription.php
+* traitInscription.php
+
+==== Visualiser la liste des produits (ceux à la une)
+
+User Story : 
+
+En tant que client, je veux pouvoir avoir la liste des produits disponible à la une afin de pouvoir visualiser les choix possibles et les ajouter au panier.
+
+Pages web concernées : +
+
+* ...
+
 
 
