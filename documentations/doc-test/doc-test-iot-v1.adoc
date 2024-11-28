@@ -104,12 +104,27 @@ Le système doit :
 
 [cols="1,1,1,1", options="header"]
 |===
-| Test(s) | Préconditions | Conditions nécessaires | Résultats attendus
+| Test(s) | Préconditions | Conditions nécessaires | Résultat(s)
 
-| A FAIRE
-| A FAIRE
-| A FAIRE
-| A FAIRE
+| Lecture du fichier de configuration (config.json)
+| Le fichier doit être bien configuré et avec le droit de lecture.
+| Lecture et récupération des données en bas niveau dans une variable.
+| Test réussi
+
+| Connexion au MQTT
+| Avoir les droits pour se connecter au serveur avec le fichier de configuration.
+| Connexion au serveur et aux capteurs, solarEdge qui sont demandés dans config.json.
+| Test réussi
+
+| Récupération des données
+| Être connecter sur le MQTT avec la bonne configuration.
+| Les données cibles sont bien récupérées et exploitables.
+| Test réussi
+
+| Écriture des données
+| Récupérer les données souhaitées et avoir les droits d'écriture dans le répertoire.
+| Les données récupérées et écrites dans leurs fichiers qui leur sont dédiées.
+| Test réussi
 
 |===
 

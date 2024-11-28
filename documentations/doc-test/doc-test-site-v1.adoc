@@ -70,13 +70,27 @@ Le projet vise à développer un site e-commerce pour la vente de chaussures, ax
 
 [cols="1,1,1,1", options="header"]
 |===
-| Test(s) | Préconditions | Conditions nécessaires | Résultats attendus
+| Test(s) | Préconditions | Conditions nécessaires | Résultat(s)
 
-| A FAIRE
-| A FAIRE
-| A FAIRE
-| A FAIRE
+| Création d'un compte client
+| Ne pas être déjà connecté et être sur la page de création de compte
+| Affiche un formulaire de création. Affiche les erreurs comme : le nom, prénom, numéro de téléphone vide ou mail invalide. Insert le nouvel utilisateur dans la base de données.
+| Test réussi
 
+| Connexion d'un compte client
+| Ne pas être déjà connecté et être sur la page de connexion
+| Affiche un formulaire de connexion. Affiche les erreurs de connexion comme : compte inexistant, mauvais mot de passe. Possibilité de se connecter à un compte client et administrateur. Redirection vers l'index/la page d'accueil.
+| Test réussi
+
+| Déconnexion d'un compte client
+| Être connecté et cliquer sur le bouton de déconnexion
+| La session est détruite et l'utilisateur est redirigé vers l'index.
+| Test réussi
+
+| Visualiser la liste des produits (à la une)
+| Être sur la page d'accueil
+| A FAIRE
+| A FAIRE
 |===
 
 <<<
