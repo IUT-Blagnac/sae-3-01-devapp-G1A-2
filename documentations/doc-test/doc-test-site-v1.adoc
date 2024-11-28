@@ -10,7 +10,7 @@ Equipe : 1A-2 +
 
 Client : Style & Semelle +
 
-Projet : Gestion entrepôt +
+Projet : Projet d'e-commerce +
 
 <<<
 
