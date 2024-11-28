@@ -1,1 +1,1 @@
-{"topic":["solaredge/blagnac/#","AM107/by-room/#"],"server":"tcp://mqtt.iut-blagnac.fr:1883","salle":["all","E210","Foyer-etudiants-entrée","C102"],"data":{"activity":30.0,"co2":0.0,"temperature":10.0},"frequence":20}
+{"topic":["solaredge/blagnac/#","AM107/by-room/#"],"server":"tcp://mqtt.iut-blagnac.fr:1883","salle":["all"],"data":{"activity":30.0,"illumination":0.0,"co2":0.0,"pression":0.0},"frequence":20}

@@ -260,7 +260,7 @@
                   <Insets right="10.0" />
                </HBox.margin>
             </Text>
-            <TextField fx:id="frequencTextField" prefHeight="26.0" prefWidth="91.0" />
+            <TextField fx:id="frequenceTextField" prefHeight="26.0" prefWidth="91.0" />
          </children>
       </HBox>
    </children>

@@ -106,9 +106,9 @@ public class AppMainFrameViewController {
     private TextField tfServer;
 
     @FXML
-    private TextField frequencTextField;
+    private TextField frequenceTextField;
 
-    @FXML 
+    @FXML
     private Menu choixSalles;
     @FXML
     private CheckBox temperature;
@@ -143,10 +143,8 @@ public class AppMainFrameViewController {
     private FloatProperty seuilIll = new SimpleFloatProperty();
     private FloatProperty seuilPres = new SimpleFloatProperty();
 
-
     // Actions
 
-    @FXML
     public void initialize() {
         System.out.println("Controlleur chargé avec succès");
         initializeConfig();
@@ -169,7 +167,7 @@ public class AppMainFrameViewController {
             public String toString(Number value) {
                 return value == null ? "" : value.toString();
             }
-    
+
             @Override
             public Float fromString(String value) {
                 try {
@@ -199,7 +197,7 @@ public class AppMainFrameViewController {
         seuilPresField.setDisable(!pression.isSelected());
     }
 
-    private void loadCheckBoxFromData(){
+    private void loadCheckBoxFromData() {
         temperature.setSelected(data.containsKey("temperature"));
         humidity.setSelected(data.containsKey("humidity"));
         activity.setSelected(data.containsKey("activity"));
@@ -214,31 +212,31 @@ public class AppMainFrameViewController {
         } else {
             this.data.remove("temperature");
         }
-    
+
         if (humidity.isSelected()) {
             this.data.put("humidity", seuilHum.getValue());
         } else {
             this.data.remove("humidity");
         }
-    
+
         if (activity.isSelected()) {
             this.data.put("activity", seuilAct.getValue());
         } else {
             this.data.remove("activity");
         }
-    
+
         if (co2.isSelected()) {
             this.data.put("co2", seuilCo2.getValue());
         } else {
             this.data.remove("co2");
         }
-    
+
         if (illumination.isSelected()) {
             this.data.put("illumination", seuilIll.getValue());
         } else {
             this.data.remove("illumination");
         }
-    
+
         if (pression.isSelected()) {
             this.data.put("pression", seuilPres.getValue());
         } else {
@@ -275,8 +273,7 @@ public class AppMainFrameViewController {
                         if (checkMenuItem.isSelected()) {
                             this.salle.add(checkMenuItem.getText());
                             System.out.println("Salle ajoutée : " + checkMenuItem.getText());
-                        }
-                        else {
+                        } else {
                             this.salle.remove(checkMenuItem.getText());
                             System.out.println("Salle retirée : " + checkMenuItem.getText());
                         }
@@ -295,12 +292,11 @@ public class AppMainFrameViewController {
             this.salle = new HashSet<String>();
             this.data = new HashMap<String, Float>();
 
-
             // Créer un objet semblable au config.json
             mapper = new ObjectMapper();
             System.out.println("Répertoire courant : " + new File(".").getAbsolutePath());
             config = mapper.readValue(new File("../config.json"), Config.class);
-    
+
             // Récupération des attributs de config.json vers les attributs de la classe
             this.server = config.getServer();
             this.topic = config.getTopic();
@@ -310,7 +306,7 @@ public class AppMainFrameViewController {
             loadCheckBoxFromData();
             disableFieldsIfUnchecked();
             this.frequence = config.getFrequence();
-            this.frequencTextField.setText(String.valueOf(frequence));
+            this.frequenceTextField.setText(String.valueOf(frequence));
 
             this.tfServer.setText(server);
             this.tfServer.setPromptText("Adresse du serveur MQTT");
@@ -323,7 +319,7 @@ public class AppMainFrameViewController {
             seuilCo2.set(config.getData().getOrDefault("co2", 0.0f));
             seuilIll.set(config.getData().getOrDefault("illumination", 0.0f));
             seuilPres.set(config.getData().getOrDefault("pression", 0.0f));
-    
+
             System.out.println("Configuration chargée");
         } catch (IOException e) {
             e.printStackTrace();
@@ -346,7 +342,8 @@ public class AppMainFrameViewController {
 
         config.setTopic(topic);
 
-        frequence = Integer.parseInt(frequencTextField.getText());
+        frequence = Integer.parseInt(frequenceTextField.getText());
+        System.out.println("La frequence est : " + frequence);
         config.setFrequence(frequence);
         try {
             mapper.writeValue(new File("../config.json"), config);
@@ -379,42 +376,42 @@ public class AppMainFrameViewController {
         String broker = tfServer.getText();
         String clientId = UUID.randomUUID().toString();
         System.out.println("Tentative de connexion au broker MQTT : " + broker + " avec l'ID client : " + clientId);
-    
+
         try {
             // Création du client MQTT
             MqttClient client = new MqttClient(broker, clientId);
-            
+
             // Configuration de la callback pour traiter les événements MQTT
             client.setCallback(new MqttCallback() {
                 @Override
                 public void connectionLost(Throwable cause) {
                     testResuLabel.setText("Connexion perdue !");
                 }
-    
+
                 @Override
                 public void messageArrived(String topic, MqttMessage message) throws Exception {
                     testResuLabel.setText("Succès : Message reçu : " + new String(message.getPayload()));
                 }
-    
+
                 @Override
                 public void deliveryComplete(IMqttDeliveryToken token) {
                     System.out.println("Message envoyé... (Pas utile dans l'interface)");
                 }
             });
-    
+
             // Connexion au broker
             client.connect();
             System.out.println("Connexion au broker réussie !");
-            
+
             // Souscription à un topic
             String topic = "#";
             int qos = 1; // Qualité de service
             client.subscribe(topic, qos);
             System.out.println("Souscription au topic : " + topic);
-    
+
             // Affiche un résultat dans l'interface
             testResuLabel.setText("Connexion et souscription réussies.");
-    
+
             // Ferme le client après 5 secondes
             new Thread(() -> {
                 try {
@@ -429,15 +426,13 @@ public class AppMainFrameViewController {
                     System.err.println("Erreur lors de la fermeture du client MQTT : " + e.getMessage());
                 }
             }).start();
-    
+
         } catch (Exception e) {
             e.printStackTrace();
             System.err.println("Erreur lors de la connexion MQTT : " + e.getMessage());
             testResuLabel.setText("Erreur : " + e.getMessage());
         }
     }
-    
-
 
     /*
      * Action menu quitter. Demander une confirmation puis fermer la fenêtre (donc

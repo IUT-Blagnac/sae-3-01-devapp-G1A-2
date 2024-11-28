@@ -29,7 +29,7 @@ import javafx.scene.chart.XYChart;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class SolarEdgeViewController implements Initializable {
+public class SolarEdgeViewController {
 
     // private ArrayList<String> topic;
     // private String server;
@@ -114,8 +114,8 @@ public class SolarEdgeViewController implements Initializable {
 
     // @FXML
     // public void initialize() {
-    //     System.out.println("Controlleur chargé avec succès");
-    //     // loadConfig();
+    // System.out.println("Controlleur chargé avec succès");
+    // // loadConfig();
     // }
 
     // private void loadConfig() {
@@ -199,13 +199,12 @@ public class SolarEdgeViewController implements Initializable {
         }
     }
 
-    // @FXML
-    // private void stopThread() {
-    // this.sEdgeBorderPane.doStopSolarEdge();
-    // }
-
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
+    /**
+     * Méthode permettant de charger l'historique des données du fichier résultat
+     * python
+     * initialisation du graphique
+     */
+    public void initialize() {
         System.out.println("Controlleur chargé avec succès");
 
         // Création et ajout de données fictives au graphique
@@ -214,13 +213,15 @@ public class SolarEdgeViewController implements Initializable {
 
         try {
             ObjectMapper mapper = new ObjectMapper();
-        
+
             JsonNode root = mapper.readTree(new File("../resultat/resultatSolar.json"));
             JsonNode currentPower = root.get("currentPower");
             JsonNode lastUpdateTime = root.get("lastUpdateTime");
+            System.out.println("Taille de current power : " + currentPower.size());
+            System.out.println("Taille de last update time : " + lastUpdateTime.size());
 
             if (lastUpdateTime.size() == currentPower.size()) {
-                for (int i = 0; i<lastUpdateTime.size(); i++) {
+                for (int i = 0; i < lastUpdateTime.size(); i++) {
                     String date = lastUpdateTime.get(i).asText();
                     double energie = currentPower.get(i).asDouble();
 
@@ -231,33 +232,14 @@ public class SolarEdgeViewController implements Initializable {
                     // Ajouter les valeurs dans les données graphiques
                     serie.getData().add(new XYChart.Data<>(date, (int) energie));
                 }
-            }
-            else {
+            } else {
                 System.out.println("Les tailles des tableaux ne sont pas égales");
             }
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
         lineChart.getData().add(serie);
-
-        // // Ajout de données fictives (heures de la journée et watts)
-        // serie.getData().add(new XYChart.Data<>("00:00", 50));
-        // serie.getData().add(new XYChart.Data<>("02:00", 75));
-        // serie.getData().add(new XYChart.Data<>("04:00", 60));
-        // serie.getData().add(new XYChart.Data<>("06:00", 90));
-        // serie.getData().add(new XYChart.Data<>("08:00", 120));
-        // serie.getData().add(new XYChart.Data<>("10:00", 200));
-        // serie.getData().add(new XYChart.Data<>("12:00", 300));
-        // serie.getData().add(new XYChart.Data<>("14:00", 250));
-        // serie.getData().add(new XYChart.Data<>("16:00", 400));
-        // serie.getData().add(new XYChart.Data<>("18:00", 350));
-        // serie.getData().add(new XYChart.Data<>("20:00", 220));
-        // serie.getData().add(new XYChart.Data<>("22:00", 150));
-
-        // // Ajouter la série au graphique
-        // lineChart.getData().add(serie);
     }
 
 }
