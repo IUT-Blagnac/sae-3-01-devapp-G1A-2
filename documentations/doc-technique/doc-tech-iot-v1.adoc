@@ -1,4 +1,4 @@
-= Documentation technique site web
+= Documentation technique IoT
 :toc:
 :toc-title: Sommaire
 
