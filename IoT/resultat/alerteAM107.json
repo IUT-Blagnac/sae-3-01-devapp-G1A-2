@@ -119,5 +119,121 @@
         "illumination": [
             16
         ]
+    },
+    "E006": {
+        "temperature": [
+            21.9
+        ],
+        "timestamp": [
+            "2024-11-27 16:43:52"
+        ],
+        "humidity": [
+            54
+        ],
+        "co2": [
+            1372
+        ],
+        "illumination": [
+            88
+        ]
+    },
+    "B113": {
+        "temperature": [
+            19.9
+        ],
+        "timestamp": [
+            "2024-11-27 16:43:53"
+        ],
+        "humidity": [
+            62
+        ],
+        "co2": [
+            1825
+        ],
+        "illumination": [
+            7
+        ]
+    },
+    "E209": {
+        "temperature": [
+            22.2
+        ],
+        "timestamp": [
+            "2024-11-27 16:44:22"
+        ],
+        "humidity": [
+            50
+        ],
+        "co2": [
+            1008
+        ],
+        "illumination": [
+            56
+        ]
+    },
+    "E003": {
+        "temperature": [
+            22.6
+        ],
+        "timestamp": [
+            "2024-11-27 16:44:57"
+        ],
+        "humidity": [
+            46
+        ],
+        "co2": [
+            513
+        ],
+        "illumination": [
+            109
+        ]
+    },
+    "B112": {
+        "temperature": [
+            23.2
+        ],
+        "timestamp": [
+            "2024-11-27 16:45:45"
+        ],
+        "humidity": [
+            57
+        ],
+        "co2": [
+            2241
+        ],
+        "illumination": [
+            53
+        ]
+    },
+    "C002": {
+        "temperature": [
+            20.4
+        ],
+        "timestamp": [
+            "2024-11-27 16:45:52"
+        ],
+        "humidity": [
+            49
+        ],
+        "co2": [
+            619
+        ]
+    },
+    "B217": {
+        "temperature": [
+            22.6
+        ],
+        "timestamp": [
+            "2024-11-27 16:45:53"
+        ],
+        "humidity": [
+            52.5
+        ],
+        "co2": [
+            1379
+        ],
+        "illumination": [
+            3
+        ]
     }
 }

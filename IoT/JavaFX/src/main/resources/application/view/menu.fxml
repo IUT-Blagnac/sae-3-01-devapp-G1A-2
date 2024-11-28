@@ -17,7 +17,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox prefHeight="496.0" prefWidth="789.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.AppMainFrameViewController">
+<VBox onMouseClicked="#afficheAttributs" prefHeight="496.0" prefWidth="789.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.AppMainFrameViewController">
    <children>
       <MenuBar VBox.vgrow="NEVER">
          <menus>
@@ -45,11 +45,15 @@
                         <Insets top="10.0" />
                      </VBox.margin>
                   </HBox>
-                  <Button fx:id="buttonTestConnection" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="Tester la connexion">
+                  <HBox alignment="CENTER">
                      <VBox.margin>
                         <Insets top="10.0" />
                      </VBox.margin>
-                  </Button>
+                     <children>
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#testConnection" text="Tester la connexion" />
+                        <Label fx:id="testResuLabel" />
+                     </children>
+                  </HBox>
                </children>
             </VBox>
          </children>
@@ -70,32 +74,71 @@
                   </HBox>
                   <MenuBar>
                      <menus>
-                        <Menu mnemonicParsing="false" text="Salles par Bâtiment">
+                        <Menu fx:id="choixSalles" mnemonicParsing="false" text="Salles par Bâtiment">
                            <items>
-                              <Menu mnemonicParsing="false" text="Bâtiment A">
-                                 <items>
-                                    <CheckMenuItem mnemonicParsing="false" text="A101" />
-                                    <CheckMenuItem mnemonicParsing="false" text="A102" />
-                                    <CheckMenuItem mnemonicParsing="false" text="A103" />
-                                 </items>
-                              </Menu>
                               <Menu mnemonicParsing="false" text="Bâtiment B">
-                                 <items>
-                                    <CheckMenuItem mnemonicParsing="false" text="B201" />
+                                  <items>
+                                    <CheckMenuItem mnemonicParsing="false" text="B108" />
+                                    <CheckMenuItem mnemonicParsing="false" text="B203" />
+                                    <CheckMenuItem mnemonicParsing="false" text="B103" />
+                                    <CheckMenuItem mnemonicParsing="false" text="B110" />
+                                    <CheckMenuItem mnemonicParsing="false" text="B106" />
+                                    <CheckMenuItem mnemonicParsing="false" text="B001" />
                                     <CheckMenuItem mnemonicParsing="false" text="B202" />
-                                 </items>
+                                    <CheckMenuItem mnemonicParsing="false" text="B201" />
+                                    <CheckMenuItem mnemonicParsing="false" text="B109" />
+                                    <CheckMenuItem mnemonicParsing="false" text="B002" />
+                                    <CheckMenuItem mnemonicParsing="false" text="B111" />
+                                    <CheckMenuItem mnemonicParsing="false" text="B105" />
+                                    <CheckMenuItem mnemonicParsing="false" text="B234" />
+                                    <CheckMenuItem mnemonicParsing="false" text="B113" />
+                                    <CheckMenuItem mnemonicParsing="false" text="B112" />
+                                    <CheckMenuItem mnemonicParsing="false" text="B217" />
+                                  </items>
                               </Menu>
                               <Menu mnemonicParsing="false" text="Bâtiment C">
-                                 <items>
-                                    <CheckMenuItem mnemonicParsing="false" text="C301" />
-                                    <CheckMenuItem mnemonicParsing="false" text="C302" />
-                                 </items>
+                                  <items>
+                                    <CheckMenuItem mnemonicParsing="false" text="C102" />
+                                    <CheckMenuItem mnemonicParsing="false" text="C006" />
+                                    <CheckMenuItem mnemonicParsing="false" text="C004" />
+                                    <CheckMenuItem mnemonicParsing="false" text="C001" />
+                                    <CheckMenuItem mnemonicParsing="false" text="C002" />
+                                  </items>
                               </Menu>
-                              <Menu mnemonicParsing="false" text="Autre">
-                                 <items>
-                                    <CheckMenuItem mnemonicParsing="false" text="Local-Vélo" />
-                                 </items>
+                              <Menu mnemonicParsing="false" text="Bâtiment E">
+                                  <items>
+                                    <CheckMenuItem mnemonicParsing="false" text="E007" />
+                                    <CheckMenuItem mnemonicParsing="false" text="E208" />
+                                    <CheckMenuItem mnemonicParsing="false" text="E210" />
+                                    <CheckMenuItem mnemonicParsing="false" text="E207" />
+                                    <CheckMenuItem mnemonicParsing="false" text="E101" />
+                                    <CheckMenuItem mnemonicParsing="false" text="E100" />
+                                    <CheckMenuItem mnemonicParsing="false" text="E102" />
+                                    <CheckMenuItem mnemonicParsing="false" text="E103" />
+                                    <CheckMenuItem mnemonicParsing="false" text="E106" />
+                                    <CheckMenuItem mnemonicParsing="false" text="E006" />
+                                    <CheckMenuItem mnemonicParsing="false" text="E209" />
+                                    <CheckMenuItem mnemonicParsing="false" text="E003" />
+                                    <CheckMenuItem mnemonicParsing="false" text="E001" />
+                                    <CheckMenuItem mnemonicParsing="false" text="E004" />
+                                  </items>
                               </Menu>
+                              <Menu mnemonicParsing="false" text="Autres">
+                                  <items>
+                                    <CheckMenuItem mnemonicParsing="false" text="Foyer-etudiants-entrée" />
+                                    <CheckMenuItem mnemonicParsing="false" text="Local-velo" />
+                                    <CheckMenuItem mnemonicParsing="false" text="hall-amphi" />
+                                    <CheckMenuItem mnemonicParsing="false" text="Foyer-personnels" />
+                                    <CheckMenuItem mnemonicParsing="false" text="hall-entrée-principale" />
+                                    <CheckMenuItem mnemonicParsing="false" text="Salle-conseil" />
+                                    <CheckMenuItem mnemonicParsing="false" text="amphi1" />
+                                  </items>
+                              </Menu>
+                           <Menu mnemonicParsing="false" text="Tous">
+                              <items>
+                                <CheckMenuItem mnemonicParsing="false" text="all" />
+                              </items>
+                           </Menu>
                            </items>
                         </Menu>
                      </menus>
@@ -118,74 +161,69 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <CheckBox mnemonicParsing="false" text="Température">
+                        <CheckBox fx:id="temperature" mnemonicParsing="false" text="Température">
                            <GridPane.margin>
                               <Insets left="5.0" />
                            </GridPane.margin>
                         </CheckBox>
                         <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="107.0" text="Seuil" GridPane.columnIndex="1" />
-                        <TextField GridPane.columnIndex="2">
+                        <TextField fx:id="seuilTempField" GridPane.columnIndex="2">
                            <GridPane.margin>
                               <Insets />
                            </GridPane.margin></TextField>
-                        <CheckBox mnemonicParsing="false" prefHeight="18.0" prefWidth="108.0" text="Humidité" GridPane.rowIndex="1">
+                        <CheckBox fx:id="humidity" mnemonicParsing="false" prefHeight="18.0" prefWidth="108.0" text="Humidité" GridPane.rowIndex="1">
                            <padding>
                               <Insets left="5.0" />
                            </padding>
                         </CheckBox>
                         <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="107.0" text="Seuil" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <TextField GridPane.columnIndex="2" GridPane.rowIndex="1">
+                        <TextField fx:id="seuilHumField" GridPane.columnIndex="2" GridPane.rowIndex="1">
                            <GridPane.margin>
                               <Insets />
                            </GridPane.margin></TextField>
-                        <CheckBox mnemonicParsing="false" prefHeight="18.0" prefWidth="108.0" text="Activité" GridPane.rowIndex="2">
+                        <CheckBox fx:id="activity" mnemonicParsing="false" prefHeight="18.0" prefWidth="108.0" text="Activité" GridPane.rowIndex="2">
                            <padding>
                               <Insets left="5.0" />
                            </padding>
                         </CheckBox>
                         <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="107.0" text="Seuil" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                        <TextField GridPane.columnIndex="2" GridPane.rowIndex="2">
+                        <TextField fx:id="seuilActField" GridPane.columnIndex="2" GridPane.rowIndex="2">
                            <GridPane.margin>
                               <Insets />
                            </GridPane.margin></TextField>
-                        <CheckBox mnemonicParsing="false" prefHeight="18.0" prefWidth="108.0" text="CO2" GridPane.rowIndex="3">
+                        <CheckBox fx:id="co2" mnemonicParsing="false" prefHeight="18.0" prefWidth="108.0" text="CO2" GridPane.rowIndex="3">
                            <padding>
                               <Insets left="5.0" />
                            </padding>
                         </CheckBox>
                         <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="107.0" text="Seuil" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                        <TextField GridPane.columnIndex="2" GridPane.rowIndex="3">
+                        <TextField fx:id="seuilCo2Field" GridPane.columnIndex="2" GridPane.rowIndex="3">
                            <GridPane.margin>
                               <Insets />
                            </GridPane.margin></TextField>
-                        <CheckBox mnemonicParsing="false" prefHeight="18.0" prefWidth="108.0" text="Luminosité" GridPane.rowIndex="4">
+                        <CheckBox fx:id="illumination" mnemonicParsing="false" prefHeight="18.0" prefWidth="108.0" text="Luminosité" GridPane.rowIndex="4">
                            <padding>
                               <Insets left="5.0" />
                            </padding>
                         </CheckBox>
                         <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="107.0" text="Seuil" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                        <TextField GridPane.columnIndex="2" GridPane.rowIndex="4">
+                        <TextField fx:id="seuilIllField" GridPane.columnIndex="2" GridPane.rowIndex="4">
                            <GridPane.margin>
                               <Insets />
                            </GridPane.margin></TextField>
-                        <CheckBox mnemonicParsing="false" prefHeight="18.0" prefWidth="108.0" text="Pression" GridPane.rowIndex="5">
+                        <CheckBox fx:id="pression" mnemonicParsing="false" prefHeight="18.0" prefWidth="108.0" text="Pression" GridPane.rowIndex="5">
                            <padding>
                               <Insets left="5.0" />
                            </padding>
                         </CheckBox>
                         <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="107.0" text="Seuil" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                        <TextField GridPane.columnIndex="2" GridPane.rowIndex="5">
+                        <TextField fx:id="seuilPresField" GridPane.columnIndex="2" GridPane.rowIndex="5">
                            <GridPane.margin>
                               <Insets />
                            </GridPane.margin></TextField>
                      </children>
                   </GridPane>
-                  <Button mnemonicParsing="false" text="Capturer les valeurs">
-                     <VBox.margin>
-                        <Insets top="10.0" />
-                     </VBox.margin>
-                  </Button>
-                  <Button mnemonicParsing="false" onAction="#saveConfig" text="Valider la configuration">
+                  <Button mnemonicParsing="false" onAction="#dechargeConfig" text="Valider la configuration">
                      <VBox.margin>
                         <Insets top="10.0" />
                      </VBox.margin>
@@ -217,12 +255,12 @@
       </HBox>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
          <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="fréquence (ms)" wrappingWidth="81.33666944503784">
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="fréquence (ms)" wrappingWidth="94.33666944503784">
                <HBox.margin>
                   <Insets right="10.0" />
                </HBox.margin>
             </Text>
-            <TextField fx:id="champFrequenceSaisie" prefHeight="26.0" prefWidth="91.0" />
+            <TextField fx:id="frequencTextField" prefHeight="26.0" prefWidth="91.0" />
          </children>
       </HBox>
    </children>

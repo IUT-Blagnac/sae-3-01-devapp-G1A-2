@@ -1,21 +1,21 @@
 package model;
 
-import java.util.List;
-import java.util.Map;
+import java.util.HashMap;
+import java.util.HashSet;
 
 public class Config {
-    private List<String> topic;
+    private HashSet<String> topic;
     private String server;
-    private List<String> salle;
-    private Map<String, Integer> data;
+    private HashSet<String> salle;
+    private HashMap<String, Float> data;
     private int frequence;
 
     // Getters et setters
-    public List<String> getTopic() {
+    public HashSet<String> getTopic() {
         return topic;
     }
 
-    public void setTopic(List<String> topic) {
+    public void setTopic(HashSet<String> topic) {
         this.topic = topic;
     }
 
@@ -27,19 +27,19 @@ public class Config {
         this.server = server;
     }
 
-    public List<String> getSalle() {
+    public HashSet<String> getSalle() {
         return salle;
     }
 
-    public void setSalle(List<String> salle) {
+    public void setSalle(HashSet<String> salle) {
         this.salle = salle;
     }
 
-    public Map<String, Integer> getData() {
+    public HashMap<String, Float> getData() {
         return data;
     }
 
-    public void setData(Map<String, Integer> data) {
+    public void setData(HashMap<String, Float> data) {
         this.data = data;
     }
 

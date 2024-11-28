@@ -1,1 +1,36 @@
-{}
+{
+    "C002": {
+        "temperature": [
+            20.4
+        ],
+        "humidity": [
+            49
+        ],
+        "co2": [
+            619
+        ],
+        "illumination": [
+            0
+        ],
+        "timestamp": [
+            "2024-11-27 16:45:52"
+        ]
+    },
+    "B217": {
+        "temperature": [
+            22.6
+        ],
+        "humidity": [
+            52.5
+        ],
+        "co2": [
+            1379
+        ],
+        "illumination": [
+            3
+        ],
+        "timestamp": [
+            "2024-11-27 16:45:53"
+        ]
+    }
+}
