@@ -47,7 +47,7 @@ public class SolarEdgeBorderPane {
             seViewController.initContext(this.solarStage, this);
 
             // Création du thread
-            this.r = new MyRun();
+            this.r = new MyRun(this.seViewController);
             this.t = new Thread(r);
             t.start();
 
@@ -68,18 +68,22 @@ public class SolarEdgeBorderPane {
     // TEST THREAD DE LA CLASSE
     public static class MyRun implements Runnable {
         private boolean enCours;
+        private SolarEdgeViewController seRunViewController;
 
-        public MyRun() {
+        public MyRun(SolarEdgeViewController pseRunViewController) {
             this.enCours = true;
+            this.seRunViewController = pseRunViewController;
         }
 
         @Override
         public void run() {
             while (this.enCours) {
+
                 System.out.println("On est dans le thread du solar edge");
                 try {
-
+                    this.seRunViewController.loadUpdateHistoric();
                     Thread.sleep(2000); // pause de 2 secondes à remplacer par la fréquence
+
                 } catch (InterruptedException e) {
                     System.err.println("Thread interrompu : " + e.getMessage());
                     this.enCours = false;
