@@ -79,15 +79,15 @@ public class SolarEdgeBorderPane {
         public void run() {
             while (this.enCours) {
 
-                System.out.println("On est dans le thread du solar edge");
-                try {
-                    this.seRunViewController.loadUpdateHistoric();
-                    Thread.sleep(2000); // pause de 2 secondes à remplacer par la fréquence
+                // System.out.println("On est dans le thread du solar edge");
+                // try {
+                this.seRunViewController.loadUpdateHistoric();
+                // Thread.sleep(100); // cooldown au besoin
 
-                } catch (InterruptedException e) {
-                    System.err.println("Thread interrompu : " + e.getMessage());
-                    this.enCours = false;
-                }
+                // } catch (InterruptedException e) {
+                // System.err.println("Thread interrompu : " + e.getMessage());
+                // this.enCours = false;
+                // }
             }
             // Nettoyage éventuel
             System.out.println("Le thread est arrete.");

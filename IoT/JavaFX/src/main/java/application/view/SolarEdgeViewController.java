@@ -231,34 +231,37 @@ public class SolarEdgeViewController {
             JsonNode root = mapper.readTree(new File("../resultat/resultatSolar.json"));
             JsonNode currentPower = root.get("currentPower");
             JsonNode lastUpdateTime = root.get("lastUpdateTime");
+            if (currentPower != null && lastUpdateTime != null) {
 
-            if (this.sizeTimeStamp != lastUpdateTime.size()) {
-                this.sizeTimeStamp = lastUpdateTime.size();
+                if (this.sizeTimeStamp != lastUpdateTime.size()) {
+                    this.sizeTimeStamp = lastUpdateTime.size();
 
-                XYChart.Series<String, Integer> serie = new XYChart.Series<>();
-                serie.setName("Évolution de l'énergie récupérée");
+                    XYChart.Series<String, Integer> serie = new XYChart.Series<>();
+                    serie.setName("Évolution de l'énergie récupérée");
 
-                DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm:ss"); // Format uniquement pour
-                                                                                           // heure
-                                                                                           // et minute et secondes
+                    DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm:ss"); // Format uniquement pour
+                                                                                               // heure
+                                                                                               // et minute et secondes
 
-                for (int i = 0; i < lastUpdateTime.size(); i++) {
-                    String rawDate = lastUpdateTime.get(i).asText();
-                    String formattedTime = extractTime(rawDate, timeFormatter); // Appel de la fonction pour extraire
-                                                                                // l'heure
+                    for (int i = 0; i < lastUpdateTime.size(); i++) {
+                        String rawDate = lastUpdateTime.get(i).asText();
+                        String formattedTime = extractTime(rawDate, timeFormatter); // Appel de la fonction pour
+                                                                                    // extraire
+                                                                                    // l'heure
 
-                    double energie = currentPower.get(i).asDouble();
-                    System.out.println("Heure : " + formattedTime + ", Énergie : " + energie);
+                        double energie = currentPower.get(i).asDouble();
+                        System.out.println("Heure : " + formattedTime + ", Énergie : " + energie);
 
-                    serie.getData().add(new XYChart.Data<>(formattedTime, (int) energie));
+                        serie.getData().add(new XYChart.Data<>(formattedTime, (int) energie));
+                    }
+
+                    Platform.runLater(() -> {
+                        lineChart.getData().clear(); // Efface les anciennes données
+                        xAxis.getCategories().clear(); // Nettoie les anciennes catégories
+                        lineChart.getData().add(serie); // Ajoute la nouvelle série
+                        xAxis.setLabel("Heure (h:m:s)"); // Définit le label de l'axe X
+                    });
                 }
-
-                Platform.runLater(() -> {
-                    lineChart.getData().clear(); // Efface les anciennes données
-                    xAxis.getCategories().clear(); // Nettoie les anciennes catégories
-                    lineChart.getData().add(serie); // Ajoute la nouvelle série
-                    xAxis.setLabel("Heure (h:m:s)"); // Définit le label de l'axe X
-                });
             }
         } catch (Exception e) {
             e.printStackTrace();
