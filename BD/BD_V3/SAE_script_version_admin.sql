@@ -483,3 +483,270 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+  -- Insérer les catégories principales
+INSERT INTO CATEGORIE (idCategorie, nomCategorie, descCat, idParent) VALUES
+(1, 'Chaussures de sport', 'Catégorie des chaussures dédiées aux activités sportives', NULL),
+(2, 'Chaussures de ville', 'Catégorie des chaussures élégantes et formelles', NULL),
+(3, 'Chaussures décontractées', 'Catégorie des chaussures pour un usage quotidien et relax', NULL);
+
+-- Insérer les sous-catégories pour Chaussures de sport
+INSERT INTO CATEGORIE (idCategorie, nomCategorie, descCat, idParent) VALUES
+(4, 'Baskets', 'Chaussures de sport adaptées pour diverses activités', 1),
+(5, 'Chaussures de running', 'Chaussures spécialement conçues pour la course à pied', 1),
+(6, 'Chaussures de randonnée', 'Chaussures robustes pour les randonnées', 1);
+
+-- Insérer les sous-catégories pour Chaussures de ville
+INSERT INTO CATEGORIE (idCategorie, nomCategorie, descCat, idParent) VALUES
+(7, 'Derbies', 'Chaussures de ville avec des lacets ouverts', 2),
+(8, 'Mocassins', 'Chaussures élégantes sans lacets', 2),
+(9, 'Richelieux', 'Chaussures de ville avec des lacets fermés', 2),
+(10, 'Escarpins', 'Chaussures féminines à talons', 2);
+
+-- Insérer les sous-catégories pour Chaussures décontractées
+INSERT INTO CATEGORIE (idCategorie, nomCategorie, descCat, idParent) VALUES
+(11, 'Sandales', 'Chaussures ouvertes pour temps chaud', 3),
+(12, 'Espadrilles', 'Chaussures décontractées en toile', 3),
+(13, 'Tongs', 'Chaussures minimalistes pour un usage informel', 3);
+
+-- Mise à jour des catégories des produits pour plus de précision
+UPDATE `PRODUIT` SET `IDCATEGORIE` = 4 WHERE `IDPRODUIT` = 97; -- Baskets
+UPDATE `PRODUIT` SET `IDCATEGORIE` = 5 WHERE `IDPRODUIT` = 98; -- Chaussures de running
+UPDATE `PRODUIT` SET `IDCATEGORIE` = 10 WHERE `IDPRODUIT` = 99; -- Escarpins
+UPDATE `PRODUIT` SET `IDCATEGORIE` = 11 WHERE `IDPRODUIT` = 100; -- Sandales
+UPDATE `PRODUIT` SET `IDCATEGORIE` = 6 WHERE `IDPRODUIT` = 101; -- Bottes
+UPDATE `PRODUIT` SET `IDCATEGORIE` = 11 WHERE `IDPRODUIT` = 102; -- Sandales
+
+-- Exemple pour un produit pack
+UPDATE `PRODUIT` SET `IDCATEGORIE` = 3 WHERE `IDPRODUIT` = 105; -- Pack de sandales, décontracté
+
+-- Adaptation des autres produits selon leur description et sous-catégories
+UPDATE `PRODUIT` SET `IDCATEGORIE` = 7 WHERE `IDPRODUIT` = 109; -- Chaussures de randonnée
+UPDATE `PRODUIT` SET `IDCATEGORIE` = 8 WHERE `IDPRODUIT` = 111; -- Mocassins
+UPDATE `PRODUIT` SET `IDCATEGORIE` = 9 WHERE `IDPRODUIT` = 113; -- Ballerines
+UPDATE `PRODUIT` SET `IDCATEGORIE` = 10 WHERE `IDPRODUIT` = 115; -- Sneakers High-Tech
+
+-- Packs multiples
+UPDATE `PRODUIT` SET `IDCATEGORIE` = 12 WHERE `IDPRODUIT` IN (158, 159); -- Packs divers
+
+-- Chaussures techniques et de sport spécifiques
+UPDATE `PRODUIT` SET `IDCATEGORIE` = 5 WHERE `IDPRODUIT` = 148; -- Chaussures de Basketball
+UPDATE `PRODUIT` SET `IDCATEGORIE` = 5 WHERE `IDPRODUIT` = 149; -- Baskets Running Fast
+
+-- Escarpins et chaussures féminines élégantes
+UPDATE `PRODUIT` SET `IDCATEGORIE` = 10 WHERE `IDPRODUIT` = 150; -- Escarpins Satin Élégance
+UPDATE `PRODUIT` SET `IDCATEGORIE` = 10 WHERE `IDPRODUIT` = 151; -- Mules en Cuir Chic
+
+-- Bottes et chaussures d’hiver
+UPDATE `PRODUIT` SET `IDCATEGORIE` = 6 WHERE `IDPRODUIT` = 152; -- Bottes Hiver Confort
+UPDATE `PRODUIT` SET `IDCATEGORIE` = 11 WHERE `IDPRODUIT` = 153; -- Sandales Hawaï Confort
+
+-- Chaussures urbaines
+UPDATE `PRODUIT` SET `IDCATEGORIE` = 4 WHERE `IDPRODUIT` = 154; -- Chaussures de Ville Mode
+UPDATE `PRODUIT` SET `IDCATEGORIE` = 8 WHERE `IDPRODUIT` = 155; -- Mocassins Homme Élégants
+
+-- Packs pour femmes et hommes
+UPDATE `PRODUIT` SET `IDCATEGORIE` = 12 WHERE `IDPRODUIT` = 156; -- Pack Sandales Été Femme
+UPDATE `PRODUIT` SET `IDCATEGORIE` = 12 WHERE `IDPRODUIT` = 157; -- Pack Tennis Homme
+
+-- Chaussures pour enfants
+UPDATE `PRODUIT` SET `IDCATEGORIE` = 13 WHERE `IDPRODUIT` = 158; -- Pack Chaussures Enfant
+
+-- Packs pour hommes
+UPDATE `PRODUIT` SET `IDCATEGORIE` = 12 WHERE `IDPRODUIT` = 159; -- Pack École Homme
+
+-- Chaussures de sport techniques
+UPDATE `PRODUIT` SET `IDCATEGORIE` = 5 WHERE `IDPRODUIT` = 160; -- Baskets High-Tech
+UPDATE `PRODUIT` SET `IDCATEGORIE` = 5 WHERE `IDPRODUIT` = 161; -- Chaussures de Course Extrême
+
+-- Chaussures professionnelles
+UPDATE `PRODUIT` SET `IDCATEGORIE` = 9 WHERE `IDPRODUIT` = 162; -- Escarpins à Talon Haut
+UPDATE `PRODUIT` SET `IDCATEGORIE` = 11 WHERE `IDPRODUIT` = 163; -- Chaussures de Sécurité Standard
+
+-- Chaussures techniques et urbaines
+UPDATE `PRODUIT` SET `IDCATEGORIE` = 6 WHERE `IDPRODUIT` = 164; -- Bottes Montantes Hiver
+UPDATE `PRODUIT` SET `IDCATEGORIE` = 4 WHERE `IDPRODUIT` = 165; -- Tennis Fashion
+UPDATE `PRODUIT` SET `IDCATEGORIE` = 5 WHERE `IDPRODUIT` = 166; -- Baskets Sportives Hautes
+UPDATE `PRODUIT` SET `IDCATEGORIE` = 10 WHERE `IDPRODUIT` = 167; -- Escarpins Satin Chic
+
+-- Chaussures de randonnée et techniques
+UPDATE `PRODUIT` SET `IDCATEGORIE` = 7 WHERE `IDPRODUIT` = 168; -- Chaussures de Randonnée Femme
+
+-- Chaussures de trail et running spécifiques
+UPDATE `PRODUIT` SET `IDCATEGORIE` = 5 WHERE `IDPRODUIT` = 169; -- Baskets de Trail Homme
+
+-- Chaussures polyvalentes
+UPDATE `PRODUIT` SET `IDCATEGORIE` = 5 WHERE `IDPRODUIT` = 170; -- Baskets Ultra Confort
+
+-- Chaussures féminines légères et élégantes
+UPDATE `PRODUIT` SET `IDCATEGORIE` = 10 WHERE `IDPRODUIT` = 171; -- Baskets Légères Femme
+
+-- Chaussures urbaines classiques
+UPDATE `PRODUIT` SET `IDCATEGORIE` = 8 WHERE `IDPRODUIT` = 172; -- Chaussures Ville Classiques
+
+-- Bottes et boots féminines
+UPDATE `PRODUIT` SET `IDCATEGORIE` = 6 WHERE `IDPRODUIT` = 173; -- Boots Fashion Femme
+UPDATE `PRODUIT` SET `IDCATEGORIE` = 6 WHERE `IDPRODUIT` = 174; -- Bottes Haute Gamme
+
+-- Chaussures sportives et techniques
+UPDATE `PRODUIT` SET `IDCATEGORIE` = 5 WHERE `IDPRODUIT` = 175; -- Baskets Running
+UPDATE `PRODUIT` SET `IDCATEGORIE` = 5 WHERE `IDPRODUIT` = 176; -- Chaussures Football Pro
+
+-- Chaussures élégantes et formelles
+UPDATE `PRODUIT` SET `IDCATEGORIE` = 10 WHERE `IDPRODUIT` = 177; -- Mocassins en Cuir
+UPDATE `PRODUIT` SET `IDCATEGORIE` = 10 WHERE `IDPRODUIT` = 178; -- Escarpins Élégance Nuit
+
+-- Chaussures de sécurité et professionnelles
+UPDATE `PRODUIT` SET `IDCATEGORIE` = 9 WHERE `IDPRODUIT` = 179; -- Chaussures de Sécurité Homme
+UPDATE `PRODUIT` SET `IDCATEGORIE` = 9 WHERE `IDPRODUIT` = 180; -- Chaussures de Sécurité Femme
+
+-- Insérer des utilisateurs (Clients) dans la table Utilisateur
+INSERT INTO UTILISATEUR (idUtilisateur, nom, prenom, email, password, telephone, dateNaissance, dateInscription, idRole)
+VALUES
+(1, 'Dupont', 'Jean', 'jean.dupont@gmail.com', 'hashed_password_1', '0612345678', '1990-02-14', '2024-12-01', 2),
+(2, 'Martin', 'Sophie', 'sophie.martin@hotmail.com', 'hashed_password_2', '0654321098', '1985-07-22', '2024-12-01', 2),
+(3, 'Lemoine', 'Pierre', 'pierre.lemoine@yahoo.com', 'hashed_password_3', '0645123654', '1992-10-05', '2024-12-01', 2),
+(4, 'Durand', 'Marc', 'marc.durand@gmail.com', 'hashed_password_4', '0678123456', '1998-11-18', '2024-12-01', 2),
+(5, 'Petit', 'Julie', 'julie.petit@hotmail.com', 'hashed_password_5', '0698765432', '1988-03-12', '2024-12-01', 2),
+(6, 'Nguyen', 'Thi', 'thi.nguyen@gmail.com', 'hashed_password_6', '0634567890', '1995-06-30', '2024-12-01', 2),
+(7, 'Bernard', 'Lucie', 'lucie.bernard@hotmail.com', 'hashed_password_7', '0611223344', '1993-01-11', '2024-12-01', 2),
+(8, 'Lemoine', 'Claire', 'claire.lemoine@gmail.com', 'hashed_password_8', '0687654321', '1994-05-17', '2024-12-01', 2),
+(9, 'Sanchez', 'Ana', 'ana.sanchez@gmail.com', 'hashed_password_9', '0687654321', '1991-09-18', '2024-12-01', 2),
+(10, 'Roche', 'Valérie', 'valerie.roche@hotmail.com', 'hashed_password_10', '0656789123', '1982-12-15', '2024-12-01', 2),
+(11, 'Tanguy', 'Louis', 'louis.tanguy@gmail.com', 'hashed_password_11', '0611223345', '1997-02-05', '2024-12-01', 2),
+(12, 'Chevalier', 'Isabelle', 'isabelle.chevalier@hotmail.com', 'hashed_password_12', '0634567891', '1989-12-18', '2024-12-01', 2),
+(13, 'Fournier', 'Antoine', 'antoine.fournier@yahoo.com', 'hashed_password_13', '0687654322', '1994-01-02', '2024-12-01', 2),
+(14, 'Rousseau', 'Benoît', 'benoit.rousseau@gmail.com', 'hashed_password_14', '0654321090', '1996-03-10', '2024-12-01', 2),
+(15, 'Gauthier', 'Chloé', 'chloe.gauthier@hotmail.com', 'hashed_password_15', '0678234567', '1991-09-27', '2024-12-01', 2),
+(16, 'Dupuis', 'Thierry', 'thierry.dupuis@gmail.com', 'hashed_password_16', '0622345678', '1984-04-14', '2024-12-01', 2),
+(17, 'Boucher', 'Emilie', 'emilie.boucher@gmail.com', 'hashed_password_17', '0636547890', '1999-06-19', '2024-12-01', 2),
+(18, 'Pires', 'Luis', 'luis.pires@hotmail.com', 'hashed_password_18', '0667881234', '1993-07-11', '2024-12-01', 2),
+(19, 'Lemoine', 'Julien', 'julien.lemoine@gmail.com', 'hashed_password_19', '0645236789', '1987-02-23', '2024-12-01', 2),
+(20, 'Girard', 'Sophie', 'sophie.girard@hotmail.com', 'hashed_password_20', '0612345679', '1995-11-30', '2024-12-01', 2),
+(21, 'Beaufort', 'Elise', 'elise.beaufort@gmail.com', 'hashed_password_21', '0678543210', '1989-01-06', '2024-12-01', 2),
+(22, 'Lemoine', 'Maxime', 'maxime.lemoine@yahoo.com', 'hashed_password_22', '0687654323', '1997-10-14', '2024-12-01', 2),
+(23, 'Leclerc', 'Cécile', 'cecile.leclerc@hotmail.com', 'hashed_password_23', '0654781234', '1993-05-17', '2024-12-01', 2),
+(24, 'Roux', 'Mathieu', 'mathieu.roux@gmail.com', 'hashed_password_24', '0623456789', '1998-11-22', '2024-12-01', 2),
+(25, 'Lemoine', 'Sébastien', 'sebastien.lemoine@hotmail.com', 'hashed_password_25', '0634567892', '1986-08-03', '2024-12-01', 2),
+(26, 'Joly', 'Camille', 'camille.joly@gmail.com', 'hashed_password_26', '0611234567', '1994-02-12', '2024-12-01', 2),
+(27, 'Leblanc', 'Clément', 'clement.leblanc@hotmail.com', 'hashed_password_27', '0656789123', '1992-09-06', '2024-12-01', 2),
+(28, 'Lemoine', 'Nicolas', 'nicolas.lemoine@gmail.com', 'hashed_password_28', '0687654324', '1988-01-15', '2024-12-01', 2),
+(29, 'Ziegler', 'Ingrid', 'ingrid.ziegler@yahoo.com', 'hashed_password_29', '0623456780', '1996-07-29', '2024-12-01', 2),
+(30, 'Henri', 'Raphaël', 'raphael.henri@hotmail.com', 'hashed_password_30', '0612345671', '1990-05-19', '2024-12-01', 2),
+(31, 'Marchand', 'Pauline', 'pauline.marchand@gmail.com', 'hashed_password_31', '0611122334', '1992-03-15', '2024-12-01', 2),
+(32, 'Delacroix', 'Léon', 'leon.delacroix@hotmail.com', 'hashed_password_32', '0654321098', '1985-06-22', '2024-12-01', 2),
+(33, 'Blanc', 'Emma', 'emma.blanc@gmail.com', 'hashed_password_33', '0687654325', '1997-11-12', '2024-12-01', 2),
+(34, 'Dufresne', 'Michel', 'michel.dufresne@yahoo.com', 'hashed_password_34', '0623456789', '1994-05-23', '2024-12-01', 2),
+(35, 'Langlois', 'Amandine', 'amandine.langlois@hotmail.com', 'hashed_password_35', '0645123456', '1989-08-17', '2024-12-01', 2),
+(36, 'Dupont', 'Laurent', 'laurent.dupont@gmail.com', 'hashed_password_36', '0678234567', '1993-10-09', '2024-12-01', 2),
+(37, 'Rivet', 'Alice', 'alice.rivet@hotmail.com', 'hashed_password_37', '0687654326', '1988-07-04', '2024-12-01', 2),
+(38, 'Vidal', 'Xavier', 'xavier.vidal@gmail.com', 'hashed_password_38', '0623456790', '1996-02-28', '2024-12-01', 2),
+(39, 'Richard', 'Sophie', 'sophie.richard@yahoo.com', 'hashed_password_39', '0654320987', '1991-12-17', '2024-12-01', 2),
+(40, 'Giraud', 'Benjamin', 'benjamin.giraud@hotmail.com', 'hashed_password_40', '0687654327', '1990-01-20', '2024-12-01', 2),
+(41, 'Thomas', 'Florence', 'florence.thomas@gmail.com', 'hashed_password_41', '0612345670', '1997-09-11', '2024-12-01', 2),
+(42, 'Lemoine', 'Benoît', 'benoit.lemoine@hotmail.com', 'hashed_password_42', '0656789012', '1983-04-13', '2024-12-01', 2),
+(43, 'Vallet', 'Clara', 'clara.vallet@gmail.com', 'hashed_password_43', '0678234568', '1995-07-24', '2024-12-01', 2),
+(44, 'Garnier', 'Nathalie', 'nathalie.garnier@yahoo.com', 'hashed_password_44', '0687654328', '1992-10-30', '2024-12-01', 2),
+(45, 'Fuchs', 'Marc', 'marc.fuchs@hotmail.com', 'hashed_password_45', '0612345673', '1987-12-06', '2024-12-01', 2),
+(46, 'Simon', 'Charlotte', 'charlotte.simon@gmail.com', 'hashed_password_46', '0654321099', '1999-04-02', '2024-12-01', 2),
+(47, 'Tanguy', 'Pierre', 'pierre.tanguy@yahoo.com', 'hashed_password_47', '0623456781', '1990-06-25', '2024-12-01', 2),
+(48, 'Lemoine', 'Hélène', 'helene.lemoine@hotmail.com', 'hashed_password_48', '0678234569', '1988-08-15', '2024-12-01', 2),
+(49, 'Faure', 'Julien', 'julien.faure@gmail.com', 'hashed_password_49', '0656789013', '1995-01-07', '2024-12-01', 2),
+(50, 'Pires', 'Audrey', 'audrey.pires@hotmail.com', 'hashed_password_50', '0612345672', '1993-03-17', '2024-12-01', 2);
+
+
+-- Insérer des paniers associés aux utilisateurs dans la table Panier
+INSERT INTO PANIER (idPanier, dateCrea, idUtilisateur)
+VALUES
+(1, '2024-11-25', 1),
+(2, '2024-11-27', 2),
+(3, '2024-11-30', 3),
+(4, '2024-11-22', 4),
+(5, '2024-11-20', 5),
+(6, '2024-11-23', 6),
+(7, '2024-11-28', 7),
+(8, '2024-11-21', 8),
+(9, '2024-11-19', 9),
+(10, '2024-11-18', 10),
+(11, '2024-11-18', 11),
+(12, '2024-11-19', 12),
+(13, '2024-11-20', 13),
+(14, '2024-11-21', 14),
+(15, '2024-11-22', 15),
+(16, '2024-11-23', 16),
+(17, '2024-11-24', 17),
+(18, '2024-11-25', 18),
+(19, '2024-11-26', 19),
+(20, '2024-11-27', 20),
+(21, '2024-11-28', 21),
+(22, '2024-11-29', 22),
+(23, '2024-11-30', 23),
+(24, '2024-12-01', 24),
+(25, '2024-12-02', 25),
+(26, '2024-12-03', 26),
+(27, '2024-12-04', 27),
+(28, '2024-12-05', 28),
+(29, '2024-12-06', 29),
+(30, '2024-12-07', 30),
+(31, '2024-11-28', 31),
+(32, '2024-11-29', 32),
+(33, '2024-11-30', 33),
+(34, '2024-12-01', 34),
+(35, '2024-12-02', 35),
+(36, '2024-12-03', 36),
+(37, '2024-12-04', 37),
+(38, '2024-12-05', 38),
+(39, '2024-12-06', 39),
+(40, '2024-12-07', 40),
+(41, '2024-12-08', 41),
+(42, '2024-12-09', 42),
+(43, '2024-12-10', 43),
+(44, '2024-12-11', 44),
+(45, '2024-12-12', 45),
+(46, '2024-12-13', 46),
+(47, '2024-12-14', 47),
+(48, '2024-12-15', 48),
+(49, '2024-12-16', 49),
+(50, '2024-12-17', 50);
+
+// Mise à jour dates inscription 
+UPDATE UTILISATEUR U
+SET U.dateInscription = (
+    SELECT P.dateCrea
+    FROM PANIER P
+    WHERE P.idUtilisateur = U.idUtilisateur
+)
+WHERE U.idUtilisateur IN (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+                         21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38,
+                         39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50);
+						 
+-- Insérer 4 administrateurs dans la table Utilisateur
+INSERT INTO UTILISATEUR (idUtilisateur, nom, prenom, email, password, telephone, dateNaissance, dateInscription, idRole)
+VALUES
+(51, 'Ho', 'Nicolas', 'admin1@gmail.com', 'nicoScrum', '0601234567', '1980-11-05', '2024-12-01', 1),
+(52, 'Gaches', 'Luca', 'admin2@gmail.com', 'nicoScrum', '0612345678', '1975-09-13', '2024-12-01', 1),
+(53, 'Bouyssou', 'Melvin', 'admin3@gmail.com', 'nicoScrum', '0623456789', '1983-02-22', '2024-12-01', 1),
+(54, 'Gourgues', 'Robin', 'admin4@gmail.com', 'nicoScrum', '0634567890', '1987-04-09', '2024-12-01', 1);
+
+-- Insertion des commentaires
+INSERT INTO COMMENTAIRE (idCommentaire, note, commentaire, idProduit, idUtilisateur) VALUES
+(1, 5, 'Produit parfait, exactement ce que je cherchais. Très satisfait !', 1, 1),
+(2, 4, 'Bon produit, la qualité est au rendez-vous. Juste un petit bémol sur la livraison.', 2, 2),
+(3, 3, 'Le produit est correct, mais la taille ne correspond pas tout à fait à ce que j’attendais.', 3, 3),
+(4, 5, 'Super qualité, je recommande sans hésiter. Livraison rapide en plus !', 4, 4),
+(5, 2, 'Le produit ne correspond pas à la description, je suis déçu.', 5, 5),
+(6, 4, 'Très bien, mais j’aurais aimé plus de choix de couleurs.', 6, 6),
+(7, 5, 'Très bon rapport qualité/prix, je l’utilise tous les jours. Très content !', 7, 7),
+(8, 3, 'Produit acceptable, mais quelques défauts visibles sur le matériau.', 8, 8),
+(9, 4, 'Très satisfait, mais le produit pourrait être un peu plus durable.', 9, 9),
+(10, 1, 'Très décevant. Produit défectueux dès la première utilisation.', 10, 10),
+(11, 4, 'Très bon produit, bonne qualité mais un peu cher à mon goût.', 11, 11),
+(12, 5, 'Produit excellent, je suis très satisfait ! Aucune mauvaise surprise.', 12, 12),
+(13, 2, 'Produit abîmé à la réception, je n’ai pas pu l’utiliser.', 13, 13),
+(14, 4, 'Belle finition, confortable, mais la taille n’est pas vraiment adaptée.', 14, 14),
+(15, 3, 'Moyenne qualité, mais le prix est abordable. Peut mieux faire.', 15, 15),
+(16, 5, 'Je recommande vivement ce produit, il a surpassé mes attentes.', 16, 16),
+(17, 4, 'Bon produit, mais il aurait été mieux avec des instructions plus claires.', 17, 17),
+(18, 5, 'Vraiment content de mon achat, la qualité est top et la livraison rapide.', 18, 18),
+(19, 1, 'Très déçu par ce produit, il ne correspond absolument pas à la description.', 19, 19),
+(20, 3, 'Produit assez bien, mais il manque quelques fonctionnalités que j’attendais.', 20, 20);
