@@ -5,19 +5,13 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.UUID;
-
-import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken;
-import org.eclipse.paho.client.mqttv3.MqttCallback;
 import org.eclipse.paho.client.mqttv3.MqttClient;
-import org.eclipse.paho.client.mqttv3.MqttMessage;
-
 import application.control.AppMainFrame;
 import application.tools.AlertUtilities;
 import javafx.beans.property.FloatProperty;
 import javafx.beans.property.SimpleFloatProperty;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert.AlertType;
-import javafx.scene.text.Text;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.CheckMenuItem;
 import javafx.scene.control.Label;
@@ -26,9 +20,6 @@ import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
-import javafx.util.StringConverter;
-import javafx.util.converter.IntegerStringConverter;
-
 import com.fasterxml.jackson.databind.ObjectMapper;
 import model.Config;
 
@@ -376,64 +367,20 @@ public class AppMainFrameViewController {
 
     @FXML
     private void testConnection() {
-        String broker = tfServer.getText();
-        String clientId = UUID.randomUUID().toString();
-        System.out.println("Tentative de connexion au broker MQTT : " + broker + " avec l'ID client : " + clientId);
+        Thread t = new Thread(() -> testConnectionMqtt());
+        t.start();
+    }
 
+    private void testConnectionMqtt() {
         try {
-            // Création du client MQTT
-            MqttClient client = new MqttClient(broker, clientId);
-
-            // Configuration de la callback pour traiter les événements MQTT
-            client.setCallback(new MqttCallback() {
-                @Override
-                public void connectionLost(Throwable cause) {
-                    testResuLabel.setText("Connexion perdue !");
-                }
-
-                @Override
-                public void messageArrived(String topic, MqttMessage message) throws Exception {
-                    testResuLabel.setText("Succès : Message reçu : " + new String(message.getPayload()));
-                }
-
-                @Override
-                public void deliveryComplete(IMqttDeliveryToken token) {
-                    System.out.println("Message envoyé... (Pas utile dans l'interface)");
-                }
-            });
-
-            // Connexion au broker
+            MqttClient client = new MqttClient("tcp://" + tfServer.getText(), UUID.randomUUID().toString());
             client.connect();
-            System.out.println("Connexion au broker réussie !");
-
-            // Souscription à un topic
-            String topic = "#";
-            int qos = 1; // Qualité de service
-            client.subscribe(topic, qos);
-            System.out.println("Souscription au topic : " + topic);
-
-            // Affiche un résultat dans l'interface
-            testResuLabel.setText("Connexion et souscription réussies.");
-
-            // Ferme le client après 5 secondes
-            new Thread(() -> {
-                try {
-                    Thread.sleep(5000); // Attendre 5 secondes
-                    if (client.isConnected()) {
-                        client.disconnect();
-                        System.out.println("Client MQTT déconnecté.");
-                        testResuLabel.setText("Client MQTT fermé après 5 secondes.");
-                    }
-                } catch (Exception e) {
-                    e.printStackTrace();
-                    System.err.println("Erreur lors de la fermeture du client MQTT : " + e.getMessage());
-                }
-            }).start();
-
+            client.disconnect();
+            System.out.println("Connexion réussie");
+            testResuLabel.setText("Connexion réussie");
         } catch (Exception e) {
-            e.printStackTrace();
-            System.err.println("Erreur lors de la connexion MQTT : " + e.getMessage());
-            testResuLabel.setText("Erreur : " + e.getMessage());
+            System.out.println("Connexion échouée");
+            testResuLabel.setText("Connexion échouée");
         }
     }
 
