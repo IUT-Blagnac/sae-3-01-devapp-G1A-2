@@ -15,7 +15,7 @@
    <top>
       <MenuBar BorderPane.alignment="CENTER">
         <menus>
-            <Menu fx:id="menuBar" mnemonicParsing="false" onAction="#test" text="Filtre">
+            <Menu fx:id="menuBar" mnemonicParsing="false" text="Filtre">
                <items>
                   <MenuItem mnemonicParsing="false" text="Test" />
                </items>
