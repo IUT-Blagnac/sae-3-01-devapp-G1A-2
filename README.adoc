@@ -108,8 +108,11 @@ ifndef::env-github[]
 ++++
 endif::[]
 
-=== retour sprint 1 EP
+=== retour semaine 46  EP
 Issues/Backlog :  Il faut une finalité dans certaines de vos US, et affecter une priorité et une estimation (à droite une fois l'US ouverte). Sinon bien.  Les issues/task peuvent toutes être rattachées à une US (ex. initialisation php à Connexion par ex). DOC /Il manque les liens vers les docs dans le readme. J'ai uniquement la conception. Tests: J'ai les critères d'acceptabilité mais pas de lien vers le cahier de tests.  release : Pas de release pour le sprint 1.
+
+=== Retour semaine 48 EP
+Backlog ok; pour les issues il me manque encore les milestones par sprint, d'ailleurs j'ai des difficultés à identifer quel est le sprint en cours. Peu de nouvelles issues /tasks créées. doc technique : organiser les UC par services. Tests: je devrais avoir les tests sur sprint 2 au moins écris.
 
 == Retours communication par EP
 
