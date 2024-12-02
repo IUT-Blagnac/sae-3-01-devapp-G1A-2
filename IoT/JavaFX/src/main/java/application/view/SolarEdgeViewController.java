@@ -30,6 +30,7 @@ public class SolarEdgeViewController {
     // Contrôleur de Dialogue associé à AppMainFrameController
     private SolarEdgeBorderPane sEdgeBorderPane;
 
+
     // Fenêtre physique ou est la scène contenant le fichier xml contrôlé par this
     private Stage containingStage;
     private int sizeTimeStamp;

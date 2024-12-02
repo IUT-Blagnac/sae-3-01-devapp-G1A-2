@@ -76,7 +76,7 @@ public class AppMainFrame extends Application {
             this.am107BorderPane = new Am107BorderPane(this.dbmfStage);
         }
         this.am107BorderPane.doAm107(); // Affiche la fenêtre
-        }
+    }    
 
     public void setSolarEdgeRunning(Boolean _isRunning) {
         this.isSolarEdgeRunning = _isRunning;
