@@ -372,15 +372,24 @@ public class AppMainFrameViewController {
     }
 
     private void testConnectionMqtt() {
+        MqttClient client = null;
         try {
-            MqttClient client = new MqttClient("tcp://" + tfServer.getText(), UUID.randomUUID().toString());
+            client = new MqttClient("tcp://" + tfServer.getText(), UUID.randomUUID().toString());
             client.connect();
-            client.disconnect();
             System.out.println("Connexion réussie");
-            testResuLabel.setText("Connexion réussie");
+            javafx.application.Platform.runLater(() -> testResuLabel.setText("Connexion réussie"));
         } catch (Exception e) {
             System.out.println("Connexion échouée");
-            testResuLabel.setText("Connexion échouée");
+            javafx.application.Platform.runLater(() -> testResuLabel.setText("Connexion échouée"));
+        } finally {
+            if (client != null) {
+                try {
+                    client.disconnect();
+                    client.close();
+                } catch (Exception e) {
+                    System.out.println("Essayez avec un bon nom de serveur.");
+                }
+            }
         }
     }
 
