@@ -111,6 +111,13 @@ endif::[]
 === retour sprint 1 EP
 Issues/Backlog :  Il faut une finalité dans certaines de vos US, et affecter une priorité et une estimation (à droite une fois l'US ouverte). Sinon bien.  Les issues/task peuvent toutes être rattachées à une US (ex. initialisation php à Connexion par ex). DOC /Il manque les liens vers les docs dans le readme. J'ai uniquement la conception. Tests: J'ai les critères d'acceptabilité mais pas de lien vers le cahier de tests.  release : Pas de release pour le sprint 1.
 
+== Retours communication par EP
+
+=== semaine 48
+Odj et CR les plus récents datent du 14/11 !! Je n'ai pas ceux de la semaine 48 ou au moins 47 alors qu'ils sont annoncés. Eviter les réunions en télétravail ! ODJ : faire des rubriques avec intervenants et temps, et rôle (qui anime, qui fait le CR). Le CR doit reprendre l'ODJ et être rédigé avec un retour sur la réunion client et une analyse des réussites et echec . A faire cette semaine !!
+note : 0,7/3
+
+
 == Historique des journées de télétravail
 
 === À venir
