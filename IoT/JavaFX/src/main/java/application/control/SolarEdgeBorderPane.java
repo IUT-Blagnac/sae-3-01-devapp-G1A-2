@@ -1,12 +1,9 @@
 package application.control;
 
 import application.tools.StageManagement;
-import application.view.AppMainFrameViewController;
 import application.view.SolarEdgeViewController;
-import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.scene.layout.BorderPane;
 

@@ -16,6 +16,8 @@ public class AppMainFrame extends Application {
 
     // Stage de la fenêtre principale construite par DailyBankMainFrame
     private Stage dbmfStage;
+    private Boolean isSolarEdgeRunning = false;
+    private Boolean isAm107Running = false;
 
     /**
      * Méthode de démarrage (JavaFX).

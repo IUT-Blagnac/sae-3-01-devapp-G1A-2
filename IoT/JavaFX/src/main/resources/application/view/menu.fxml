@@ -223,10 +223,15 @@
                            </GridPane.margin></TextField>
                      </children>
                   </GridPane>
-                  <Button mnemonicParsing="false" onAction="#dochargeConfig" text="Valider la configuration et lancer">
+                  <Button fx:id="launchAm107Btn" mnemonicParsing="false" onAction="#dochargeConfig" text="Valider la configuration et lancer">
                      <VBox.margin>
                         <Insets top="10.0" />
                      </VBox.margin>
+                  </Button>
+                  <Button fx:id="launchAm107Btn" mnemonicParsing="false" onAction="#doLaunchAM107" text="Lancer">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
                   </Button>
                </children>
                <HBox.margin>

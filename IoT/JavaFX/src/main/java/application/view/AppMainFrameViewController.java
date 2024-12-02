@@ -12,6 +12,7 @@ import javafx.beans.property.FloatProperty;
 import javafx.beans.property.SimpleFloatProperty;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.CheckMenuItem;
 import javafx.scene.control.Label;
@@ -36,6 +37,8 @@ public class AppMainFrameViewController {
     private int frequence; // TO CHANGE
     private ObjectMapper mapper;
     private Config config;
+    private Boolean isSolarEdge = false;
+    private Boolean isAm107 = false;
 
     // Contrôleur de Dialogue associé à AppMainFrameController
     private AppMainFrame dbmfDialogController;
@@ -133,6 +136,12 @@ public class AppMainFrameViewController {
     private FloatProperty seuilCo2 = new SimpleFloatProperty();
     private FloatProperty seuilIll = new SimpleFloatProperty();
     private FloatProperty seuilPres = new SimpleFloatProperty();
+
+    @FXML
+    private Button launchSolarEdgeBtn;
+
+    @FXML
+    private Button launchAm107Btn;
 
     // Actions
 
@@ -344,8 +353,13 @@ public class AppMainFrameViewController {
             System.out.println("Erreur lors de l'écriture dans le fichier de configuration");
             e.printStackTrace();
         }
+    }
 
-        // lancement de la fenêtre AM107 (provisoirement ici mais peut-être bougé)
+    @FXML
+    private void doLaunchAM107(){
+        System.out.println("Lancement de l'application AM107");
+        this.isAm107 = true;
+        this.launchAm107Btn.setDisable(true);
         this.dbmfDialogController.am107Display();
     }
 
@@ -361,8 +375,15 @@ public class AppMainFrameViewController {
     @FXML
     private void doLaunchSolarEdge() {
         System.out.println("Lancement de l'application Solar Edge");
+        this.isSolarEdge = true;
+        this.launchSolarEdgeBtn.setDisable(true);
         this.dbmfDialogController.solarDisplay();
+    }
 
+    public void onSolarEdgeClosed() {
+        System.out.println("Fenêtre Solar Edge fermée");
+        this.isSolarEdge = false;
+        this.launchSolarEdgeBtn.setDisable(false);
     }
 
     @FXML
