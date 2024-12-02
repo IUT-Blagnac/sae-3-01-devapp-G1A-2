@@ -32,7 +32,7 @@ public class Am107BorderPane {
 
             this.am107Stage = new Stage();
             // this.am107Stage.initModality(Modality.WINDOW_MODAL);
-            this.am107Stage.initOwner(_parentStage);
+            // this.am107Stage.initOwner(_parentStage);
             StageManagement.manageCenteringStage(_parentStage, this.am107Stage);
             this.am107Stage.setScene(scene);
             this.am107Stage.setTitle("Fenêtre AM107");
@@ -60,7 +60,10 @@ public class Am107BorderPane {
     public Stage getAm107Stage() {
         return this.am107Stage;
     }
-    
+
+    // public Stage getAm107Stage() {
+    // return this.am107Stage;
+    // }
 
     // public void doStopSolarEdge() {
     // this.r.stop();

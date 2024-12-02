@@ -2,6 +2,7 @@ package application.control;
 
 import application.tools.StageManagement;
 import application.view.SolarEdgeViewController;
+import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -33,7 +34,7 @@ public class SolarEdgeBorderPane {
 
             this.solarStage = new Stage();
             // this.solarStage.initModality(Modality.WINDOW_MODAL);
-            this.solarStage.initOwner(_parentStage);
+            // this.solarStage.initOwner(_parentStage);
             StageManagement.manageCenteringStage(_parentStage, this.solarStage);
             this.solarStage.setScene(scene);
             this.solarStage.setTitle("Fenêtre Solar Edge");
@@ -75,19 +76,16 @@ public class SolarEdgeBorderPane {
         @Override
         public void run() {
             while (this.enCours) {
-
-                // System.out.println("On est dans le thread du solar edge");
-                // try {
-                this.seRunViewController.loadUpdateHistoric();
-                // Thread.sleep(100); // cooldown au besoin
-
-                // } catch (InterruptedException e) {
-                // System.err.println("Thread interrompu : " + e.getMessage());
-                // this.enCours = false;
-                // }
+                Platform.runLater(() -> {
+                    this.seRunViewController.loadUpdateHistoric();
+                });
+                try {
+                    Thread.sleep(100); // Pause pour éviter une utilisation excessive des ressources
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
-            // Nettoyage éventuel
-            System.out.println("Le thread est arrete.");
+            System.out.println("Le thread est arrêté.");
         }
 
         public void stop() {

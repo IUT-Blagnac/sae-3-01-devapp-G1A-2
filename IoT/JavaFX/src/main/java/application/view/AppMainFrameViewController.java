@@ -355,25 +355,85 @@ public class AppMainFrameViewController {
         }
     }
 
+    // @FXML
+    // private void doLaunchAM107() {
+    // System.out.println("Lancement de l'application AM107");
+    // this.isAm107 = true;
+    // System.out.println("Bouton AM107 désactivé");
+    // this.launchAm107Btn.setDisable(true); // Désactiver le bouton
+
+    // // Ouvrir la fenêtre AM107
+    // this.dbmfDialogController.am107Display();
+
+    // // Ajouter un gestionnaire d'événement pour réactiver le bouton après
+    // fermeture
+    // Stage am107Stage = this.dbmfDialogController.getAm107Stage();
+    // System.out.println("Stage AM107 : " + am107Stage);
+    // if (am107Stage != null) {
+    // System.out.println("Configuration de l'événement de fermeture");
+    // this.launchAm107Btn.setDisable(false); // Réactiver le bouton
+    // // passage de l'état de la fenêtre à false pour l'attribut de AppMainFrame
+    // this.dbmfDialogController.setAm107Running(isAm107);
+    // } else {
+    // System.out.println("Erreur : le stage AM107 est null");
+    // }
+    // }
+
     @FXML
     private void doLaunchAM107() {
         System.out.println("Lancement de l'application AM107");
         this.isAm107 = true;
-        System.out.println("Bouton AM107 désactivé");
         this.launchAm107Btn.setDisable(true); // Désactiver le bouton
-    
-        // Ouvrir la fenêtre AM107
-        this.dbmfDialogController.am107Display();
-    
-        // Ajouter un gestionnaire d'événement pour réactiver le bouton après fermeture
-        Stage am107Stage = this.dbmfDialogController.getAm107Stage();
-        System.out.println("Stage AM107 : " + am107Stage);
-        if (am107Stage != null) {
-            System.out.println("Configuration de l'événement de fermeture");
-            this.launchAm107Btn.setDisable(false); // Réactiver le bouton
-        } else {
-            System.out.println("Erreur : le stage AM107 est null");
-        }
+
+        // Ouvrir la fenêtre AM107 et obtenir son Stage
+        Stage am107Stage = this.dbmfDialogController.am107Display();
+
+        // Ajouter un écouteur pour détecter la fermeture de la fenêtre
+        am107Stage.setOnHiding(event -> onAm107Closed());
+    }
+
+    /**
+     * Méthode permettant de gérer la fermeture de la fenêtre AM107
+     * Dégrise le bouton de lancement de la fenêtre AM107
+     * Set l'état d'ouverture de la fenêtre à false dans l'AppMainFrame
+     */
+    private void onAm107Closed() {
+        System.out.println("Fenêtre AM017 fermée");
+        this.isAm107 = false;
+        this.launchAm107Btn.setDisable(false); // dégrise le bouton de lancement
+        System.out.println("Valeur du boolean isAM107 apres la fermeture de la fenetre : " + this.isAm107);
+        this.dbmfDialogController.setAm107Running(isAm107);
+        this.dbmfDialogController.testIfWindowsAreAllClosed();
+        // Set l'état d'ouverture de la fenêtre à false
+        // dans l'AppMainFrame
+    }
+
+    @FXML
+    private void doLaunchSolarEdge() {
+        System.out.println("Lancement de l'application Solar Edge");
+        this.isSolarEdge = true;
+        this.launchSolarEdgeBtn.setDisable(true); // Désactiver le bouton
+
+        // Ouvrir la fenêtre Solar Edge et obtenir son Stage
+        Stage solarEdgeStage = this.dbmfDialogController.solarDisplay();
+
+        // Ajouter un écouteur pour détecter la fermeture de la fenêtre
+        solarEdgeStage.setOnHiding(event -> onSolarEdgeClosed());
+    }
+
+    /**
+     * Méthode permettant de gérer la fermeture de la fenêtre solarEdge
+     * Dégrise le bouton de lancement de la fenêtre solarEdge
+     * Set l'état d'ouverture de la fenêtre à false dans l'AppMainFrame
+     */
+    private void onSolarEdgeClosed() {
+        System.out.println("Fenêtre Solar Edge fermée");
+        this.isSolarEdge = false;
+        this.launchSolarEdgeBtn.setDisable(false); // dégrise le bouton de lancement
+        System.out.println("Valeur du boolean isSolarEdge apres la fermeture de la fenetre : " + this.isSolarEdge);
+        this.dbmfDialogController.setSolarEdgeRunning(this.isSolarEdge); // Set l'état d'ouverture de la fenêtre à false
+                                                                         // dans l'AppMainFrame
+        this.dbmfDialogController.testIfWindowsAreAllClosed();
     }
 
     @FXML
@@ -383,21 +443,6 @@ public class AppMainFrameViewController {
         System.out.println("Salle : " + salle);
         System.out.println("Frequence : " + frequence);
         System.out.println("Data : " + data);
-    }
-
-    @FXML
-    private void doLaunchSolarEdge() {
-        System.out.println("Lancement de l'application Solar Edge");
-        this.isSolarEdge = true;
-        this.launchSolarEdgeBtn.setDisable(true); // Désactiver le bouton
-        this.dbmfDialogController.solarDisplay();
-        this.launchSolarEdgeBtn.setDisable(false); // Réactiver le bouton
-    }
-
-    public void onSolarEdgeClosed() {
-        System.out.println("Fenêtre Solar Edge fermée");
-        this.isSolarEdge = false;
-        this.launchSolarEdgeBtn.setDisable(false);
     }
 
     @FXML

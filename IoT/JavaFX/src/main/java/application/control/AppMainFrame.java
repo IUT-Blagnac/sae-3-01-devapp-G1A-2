@@ -21,7 +21,6 @@ public class AppMainFrame extends Application {
     private Am107BorderPane am107BorderPane;
     private SolarEdgeBorderPane solarEdgeBorderPane;
 
-
     /**
      * Méthode de démarrage (JavaFX).
      */
@@ -64,19 +63,25 @@ public class AppMainFrame extends Application {
         Application.launch();
     }
 
-    public void solarDisplay() {
+    public Stage solarDisplay() {
         if (this.solarEdgeBorderPane == null) { // Créer la fenêtre si elle n'existe pas
             this.solarEdgeBorderPane = new SolarEdgeBorderPane(this.dbmfStage);
         }
+        gestionLancementPython(); // Appel au lancement du programme python avant l'affichage de l'interface
+        this.setSolarEdgeRunning(true); // Changement d'état de la fenêtre
         this.solarEdgeBorderPane.doSolarEdge(); // Affiche la fenêtre
+        return this.solarEdgeBorderPane.getSolarStage(); // Retourne le Stage de la fenêtre
     }
 
-    public void am107Display() {
+    public Stage am107Display() {
         if (this.am107BorderPane == null) { // Créer la fenêtre si elle n'existe pas
             this.am107BorderPane = new Am107BorderPane(this.dbmfStage);
         }
+        gestionLancementPython(); // Appel au lancement du programme python avant l'affichage de l'interface
+        this.setAm107Running(true); // Changement d'état de la fenêtre
         this.am107BorderPane.doAm107(); // Affiche la fenêtre
-    }    
+        return this.am107BorderPane.getAm107Stage(); // Retourne le Stage de la fenêtre
+    }
 
     public void setSolarEdgeRunning(Boolean _isRunning) {
         this.isSolarEdgeRunning = _isRunning;
@@ -97,8 +102,37 @@ public class AppMainFrame extends Application {
     public Stage getSolarStage() {
         return this.solarEdgeBorderPane.getSolarStage(); // Suppose que solarEdgeBorderPane est initialisé
     }
-    
-    public Stage getAm107Stage() {
-        return this.am107BorderPane != null ? this.am107BorderPane.getAm107Stage() : null;
+
+    // public Stage getAm107Stage() {
+    // return this.am107BorderPane != null ? this.am107BorderPane.getAm107Stage() :
+    // null;
+    // }
+
+    /**
+     * Méthode permettant la gestion du lancement du programme python
+     * le main.py est appelé une fois pour les deux fenêtres solarEdge et AM107
+     */
+    public void gestionLancementPython() {
+        System.out.println("Valeur de letat fenetre AM107 : " + this.getAm107Running());
+        System.out.println("Valeur de l'état fenetre SolarEdge : " + this.getSolarEdgeRunning());
+        if (this.getAm107Running() == false && this.getSolarEdgeRunning() == false) {
+            System.out.println("Lancement du programme python");
+
+        } else {
+            System.out.println("Pas de lancement du programme python !!!!!");
+        }
     }
+
+    /**
+     * Méthode permettant la gestion de la fin du programme python
+     * On va devoir faire un KILL du programme ici
+     */
+    public void testIfWindowsAreAllClosed() {
+        if (this.getAm107Running() == false && this.getSolarEdgeRunning() == false) {
+            System.out.println("FIN DU PROGRAMME PYTHON");
+        } else {
+            System.out.println("PROGRAMME PYTHON IS RUNNING...");
+        }
+    }
+
 }

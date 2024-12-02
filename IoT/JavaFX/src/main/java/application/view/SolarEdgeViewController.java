@@ -30,7 +30,6 @@ public class SolarEdgeViewController {
     // Contrôleur de Dialogue associé à AppMainFrameController
     private SolarEdgeBorderPane sEdgeBorderPane;
 
-
     // Fenêtre physique ou est la scène contenant le fichier xml contrôlé par this
     private Stage containingStage;
     private int sizeTimeStamp;
@@ -68,7 +67,8 @@ public class SolarEdgeViewController {
      * Affichage de la fenêtre.
      */
     public void displayDialog() {
-        this.containingStage.showAndWait();
+        // this.containingStage.showAndWait();
+        this.containingStage.show(); // test en show uniquement pour éviter l'attente bloquante
     }
 
     /*

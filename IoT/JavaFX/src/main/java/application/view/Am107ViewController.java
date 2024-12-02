@@ -22,7 +22,6 @@ import model.SalleData;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-
 public class Am107ViewController {
 
     // Contrôleur de Dialogue associé à AppMainFrameController
@@ -65,7 +64,8 @@ public class Am107ViewController {
      * Affichage de la fenêtre.
      */
     public void displayDialog() {
-        this.containingStage.showAndWait();
+        // this.containingStage.showAndWait();
+        this.containingStage.show(); // test en show uniquement pour éviter l'attente bloquante
     }
 
     /*
@@ -120,7 +120,8 @@ public class Am107ViewController {
         VBox vboxGraphiques = new VBox();
         this.scrollPaneGraphiques.setContent(vboxGraphiques);
 
-        // Ici on initialise les hboxes pour chaque salle (une hbox est une sorte de container horizontal)
+        // Ici on initialise les hboxes pour chaque salle (une hbox est une sorte de
+        // container horizontal)
         for (String salle : this.sallesCapteurs.keySet()) {
             HBox hboxSalle = new HBox();
             hboxSalle.setSpacing(10);
@@ -129,7 +130,10 @@ public class Am107ViewController {
                 addGraphiqueToHBox(hboxSalle, salle, capteur); // Génére un graphique pour chaque capteur
             }
 
-            vboxGraphiques.getChildren().add(hboxSalle); // Ajoute le container de la salle à la liste des containers (en gros la VBox est un gros container vertical qui contient les containers horizontaux de chaque salle (comme si on empiler des rectangles))
+            vboxGraphiques.getChildren().add(hboxSalle); // Ajoute le container de la salle à la liste des containers
+                                                         // (en gros la VBox est un gros container vertical qui contient
+                                                         // les containers horizontaux de chaque salle (comme si on
+                                                         // empiler des rectangles))
         }
     }
 
@@ -154,29 +158,32 @@ public class Am107ViewController {
     }
 
     /**
-     * Ajout d'un graphique à une HBox (crée dynamiquement un graphique pour une salle et un capteur)
+     * Ajout d'un graphique à une HBox (crée dynamiquement un graphique pour une
+     * salle et un capteur)
      *
-     * @param hbox    HBox à laquelle ajouter le graphique (donc l'endroit où afficher le graphique) (chaque HBox représente une salle et contient les graphiques des capteurs)
+     * @param hbox    HBox à laquelle ajouter le graphique (donc l'endroit où
+     *                afficher le graphique) (chaque HBox représente une salle et
+     *                contient les graphiques des capteurs)
      * @param salle   Nom de la salle
      * @param capteur Nom du capteur
      */
     public void addGraphiqueToHBox(HBox hbox, String salle, String capteur) {
         SalleData salleData = this.sallesCapteurs.get(salle);
         System.out.println("Affichage du graphique pour la salle " + salle + " et le capteur " + capteur);
-    
+
         NumberAxis xAxis = new NumberAxis();
         NumberAxis yAxis = new NumberAxis();
         xAxis.setLabel("Temps");
         yAxis.setLabel(capteur);
-    
+
         LineChart<Number, Number> lineChart = new LineChart<>(xAxis, yAxis);
         lineChart.setTitle("Graphique de " + capteur + " pour la salle " + salle);
-    
+
         XYChart.Series<Number, Number> series = new XYChart.Series<>();
         series.setName(capteur);
-    
+
         List<Double> data = null;
-    
+
         // Selon le capteur, récupérer les bonnes données
         switch (capteur) {
             case "temperature":
@@ -201,7 +208,7 @@ public class Am107ViewController {
                 System.out.println("Capteur non reconnu");
                 return;
         }
-    
+
         // Vérification si les données ne sont pas vides avant de créer un graphique
         if (data != null && !data.isEmpty()) {
             // Ajout des points de données dans la série
@@ -214,44 +221,48 @@ public class Am107ViewController {
             System.out.println("Aucune donnée disponible pour le capteur " + capteur + " de la salle " + salle);
         }
     }
-    
+
     /**
      * Chargement des salles dans le menu de filtrage en haut à droite de la fenetre
      */
-    private void loadSalleFiltre(){
+    private void loadSalleFiltre() {
         System.out.println("Chargement des salles dans le menu");
         for (String salle : this.sallesCapteurs.keySet()) {
             System.out.println("Ajout de la salle " + salle);
             Menu menuSalle = new Menu(salle);
             this.menuBar.getItems().add(menuSalle);
-    
+
             // Ajout des capteurs pour chaque salle
             for (String capteur : this.sallesCapteurs.get(salle).getCapteurs().keySet()) {
                 System.out.println("Ajout du capteur " + capteur);
                 MenuItem menuItem = new MenuItem(capteur);
                 menuSalle.getItems().add(menuItem);
-                menuItem.setOnAction(e -> filterCapteurGraphiques(salle, capteur)); // si on clique sur le capteur, on affiche le graphique du capteur (spécifique à la salle)
-            } 
-            menuSalle.setOnAction(e -> filterSalleGraphiques(salle)); // si on clique sur la salle, on affiche tous les graphiques de la salle
+                menuItem.setOnAction(e -> filterCapteurGraphiques(salle, capteur)); // si on clique sur le capteur, on
+                                                                                    // affiche le graphique du capteur
+                                                                                    // (spécifique à la salle)
+            }
+            menuSalle.setOnAction(e -> filterSalleGraphiques(salle)); // si on clique sur la salle, on affiche tous les
+                                                                      // graphiques de la salle
         }
     }
-    
+
     private void filterCapteurGraphiques(String salle, String capteur) {
         VBox vboxGraphiques = (VBox) this.scrollPaneGraphiques.getContent();
-        
+
         // Parcourir toutes les salles (HBox)
         for (int i = 0; i < vboxGraphiques.getChildren().size(); i++) {
             HBox hboxSalle = (HBox) vboxGraphiques.getChildren().get(i);
-            
+
             // Si l'HBox ne correspond pas à la salle sélectionnée, passer à la suivante
-            if (hboxSalle.getChildren().isEmpty() || !((LineChart) hboxSalle.getChildren().get(0)).getTitle().contains(salle)) {
+            if (hboxSalle.getChildren().isEmpty()
+                    || !((LineChart) hboxSalle.getChildren().get(0)).getTitle().contains(salle)) {
                 continue;
             }
-            
+
             // Parcourir les graphiques de la salle
             for (int j = 0; j < hboxSalle.getChildren().size(); j++) {
                 LineChart chart = (LineChart) hboxSalle.getChildren().get(j);
-                
+
                 // Si le titre du graphique correspond au capteur sélectionné
                 if (chart.getTitle().contains(capteur)) {
                     chart.setVisible(true); // Afficher le graphique du capteur sélectionné
@@ -263,7 +274,7 @@ public class Am107ViewController {
             }
         }
     }
-    
+
     /**
      * Faire défiler le ScrollPane jusqu'à un graphique spécifique
      *
@@ -271,8 +282,8 @@ public class Am107ViewController {
      */
     private void scrollToGraphique(LineChart chart) {
         VBox vboxGraphiques = (VBox) this.scrollPaneGraphiques.getContent();
-        
-        int index = vboxGraphiques.getChildren().indexOf(chart.getParent());  // Trouver l'HBox contenant le graphique
+
+        int index = vboxGraphiques.getChildren().indexOf(chart.getParent()); // Trouver l'HBox contenant le graphique
         if (index != -1) {
             double scrollHeight = this.scrollPaneGraphiques.getHeight();
             double contentHeight = vboxGraphiques.getHeight();
@@ -280,7 +291,7 @@ public class Am107ViewController {
             this.scrollPaneGraphiques.setVvalue(scrollPosition);
         }
     }
-    
+
     /**
      * Filtrer les graphiques pour afficher uniquement ceux de la salle sélectionnée
      *
@@ -288,13 +299,14 @@ public class Am107ViewController {
      */
     private void filterSalleGraphiques(String salle) {
         VBox vboxGraphiques = (VBox) this.scrollPaneGraphiques.getContent();
-        
+
         // Parcourir toutes les salles (HBox)
         for (int i = 0; i < vboxGraphiques.getChildren().size(); i++) {
             HBox hboxSalle = (HBox) vboxGraphiques.getChildren().get(i);
-            
+
             // Si l'HBox ne correspond pas à la salle sélectionnée, la masquer
-            if (hboxSalle.getChildren().isEmpty() || !((LineChart) hboxSalle.getChildren().get(0)).getTitle().contains(salle)) {
+            if (hboxSalle.getChildren().isEmpty()
+                    || !((LineChart) hboxSalle.getChildren().get(0)).getTitle().contains(salle)) {
                 hboxSalle.setVisible(false);
             } else {
                 hboxSalle.setVisible(true); // Afficher la salle sélectionnée
@@ -310,7 +322,7 @@ public class Am107ViewController {
      */
     private void scrollToSalle(HBox hboxSalle) {
         VBox vboxGraphiques = (VBox) this.scrollPaneGraphiques.getContent();
-        
+
         int index = vboxGraphiques.getChildren().indexOf(hboxSalle);
         if (index != -1) {
             double scrollHeight = this.scrollPaneGraphiques.getHeight();
@@ -321,44 +333,46 @@ public class Am107ViewController {
     }
 
     /**
-     * Afficher toutes les salles et tous les graphiques (ne marche pas correctement) #TODO
+     * Afficher toutes les salles et tous les graphiques (ne marche pas
+     * correctement) #TODO
      */
     @FXML
     private void afficherToutesLesSalles() {
         VBox vboxGraphiques = (VBox) this.scrollPaneGraphiques.getContent();
-        
+
         for (int i = 0; i < vboxGraphiques.getChildren().size(); i++) {
             HBox hboxSalle = (HBox) vboxGraphiques.getChildren().get(i);
             hboxSalle.setVisible(true); // Rendre la salle visible
         }
     }
-    
+
     /**
      * Rafraîchir les graphiques avec les nouvelles données
      */
     public void refreshGraphiques() {
         System.out.println("Rafraîchissement des graphiques");
-    
+
         // Récupérer le VBox contenant tous les graphiques
         VBox vboxGraphiques = (VBox) this.scrollPaneGraphiques.getContent();
-    
+
         // Parcourir chaque HBox (chaque salle)
         for (int i = 0; i < vboxGraphiques.getChildren().size(); i++) {
             HBox hboxSalle = (HBox) vboxGraphiques.getChildren().get(i);
-    
+
             // Parcourir chaque graphique dans cette salle (HBox)
             for (int j = 0; j < hboxSalle.getChildren().size(); j++) {
                 LineChart<Number, Number> lineChart = (LineChart<Number, Number>) hboxSalle.getChildren().get(j);
-    
+
                 // Récupérer la salle et le capteur à partir du titre du graphique
                 String salle = lineChart.getTitle().split(" ")[6];
                 String capteur = lineChart.getTitle().split(" ")[2];
-                System.out.println("Rafraîchissement du graphique pour la salle " + salle + " et le capteur " + capteur);
-    
+                System.out
+                        .println("Rafraîchissement du graphique pour la salle " + salle + " et le capteur " + capteur);
+
                 // Récupérer les nouvelles données du capteur
                 SalleData salleData = this.sallesCapteurs.get(salle);
                 List<Double> data = null;
-    
+
                 // Selon le capteur, récupérer les bonnes données
                 switch (capteur) {
                     case "temperature":
@@ -383,10 +397,11 @@ public class Am107ViewController {
                         System.out.println("Capteur non reconnu");
                         break;
                 }
-    
+
                 // Mettre à jour la série du graphique avec les nouvelles données
                 if (data != null) {
-                    XYChart.Series<Number, Number> series = lineChart.getData().get(0); // On suppose qu'il y a une seule série
+                    XYChart.Series<Number, Number> series = lineChart.getData().get(0); // On suppose qu'il y a une
+                                                                                        // seule série
                     series.getData().clear(); // Effacer les anciennes données
                     for (int k = 0; k < data.size(); k++) {
                         // Ajouter les nouvelles données
@@ -399,8 +414,16 @@ public class Am107ViewController {
 
     // Manque les alertes
     // Fix le bug de l'affichage des graphiques après filtrage
-    // Manque le délire de Thread pour refresh les graphiques à une certaine fréquence, je pense qu'on fera avec un timer qui va juste appeler la méthode refreshGraphiques() toutes les x secondes
-    // Demander au prof si on peux ? pcq au final je fais aucun Thread qui contient les graphiques, je les crée directement dans la méthode initalize() et je les affiche directement
-    // Le refresh est giga énervé, il regénère tous les graphiques à chaque fois, c'est pas ouf, possible de faire mieux en faisant une méthode qui met à jour les données des graphiques en lui donnant le graphique qu'on veux update
-    // Du coup en utilisant la méthode de la ligne au dessus on pourra faire un thread qui regarde toutes les x secondes si les données ont changées et si oui il update les graphiques qui ont changés uniquement
+    // Manque le délire de Thread pour refresh les graphiques à une certaine
+    // fréquence, je pense qu'on fera avec un timer qui va juste appeler la méthode
+    // refreshGraphiques() toutes les x secondes
+    // Demander au prof si on peux ? pcq au final je fais aucun Thread qui contient
+    // les graphiques, je les crée directement dans la méthode initalize() et je les
+    // affiche directement
+    // Le refresh est giga énervé, il regénère tous les graphiques à chaque fois,
+    // c'est pas ouf, possible de faire mieux en faisant une méthode qui met à jour
+    // les données des graphiques en lui donnant le graphique qu'on veux update
+    // Du coup en utilisant la méthode de la ligne au dessus on pourra faire un
+    // thread qui regarde toutes les x secondes si les données ont changées et si
+    // oui il update les graphiques qui ont changés uniquement
 }
