@@ -18,6 +18,9 @@ public class AppMainFrame extends Application {
     private Stage dbmfStage;
     private Boolean isSolarEdgeRunning = false;
     private Boolean isAm107Running = false;
+    private Am107BorderPane am107BorderPane;
+    private SolarEdgeBorderPane solarEdgeBorderPane;
+
 
     /**
      * Méthode de démarrage (JavaFX).
@@ -62,12 +65,40 @@ public class AppMainFrame extends Application {
     }
 
     public void solarDisplay() {
-        SolarEdgeBorderPane sd = new SolarEdgeBorderPane(this.dbmfStage);
-        sd.doSolarEdge();
+        if (this.solarEdgeBorderPane == null) { // Créer la fenêtre si elle n'existe pas
+            this.solarEdgeBorderPane = new SolarEdgeBorderPane(this.dbmfStage);
+        }
+        this.solarEdgeBorderPane.doSolarEdge(); // Affiche la fenêtre
     }
 
     public void am107Display() {
-        Am107BorderPane am = new Am107BorderPane(this.dbmfStage);
-        am.doAm107();
+        if (this.am107BorderPane == null) { // Créer la fenêtre si elle n'existe pas
+            this.am107BorderPane = new Am107BorderPane(this.dbmfStage);
+        }
+        this.am107BorderPane.doAm107(); // Affiche la fenêtre
+        }
+
+    public void setSolarEdgeRunning(Boolean _isRunning) {
+        this.isSolarEdgeRunning = _isRunning;
+    }
+
+    public Boolean getSolarEdgeRunning() {
+        return this.isSolarEdgeRunning;
+    }
+
+    public void setAm107Running(Boolean _isRunning) {
+        this.isAm107Running = _isRunning;
+    }
+
+    public Boolean getAm107Running() {
+        return this.isAm107Running;
+    }
+
+    public Stage getSolarStage() {
+        return this.solarEdgeBorderPane.getSolarStage(); // Suppose que solarEdgeBorderPane est initialisé
+    }
+    
+    public Stage getAm107Stage() {
+        return this.am107BorderPane != null ? this.am107BorderPane.getAm107Stage() : null;
     }
 }

@@ -95,4 +95,7 @@ public class SolarEdgeBorderPane {
         }
     }
 
+    public Stage getSolarStage() {
+        return this.solarStage;
+    }
 }

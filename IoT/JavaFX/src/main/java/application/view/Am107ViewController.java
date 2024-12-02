@@ -94,10 +94,10 @@ public class Am107ViewController {
 
     @FXML
     private void doQuit() {
-
         if (AlertUtilities.confirmYesCancel(this.containingStage, "Quitter l'application",
-                "Etes vous sur de vouloir quitter la fenêtre ?", null, AlertType.CONFIRMATION)) {
-            this.containingStage.close();
+                "Etes-vous sûr de vouloir quitter la fenêtre ?", null, AlertType.CONFIRMATION)) {
+            this.containingStage.close(); // Ferme la fenêtre correctement
+            System.out.println("Fenêtre AM107 fermée, bouton réactivé");
         }
     }
 

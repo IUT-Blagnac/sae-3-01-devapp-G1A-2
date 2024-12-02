@@ -57,6 +57,11 @@ public class Am107BorderPane {
         this.amViewController.displayDialog();
     }
 
+    public Stage getAm107Stage() {
+        return this.am107Stage;
+    }
+    
+
     // public void doStopSolarEdge() {
     // this.r.stop();
     // }
