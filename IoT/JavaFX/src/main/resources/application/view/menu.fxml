@@ -223,7 +223,7 @@
                            </GridPane.margin></TextField>
                      </children>
                   </GridPane>
-                  <Button fx:id="launchAm107Btn" mnemonicParsing="false" onAction="#dochargeConfig" text="Valider la configuration et lancer">
+                  <Button fx:id="launchAm107Btn" mnemonicParsing="false" onAction="#dochargeConfig" text="Valider la configuration reset le fichier resultat">
                      <VBox.margin>
                         <Insets top="10.0" />
                      </VBox.margin>
