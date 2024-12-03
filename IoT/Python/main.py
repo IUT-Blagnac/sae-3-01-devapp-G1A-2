@@ -43,20 +43,6 @@ def verifFichier():
                 print(f"Fichier {fichier} créé")
 
 '''
-Fonction qui vérifie la cohérence des données dans le fichier de résultat par rapport à la configuration.
-'''
-def verifCoherenceConfigResultat():
-    with open("../resultat/resultatAM107.json", 'r+', encoding='utf-8') as file:
-        data = json.load(file)
-        for room in data:
-            if room not in salle and "all" not in salle:
-                print(f"La salle {room} n'est pas dans la configuration")
-                data = {}
-        file.seek(0)
-        file.write(json.dumps(data, ensure_ascii=False, indent=4))
-        file.truncate()
-
-'''
 Fonction qui charge la configuration depuis le fichier config.json et initialise les variables globales.
 Cette fonction crée un fichier de configuration par défaut si le fichier config.json n'existe pas.
 '''
@@ -387,7 +373,6 @@ def thread_subscribe(type, topic):
 
 # Initialisation
 verifFichier()
-verifCoherenceConfigResultat()
 config()
 
 # Création des threads pour chaques topic et comportement attendu (on a donc un thread par topic soit 2 threads), un thread pour l'écriture des données et un timer pour la fréquence
