@@ -18,7 +18,6 @@ import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import model.RootData;
 import model.SalleData;
-
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class Am107ViewController {
@@ -148,7 +147,12 @@ public class Am107ViewController {
 
                 if (data != null) {
                     for (int i = 0; i < data.size(); i++) {
-                        series.getData().add(new XYChart.Data<>(i, data.get(i)));
+                        XYChart.Data<Number, Number> dataPoint = new XYChart.Data<>(i, data.get(i));
+                        
+                        // Set the hoverable node
+                        dataPoint.setNode(createHoverableNode(salle));
+                
+                        series.getData().add(dataPoint);
                     }
                     lineChart.getData().add(series);
                 }
@@ -225,10 +229,13 @@ public class Am107ViewController {
     
                 // Mettre à jour les données dans la série.
                 if (data != null) {
-                    int currentSize = series.getData().size(); // Taille actuelle de la série.
-                    for (int j = currentSize; j < data.size(); j++) {
+                    series.getData().clear(); // Clear old data before updating
+                    for (int j = 0; j < data.size(); j++) {
                         XYChart.Data<Number, Number> dataPoint = new XYChart.Data<>(j, data.get(j));
-                        dataPoint.setNode(createHoverableNode(salle)); // Associe le noeud interactif.
+                        
+                        // Set the hoverable node
+                        dataPoint.setNode(createHoverableNode(salle));
+                        
                         series.getData().add(dataPoint);
                     }
                 }
@@ -236,22 +243,25 @@ public class Am107ViewController {
         }
     }
     
-    /**
-     * Crée un noeud interactif pour afficher la salle lors du survol.
-     *
-     * @param salle Nom de la salle associée au point.
-     * @return Node personnalisé avec tooltip pour la salle.
-     */
     private javafx.scene.Node createHoverableNode(String salle) {
-        javafx.scene.control.Label label = new javafx.scene.control.Label();
+        javafx.scene.control.Label label = new javafx.scene.control.Label(salle);
         label.setStyle("-fx-background-color: white; -fx-padding: 5px; -fx-border-color: black;");
-        label.setText(salle);
         label.setVisible(false);
     
-        // Event de souris pour afficher la salle au survol.
-        javafx.scene.Group group = new javafx.scene.Group(label);
-        group.setOnMouseEntered(e -> label.setVisible(true));
-        group.setOnMouseExited(e -> label.setVisible(false));
+        // Le cercle utilisé pour représenter le point
+        javafx.scene.shape.Circle point = new javafx.scene.shape.Circle(5);
+        point.setStyle("-fx-fill: blue; -fx-stroke: black;");
+    
+        // Gestionnaire pour afficher et cacher le label
+        point.setOnMouseEntered(event -> label.setVisible(true));
+        point.setOnMouseExited(event -> label.setVisible(false));
+    
+        // Utilisation d'un groupe pour encapsuler le point et le label
+        javafx.scene.Group group = new javafx.scene.Group(point, label);
+    
+        // Déplacement du label pour qu'il ne chevauche pas le point
+        label.translateXProperty().bind(point.translateXProperty().add(10));
+        label.translateYProperty().bind(point.translateYProperty().subtract(10));
     
         return group;
     }
