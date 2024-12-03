@@ -83,7 +83,7 @@ public class SolarEdgeBorderPane {
                     this.seRunViewController.loadUpdateHistoric();
                 });
                 try {
-                    Thread.sleep(100); // Pause pour éviter une utilisation excessive des ressources
+                    Thread.sleep(10000); // Pause pour éviter une utilisation excessive des ressources
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

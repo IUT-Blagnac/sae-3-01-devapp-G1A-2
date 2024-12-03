@@ -1,6 +1,7 @@
 package application.view;
 
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -328,6 +329,15 @@ public class AppMainFrameViewController {
 
     @FXML
     private void dochargeConfig() {
+        // Hard reset resultatAM107.json en tronquant le fichier et écrivant un {} dedans
+        String filePath = "../resultat/resultatAM107.json"; // Remplacez par le chemin de votre fichier
+        try (FileWriter writer = new FileWriter(filePath)) {
+            writer.write("{}");
+            System.out.println("Le fichier a été écrit avec succès.");
+        } catch (IOException e) {
+            System.err.println("Erreur lors de l'écriture dans le fichier : " + e.getMessage());
+        }
+
         ObjectMapper mapper = new ObjectMapper();
         Config config = new Config();
         config.setServer(tfServer.getText());
