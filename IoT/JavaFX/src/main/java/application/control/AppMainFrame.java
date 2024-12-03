@@ -1,6 +1,9 @@
 package application.control;
 
+import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
+import java.io.InputStreamReader;
 
 import application.view.AppMainFrameViewController;
 import javafx.application.Application;
@@ -119,24 +122,51 @@ public class AppMainFrame extends Application {
     public void gestionLancementPython() {
         System.out.println("Valeur de l'état fenêtre AM107 : " + this.getAm107Running());
         System.out.println("Valeur de l'état fenêtre SolarEdge : " + this.getSolarEdgeRunning());
-
+    
         if (!this.getAm107Running() && !this.getSolarEdgeRunning()) {
             System.out.println("Aucune fenêtre ouverte. Pas de lancement du programme Python.");
         } else {
             if (pythonProcess == null || !pythonProcess.isAlive()) {
                 System.out.println("Lancement du programme Python.");
                 try {
-                    // Chemin vers le script Python
+                    // Chemin vers le script Python et le fichier requirements.txt
                     String scriptPath = "../Python/main.py";
-
+                    String requirementsPath = "../Python/requirements.txt";
+                    String venvPath = "../Python/venv";
+    
+                    // Commande pour créer l'environnement virtuel
+                    ProcessBuilder pbCreateVenv = new ProcessBuilder("python3", "-m", "venv", venvPath);
+                    pbCreateVenv.redirectErrorStream(true);
+                    Process processCreateVenv = pbCreateVenv.start();
+                    processCreateVenv.waitFor();
+    
+                    // Déterminer le chemin vers pip en fonction du système d'exploitation
+                    String pipPath;
+                    if (System.getProperty("os.name").toLowerCase().contains("win")) {
+                        pipPath = venvPath + "\\Scripts\\pip.exe";
+                    } else {
+                        pipPath = venvPath + "/bin/pip";
+                    }
+    
+                    // Commande pour installer les dépendances
+                    ProcessBuilder pbInstallDeps = new ProcessBuilder(pipPath, "install", "-r", requirementsPath);
+                    pbInstallDeps.redirectErrorStream(true);
+                    Process processInstallDeps = pbInstallDeps.start();
+                    processInstallDeps.waitFor();
+    
                     // Commande pour lancer le script Python
-                    ProcessBuilder pb = new ProcessBuilder("python", scriptPath);
-
-                    // Démarrer le processus Python
-                    pythonProcess = pb.start();
-
-                    System.out.println("Programme Python lancé avec succès.");
-                } catch (IOException e) {
+                    String pythonPath;
+                    if (System.getProperty("os.name").toLowerCase().contains("win")) {
+                        pythonPath = venvPath + "\\Scripts\\python.exe";
+                    } else {
+                        pythonPath = venvPath + "/bin/python";
+                    }
+                    ProcessBuilder pbRunScript = new ProcessBuilder(pythonPath, scriptPath);
+                    pbRunScript.redirectErrorStream(true);
+                    Process processRunScript = pbRunScript.start();
+                    pythonProcess = processRunScript;
+                    
+                } catch (IOException | InterruptedException e) {
                     System.err.println("Erreur lors du lancement du programme Python : " + e.getMessage());
                     e.printStackTrace();
                 }
