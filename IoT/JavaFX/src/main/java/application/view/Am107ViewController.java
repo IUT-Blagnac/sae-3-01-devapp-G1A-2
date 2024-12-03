@@ -96,6 +96,7 @@ public class Am107ViewController {
     private void doQuit() {
         if (AlertUtilities.confirmYesCancel(this.containingStage, "Quitter l'application",
                 "Etes-vous sûr de vouloir quitter la fenêtre ?", null, AlertType.CONFIRMATION)) {
+            this.am107BorderPane.doStopAm107();
             this.containingStage.close(); // Ferme la fenêtre correctement
             System.out.println("Fenêtre AM107 fermée, bouton réactivé");
         }

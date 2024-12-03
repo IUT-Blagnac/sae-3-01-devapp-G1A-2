@@ -59,6 +59,9 @@ public class SolarEdgeBorderPane {
         this.seViewController.displayDialog();
     }
 
+    /**
+     * Méthode permettant de stopper le thread du solarEdge
+     */
     public void doStopSolarEdge() {
         this.r.stop();
     }

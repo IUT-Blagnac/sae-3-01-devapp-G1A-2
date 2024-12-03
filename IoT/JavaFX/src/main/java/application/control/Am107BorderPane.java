@@ -2,6 +2,8 @@ package application.control;
 
 import application.tools.StageManagement;
 import application.view.Am107ViewController;
+import application.view.SolarEdgeViewController;
+import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -11,8 +13,8 @@ public class Am107BorderPane {
     // Stage de la fenêtre principale construite par DailyBankMainFrame
     private Stage am107Stage;
     private Am107ViewController amViewController;
-    // private Thread t;
-    // private MyRun r;
+    private Thread t;
+    private MyRun r;
 
     /**
      * Constructeur
@@ -42,10 +44,10 @@ public class Am107BorderPane {
             amViewController = loader.getController();
             amViewController.initContext(this.am107Stage, this);
 
-            // // Création du thread
-            // this.r = new MyRun();
-            // this.t = new Thread(r);
-            // t.start();
+            // Création du thread
+            this.r = new MyRun(this.amViewController);
+            this.t = new Thread(r);
+            t.start();
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -97,4 +99,41 @@ public class Am107BorderPane {
     // this.enCours = false;
     // }
     // }
+
+    /**
+     * Méthode permettant de stopper le thread du solarEdge
+     */
+    public void doStopAm107() {
+        this.r.stop();
+    }
+
+    // TEST THREAD DE LA CLASSE
+    public static class MyRun implements Runnable {
+        private boolean enCours;
+        private Am107ViewController amRunViewController;
+
+        public MyRun(Am107ViewController pamRunViewController) {
+            this.enCours = true;
+            this.amRunViewController = pamRunViewController;
+        }
+
+        @Override
+        public void run() {
+            while (this.enCours) {
+                Platform.runLater(() -> {
+                    this.amRunViewController.refreshGraphiques();
+                });
+                try {
+                    Thread.sleep(100); // Pause pour éviter une utilisation excessive des ressources
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+            System.out.println("Le thread est arrêté.");
+        }
+
+        public void stop() {
+            this.enCours = false;
+        }
+    }
 }
