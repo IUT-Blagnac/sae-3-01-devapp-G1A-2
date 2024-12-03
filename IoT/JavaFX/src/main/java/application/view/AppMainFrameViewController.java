@@ -388,6 +388,12 @@ public class AppMainFrameViewController {
         // Ouvrir la fenêtre AM107 et obtenir son Stage
         Stage am107Stage = this.dbmfDialogController.am107Display();
 
+        // Mettre à jour l'état dans AppMainFrame
+        this.dbmfDialogController.setAm107Running(true);
+
+        // Gérer le lancement du programme Python
+        this.dbmfDialogController.gestionLancementPython();
+
         // Ajouter un écouteur pour détecter la fermeture de la fenêtre
         am107Stage.setOnHiding(event -> onAm107Closed());
     }
@@ -416,6 +422,12 @@ public class AppMainFrameViewController {
 
         // Ouvrir la fenêtre Solar Edge et obtenir son Stage
         Stage solarEdgeStage = this.dbmfDialogController.solarDisplay();
+
+        // Mettre à jour l'état dans AppMainFrame
+        this.dbmfDialogController.setSolarEdgeRunning(true);
+
+        // Gérer le lancement du programme Python
+        this.dbmfDialogController.gestionLancementPython();
 
         // Ajouter un écouteur pour détecter la fermeture de la fenêtre
         solarEdgeStage.setOnHiding(event -> onSolarEdgeClosed());

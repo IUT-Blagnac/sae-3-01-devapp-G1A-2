@@ -1,5 +1,7 @@
 package application.control;
 
+import java.io.IOException;
+
 import application.view.AppMainFrameViewController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -20,6 +22,8 @@ public class AppMainFrame extends Application {
     private Boolean isAm107Running = false;
     private Am107BorderPane am107BorderPane;
     private SolarEdgeBorderPane solarEdgeBorderPane;
+    // Ajoutez cette ligne en haut de votre classe
+    private Process pythonProcess;
 
     /**
      * Méthode de démarrage (JavaFX).
@@ -109,29 +113,63 @@ public class AppMainFrame extends Application {
     // }
 
     /**
-     * Méthode permettant la gestion du lancement du programme python
-     * le main.py est appelé une fois pour les deux fenêtres solarEdge et AM107
+     * Méthode permettant la gestion du lancement du programme Python
+     * Le main.py est appelé une fois pour les deux fenêtres SolarEdge et AM107
      */
     public void gestionLancementPython() {
-        System.out.println("Valeur de letat fenetre AM107 : " + this.getAm107Running());
-        System.out.println("Valeur de l'état fenetre SolarEdge : " + this.getSolarEdgeRunning());
-        if (this.getAm107Running() == false && this.getSolarEdgeRunning() == false) {
-            System.out.println("Lancement du programme python");
+        System.out.println("Valeur de l'état fenêtre AM107 : " + this.getAm107Running());
+        System.out.println("Valeur de l'état fenêtre SolarEdge : " + this.getSolarEdgeRunning());
 
+        if (!this.getAm107Running() && !this.getSolarEdgeRunning()) {
+            System.out.println("Aucune fenêtre ouverte. Pas de lancement du programme Python.");
         } else {
-            System.out.println("Pas de lancement du programme python !!!!!");
+            if (pythonProcess == null || !pythonProcess.isAlive()) {
+                System.out.println("Lancement du programme Python.");
+                try {
+                    // Chemin vers le script Python
+                    String scriptPath = "../Python/main.py";
+
+                    // Commande pour lancer le script Python
+                    ProcessBuilder pb = new ProcessBuilder("python", scriptPath);
+
+                    // Démarrer le processus Python
+                    pythonProcess = pb.start();
+
+                    System.out.println("Programme Python lancé avec succès.");
+                } catch (IOException e) {
+                    System.err.println("Erreur lors du lancement du programme Python : " + e.getMessage());
+                    e.printStackTrace();
+                }
+            } else {
+                System.out.println("Le programme Python est déjà en cours d'exécution.");
+            }
         }
     }
 
     /**
-     * Méthode permettant la gestion de la fin du programme python
-     * On va devoir faire un KILL du programme ici
+     * Méthode permettant la gestion de la fin du programme Python
+     * On arrête le programme ici si toutes les fenêtres sont fermées
      */
     public void testIfWindowsAreAllClosed() {
-        if (this.getAm107Running() == false && this.getSolarEdgeRunning() == false) {
-            System.out.println("FIN DU PROGRAMME PYTHON");
+        if (!this.getAm107Running() && !this.getSolarEdgeRunning()) {
+            System.out.println("Toutes les fenêtres sont fermées. Arrêt du programme Python.");
+            if (pythonProcess != null && pythonProcess.isAlive()) {
+                // Arrêter le processus Python
+                pythonProcess.destroy();
+
+                try {
+                    // Attendre que le processus se termine
+                    pythonProcess.waitFor();
+                    System.out.println("Programme Python arrêté avec succès.");
+                } catch (InterruptedException e) {
+                    System.err.println("Erreur lors de l'arrêt du programme Python : " + e.getMessage());
+                    e.printStackTrace();
+                }
+            } else {
+                System.out.println("Le programme Python n'est pas en cours d'exécution.");
+            }
         } else {
-            System.out.println("PROGRAMME PYTHON IS RUNNING...");
+            System.out.println("Programme Python toujours nécessaire.");
         }
     }
 

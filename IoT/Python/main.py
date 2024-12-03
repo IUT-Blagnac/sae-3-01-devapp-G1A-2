@@ -3,6 +3,16 @@ import threading
 import paho.mqtt.subscribe as subscribe
 from datetime import datetime
 import os
+import signal
+import sys
+
+def sigterm_handler(signal, frame):
+    print("Arrêt du script Python")
+    # Effectuer des opérations de nettoyage ici si nécessaire
+    sys.exit(0)
+
+signal.signal(signal.SIGTERM, sigterm_handler)
+
 
 server = str()
 topic = list()
