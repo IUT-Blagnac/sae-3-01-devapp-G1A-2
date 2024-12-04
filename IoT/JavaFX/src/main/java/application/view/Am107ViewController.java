@@ -1,23 +1,38 @@
 package application.view;
 
 import java.io.File;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-
+import java.util.Set;
+import java.util.stream.Collectors;
 import application.control.Am107BorderPane;
 import application.tools.AlertUtilities;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.fxml.FXML;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Menu;
+import javafx.scene.control.MenuItem;
+import javafx.scene.control.MenuBar;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
+import javafx.util.Duration;
 import model.RootData;
 import model.SalleData;
+
+import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class Am107ViewController {
@@ -25,12 +40,14 @@ public class Am107ViewController {
     private Am107BorderPane am107BorderPane;
     private Stage containingStage;
     private Map<String, SalleData> sallesCapteurs;
-
-    @FXML
-    private Menu menuBar;
+    private Map<String, JsonNode> alertePrecedentes = new HashMap<>();
+    private static final DateTimeFormatter TIME_FORMATTER = DateTimeFormatter.ofPattern("HH:mm"); //Pour plus tard, j'attend les autres commit avant de toucher à ça
 
     @FXML
     private ScrollPane scrollPaneGraphiques;
+
+    @FXML
+    private VBox vBoxAlerte;
 
     /**
      * Initialisation du contrôleur de vue AppMainFrameController.
@@ -80,6 +97,10 @@ public class Am107ViewController {
         System.out.println("Contrôleur chargé avec succès.");
         loadSallesEtCapteursFromResultatJSON();
         initializeGraphiquesParCapteur();
+        getAllAlerte();
+        Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(30), event -> updateAlertes()));
+        timeline.setCycleCount(Timeline.INDEFINITE);
+        timeline.play();
     }
 
     /**
@@ -110,7 +131,9 @@ public class Am107ViewController {
         for (String capteur : capteurs) {
             NumberAxis xAxis = new NumberAxis();
             NumberAxis yAxis = new NumberAxis();
-            xAxis.setLabel("Temps");
+            xAxis.setLabel("Date");
+            // Elargir l'axe des ordonnées 
+            xAxis.setUpperBound(xAxis.getBoundsInLocal().getWidth()+100);
             yAxis.setLabel(capteur);
 
             LineChart<Number, Number> lineChart = new LineChart<>(xAxis, yAxis);
@@ -166,7 +189,7 @@ public class Am107ViewController {
         System.out.println("Rafraîchissement des graphiques...");
         loadSallesEtCapteursFromResultatJSON(); // Recharger les données depuis le JSON.
     
-        List<String> capteurs = List.of("temperature", "humidity", "co2", "illumination", "activity", "pression");
+        List<String> capteurs = List.of("temperature", "humidity", "co2", "illumination", "activity", "pressure");
         VBox vboxGraphiques = (VBox) this.scrollPaneGraphiques.getContent();
     
         for (int i = 0; i < capteurs.size(); i++) {
@@ -265,4 +288,157 @@ public class Am107ViewController {
     
         return group;
     }
+
+    public void getAllAlerte() {
+        try {
+            // Lire le fichier JSON
+            ObjectMapper objectMapper = new ObjectMapper();
+            JsonNode data = objectMapper.readTree(new File("../resultat/alerteAM107.json"));
+
+            // Obtenir les noms des salles
+            List<String> keys = new ArrayList<>();
+            data.fieldNames().forEachRemaining(keys::add);
+
+            // Liste pour suivre les menus et salles modifiés
+            Set<String> menusModifies = new HashSet<>();
+            Set<String> sallesModifiees = new HashSet<>();
+
+            // Vérifier les changements depuis la dernière mise à jour
+            for (String key : keys) {
+                JsonNode currentData = data.get(key);
+                JsonNode alertePrecedentesNode = alertePrecedentes.get(key);
+
+                if (!currentData.equals(alertePrecedentesNode)) { // Si les données ont changé
+                    sallesModifiees.add(key);
+
+                    // Identifier le menu parent
+                    if (key.startsWith("B")) menusModifies.add("B");
+                    else if (key.startsWith("C")) menusModifies.add("C");
+                    else if (key.startsWith("E")) menusModifies.add("E");
+                    else menusModifies.add("Autres");
+                }
+            }
+
+            // Mettre à jour les données précédentes
+            alertePrecedentes.clear();
+            keys.forEach(key -> alertePrecedentes.put(key, data.get(key)));
+
+            // Séparer les salles par préfixe
+            List<String> B = keys.stream().filter(key -> key.startsWith("B")).collect(Collectors.toList());
+            List<String> C = keys.stream().filter(key -> key.startsWith("C")).collect(Collectors.toList());
+            List<String> E = keys.stream().filter(key -> key.startsWith("E")).collect(Collectors.toList());
+            List<String> Other = keys.stream()
+                    .filter(key -> !key.startsWith("A") && !key.startsWith("B") && !key.startsWith("C") && !key.startsWith("E"))
+                    .collect(Collectors.toList());
+
+            // Listes des préfixes pour créer les menus
+            List<String> prefixes = Arrays.asList("B", "C", "E", "Autres");
+
+            // Création des menus
+            for (String prefix : prefixes) {
+                Menu menu = new Menu(prefix);
+
+                // Mettre en valeur le menu si des salles ont changé
+                if (menusModifies.contains(prefix)) {
+                    menu.setStyle("-fx-text-fill: green;");
+                }
+
+                List<String> salles;
+                switch (prefix) {
+                    case "B":
+                        salles = B;
+                        break;
+                    case "C":
+                        salles = C;
+                        break;
+                    case "E":
+                        salles = E;
+                        break;
+                    default:
+                        salles = Other;
+                        break;
+                }
+
+                for (String salle : salles) {
+                    MenuItem menuItem = new MenuItem(salle);
+
+                    // Mettre en valeur la salle si elle a changé
+                    if (sallesModifiees.contains(salle)) {
+                        menuItem.setStyle("-fx-font-weight: bold; -fx-text-fill: green;");
+                    }
+
+                    // Ajouter un gestionnaire d'événements pour afficher les alertes
+                    menuItem.setOnAction(event -> afficherToutesAlertesPourSalle(data, salle));
+                    menu.getItems().add(menuItem);
+                }
+
+                MenuBar menuBar = new MenuBar();
+                menuBar.getMenus().add(menu);
+                vBoxAlerte.getChildren().add(menuBar);
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("Erreur lors de la lecture ou du traitement du fichier JSON.");
+        }
+    }
+
+    // Méthode pour afficher toutes les alertes d'une salle spécifique
+    private void afficherToutesAlertesPourSalle(JsonNode data, String salle) {
+        try {
+            // Récupérer les données de la salle
+            JsonNode alerte = data.get(salle);
+
+            // Construire un message contenant toutes les alertes
+            StringBuilder alertesMessage = new StringBuilder("Alertes pour la salle " + salle + " :\n");
+            if (alerte != null) {
+                alerte.fields().forEachRemaining(entry -> {
+                    String key = entry.getKey();
+                    JsonNode values = entry.getValue();
+                    alertesMessage.append(key).append(" : ").append(values.toString()).append("\n");
+                });
+            } else {
+                alertesMessage.append("Aucune alerte.");
+            }
+
+            // Afficher les alertes dans une boîte de dialogue
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Détails des Alertes");
+            alert.setHeaderText("Salle : " + salle);
+            alert.setContentText(alertesMessage.toString());
+            alert.showAndWait();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("Erreur lors de l'affichage des alertes pour la salle " + salle);
+        }
+    }
+
+    /**
+    * Méthode pour mettre à jour les alertes dynamiquement.
+    */
+    public void updateAlertes() {
+        vBoxAlerte.getChildren().clear();
+        getAllAlerte();
+    }
+
+    /**
+     * Fonction utilitaire pour extraire l'heure et les minutes d'une date ISO.
+     *
+     * @param rawDate   La date brute sous forme de chaîne.
+     * @param formatter Le format souhaité pour l'heure.
+     * @return L'heure et les minutes formatées.
+     */
+    private String extractTime(String rawDate, DateTimeFormatter formatter) {
+        try {
+            // Créer un formatteur adapté au format "2024-11-27 10:48:25"
+            DateTimeFormatter inputFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+            LocalDateTime dateTime = LocalDateTime.parse(rawDate, inputFormatter); // Parse avec le format personnalisé
+            return dateTime.format(formatter); // Format vers HH:mm
+        } catch (Exception e) {
+            System.err.println("Erreur de formatage de la date : " + rawDate);
+            return rawDate; // Retourne la date brute en cas d'échec
+        }
+    }
+
 }

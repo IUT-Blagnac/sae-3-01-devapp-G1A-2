@@ -27,29 +27,20 @@
       </MenuBar>
    </top>
    <right>
-      <VBox alignment="TOP_CENTER" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <VBox alignment="TOP_CENTER" prefHeight="311.0" prefWidth="259.0" BorderPane.alignment="CENTER">
          <children>
             <Label alignment="CENTER" contentDisplay="CENTER" text="Alertes" textAlignment="CENTER" />
             <ScrollPane fx:id="scrollPaneAlertes" prefHeight="195.0" prefWidth="200.0">
               <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <VBox fx:id="vBoxAlerte" prefHeight="200.0" prefWidth="192.0" />
+                     </children></AnchorPane>
               </content>
             </ScrollPane>
          </children>
       </VBox>
    </right>
-   <center>
-      <VBox alignment="TOP_CENTER" BorderPane.alignment="CENTER">
-         <children>
-            <Label text="Graphiques" />
-            <ScrollPane fx:id="scrollPaneGraphiques">
-               <content>
-                  <VBox prefHeight="200.0" prefWidth="100.0" />
-               </content>
-            </ScrollPane>
-         </children>
-      </VBox>
-   </center>
    <bottom>
       <VBox alignment="CENTER" BorderPane.alignment="CENTER">
          <children>
@@ -58,4 +49,16 @@
          </children>
       </VBox>
    </bottom>
+   <center>
+      <VBox alignment="TOP_CENTER" prefWidth="342.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Graphiques" />
+            <ScrollPane fx:id="scrollPaneGraphiques" prefWidth="345.0">
+               <content>
+                  <VBox prefHeight="200.0" prefWidth="100.0" />
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+   </center>
 </BorderPane>
