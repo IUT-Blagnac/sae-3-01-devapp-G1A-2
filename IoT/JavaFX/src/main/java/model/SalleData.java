@@ -10,7 +10,7 @@ public class SalleData {
     private List<Double> co2;
     private List<Double> illumination;
     private List<Double> activity;
-    private List<Double> pression;
+    private List<Double> pressure;
     private List<String> timestamp;
 
     // Getters et setters
@@ -54,12 +54,12 @@ public class SalleData {
         this.activity = activity;
     }
 
-    public List<Double> getPression() {
-        return pression;
+    public List<Double> getPressure() {
+        return pressure;
     }
 
-    public void setPression(List<Double> pression) {
-        this.pression = pression;
+    public void setPressure(List<Double> pressure) {
+        this.pressure = pressure;
     }
 
     public List<String> getTimestamp() {
@@ -79,7 +79,7 @@ public class SalleData {
         capteurs.put("co2", co2 != null && !co2.isEmpty());
         capteurs.put("illumination", illumination != null && !illumination.isEmpty());
         capteurs.put("activity", activity != null && !activity.isEmpty());
-        capteurs.put("pression", pression != null && !pression.isEmpty());
+        capteurs.put("pressure", pressure != null && !pressure.isEmpty());
 
         return capteurs;
     }

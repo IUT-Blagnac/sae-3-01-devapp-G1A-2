@@ -204,7 +204,7 @@ public class AppMainFrameViewController {
         activity.setSelected(data.containsKey("activity"));
         co2.setSelected(data.containsKey("co2"));
         illumination.setSelected(data.containsKey("illumination"));
-        pression.setSelected(data.containsKey("pression"));
+        pression.setSelected(data.containsKey("pressure"));
     }
 
     private void valideData() {
@@ -239,9 +239,9 @@ public class AppMainFrameViewController {
         }
 
         if (pression.isSelected()) {
-            this.data.put("pression", seuilPres.getValue());
+            this.data.put("pressure", seuilPres.getValue());
         } else {
-            this.data.remove("pression");
+            this.data.remove("pressure");
         }
     }
 
@@ -319,7 +319,7 @@ public class AppMainFrameViewController {
             seuilAct.set(config.getData().getOrDefault("activity", 0.0f));
             seuilCo2.set(config.getData().getOrDefault("co2", 0.0f));
             seuilIll.set(config.getData().getOrDefault("illumination", 0.0f));
-            seuilPres.set(config.getData().getOrDefault("pression", 0.0f));
+            seuilPres.set(config.getData().getOrDefault("pressure", 0.0f));
 
             System.out.println("Configuration chargée");
         } catch (IOException e) {
@@ -329,7 +329,8 @@ public class AppMainFrameViewController {
 
     @FXML
     private void dochargeConfig() {
-        // Hard reset resultatAM107.json en tronquant le fichier et écrivant un {} dedans
+        // Hard reset resultatAM107.json en tronquant le fichier et écrivant un {}
+        // dedans
         String filePath = "../resultat/resultatAM107.json"; // Remplacez par le chemin de votre fichier
         try (FileWriter writer = new FileWriter(filePath)) {
             writer.write("{}");
@@ -339,7 +340,7 @@ public class AppMainFrameViewController {
         }
 
         ObjectMapper mapper = new ObjectMapper();
-        Config config = new Config();
+        this.config = new Config();
         config.setServer(tfServer.getText());
 
         valideSalles();
@@ -396,7 +397,7 @@ public class AppMainFrameViewController {
         this.launchAm107Btn.setDisable(true); // Désactiver le bouton
 
         // Ouvrir la fenêtre AM107 et obtenir son Stage
-        Stage am107Stage = this.dbmfDialogController.am107Display();
+        Stage am107Stage = this.dbmfDialogController.am107Display(this.config); // passage de la config en param
 
         // Mettre à jour l'état dans AppMainFrame
         this.dbmfDialogController.setAm107Running(true);

@@ -1,5 +1,7 @@
 package application.control;
 
+import model.Config;
+
 import application.tools.StageManagement;
 import application.view.Am107ViewController;
 import application.view.SolarEdgeViewController;
@@ -55,8 +57,8 @@ public class Am107BorderPane {
         }
     }
 
-    public void doAm107() {
-        this.amViewController.displayDialog();
+    public void doAm107(Config pconfig) {
+        this.amViewController.displayDialog(pconfig);
     }
 
     public Stage getAm107Stage() {
@@ -124,7 +126,7 @@ public class Am107BorderPane {
                     this.amRunViewController.refreshGraphiques();
                 });
                 try {
-                    Thread.sleep(10000); // Pause pour éviter une utilisation excessive des ressources
+                    Thread.sleep(1000); // Pause pour éviter une utilisation excessive des ressources
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
