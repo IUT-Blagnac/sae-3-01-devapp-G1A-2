@@ -1,11 +1,7 @@
 package application.control;
 
-import java.io.BufferedReader;
-import java.io.File;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import model.Config;
-
 import application.view.AppMainFrameViewController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -136,7 +132,7 @@ public class AppMainFrame extends Application {
                     String venvPath = "../Python/venv";
 
                     // Commande pour créer l'environnement virtuel
-                    ProcessBuilder pbCreateVenv = new ProcessBuilder("python3", "-m", "venv", venvPath);
+                    ProcessBuilder pbCreateVenv = new ProcessBuilder("python", "-m", "venv", venvPath);
                     pbCreateVenv.redirectErrorStream(true);
                     Process processCreateVenv = pbCreateVenv.start();
                     processCreateVenv.waitFor();
@@ -166,6 +162,22 @@ public class AppMainFrame extends Application {
                     pbRunScript.redirectErrorStream(true);
                     Process processRunScript = pbRunScript.start();
                     pythonProcess = processRunScript;
+
+                    // Affiche la sortie standard du programme Python
+                    new Thread(() -> {
+                        try {
+                            java.io.BufferedReader reader = new java.io.BufferedReader(
+                                    new java.io.InputStreamReader(processRunScript.getInputStream()));
+                            String line = "";
+                            while ((line = reader.readLine()) != null) {
+                                System.out.println("Sortie Python : " + line);
+                            }
+                        } catch (java.io.IOException e) {
+                            System.err.println("Erreur lors de la lecture de la sortie standard du programme Python : "
+                                    + e.getMessage());
+                            e.printStackTrace();
+                        }
+                    }).start();
 
                 } catch (IOException | InterruptedException e) {
                     System.err.println("Erreur lors du lancement du programme Python : " + e.getMessage());

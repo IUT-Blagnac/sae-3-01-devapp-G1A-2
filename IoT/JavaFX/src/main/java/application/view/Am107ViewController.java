@@ -1,23 +1,20 @@
 package application.view;
 
 import java.io.File;
-<<<<<<< HEAD
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
-=======
-import model.Config;
-
-import java.util.ArrayList;
-import java.util.HashMap;
->>>>>>> refs/remotes/origin/master
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
+
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import application.control.Am107BorderPane;
 import application.tools.AlertUtilities;
 import javafx.animation.KeyFrame;
@@ -29,33 +26,25 @@ import javafx.scene.chart.XYChart;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Menu;
-import javafx.scene.control.MenuItem;
 import javafx.scene.control.MenuBar;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import javafx.util.Duration;
+import model.Config;
 import model.RootData;
 import model.SalleData;
-
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class Am107ViewController {
 
     private Am107BorderPane am107BorderPane;
     private Stage containingStage;
     private Map<String, SalleData> sallesCapteurs;
-<<<<<<< HEAD
     private Map<String, JsonNode> alertePrecedentes = new HashMap<>();
     private static final DateTimeFormatter TIME_FORMATTER = DateTimeFormatter.ofPattern("HH:mm"); //Pour plus tard, j'attend les autres commit avant de toucher à ça
-=======
     private Config config;
-
-    @FXML
-    private Menu menuBar;
->>>>>>> refs/remotes/origin/master
 
     @FXML
     private ScrollPane scrollPaneGraphiques;
@@ -80,6 +69,7 @@ public class Am107ViewController {
      */
     public void displayDialog(Config pconfig) {
         this.config = pconfig;
+        System.out.println("Configuration reçue dans AM107 VIEW CONTROLLER : " + this.config);
         this.sallesCapteurs.clear(); // Clear les données existantes
         loadSallesEtCapteursFromResultatJSON(); // Reload data du JSON
         initializeGraphiquesParCapteur(); // reset les graphiques
@@ -114,15 +104,11 @@ public class Am107ViewController {
     public void initialize() {
         System.out.println("Contrôleur chargé avec succès.");
         loadSallesEtCapteursFromResultatJSON();
-<<<<<<< HEAD
         initializeGraphiquesParCapteur();
         getAllAlerte();
         Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(30), event -> updateAlertes()));
         timeline.setCycleCount(Timeline.INDEFINITE);
         timeline.play();
-=======
-        // initializeGraphiquesParCapteur();
->>>>>>> refs/remotes/origin/master
     }
 
     /**
@@ -149,6 +135,10 @@ public class Am107ViewController {
         this.scrollPaneGraphiques.setContent(vboxGraphiques);
 
         // Liste des capteurs à gérer et donc des graphiques à plot
+        if (this.config == null) {
+            System.err.println("\n\n\nConfiguration non définie. Impossible de charger les graphiques.\n\n\n");
+            return;
+        }
         Map<String, Float> mapCapteur = this.config.getData();
         List<String> capteurs = new ArrayList<String>();
 
@@ -216,10 +206,6 @@ public class Am107ViewController {
     public void refreshGraphiques() {
         System.out.println("Rafraîchissement des graphiques...");
         loadSallesEtCapteursFromResultatJSON(); // Recharger les données depuis le JSON.
-<<<<<<< HEAD
-    
-        List<String> capteurs = List.of("temperature", "humidity", "co2", "illumination", "activity", "pressure");
-=======
 
         // Liste des capteurs à gérer et donc des graphiques à plot
         Map<String, Float> mapCapteur = this.config.getData();
@@ -229,7 +215,6 @@ public class Am107ViewController {
             capteurs.add(key);
         }
         // vbox contenant tous les graphiques
->>>>>>> refs/remotes/origin/master
         VBox vboxGraphiques = (VBox) this.scrollPaneGraphiques.getContent();
 
         for (int i = 0; i < capteurs.size(); i++) {

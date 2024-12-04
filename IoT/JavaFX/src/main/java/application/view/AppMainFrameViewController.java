@@ -296,7 +296,7 @@ public class AppMainFrameViewController {
             // Créer un objet semblable au config.json
             mapper = new ObjectMapper();
             System.out.println("Répertoire courant : " + new File(".").getAbsolutePath());
-            config = mapper.readValue(new File("../config.json"), Config.class);
+            this.config = mapper.readValue(new File("../config.json"), Config.class);
 
             // Récupération des attributs de config.json vers les attributs de la classe
             this.server = config.getServer();
@@ -341,6 +341,7 @@ public class AppMainFrameViewController {
 
         ObjectMapper mapper = new ObjectMapper();
         this.config = new Config();
+
         config.setServer(tfServer.getText());
 
         valideSalles();
@@ -397,6 +398,10 @@ public class AppMainFrameViewController {
         this.launchAm107Btn.setDisable(true); // Désactiver le bouton
 
         // Ouvrir la fenêtre AM107 et obtenir son Stage
+        System.out.println(this.config + "okokokoko");
+        if (this.config == null) {
+            System.out.println("Configuration nulle");
+        }
         Stage am107Stage = this.dbmfDialogController.am107Display(this.config); // passage de la config en param
 
         // Mettre à jour l'état dans AppMainFrame
