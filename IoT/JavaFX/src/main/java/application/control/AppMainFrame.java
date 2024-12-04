@@ -78,9 +78,7 @@ public class AppMainFrame extends Application {
     }
 
     public Stage am107Display(Config pconfig) {
-        if (this.am107BorderPane == null) { // Créer la fenêtre si elle n'existe pas
-            this.am107BorderPane = new Am107BorderPane(this.dbmfStage);
-        }
+        this.am107BorderPane = new Am107BorderPane(this.dbmfStage);
         gestionLancementPython(); // Appel au lancement du programme python avant l'affichage de l'interface
         this.setAm107Running(true); // Changement d'état de la fenêtre
         this.am107BorderPane.doAm107(pconfig); // Affiche la fenêtre
@@ -132,7 +130,7 @@ public class AppMainFrame extends Application {
                     String venvPath = "../Python/venv";
 
                     // Commande pour créer l'environnement virtuel
-                    ProcessBuilder pbCreateVenv = new ProcessBuilder("python", "-m", "venv", venvPath);
+                    ProcessBuilder pbCreateVenv = new ProcessBuilder("python3", "-m", "venv", venvPath);
                     pbCreateVenv.redirectErrorStream(true);
                     Process processCreateVenv = pbCreateVenv.start();
                     processCreateVenv.waitFor();
