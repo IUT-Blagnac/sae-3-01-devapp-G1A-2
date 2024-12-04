@@ -53,7 +53,7 @@
    <bottom>
       <VBox alignment="CENTER" BorderPane.alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" onAction="#refreshGraphiques" text="Refersh graphiques" />
+            <Button mnemonicParsing="false" onAction="#refreshGraphiques" text="Refresh graphiques" />
             <Button mnemonicParsing="false" text="Afficher toutes les salles" />
          </children>
       </VBox>

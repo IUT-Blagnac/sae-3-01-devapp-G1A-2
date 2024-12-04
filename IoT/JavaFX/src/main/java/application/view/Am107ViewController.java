@@ -1,6 +1,10 @@
 package application.view;
 
 import java.io.File;
+import model.Config;
+
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -25,6 +29,7 @@ public class Am107ViewController {
     private Am107BorderPane am107BorderPane;
     private Stage containingStage;
     private Map<String, SalleData> sallesCapteurs;
+    private Config config;
 
     @FXML
     private Menu menuBar;
@@ -47,7 +52,11 @@ public class Am107ViewController {
     /**
      * Affichage de la fenêtre.
      */
-    public void displayDialog() {
+    public void displayDialog(Config pconfig) {
+        this.config = pconfig;
+        this.sallesCapteurs.clear(); // Clear les données existantes
+        loadSallesEtCapteursFromResultatJSON(); // Reload data du JSON
+        initializeGraphiquesParCapteur(); // reset les graphiques
         this.containingStage.show();
     }
 
@@ -79,7 +88,7 @@ public class Am107ViewController {
     public void initialize() {
         System.out.println("Contrôleur chargé avec succès.");
         loadSallesEtCapteursFromResultatJSON();
-        initializeGraphiquesParCapteur();
+        // initializeGraphiquesParCapteur();
     }
 
     /**
@@ -87,6 +96,7 @@ public class Am107ViewController {
      */
     private void loadSallesEtCapteursFromResultatJSON() {
         System.out.println("Chargement des salles depuis le fichier resultatAM107.json...");
+        this.sallesCapteurs = new HashMap<>(); // Reset the map
         ObjectMapper mapper = new ObjectMapper();
         try {
             RootData rootData = mapper.readValue(new File("../resultat/resultatAM107.json"), RootData.class);
@@ -104,8 +114,13 @@ public class Am107ViewController {
         VBox vboxGraphiques = new VBox();
         this.scrollPaneGraphiques.setContent(vboxGraphiques);
 
-        // Liste des capteurs à gérer
-        List<String> capteurs = List.of("temperature", "humidity", "co2", "illumination", "activity", "pression");
+        // Liste des capteurs à gérer et donc des graphiques à plot
+        Map<String, Float> mapCapteur = this.config.getData();
+        List<String> capteurs = new ArrayList<String>();
+
+        for (String key : mapCapteur.keySet()) {
+            capteurs.add(key);
+        }
 
         for (String capteur : capteurs) {
             NumberAxis xAxis = new NumberAxis();
@@ -140,18 +155,18 @@ public class Am107ViewController {
                     case "activity":
                         data = salleData.getActivity();
                         break;
-                    case "pression":
-                        data = salleData.getPression();
+                    case "pressure":
+                        data = salleData.getPressure();
                         break;
                 }
 
                 if (data != null) {
                     for (int i = 0; i < data.size(); i++) {
                         XYChart.Data<Number, Number> dataPoint = new XYChart.Data<>(i, data.get(i));
-                        
+
                         // Set the hoverable node
                         dataPoint.setNode(createHoverableNode(salle));
-                
+
                         series.getData().add(dataPoint);
                     }
                     lineChart.getData().add(series);
@@ -165,14 +180,21 @@ public class Am107ViewController {
     public void refreshGraphiques() {
         System.out.println("Rafraîchissement des graphiques...");
         loadSallesEtCapteursFromResultatJSON(); // Recharger les données depuis le JSON.
-    
-        List<String> capteurs = List.of("temperature", "humidity", "co2", "illumination", "activity", "pression");
+
+        // Liste des capteurs à gérer et donc des graphiques à plot
+        Map<String, Float> mapCapteur = this.config.getData();
+        List<String> capteurs = new ArrayList<String>();
+
+        for (String key : mapCapteur.keySet()) {
+            capteurs.add(key);
+        }
+        // vbox contenant tous les graphiques
         VBox vboxGraphiques = (VBox) this.scrollPaneGraphiques.getContent();
-    
+
         for (int i = 0; i < capteurs.size(); i++) {
             String capteur = capteurs.get(i);
             LineChart<Number, Number> lineChart;
-    
+
             // Vérifier si le graphique existe déjà pour ce capteur.
             if (i < vboxGraphiques.getChildren().size()) {
                 lineChart = (LineChart<Number, Number>) vboxGraphiques.getChildren().get(i);
@@ -182,17 +204,17 @@ public class Am107ViewController {
                 NumberAxis yAxis = new NumberAxis();
                 xAxis.setLabel("Temps");
                 yAxis.setLabel(capteur);
-    
+
                 lineChart = new LineChart<>(xAxis, yAxis);
                 lineChart.setTitle("Graphique de " + capteur);
                 lineChart.setLegendVisible(true); // Assure que la légende est toujours visible.
                 vboxGraphiques.getChildren().add(lineChart);
             }
-    
+
             // Rafraîchir ou ajouter les séries pour les salles.
             for (String salle : this.sallesCapteurs.keySet()) {
                 SalleData salleData = this.sallesCapteurs.get(salle);
-    
+
                 XYChart.Series<Number, Number> series = lineChart.getData().stream()
                         .filter(s -> s.getName().equals(salle))
                         .findFirst()
@@ -203,7 +225,7 @@ public class Am107ViewController {
                             lineChart.getData().add(newSeries);
                             return newSeries;
                         });
-    
+
                 // Récupérer les nouvelles données pour ce capteur et cette salle.
                 List<Double> data = null;
                 switch (capteur) {
@@ -222,47 +244,47 @@ public class Am107ViewController {
                     case "activity":
                         data = salleData.getActivity();
                         break;
-                    case "pression":
-                        data = salleData.getPression();
+                    case "pressure":
+                        data = salleData.getPressure();
                         break;
                 }
-    
+
                 // Mettre à jour les données dans la série.
                 if (data != null) {
                     series.getData().clear(); // Clear old data before updating
                     for (int j = 0; j < data.size(); j++) {
                         XYChart.Data<Number, Number> dataPoint = new XYChart.Data<>(j, data.get(j));
-                        
+
                         // Set the hoverable node
                         dataPoint.setNode(createHoverableNode(salle));
-                        
+
                         series.getData().add(dataPoint);
                     }
                 }
             }
         }
     }
-    
+
     private javafx.scene.Node createHoverableNode(String salle) {
         javafx.scene.control.Label label = new javafx.scene.control.Label(salle);
         label.setStyle("-fx-background-color: white; -fx-padding: 5px; -fx-border-color: black;");
         label.setVisible(false);
-    
+
         // Le cercle utilisé pour représenter le point
         javafx.scene.shape.Circle point = new javafx.scene.shape.Circle(5);
-        point.setStyle("-fx-fill: blue; -fx-stroke: black;");
-    
+        point.setStyle("-fx-fill: white; -fx-stroke: black;");
+
         // Gestionnaire pour afficher et cacher le label
         point.setOnMouseEntered(event -> label.setVisible(true));
         point.setOnMouseExited(event -> label.setVisible(false));
-    
+
         // Utilisation d'un groupe pour encapsuler le point et le label
         javafx.scene.Group group = new javafx.scene.Group(point, label);
-    
+
         // Déplacement du label pour qu'il ne chevauche pas le point
         label.translateXProperty().bind(point.translateXProperty().add(10));
         label.translateYProperty().bind(point.translateYProperty().subtract(10));
-    
+
         return group;
     }
 }

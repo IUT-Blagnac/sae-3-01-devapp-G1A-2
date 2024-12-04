@@ -1,1 +1,1 @@
-{"topic":["solaredge/blagnac/#","AM107/by-room/#"],"server":"mqtt.iut-blagnac.fr","salle":["all"],"data":{"activity":1000000.0,"illumination":1000000.0,"co2":1000000.0,"pression":1000000.0,"temperature":1000000.0,"humidity":1000000.0},"frequence":20}
+{"topic":["solaredge/blagnac/#","AM107/by-room/#"],"server":"mqtt.iut-blagnac.fr","salle":["all"],"data":{"illumination":1000000.0,"activity":100000.0,"co2":1000000.0,"humidity":100000.0,"pressure":100000.0},"frequence":20}

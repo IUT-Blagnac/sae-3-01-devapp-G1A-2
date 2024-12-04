@@ -1,70 +1,102 @@
 {
-    "C002": {
-        "temperature": [
-            21.4
-        ],
+    "amphi1": {
         "humidity": [
-            50.5
+            39.5
         ],
         "activity": [
             0
         ],
         "co2": [
-            964
+            441
         ],
         "illumination": [
-            2
+            1
+        ],
+        "pressure": [
+            1002.9
         ],
         "timestamp": [
-            "2024-12-03 12:45:37"
+            "2024-12-04 13:37:36"
         ]
     },
-    "B112": {
-        "temperature": [
-            19.6
-        ],
+    "B203": {
         "humidity": [
-            53
+            48.5
+        ],
+        "activity": [
+            370
+        ],
+        "co2": [
+            2624
+        ],
+        "illumination": [
+            77
+        ],
+        "pressure": [
+            1002.1
+        ],
+        "timestamp": [
+            "2024-12-04 13:37:38"
+        ]
+    },
+    "E208": {
+        "humidity": [
+            37
         ],
         "activity": [
             0
         ],
         "co2": [
-            575
+            473
         ],
         "illumination": [
-            64
+            13
+        ],
+        "pressure": [
+            1002.2
         ],
         "timestamp": [
-            "2024-12-03 12:45:39"
+            "2024-12-04 13:37:39"
         ]
     },
-    "B108": {
-        "temperature": [
-            20.3
-        ],
+    "E210": {
         "humidity": [
-            59
+            35
         ],
         "activity": [
             0
         ],
         "co2": [
-            1698
+            458
         ],
         "illumination": [
-            9
+            479
+        ],
+        "pressure": [
+            1001.4
         ],
         "timestamp": [
-            "2024-12-03 12:46:35"
+            "2024-12-04 13:38:00"
         ]
     },
-    "B111": {
-        "temperature": [
-            22.2
+    "B103": {
+        "humidity": [
+            42
+        ],
+        "activity": [
+            72
+        ],
+        "co2": [
+            3226
+        ],
+        "illumination": [
+            17
+        ],
+        "pressure": [
+            1002.7
         ],
         "timestamp": [
-            "2024-12-03 18:12:36"
+            "2024-12-04 13:38:04"
         ]
     }
 }
