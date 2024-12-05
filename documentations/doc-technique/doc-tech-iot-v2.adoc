@@ -92,7 +92,7 @@ Cette structuration permet d'améliorer la *modularité* en rendant chaque compo
 
         * Gestion des alertes en fonction des seuils définis.
 
-image::documentations\diagrammes\IoT\DSAM107.png[title="Interface de visualisation des données AM107", width=800]
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/diagrammes/IoT/DSAM107.png[title="Interface de visualisation des données AM107", width=800]
     
 
 === **Affichage des données SolarEdge** : Visualisation des données de production énergétique.
@@ -104,7 +104,7 @@ image::documentations\diagrammes\IoT\DSAM107.png[title="Interface de visualisati
         * Mise à jour des graphiques en se basant sur le fichier resultatSolar.json.
         * Affichage de l'historique de production énergétique.
 
-image::documentations\diagrammes\IoT\DSSolarEdge.png[title="Interface de visualisation des données SolarEdge", width=800]
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/diagrammes/IoT/DSSolarEdge.png[title="Interface de visualisation des données SolarEdge", width=800]
 
 === **Configuration des paramètres** : Gestion des salles, capteurs, seuils d'alerte et fréquence de rafraîchissement.
     - *Classes impliquées* :
