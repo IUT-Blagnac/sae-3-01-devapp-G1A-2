@@ -26,19 +26,19 @@
 |Nom de la tâche |Durée Approx. |Priorité
 
 |Rechercher de produits par catégorie/sous-catégorie ou mot-clé ou regroupement
-|
-|Must
-
-|Visualiser la liste de produits correspondants à la recherche
-|
+|3 jours
 |Must
 
 |Visualiser le détail d’un type produit (dont photos, avis & réponses, moyenne note avis, photos de la communauté, stock, catégorie et regroupement associés, …)
-|
+|3 jours
+|Must
+
+|Tri de la liste de produits par prix croissant / décroissant
+|2 jours
 |Must
 
 |Ajouter un produit affiché dans le panier / Gérer le panier (afficher le panier, modifier qté, supprimer un produit)
-|
+|4 jours
 |Must
 |===
 
@@ -49,15 +49,15 @@
 |Nom de la tâche |Durée Approx. |Priorité
 
 |Visualiser ses commandes passées (et saisir un avis sur un type produit acheté et livré, avec photos éventuelles)
-|
+|3 jours
 |Must
 
 |Faire un achat / passer une commande
-|
+|3 jours
 |Must
 
 |CRUD admin
-|
+|5 jours
 |Must
 |===
 
@@ -67,15 +67,11 @@
 |===
 |Nom de la tâche |Durée Approx. |Priorité
 
-|Tri de la liste de produits par prix croissant / décroissant
-|
-|Must
-
 |Gérer des points fidélité (recommandé)
-|
+|4 jours
 |Should
 
 |Visualiser mes dernières consultations de produits (recommandé)
-|
+|3 jours
 |Should
 |===
