@@ -136,7 +136,7 @@ image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-r
 
 Vous pouvez également annuler la modification si vous ne souhaitez pas valider, en cliquant sur le bouton "Retourner sur votre compte".
 
-immage::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/modifCompteRetour.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/modifCompteRetour.png"] 
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/modifCompteRetour.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/modifCompteRetour.png"] 
 
 
 Vous pouvez supprimer votre compte en cliquant sur le bouton "Supprimer mon compte".
@@ -163,8 +163,8 @@ image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-r
 
 Vous pouvez consulter votre panier en cliquant sur le logo de caddie 
 
-image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/RedirectionSuprCompte.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/RedirectionSuprCompte.png"] 
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/panier.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/RedirectionSuprCompte.png"] 
 
 Une fois avoir cliquer sur le caddie vous êtes redirigé vers votre panier 
 
-image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/RedirectionSuprCompte.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/RedirectionSuprCompte.png"] 
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/panier.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/RedirectionSuprCompte.png"] 
