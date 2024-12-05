@@ -94,7 +94,30 @@ image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-r
 ==== Consulter une categorie
 image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Page-D'accueil-selectCateg.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Page-D'accueil-selectCateg.png"] 
 
+Cliquer sur une des catégories pour aller sur la page avec la liste des produit disponible 
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/SelectCat.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/SelectCat.png"]
+
 === B) Utilisateur client
-Pour se connecter un compte, il faut cliquer sur l'icône en haut à droite de la page puis sur *"Déconnexion"* :
+
+==== Se connecter 
+
+Pour se connecter il faut remplir le formulaire email et mot de passe, si vous cliquer sur le bouton se souvenir de moi lors de votre deconnexion si vous vous reconnecter votre champs addresse mail est automatiquement remplie. 
+
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/connexion.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/connexion.png"] 
+
+==== Se déconnecter 
+
+Pour se déconnecter d'un compte, il faut cliquer sur l'icône en haut à droite de la page puis sur *"Déconnexion"* :
 
 image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/boutonDeconnexion.PNG[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/boutonDeconnexion.PNG"] 
+
+
+==== Consulter ses informations personnelles 
+
+Vous pouvez voir vos informations personnelles 
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/boutonDeconnexion.PNG[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/boutonDeconnexion.PNG"] 
+
+
