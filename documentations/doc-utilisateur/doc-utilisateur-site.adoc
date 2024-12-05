@@ -57,7 +57,12 @@ Il y a 3 rôles différents pour les utilisateurs du site : +
 
 === b) Utilisateur non connecté et compte client
 
-==== Connex ion à un compte 
+Lorsque vous arrivez sur le site, vous arrivez sur cette page d'accueil.
+
+==== Page d'accueil
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Page-D'accueil.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Page-D'accueil.png"] 
+
+==== Connexion à un compte 
 
 Pour créer un compte, il faut cliquer sur l'icône en haut à droite de la page puis sur *"Connexion"* :
 
@@ -86,10 +91,6 @@ image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-r
 Ensuite que vous arrivez sur le formulaire de connexion remplissez-le avec un email valide et le bon mot de passe et cliquer sur *"Connexion"*. Vous pouvez aussi cocher sur *"Se souvenir de moi"* pour éviter de se connecter à chaque fois :
 
 image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/connexionCompte.PNG[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/connexionCompte.PNG"] 
-
-==== Page d'accueil
-image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Page-D'accueil.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Page-D'accueil.png"] 
-
 
 ==== Consulter une categorie
 
@@ -161,10 +162,10 @@ image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-r
 
 ==== Consulter son panier 
 
-Vous pouvez consulter votre panier en cliquant sur le logo de caddie 
+Vous pouvez consulter votre panier en cliquant sur le logo du caddie.
 
-image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/panier.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/RedirectionSuprCompte.png"] 
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/panierButton.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/panierButton.png"] 
 
-Une fois avoir cliquer sur le caddie vous êtes redirigé vers votre panier 
+Une fois que vous avez cliqué sur le caddie, vous êtes redirigé vers votre panier.
 
-image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/panier.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/RedirectionSuprCompte.png"] 
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/panier.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/panier.png"] 
