@@ -92,9 +92,10 @@ image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-r
 
 
 ==== Consulter une categorie
+
 image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Page-D'accueil-selectCateg.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Page-D'accueil-selectCateg.png"] 
 
-Cliquer sur une des catégories pour aller sur la page avec la liste des produit disponible 
+Cliquez sur une des catégories pour accéder à la page contenant la liste des produits disponibles.
 
 image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/SelectCat.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/SelectCat.png"]
 
@@ -102,8 +103,7 @@ image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-r
 
 ==== Se connecter 
 
-Pour se connecter il faut remplir le formulaire email et mot de passe, si vous cliquer sur le bouton se souvenir de moi lors de votre deconnexion si vous vous reconnecter votre champs addresse mail est automatiquement remplie. 
-
+Pour se connecter, il faut remplir le formulaire avec l'email et le mot de passe. Si vous cliquez sur le bouton "Se souvenir de moi", lors de votre déconnexion, votre champ d'adresse email sera automatiquement rempli lors de votre prochaine reconnexion.
 
 image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/connexion.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/connexion.png"] 
 
@@ -116,8 +116,55 @@ image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-r
 
 ==== Consulter ses informations personnelles 
 
-Vous pouvez voir vos informations personnelles 
+Vous pouvez voir vos informations personnelles en cliquant sur "Mon Compte" en haut à droite.
 
-image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/boutonDeconnexion.PNG[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/boutonDeconnexion.PNG"] 
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/consultCompteButton.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/consultCompteButton.png"] 
 
 
+Une fois "Mon Compte" sélectionné, vous êtes redirigé vers la page contenant vos informations personnelles.
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/compte.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/compte.png"] 
+
+Sur la page contenant vos informations personnelles, vous pouvez modifier vos informations ou supprimer votre compte.
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/ModifCompteButton.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/ModifCompteButton.png"] 
+
+Lorsque vous cliquez sur le bouton "Modifier ses informations personnelles", vous serez redirigé vers un formulaire contenant toutes vos informations personnelles. Vous pouvez changer les informations souhaitées sur le formulaire, puis valider celui-ci.
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/modifCompte.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/modifCompte.png"] 
+
+
+Vous pouvez également annuler la modification si vous ne souhaitez pas valider, en cliquant sur le bouton "Retourner sur votre compte".
+
+immage::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/modifCompteRetour.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/modifCompteRetour.png"] 
+
+
+Vous pouvez supprimer votre compte en cliquant sur le bouton "Supprimer mon compte".
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/suprCompteButton.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/suprCompteButton..png"] 
+
+
+Lorsque vous cliquez, une première pop-up s'affiche pour vous demander si vous êtes sûr de vouloir supprimer votre compte.
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/suprCompte-PopUp1.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/suprCompte-PopUp1.png"] 
+
+
+Ensuite, un deuxième message de confirmation de suppression apparaît.
+
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/suprCompte-PopUp-2.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/suprCompte-PopUp-2.png"] 
+
+
+Une fois la suppression effectuée, vous êtes redirigé vers la page d'accueil.
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/RedirectionSuprCompte.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/RedirectionSuprCompte.png"] 
+
+==== Consulter son panier 
+
+Vous pouvez consulter votre panier en cliquant sur le logo de caddie 
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/RedirectionSuprCompte.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/RedirectionSuprCompte.png"] 
+
+Une fois avoir cliquer sur le caddie vous êtes redirigé vers votre panier 
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/RedirectionSuprCompte.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/RedirectionSuprCompte.png"] 
