@@ -106,134 +106,87 @@ SIGTERM
 
 1. **Prérequis** :
     - Python 3.x avec `pip` installé.
-    - Bibliothèques Python nécessaires (définies dans 
-
-requirements.txt
-
-).
+    - Bibliothèques Python nécessaires (définies dans requirements.txt).
 
 2. **Cloner le dépôt** :
 
-    ```sh
     git clone <URL_DU_DÉPÔT>
     cd <NOM_DU_RÉPERTOIRE>/IoT/Python
-    ```
 
 3. **Créer un environnement virtuel** :
 
-    ```sh
     python -m venv venv
-    ```
 
 4. **Activer l'environnement virtuel** :
 
     - Sous Windows :
 
-        ```sh
         venv\Scripts\activate
-        ```
 
     - Sous Linux/macOS :
 
-        ```sh
         source venv/bin/activate
-        ```
 
 5. **Installer les dépendances** :
 
-    ```sh
     pip install -r requirements.txt
-    ```
 
 6. **Vérifier la configuration** :
-    - Assurez-vous que le fichier 
-
-config.json
-
- est présent et correctement configuré. Sinon, il sera généré automatiquement avec des valeurs par défaut lors de l'exécution du script.
+    - Assurez-vous que le fichier config.json est présent et correctement configuré. Sinon, il sera généré automatiquement avec des valeurs par défaut lors de l'exécution du script.
+    - Assurer-vous que les dossiers cache et resultat sont bien présent dans le répertoire.
 
 == Étapes de lancement du code
 
 1. **Naviguer vers le répertoire du script** :
 
-    ```sh
     cd <NOM_DU_RÉPERTOIRE>/IoT/Python
-    ```
 
 2. **Activer l'environnement virtuel** (si ce n'est pas déjà fait) :
 
     - Sous Windows :
 
-        ```sh
         venv\Scripts\activate
-        ```
 
     - Sous Linux/macOS :
 
-        ```sh
         source venv/bin/activate
-        ```
 
 3. **Lancer le script Python** :
 
-    ```sh
     python main.py
-    ```
 
 4. **Surveillance de l'exécution** :
     - Le script affichera des messages indiquant le chargement de la configuration, l'abonnement aux topics MQTT et la collecte des données.
-    - En cas d'erreur ou d'arrêt du script, des messages d'erreur seront affichés pour aider au diagnostic.
+    - En cas d'erreur ou d'arrêt du script, des messages d'erreur seront affichés pour aider au diagnostic. (Les problèmes fréquents incluent une mauvaise arborescence des fichiers, une configuration incorrecte ou une connexion au serveur MQTT échouée).
 
 == Cas de tests
 
 === Cas de fonctionnement nominal
 
 - **Collecte des données** :
-    - Le script doit collecter les données des capteurs définis dans 
-
-config.json
-
- et les écrire dans les fichiers 
-
-resultatAM107.json
-
- et 
-
-resultatSolar.json
-
- à la fréquence spécifiée.
+    - Le script doit collecter les données des capteurs définis dans config.json et les écrire dans les fichiers resultatAM107.json et resultatSolar.json à la fréquence spécifiée.
     - *Capture d'écran* : Affichage en console de la réception des messages MQTT et des transferts de données.
 
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/screenshots/consolepython.png[title="Capture d'écran de la console Python", width=500]
+
 - **Gestion des alertes** :
-    - En cas de dépassement des seuils définis pour les capteurs AM107, le script doit écrire les alertes dans le fichier 
-
-alerteAM107.json
-
-.
-    - *Capture d'écran* : Affichage de la détection d'une alerte avec les détails du capteur, de la salle et de la valeur mesurée.
+    - En cas de dépassement des seuils définis pour les capteurs AM107, le script doit écrire les alertes dans le fichier alerteAM107.json.
 
 === Cas d'erreurs
 
 - **Absence de configuration** :
-    - Si le fichier 
-
-config.json
-
- est absent, le script génère une configuration par défaut.
-    - *Capture d'écran* : Message indiquant la création d'une configuration par défaut.
+    * Si le fichier config.json est absent, le script génère une configuration par défaut.
+    * *Capture d'écran* : Message indiquant la création d'une configuration par défaut.
 
 - **Erreur de connexion au serveur MQTT** :
-    - En cas d'impossibilité de se connecter au serveur MQTT, le script affiche un message d'erreur.
-    - *Capture d'écran* : Message d'erreur indiquant l'échec de la connexion au serveur MQTT.
+    * En cas d'impossibilité de se connecter au serveur MQTT, le script affiche un message d'erreur.
+    * *Capture d'écran* : Message d'erreur indiquant l'échec de la connexion au serveur MQTT.
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/screenshots/configmissing.png[title="Capture d'écran de l'erreur de configuration", width=500]
 
 - **Problème lors de la réception des messages** :
     - Si un message reçu est invalide ou vide, le script affiche une erreur de réception.
-    - *Capture d'écran* : Message d'erreur précisant le problème avec le message reçu.
 
 == Conclusion
 
-Le script Python 
-
-main.py
-
- est une composante essentielle de l'application IoT, assurant la collecte et le traitement des données en temps réel. Grâce à une architecture modulaire et une gestion efficace des threads et des fichiers, il assure une communication fluide entre les capteurs et l'interface utilisateur JavaFX.
+Le script Python main.py est une composante essentielle de l'application IoT, assurant la collecte et le traitement des données en temps réel. Grâce à une architecture modulaire et une gestion efficace des threads et des fichiers, il assure une communication fluide entre les capteurs et l'interface utilisateur JavaFX.
