@@ -20,15 +20,9 @@ Le main.py s'occupe de gérer la collecte des données des capteurs AM107 et Sol
 Le script est structuré en plusieurs fonctions principales pour assurer une modularité et une lisibilité du code :
 
 - **Chargement de la configuration** :
-    - Fonction 
 
-config()
 
- : Charge les paramètres du fichier 
-
-config.json
-
- ou génère une configuration par défaut si le fichier n'existe pas. Les paramètres incluent le serveur MQTT, les topics, les salles, les données souhaitées et la fréquence de rafraîchissement.
+La fonction config() s'occupe de charger les paramètres du fichier config.json ou génère une configuration par défaut si le fichier n'existe pas. Les paramètres incluent le serveur MQTT, les topics, les salles, les données souhaitées et la fréquence de rafraîchissement. 
 
 - **Vérification et création des fichiers nécessaires** :
     - Fonction 
