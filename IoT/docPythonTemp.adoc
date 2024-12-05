@@ -25,82 +25,126 @@ Le script est structuré en plusieurs fonctions principales pour assurer une mod
 La fonction config() s'occupe de charger les paramètres du fichier config.json ou génère une configuration par défaut si le fichier n'existe pas. Les paramètres incluent le serveur MQTT, les topics, les salles, les données souhaitées et la fréquence de rafraîchissement. 
 
 - **Vérification et création des fichiers nécessaires** :
-    - Fonction 
-
-verifFichier()
-
- : Vérifie l'existence des fichiers de résultat, de cache et d'alerte, et les crée s'ils n'existent pas.
+    - La fonction verifFichier() : Vérifie l'existence des fichiers de résultat, de cache et d'alerte, et les crée s'ils n'existent pas. 
 
 - **Gestion de la réception des messages MQTT** :
-    - Fonction 
-
-on_message_print(type, message)
-
- : Traite les messages reçus en fonction du type de capteur (AM107 ou SolarEdge) et dirige le traitement vers les fonctions appropriées.
+    - La fonction on_message_print(type, message) : Traite les messages reçus en fonction du type de capteur (AM107 ou SolarEdge) et dirige le traitement vers les fonctions appropriées.
 
 - **Traitement des données des capteurs AM107** :
-    - Fonction 
-
-ecrireCacheAm107(data, fichier)
-
- : Écrit les données reçues dans le fichier cache pour les capteurs AM107.
-    - Fonction 
-
-alerteAM107(room, capteur, valeur)
-
- : Gère les alertes en cas de dépassement des seuils définis pour les capteurs AM107.
+    - La fonction ecrireCacheAm107(data, fichier) : Écrit les données reçues dans le fichier cache pour les capteurs AM107.
+    - La fonction alerteAM107(room, capteur, valeur) : Gère les alertes en cas de dépassement des seuils définis pour les capteurs AM107.
 
 - **Traitement des données des capteurs SolarEdge** :
-    - Fonction 
-
-ecrireCacheSolaredge(data, fichier)
-
- : Écrit les données reçues dans le fichier cache pour les capteurs SolarEdge.
+    - La fonction ecrireCacheSolaredge(data, fichier) : Écrit les données reçues dans le fichier cache pour les capteurs SolarEdge.
 
 - **Transfert des données du cache vers les fichiers de résultat** :
-    - Fonction 
-
-appendCacheToResultatAm107(fichierCache, fichierResultat)
-
- : Transfère les données du cache AM107 vers le fichier de résultat 
-
-resultatAM107.json
-
-.
-    - Fonction 
-
-appendCacheToResultatSolaredge(fichierCache, fichierResultat)
-
- : Transfère les données du cache SolarEdge vers le fichier de résultat 
-
-resultatSolar.json
-
-.
+    - La fonction appendCacheToResultatAm107(fichierCache, fichierResultat) : Transfère les données du cache AM107 vers le fichier de résultat : resultatAM107.json.
+    - La fonction appendCacheToResultatSolaredge(fichierCache, fichierResultat) : Transfère les données du cache SolarEdge vers le fichier de résultat resultatSolar.json.
 
 - **Gestion du cycle d'écriture des données** :
-    - Fonction 
-
-ecriture()
-
- : Lance un timer pour effectuer le transfert des données du cache vers les fichiers de résultat à intervalle régulier en fonction de la fréquence définie.
+    - La fonction ecriture() : Lance un timer basé sur la fréquence pour effectuer le transfert des données du cache vers les fichiers de résultat à intervalle régulier en fonction de la fréquence définie. (cette fonction s'occupe de la gestion des transferts des données du fichier cache vers les fichiers de résultat). 
 
 - **Abonnement aux topics MQTT** :
-    - Fonction 
-
-thread_subscribe(type, topic)
-
- : S'abonne aux topics définis et crée un thread pour chaque abonnement.
+    - La fonction thread_subscribe(type, topic) : S'abonne aux topics définis et crée un thread pour chaque abonnement.
 
 - **Gestion des signaux système** :
-    - Fonction 
+    - La fonction sigterm_handler(signal, frame) : Gère l'arrêt du script en cas de réception d'un signal SIGTERM.
 
-sigterm_handler(signal, frame)
 
- : Gère l'arrêt du script en cas de réception d'un signal 
+== Exemple de structuration des données dans les fichiers JSON
 
-SIGTERM
+- **Fichier resultatAM107.json** :
 
-.
+[source,json]
+
+{
+    "E007": {
+        "temperature": [
+            19.1
+        ],
+        "humidity": [
+            38
+        ],
+        "activity": [
+            0
+        ],
+        "co2": [
+            470
+        ],
+        "illumination": [
+            27
+        ],
+        "pressure": [
+            1002.8
+        ],
+        "timestamp": [
+            "2024-12-05 15:17:08"
+        ]
+    }
+}
+
+- **Fichier resultatSolar.json** :
+
+[source,json]
+
+{
+    "lastUpdateTime": [
+        "2024-12-04 15:12:34",
+        "2024-12-04 20:01:39",
+        "2024-12-05 15:05:19"
+    ],
+    "lifeTimeData": [
+        3445612,
+        3446238,
+        3455779
+    ],
+    "lastYearData": [
+        2964582,
+        2965208,
+        2974749
+    ],
+    "lastMonthData": [
+        30176,
+        30802,
+        40343
+    ],
+    "lastDayData": [
+        11397,
+        12023,
+        9541
+    ],
+    "currentPower": [
+        2173.4988,
+        0,
+        1539.8308
+    ]
+}
+
+- **Fichier config.json** :
+
+[source,json]
+
+
+{
+    "topic": [
+        "solaredge/blagnac/#",
+        "AM107/by-room/#"
+    ],
+    "server": "mqtt.iut-blagnac.fr",
+    "salle": [
+        "all"
+    ],
+    "data": {
+        "illumination": 2.0,
+        "activity": 0.0,
+        "co2": 2.0,
+        "temperature": 0.0,
+        "humidity": 0.0,
+        "pressure": 2.0
+    },
+    "frequence": 2
+}
+
 
 == Étapes d'installation
 
