@@ -2,8 +2,8 @@
 :toc:
 :toc-title: Sommaire
 
-Version du site : 1 +
-Date : 27/11/2024 +
+Version de la documentation : 2 +
+Date : 8/12/2024 +
 Groupe : G1A2 +
 Client : Style & Semelle +
 Projet : Gestion des entrepôts de Style & Semelle
@@ -25,8 +25,11 @@ Ces capteurs mesurent plusieurs paramètres environnementaux critiques, tels que
 - Température : pour éviter les dégradations liées à la chaleur ou au froid.
 - Humidité : pour préserver les matériaux sensibles comme le cuir.
 - Lumière : pour protéger les produits contre une exposition prolongée.
-- Concentration de poussières : pour assurer une conservation optimale.
-Par ailleurs, des capteurs de mouvement et de présence sont utilisés pour des raisons de sécurité, mais leurs données ne sont actuellement pas exploitées. Les capteurs envoient toutes les 15 minutes leurs informations à un serveur central. +
+- Activité : pour déterminer les heures de pointe.
+- Pression : pour éviter les dégradations liées à la pression.
+- Co2 : pour garantir une qualité de l'air optimale.
+
+Par ailleurs, des capteurs de mouvement et de présence sont utilisés pour des raisons de sécurité, mais leurs données ne sont actuellement pas exploitées. Les capteurs envoient toutes les 15 minutes leurs informations à un serveur central. 
 Cependant, aucune infrastructure n’est en place pour centraliser, analyser et utiliser ces données de manière cohérente et automatisée. Style & Semelle souhaite développer une solution technique pour répondre à ce besoin.
 
 === c) Objectifs du projet
