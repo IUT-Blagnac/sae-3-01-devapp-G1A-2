@@ -51,13 +51,13 @@ Bouyssou Melvin \- Secrétaire
 
 * Préparation de tous les rendus de fin de sprint (voir canal \#Dépôt sur discord pour la liste totale des détails) :
 
-  * **Javafx :**
+- **Javafx :**
 
-    * 1️⃣ Doc technique :
+  - 1️⃣ Doc technique :
 
-- 2️⃣ JavaDoc (les commentaires etc...)
+  - 2️⃣ JavaDoc (les commentaires etc...)
 
-- 3️⃣ Le .jar qui marche
+  - 3️⃣ Le .jar qui marche
 
 - **Python :**
 
