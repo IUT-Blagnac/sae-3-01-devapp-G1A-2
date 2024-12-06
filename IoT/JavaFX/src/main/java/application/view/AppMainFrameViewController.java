@@ -58,7 +58,6 @@ public class AppMainFrameViewController {
      *                         AppMainFrameController
      * @param _dbmf            Contrôleur de Dialogue qui réalisera les opérations
      *                         de navigation ou calcul
-     * @param _dbstate         Etat courant de l'application
      */
     public void initContext(Stage _containingStage, AppMainFrame _dbmf) {
         this.dbmfDialogController = _dbmf;

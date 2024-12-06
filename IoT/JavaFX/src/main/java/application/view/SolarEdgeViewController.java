@@ -48,7 +48,6 @@ public class SolarEdgeViewController {
      *                         AppMainFrameController
      * @param _dbmf            Contrôleur de Dialogue qui réalisera les opérations
      *                         de navigation ou calcul
-     * @param _dbstate         Etat courant de l'application
      */
     public void initContext(Stage _containingStage, SolarEdgeBorderPane _dbmf) {
         this.sEdgeBorderPane = _dbmf;
