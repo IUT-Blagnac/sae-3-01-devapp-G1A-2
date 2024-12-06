@@ -1,66 +1,111 @@
-<!DOCTYPE html>
-<html lang="fr">
+<?php
+require_once 'includes/header.php';
+?>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page d'accueil</title>
-    <!-- Lien vers le fichier CSS de Bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <!-- Lien vers le fichier CSS du thème Bootswatch -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css">
+    <title>Accueil</title>
+    <link rel="stylesheet" href="css/index.css">
 </head>
 
-<body class="d-flex flex-column min-vh-100">
-    <!-- En-tête -->
-    <header class="bg-primary text-white text-center py-1" style="display: flex; justify-content: space-between;">
-        <div class="container">
-            <h1>Mon site E-Commerce</h1>
+<body>
+    <div class="main-content">
+        <div class="container-fluid bandeau">
+            <div class="texte">
+                <div class="title-1">Basket</div>
+                <div class="subtitle-1">Nike Jordan</div>
+            </div>
+            <img src="images/basket-1.png" alt="Basket" class="img-1">
+            <button class="btn-1">+</button>
         </div>
-    </header>
-    <!-- Conteneur principal -->
-    <div class="container-fluid flex-grow-1">
-        <div class="row">
 
-            <!-- Menu vertical sur la gauche -->
-            <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
-                <div class="position-sticky">
-                    <ul class="nav flex-column">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="index.php"> Accueil </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="prix.php"> Consulter les produits par prix </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="categorie.php"> Consulter les produits par catégorie </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="AjoutCategorie.php"> Ajouter une catégorie </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.php?action=logout">Se déconnecter</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.php?action=logout">Détruire Cookie</a>
-                        </li>
-                    </ul>
+        <div class="container featured-products">
+            <br> <br>
+            <h2 class="section-title">Meilleures ventes du mois</h2>
+
+            <!-- Carousel Bootstrap -->
+            <div id="productCarousel" class="carousel slide" data-bs-interval="false">
+                <div class="carousel-inner">
+
+                    <?php
+                    // requête SQL pour les produits vedettes (ici un produit est considéré comme étant en vedette si celui-ci a été commandé plus de 100 fois)
+                    try {
+                        $pdostat = $conn->prepare("SELECT P.IDPRODUIT, P.NOMPRODUIT, P.PRIX, I.URL
+                                                          FROM PRODUIT P
+                                                          LEFT JOIN IMAGE I ON P.IDPRODUIT = I.IDPRODUIT
+                                                          INNER JOIN PRODUITPANIER PP ON P.IDPRODUIT = PP.IDPRODUIT
+                                                          WHERE PP.QTEPP > 100;");
+                        $pdostat->execute();
+                        $tabProdVedette = $pdostat->fetchAll(PDO::FETCH_ASSOC);
+                    } catch (PDOException $e) {
+                        echo "Erreur: " . $e->getMessage() . "<br>";
+                        die();
+                    }
+
+                    $isMobile = preg_match('/(android|iphone|ipod|windows phone)/i', $_SERVER['HTTP_USER_AGENT']);
+                    $groupSize = $isMobile ? 1 : 3;
+                    $chunks = array_chunk($tabProdVedette, $groupSize);
+                    $isActive = true;
+                    foreach ($chunks as $productGroup):
+                        ?>
+                        <div class="carousel-item <?php echo $isActive ? 'active' : ''; ?>">
+                            <div class="row">
+                                <?php foreach ($productGroup as $product): ?>
+                                    <div class="col-md-4">
+                                        <div class="product-card text-center">
+
+                                            <!-- Affichage de l'image, du nom et du prix du produit -->
+                                            <?php
+                                                if (isset($product['URL'])) {
+                                                    echo '<img src="' . htmlspecialchars($product['URL']) .'"
+                                                    alt="' . htmlspecialchars($product['NOMPRODUIT']) .'" class="img-fluid">';
+                                                }
+                                                else {
+                                                    echo '<img src="https://i.ibb.co/L8Nrb7p/1.jpg"
+                                                    alt="' . htmlspecialchars($product['NOMPRODUIT']) .'" class="img-fluid">';
+                                                }
+
+                                            ?>
+
+                                            <div class="product-info">
+                                                <h3><?php echo htmlspecialchars($product['NOMPRODUIT']); ?></h3>
+                                                <p class="price"><?php echo number_format($product['PRIX'], 2, ',', ' '); ?> €
+                                                </p>
+                                                <!-- Bouton Ajouter au panier -->
+                                                <button class="btn btn-primary add-to-cart"
+                                                    data-product-id="<?php echo htmlspecialchars($product['IDPRODUIT']); ?>">
+                                                    <i class="fas fa-shopping-cart"></i>
+                                                    Ajouter au panier
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <?php endforeach; ?>
+                            </div>
+                        </div>
+                        <?php
+                        // Désactivation de l'élément actif pour les itérations suivantes
+                        $isActive = false;
+                    endforeach;
+                    ?>
+
                 </div>
-            </nav>
+
+                <!-- Carousel controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#productCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+
+            </div>
         </div>
     </div>
-
-    <!-- Pied de page -->
-    <footer class="bg-dark text-white text-center py-1 mt-auto">
-        <div class="container">
-            <p class="mb-0">&copy; 2024 MonSite. Tous droits réservés.</p>
-        </div>
-    </footer>
-
-    <!-- Scripts JavaScript de Bootstrap -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
-
-</html>
+<footer>
+    <?php require_once 'includes/footer.php'; ?>
+</footer>

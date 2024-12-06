@@ -1,0 +1,43 @@
+
+/* Header Styles */
+
+/* Category Navigation */
+.category-nav {
+    background-color: #f8f9fa !important;
+}
+
+.category-nav .nav-link {
+    color: rgb(0, 0, 0) !important;
+    font-weight: 500;
+    padding-bottom: 3vh;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.nav-item:hover .dropdown-menu {
+    display: block;
+}
+
+.nav-link:hover {
+    color: #333;
+    text-decoration: underline;
+    text-decoration-color: #62A87C;
+}
+
+.me-2 {
+    width: 75vw;
+}
+
+.navbar-toggler {
+    background-color: #62A87C;
+}
+
+.search-container {
+    padding-top: 1vh;
+}
