@@ -23,6 +23,15 @@ frequence = int()
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 '''
+Fonction qui vérifie l'existence des dossiers de résultat, de cache et d'alerte et les crée s'ils n'existent pas.
+'''
+def verifFolder():
+    if not os.path.exists("../resultat"):
+        os.makedirs("../resultat")
+    if not os.path.exists("cache"):
+        os.makedirs("cache")
+
+'''
 Fonction qui vérifie l'existence des fichiers de résultat, de cache et d'alerte et les crée s'ils n'existent pas.
 '''
 def verifFichier():
@@ -372,6 +381,7 @@ def thread_subscribe(type, topic):
     subscribe.callback(lambda client, userdata, message: on_message_print(type, message), topic, hostname=server)
 
 # Initialisation
+verifFolder()
 verifFichier()
 config()
 

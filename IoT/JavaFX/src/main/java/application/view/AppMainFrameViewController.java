@@ -367,7 +367,7 @@ public class AppMainFrameViewController {
     private void dochargeConfig() {
         // Hard reset resultatAM107.json en tronquant le fichier et écrivant un {}
         // dedans
-        String filePath = "../resultat/resultatAM107.json"; // Remplacez par le chemin de votre fichier
+        String filePath = "../resultat/resultatAM107.json";
         try (FileWriter writer = new FileWriter(filePath)) {
             writer.write("{}");
             System.out.println("Le fichier a été écrit avec succès.");
@@ -375,6 +375,14 @@ public class AppMainFrameViewController {
             System.err.println("Erreur lors de l'écriture dans le fichier : " + e.getMessage());
         }
 
+        filePath = "../Python/cache/cache_am107.json";
+        try (FileWriter writer = new FileWriter(filePath)) {
+            writer.write("{}");
+            System.out.println("Le fichier a été écrit avec succès.");
+        } catch (IOException e) {
+            System.err.println("Erreur lors de l'écriture dans le fichier : " + e.getMessage());
+        }
+        
         ObjectMapper mapper = new ObjectMapper();
         this.config = new Config();
 
