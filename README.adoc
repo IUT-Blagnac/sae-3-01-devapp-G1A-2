@@ -91,8 +91,6 @@ Style & Semelle, PME spécialisée dans la conception et la vente de chaussures,
 === Gestion de projet & Qualité
 - https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/doc-technique/doc-tech-iot-v2.adoc[Lien vers la doc technique du système IoT]
 - https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/doc-technique/doc-python.adoc[Lien vers la doc technique partie Python (IoT)]
-- https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/doc-utilisateur/doc-utilisateur-iot.adoc[Lien vers la doc utilisateur du système IoT]
-- https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/doc-test/doc-test-iot-v1.adoc[Lien vers le cahier de tests]
 - https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/tree/master/IoT/Java[Lien vers le répertoire du code Java]
 - https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/tree/master/IoT/Python[Lien vers le répertoire du code Python]
 
