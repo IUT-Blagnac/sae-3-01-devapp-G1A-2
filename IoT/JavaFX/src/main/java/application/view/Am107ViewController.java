@@ -35,6 +35,9 @@ import model.Config;
 import model.RootData;
 import model.SalleData;
 
+/**
+ * Contrôleur de vue pour la fenêtre AM107.
+ */
 public class Am107ViewController {
 
     private Am107BorderPane am107BorderPane;
@@ -201,6 +204,10 @@ public class Am107ViewController {
         }
     }
 
+    /**
+     * Méthode pour rafraîchir les graphiques.
+     * En cas de changement de configuration, les graphiques sont réinitialisés et les données sont vidées.
+     */
     public void refreshGraphiques() {
         System.out.println("Rafraîchissement des graphiques...");
         loadSallesEtCapteursFromResultatJSON(); // Recharger les données depuis le JSON.
@@ -289,6 +296,12 @@ public class Am107ViewController {
         }
     }
 
+    /**
+     * Créer un nœud qui peut être survolé pour afficher des informations supplémentaires.
+     *
+     * @param salle Nom de la salle à afficher.
+     * @return Le nœud créé.
+     */
     private javafx.scene.Node createHoverableNode(String salle) {
         javafx.scene.control.Label label = new javafx.scene.control.Label(salle);
         label.setStyle("-fx-background-color: white; -fx-padding: 5px; -fx-border-color: black;");
@@ -312,6 +325,9 @@ public class Am107ViewController {
         return group;
     }
 
+    /**
+     * Méthode pour afficher toutes les alertes pour chaque salle.
+     */
     public void getAllAlerte() {
         try {
             // Lire le fichier JSON
@@ -406,7 +422,12 @@ public class Am107ViewController {
         }
     }
 
-    // Méthode pour afficher toutes les alertes d'une salle spécifique
+    /**
+     * Méthode pour afficher toutes les alertes pour une salle spécifique.
+     *
+     * @param data Données JSON contenant les alertes.
+     * @param salle Nom de la salle pour laquelle afficher les alertes.
+     */
     private void afficherToutesAlertesPourSalle(JsonNode data, String salle) {
         try {
             // Récupérer les données de la salle

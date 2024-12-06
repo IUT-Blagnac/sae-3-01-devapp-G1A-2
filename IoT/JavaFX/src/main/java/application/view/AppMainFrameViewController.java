@@ -146,6 +146,9 @@ public class AppMainFrameViewController {
 
     // Actions
 
+    /*
+     * Initialisation du contrôleur de vue AppMainFrameController.
+     */
     public void initialize() {
         System.out.println("Controlleur chargé avec succès");
         initializeConfig();
@@ -161,6 +164,12 @@ public class AppMainFrameViewController {
         this.testResuLabel.setText("");
     }
 
+    /**
+     * Méthode permettant de lier un TextField à une propriété FloatProperty.
+     * 
+     * @param textField TextField à lier
+     * @param property  Propriété à lier
+     */
     private void bindTextFieldToFloatProperty(TextField textField, FloatProperty property) {
         // Binding bidirectionnel entre le TextField et la propriété
         textField.textProperty().bindBidirectional(property, new javafx.util.StringConverter<>() {
@@ -180,6 +189,9 @@ public class AppMainFrameViewController {
         });
     }
 
+    /**
+     * Méthode permettant de lier les champs de saisie des seuils (TextField) aux valeurs dans le code.
+     */
     private void bindSeuilFields() {
         bindTextFieldToFloatProperty(seuilTempField, seuilTemp);
         bindTextFieldToFloatProperty(seuilHumField, seuilHum);
@@ -189,6 +201,10 @@ public class AppMainFrameViewController {
         bindTextFieldToFloatProperty(seuilPresField, seuilPres);
     }
 
+    /**
+     * Méthode permettant de désactiver les champs de saisie des seuils si la case
+     * correspondante n'est pas cochée.
+     */
     private void disableFieldsIfUnchecked() {
         seuilTempField.setDisable(!temperature.isSelected());
         seuilHumField.setDisable(!humidity.isSelected());
@@ -198,6 +214,9 @@ public class AppMainFrameViewController {
         seuilPresField.setDisable(!pression.isSelected());
     }
 
+    /**
+     * Méthode permettant de charger les CheckBox à partir de la configuration.
+     */
     private void loadCheckBoxFromData() {
         temperature.setSelected(data.containsKey("temperature"));
         humidity.setSelected(data.containsKey("humidity"));
@@ -207,6 +226,9 @@ public class AppMainFrameViewController {
         pression.setSelected(data.containsKey("pressure"));
     }
 
+    /**
+     * Méthode permettant de synchroniser les données du config avec les CheckBox visuelles.
+     */
     private void valideData() {
         if (temperature.isSelected()) {
             this.data.put("temperature", seuilTemp.getValue());
@@ -245,6 +267,9 @@ public class AppMainFrameViewController {
         }
     }
 
+    /**
+     * Méthode permettant de synchroniser les salles cochées avec la configuration. (On récupère les salles de la config et on les coche)
+     */
     private void chargeSallesVisuellement() {
         // Parcours les menus
         for (MenuItem categorie : choixSalles.getItems()) {
@@ -264,6 +289,9 @@ public class AppMainFrameViewController {
         }
     }
 
+    /**
+     * Méthode permettant de valider les salles cochées dans la configuration. (On récupère les salles cochées et on les ajoute à la liste des salles de la config)
+     */
     private void valideSalles() {
         for (MenuItem categorie : choixSalles.getItems()) {
             if (categorie instanceof Menu) {
@@ -285,6 +313,10 @@ public class AppMainFrameViewController {
         System.out.println("Salles : " + this.salle);
     }
 
+    /**
+     * Méthode permettant d'initialiser la configuration à partir du fichier config.json.
+     * Cette initialisation lance les méthodes de chargement des salles et des données comme chargeSallesVisuellement() ou loadCheckBoxFromData()...
+     */
     private void initializeConfig() {
         try {
             // Initialisation des attributs (utilisés dans la configuration)
@@ -327,6 +359,11 @@ public class AppMainFrameViewController {
         }
     }
 
+    /**
+     * Action de sauvegarde de la configuration.
+     * Cette méthode permet de sauvegarder la configuration dans le fichier config.json.
+     * Elle permet aussi de réinitialiser le fichier resultatAM107.json en tronquant le fichier et écrivant un {} dedans.
+     */
     @FXML
     private void dochargeConfig() {
         // Hard reset resultatAM107.json en tronquant le fichier et écrivant un {}
@@ -367,30 +404,11 @@ public class AppMainFrameViewController {
         }
     }
 
-    // @FXML
-    // private void doLaunchAM107() {
-    // System.out.println("Lancement de l'application AM107");
-    // this.isAm107 = true;
-    // System.out.println("Bouton AM107 désactivé");
-    // this.launchAm107Btn.setDisable(true); // Désactiver le bouton
-
-    // // Ouvrir la fenêtre AM107
-    // this.dbmfDialogController.am107Display();
-
-    // // Ajouter un gestionnaire d'événement pour réactiver le bouton après
-    // fermeture
-    // Stage am107Stage = this.dbmfDialogController.getAm107Stage();
-    // System.out.println("Stage AM107 : " + am107Stage);
-    // if (am107Stage != null) {
-    // System.out.println("Configuration de l'événement de fermeture");
-    // this.launchAm107Btn.setDisable(false); // Réactiver le bouton
-    // // passage de l'état de la fenêtre à false pour l'attribut de AppMainFrame
-    // this.dbmfDialogController.setAm107Running(isAm107);
-    // } else {
-    // System.out.println("Erreur : le stage AM107 est null");
-    // }
-    // }
-
+    /**
+     * Méthode permettant de lancer l'application AM107.
+     * Cette méthode permet de lancer l'application AM107 en désactivant le bouton de lancement de l'application AM107.
+     * Elle permet aussi de gérer le lancement du programme Python et d'ajouter un écouteur pour détecter la fermeture de la fenêtre.
+     */
     @FXML
     private void doLaunchAM107() {
         System.out.println("Lancement de l'application AM107");
@@ -430,6 +448,11 @@ public class AppMainFrameViewController {
         // dans l'AppMainFrame
     }
 
+    /**
+     * Méthode permettant de lancer l'application SolarEdge.
+     * Cette méthode permet de lancer l'application SolarEdge en désactivant le bouton de lancement de l'application SolarEdge.
+     * Elle permet aussi de gérer le lancement du programme Python et d'ajouter un écouteur pour détecter la fermeture de la fenêtre.
+     */
     @FXML
     private void doLaunchSolarEdge() {
         System.out.println("Lancement de l'application Solar Edge");
@@ -464,6 +487,9 @@ public class AppMainFrameViewController {
         this.dbmfDialogController.testIfWindowsAreAllClosed();
     }
 
+    /**
+     * Méthode de debug permettant d'afficher les attributs de la classe.
+     */
     @FXML
     private void afficheAttributs() {
         System.out.println("Serveur : " + tfServer.getText());
@@ -473,12 +499,20 @@ public class AppMainFrameViewController {
         System.out.println("Data : " + data);
     }
 
+    /**
+     * Action permettant de tester la connexion au serveur MQTT en appelant la méthode testConnectionMqtt().
+     */
     @FXML
     private void testConnection() {
         Thread t = new Thread(() -> testConnectionMqtt());
         t.start();
     }
 
+    /**
+     * Méthode permettant de tester la connexion au serveur MQTT.
+     * Cette méthode permet de tester la connexion au serveur MQTT en créant un client MQTT et en essayant de se connecter.
+     * Elle permet aussi d'afficher un message de réussite ou d'échec de la connexion.
+     */
     private void testConnectionMqtt() {
         MqttClient client = null;
         try {

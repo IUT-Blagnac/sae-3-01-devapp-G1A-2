@@ -1,10 +1,12 @@
 package model;
 
 import com.fasterxml.jackson.annotation.JsonAnySetter;
-
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Classe de données racine pour la désérialisation JSON avec Jackson
+ */
 public class RootData {
     private Map<String, SalleData> salles = new HashMap<>();
 

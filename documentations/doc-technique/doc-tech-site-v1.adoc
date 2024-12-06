@@ -42,8 +42,100 @@ Pour en savoir plus pour connaître les différentes fonctionnalités du point d
 Cliquer sur ce lien vers la doc utilisateur : https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/doc-utilisateur/doc-utilisateur-site.adoc +
 
 === c) Structuration du code source
-
 Arborescence des fichiers :
+
+* *css* +
+Ce dossier contient tous les feuilles de style CSS.
+** *button.css* +
+Feuille de style pour les différents boutons sur le site 
+** *compte.css* +
+Feuille de style pour la page compte des clients
+** *detProd.css* +
+Feuille de style pour la page d'un produit avec ces détails 
+** *footer.css* +
+Feuille de style pour le pied de page du site 
+** *header.css* +
+Feuille de style pour l'entête du site
+** *index.css* +
+Feuille de style pour la page d'accueil du site web
+** *listeProduits.css* + 
+Feuille de style pour la liste de produits
+** *login.css* + 
+Feuille de style pour la page de connexion/création du compte
+** *panier.css* + 
+Feuille de style pour le panier du client
+
+* *images* +
+Ce dossier contient tous les images du site web notamment les images des produits, les images d'arrière-plans
+
+* *includes* + 
+Ce dossier contient tous les ressources qui seront inclus dans les différentes pages du site
+** *config.php* +
+Permet de configurer le site web avec le serveur MobaXterm
+** *connexionSecurisee.php* +
+Permet de vérifier que un utilisateur est connecté à son compte, donc restreindre certains accès à certaines fonctionnalités
+** *connexionSecuriseeAdmin.php* +
+Permet de vérifier la connexion d'un compte administrateur, donc accéder à toutes les fonctionnalités du site
+** *footer.php* +
+Pied de page du site web
+** *header.php* +
+Entête du site web
+
+* *ajoutProduit.php* +
+Page pour ajouter de nouveau produit
+* *commande.php* +
+Page pour visualiser ses commandes
+* *compte.php* +
+Page du compte client
+* *connect.inc.php* +
+Permet d'établir une connexion entre la base de données SQL et le site web
+* *deconnexion.php* +
+Permet de déconnecter son compte client
+* *detailCommande.php* +
+  Permet de consulter les détails d'une commande spécifique.
+* *detailProduit.php* +
+  Affiche les détails d'un produit, incluant les images, descriptions, et avis des clients.
+* *historiqueCommande.php* +
+  Permet de consulter l'historique des commandes d'un utilisateur.
+* *index.php* +
+  Page principale du site, affichant les produits en vedette ou les promotions.
+* *inscription.php* + 
+  Page permettant à un nouvel utilisateur de créer un compte.
+* *listeProduits.php* + 
+  Affiche une liste de produits filtrables par catégorie, sous-catégorie ou recherche.
+* *login.php*  +
+  Page de connexion pour les utilisateurs enregistrés.
+* *mentionLegal.php*  +
+  Affiche les mentions légales et politiques de confidentialité du site.
+* *mettreAvis.php* + 
+  Permet à un utilisateur d'ajouter un avis sur un produit.
+* *modifCompte.php* + 
+  Page pour modifier les informations du compte utilisateur.
+* *paiement.php*  +
+  Gère la validation du paiement pour une commande.
+* *panier.php* + 
+  Affiche le contenu du panier de l'utilisateur avec les options de modification.
+* *produit.php*  +
+  Page générique pour afficher les produits d'une catégorie ou sous-catégorie.
+* *quiSommesNous.php* + 
+  Présente les informations sur l'équipe ou l'entreprise derrière le site.
+* *suprCompte.php* + 
+  Permet à un utilisateur de supprimer définitivement son compte.
+* *traitLogin.php*  +
+  Gère le traitement du formulaire de connexion.
+* *traitInscription.php*  +
+  Gère le traitement du formulaire d'inscription.
+* *dashboard.php*  +  
+  Tableau de bord pour les administrateurs avec des statistiques et outils de gestion.
+* *modifierProduit.php*  +
+  Permet de modifier les informations d'un produit existant (administrateurs).
+* *supprimerProduit.php* + 
+  Permet de supprimer un produit du catalogue (pour les administrateurs).
+* *modifierProduit.php* + 
+  Permet de modifier un produit du catalogue (pour les administrateurs).
+* *ajouterProduit.php* + 
+  Permet d'ajouter un produit du catalogue (pour les administrateurs).
+
 
 === d) Diagramme de classe des données
 
@@ -92,15 +184,65 @@ Pages web concernées : +
 * inscription.php
 * traitInscription.php
 
-==== Visualiser la liste des produits (ceux à la une)
+=== c) Sprint 2 (sem 49-50)
+
+==== Visualisation de la liste des produits (à la une)
 
 User Story : 
 
-En tant que client, je veux pouvoir avoir la liste des produits disponible à la une afin de pouvoir visualiser les choix possibles et les ajouter au panier.
+En tant qu’utilisateur du site web, je veux pouvoir visualiser une liste de produits mis en avant (produits à la une), afin de découvrir rapidement les meilleures offres ou les nouveautés.
 
 Pages web concernées : +
 
-* ...
+* index.php
+* listeProduits.php
+
+==== Rechercher des produits par catégorie/sous-catégorie, mot-clé ou regroupement
+
+User Story : 
+
+En tant qu’utilisateur, je souhaite rechercher des produits en fonction de catégories, sous-catégories, mots-clés ou regroupements afin de trouver facilement ce que je cherche.
+
+Pages web concernées : +
+
+* index.php
+* listeProduits.php
+* produit.php
+
+==== Visualiser le détail d’un produit
+
+User Story : 
+
+En tant qu’utilisateur, je veux pouvoir visualiser le détail d’un produit (photos, avis & réponses, moyenne des notes des avis, photos de la communauté, stock disponible, catégorie et regroupements associés) afin d’évaluer si ce produit correspond à mes besoins.
+
+Pages web concernées : +
+
+* detailProduit.php
+* produit.php
+
+==== Tri de la liste de produits par prix croissant / décroissant
+
+User Story : 
+
+En tant qu’utilisateur, je souhaite pouvoir trier la liste des produits par ordre de prix croissant ou décroissant afin de comparer les produits selon mon budget.
+
+Pages web concernées : +
+
+* listeProduits.php
+* produit.php
+
+==== Ajouter un produit affiché dans le panier / Gérer le panier
+
+User Story : 
+
+En tant qu’utilisateur, je veux pouvoir ajouter un produit dans mon panier, afficher son contenu, modifier les quantités ou supprimer un produit afin de gérer mes achats avant de finaliser ma commande.
+
+Pages web concernées : +
+
+* panier.php
+* listeProduits.php
+* produit.php
+
 
 
 

@@ -4,6 +4,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Classe de données pour la désérialisation JSON avec Jackson
+ */
 public class SalleData {
     private List<Double> temperature;
     private List<Double> humidity;

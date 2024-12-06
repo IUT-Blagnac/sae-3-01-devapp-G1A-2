@@ -9,6 +9,10 @@ import javafx.stage.Stage;
 import javafx.scene.layout.BorderPane;
 
 /**
+ * Classe de controleur de Dialogue de SolarEdge.
+ *
+ */
+/**
  * Classe de controleur de Dialogue de la fenêtre SolarEdge.
  *
  */

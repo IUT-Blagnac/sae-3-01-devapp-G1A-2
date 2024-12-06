@@ -99,6 +99,9 @@ public class Am107BorderPane {
         this.r.stop();
     }
 
+    /**
+     * Classe interne permettant de gérer le thread de l'AM107
+     */
     // THREAD DE LA CLASSE AM107BORDERPANE
     public static class MyRun implements Runnable {
         private boolean enCours; // Indique si le thread est en cours d'exécution
