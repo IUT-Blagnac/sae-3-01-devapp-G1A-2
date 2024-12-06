@@ -8,6 +8,10 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.scene.layout.BorderPane;
 
+/**
+ * Classe de controleur de Dialogue de la fenêtre SolarEdge.
+ *
+ */
 public class SolarEdgeBorderPane {
 
     // Stage de la fenêtre principale construite par DailyBankMainFrame
@@ -17,7 +21,16 @@ public class SolarEdgeBorderPane {
     private MyRun r;
 
     /**
-     * Constructeur
+     * Constructeur de la classe `SolarEdgeBorderPane`.
+     *
+     * Ce constructeur initialise l'interface graphique pour le SolarEdge en
+     * chargeant le
+     * fichier FXML associé,
+     * configure la scène et le stage, puis lance un thread pour rafraîchir les
+     * données du SolarEdge.
+     *
+     * @param _parentStage Le stage parent utilisé pour centrer la nouvelle fenêtre.
+     *                     (pas utilisé ici)
      */
     public SolarEdgeBorderPane(Stage _parentStage) {
 
@@ -55,6 +68,9 @@ public class SolarEdgeBorderPane {
         }
     }
 
+    /**
+     * Méthode permettant d'afficher la fenêtre du SolarEdge
+     */
     public void doSolarEdge() {
         this.seViewController.displayDialog();
     }
@@ -66,16 +82,27 @@ public class SolarEdgeBorderPane {
         this.r.stop();
     }
 
-    // TEST THREAD DE LA CLASSE
+    // THREAD DE LA CLASSE
     public static class MyRun implements Runnable {
-        private boolean enCours;
-        private SolarEdgeViewController seRunViewController;
+        private boolean enCours; // Indique si le thread est en cours d'exécution
+        private SolarEdgeViewController seRunViewController; // contrôleur de la vue SolarEdge
 
+        /**
+         * Constructeur de la classe MyRun.
+         *
+         * @param pseRunViewController le contrôleur de la vue SolarEdge
+         */
         public MyRun(SolarEdgeViewController pseRunViewController) {
             this.enCours = true;
             this.seRunViewController = pseRunViewController;
         }
 
+        /**
+         * Méthode run() du thread du SolarEdge.
+         *
+         * Cette méthode est appelée lors du démarrage du thread. Elle rafraîchit
+         * le graphique du SolarEdge à intervalle régulier. (cf. refreshGraphiques)
+         */
         @Override
         public void run() {
             while (this.enCours) {
@@ -91,11 +118,19 @@ public class SolarEdgeBorderPane {
             System.out.println("Le thread est arrêté.");
         }
 
+        /**
+         * Méthode permettant d'arrêter le thread du SolarEdge.
+         */
         public void stop() {
             this.enCours = false;
         }
     }
 
+    /**
+     * Méthode permettant de récupérer le stage du SolarEdge.
+     *
+     * @return le stage du SolarEdge
+     */
     public Stage getSolarStage() {
         return this.solarStage;
     }

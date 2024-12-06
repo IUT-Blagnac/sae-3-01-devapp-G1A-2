@@ -10,15 +10,27 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.scene.layout.BorderPane;
 
+/**
+ * Classe de controleur de Dialogue de la fenêtre AM107.
+ *
+ */
 public class Am107BorderPane {
     private Stage am107Stage;
     private Am107ViewController amViewController;
     private Thread t;
     private MyRun r;
     private static Config config;
-    
+
     /**
-     * Constructeur
+     * Constructeur de la classe `Am107BorderPane`.
+     *
+     * Ce constructeur initialise l'interface graphique pour l'AM107 en chargeant le
+     * fichier FXML associé,
+     * configure la scène et le stage, puis lance un thread pour rafraîchir les
+     * données de l'AM107.
+     *
+     * @param _parentStage Le stage parent utilisé pour centrer la nouvelle fenêtre.
+     *                     (pas utilisé ici)
      */
     public Am107BorderPane(Stage _parentStage) {
 
@@ -56,33 +68,59 @@ public class Am107BorderPane {
             System.exit(-1);
         }
     }
-    
+
+    /**
+     * Exécute l'opération AM107 en affichant une boîte de dialogue avec la
+     * configuration fournie.
+     *
+     * @param pconfig la configuration utilisateur notamment pour l'affichage des
+     *                graphiques (cf.initializeGraphiquesParCapteur)
+     */
     public void doAm107(Config pconfig) {
         config = pconfig;
         this.amViewController.displayDialog(pconfig);
     }
 
+    /**
+     * Retourne le Stage AM107.
+     *
+     * @return l'instance du Stage AM107
+     */
     public Stage getAm107Stage() {
         return this.am107Stage;
     }
 
     /**
-     * Méthode permettant de stopper le thread de l'AM107
+     * Méthode permettant de stopper le thread de l'AM107 appelée lors de la
+     * fermeture
+     * (cf. closeWindow de Am107ViewController).
      */
     public void doStopAm107() {
         this.r.stop();
     }
 
-    // TEST THREAD DE LA CLASSE
+    // THREAD DE LA CLASSE AM107BORDERPANE
     public static class MyRun implements Runnable {
-        private boolean enCours;
-        private Am107ViewController amRunViewController;
+        private boolean enCours; // Indique si le thread est en cours d'exécution
+        private Am107ViewController amRunViewController; // ViewContrôleur de l'AM107
 
+        /**
+         * Constructeur de l'instance MyRun avec le contrôleur de vue spécifié.
+         *
+         * @param pamRunViewController l'instance de Am107ViewController à associer à
+         *                             cet MyRun
+         */
         public MyRun(Am107ViewController pamRunViewController) {
             this.enCours = true;
             this.amRunViewController = pamRunViewController;
         }
 
+        /**
+         * Méthode run() du thread de l'AM107.
+         *
+         * Cette méthode est appelée lors du démarrage du thread. Elle rafraîchit les
+         * graphiques de l'AM107 à intervalle régulier. (cf. refreshGraphiques)
+         */
         @Override
         public void run() {
             while (this.enCours) {
@@ -91,7 +129,9 @@ public class Am107BorderPane {
                     System.out.println("Refresh graphique");
                 });
                 try {
-                    Thread.sleep(config.getFrequence()*1000); // Pause pour éviter une utilisation excessive des ressources
+                    Thread.sleep(config.getFrequence() * 1000); // Pause pour éviter une utilisation excessive des
+                                                                // ressources calquée sur la fréquence saisie par
+                                                                // l'utilisateur
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -99,6 +139,9 @@ public class Am107BorderPane {
             System.out.println("Le thread est arrêté.");
         }
 
+        /**
+         * Méthode permettant d'arrêter le thread de l'AM107.
+         */
         public void stop() {
             this.enCours = false;
         }
