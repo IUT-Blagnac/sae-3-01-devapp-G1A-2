@@ -119,8 +119,6 @@ Permet de déconnecter son compte client
   Page générique pour afficher les produits d'une catégorie ou sous-catégorie.
 * *quiSommesNous.php* + 
   Présente les informations sur l'équipe ou l'entreprise derrière le site.
-* *supprimerProduit.php* + 
-  Permet de supprimer un produit du catalogue (pour les administrateurs).
 * *suprCompte.php* + 
   Permet à un utilisateur de supprimer définitivement son compte.
 * *traitLogin.php*  +
@@ -131,6 +129,12 @@ Permet de déconnecter son compte client
   Tableau de bord pour les administrateurs avec des statistiques et outils de gestion.
 * *modifierProduit.php*  +
   Permet de modifier les informations d'un produit existant (administrateurs).
+* *supprimerProduit.php* + 
+  Permet de supprimer un produit du catalogue (pour les administrateurs).
+* *modifierProduit.php* + 
+  Permet de modifier un produit du catalogue (pour les administrateurs).
+* *ajouterProduit.php* + 
+  Permet d'ajouter un produit du catalogue (pour les administrateurs).
 
 
 === d) Diagramme de classe des données
@@ -238,8 +242,6 @@ Pages web concernées : +
 * panier.php
 * listeProduits.php
 * produit.php
-* supprimerProduit.php
-* modifierQuantite.php
 
 
 
