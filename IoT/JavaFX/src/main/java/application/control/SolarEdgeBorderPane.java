@@ -8,6 +8,10 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.scene.layout.BorderPane;
 
+/**
+ * Classe de controleur de Dialogue de SolarEdge.
+ *
+ */
 public class SolarEdgeBorderPane {
 
     // Stage de la fenêtre principale construite par DailyBankMainFrame
@@ -17,7 +21,7 @@ public class SolarEdgeBorderPane {
     private MyRun r;
 
     /**
-     * Constructeur
+     * Constructeur de la classe SolarEdgeBorderPane
      */
     public SolarEdgeBorderPane(Stage _parentStage) {
 
@@ -55,6 +59,9 @@ public class SolarEdgeBorderPane {
         }
     }
 
+    /**
+     * Méthode permettant d'afficher la fenêtre SolarEdge
+     */
     public void doSolarEdge() {
         this.seViewController.displayDialog();
     }
@@ -66,7 +73,9 @@ public class SolarEdgeBorderPane {
         this.r.stop();
     }
 
-    // TEST THREAD DE LA CLASSE
+    /**
+     * Classe interne permettant de gérer le thread de rafraichissement de l'historique
+     */
     public static class MyRun implements Runnable {
         private boolean enCours;
         private SolarEdgeViewController seRunViewController;
@@ -76,6 +85,9 @@ public class SolarEdgeBorderPane {
             this.seRunViewController = pseRunViewController;
         }
 
+        /**
+         * Méthode permettant de rafraichir l'historique
+         */
         @Override
         public void run() {
             while (this.enCours) {
@@ -96,6 +108,10 @@ public class SolarEdgeBorderPane {
         }
     }
 
+    /**
+     * Méthode permettant de récupérer le stage de SolarEdge
+     * @return le stage de SolarEdge
+     */
     public Stage getSolarStage() {
         return this.solarStage;
     }

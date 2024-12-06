@@ -10,6 +10,10 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.scene.layout.BorderPane;
 
+/**
+ * Classe de controleur de Dialogue de l'AM107.
+ *
+ */
 public class Am107BorderPane {
     private Stage am107Stage;
     private Am107ViewController amViewController;
@@ -18,7 +22,8 @@ public class Am107BorderPane {
     private static Config config;
     
     /**
-     * Constructeur
+     * Constructeur de la classe
+     * Permet de créer une fenêtre AM107, chargée à partir du fichier fxml
      */
     public Am107BorderPane(Stage _parentStage) {
 
@@ -57,11 +62,19 @@ public class Am107BorderPane {
         }
     }
     
+    /**
+     * Méthode permettant d'afficher la fenêtre de l'AM107
+     * @param pconfig : configuration de l'AM107
+     */
     public void doAm107(Config pconfig) {
         config = pconfig;
         this.amViewController.displayDialog(pconfig);
     }
 
+    /**
+     * Méthode permettant de récupérer le stage de l'AM107
+     * @return le stage de l'AM107
+     */
     public Stage getAm107Stage() {
         return this.am107Stage;
     }
@@ -73,7 +86,9 @@ public class Am107BorderPane {
         this.r.stop();
     }
 
-    // TEST THREAD DE LA CLASSE
+    /**
+     * Classe interne permettant de gérer le thread de l'AM107
+     */
     public static class MyRun implements Runnable {
         private boolean enCours;
         private Am107ViewController amRunViewController;
@@ -83,6 +98,9 @@ public class Am107BorderPane {
             this.amRunViewController = pamRunViewController;
         }
 
+        /**
+         * Méthode permettant de rafraîchir les graphiques de l'AM107
+         */
         @Override
         public void run() {
             while (this.enCours) {
@@ -99,6 +117,9 @@ public class Am107BorderPane {
             System.out.println("Le thread est arrêté.");
         }
 
+        /**
+         * Méthode permettant d'arrêter le thread
+         */
         public void stop() {
             this.enCours = false;
         }

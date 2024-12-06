@@ -13,7 +13,6 @@ import javafx.stage.Stage;
  * Classe de controleur de Dialogue de la fenêtre principale.
  *
  */
-
 public class AppMainFrame extends Application {
 
     // Stage de la fenêtre principale construite par DailyBankMainFrame
@@ -67,6 +66,9 @@ public class AppMainFrame extends Application {
         Application.launch();
     }
 
+    /**
+     * Méthode de lancement de la fenêtre SolarEdge.
+     */
     public Stage solarDisplay() {
         if (this.solarEdgeBorderPane == null) { // Créer la fenêtre si elle n'existe pas
             this.solarEdgeBorderPane = new SolarEdgeBorderPane(this.dbmfStage);
@@ -77,6 +79,10 @@ public class AppMainFrame extends Application {
         return this.solarEdgeBorderPane.getSolarStage(); // Retourne le Stage de la fenêtre
     }
 
+    /**
+     * Méthode de lancement de la fenêtre AM107.
+     * @param pconfig : configuration de la fenêtre AM107 (permet d'être transmise au contrôleur de la fenêtre)
+     */
     public Stage am107Display(Config pconfig) {
         this.am107BorderPane = new Am107BorderPane(this.dbmfStage);
         gestionLancementPython(); // Appel au lancement du programme python avant l'affichage de l'interface
@@ -85,34 +91,50 @@ public class AppMainFrame extends Application {
         return this.am107BorderPane.getAm107Stage(); // Retourne le Stage de la fenêtre
     }
 
+    /**
+     * Méthode permettant de changer l'état de la fenêtre SolarEdge afin de gérer le lancement du programme Python en 1 seule "exemplaire".
+     * @param _isRunning : état de la fenêtre SolarEdge (true : ouverte, false : fermée)
+     */
     public void setSolarEdgeRunning(Boolean _isRunning) {
         this.isSolarEdgeRunning = _isRunning;
     }
 
+    /**
+     * Méthode permettant de récupérer l'état de la fenêtre SolarEdge.
+     */
     public Boolean getSolarEdgeRunning() {
         return this.isSolarEdgeRunning;
     }
 
+    /**
+     * Méthode permettant de changer l'état de la fenêtre AM107 afin de gérer le lancement du programme Python en 1 seule "exemplaire".
+     * @param _isRunning : état de la fenêtre AM107 (true : ouverte, false : fermée)
+     */
     public void setAm107Running(Boolean _isRunning) {
         this.isAm107Running = _isRunning;
     }
 
+    /**
+     * Méthode permettant de récupérer l'état de la fenêtre AM107.
+     */
     public Boolean getAm107Running() {
         return this.isAm107Running;
     }
 
+    /**
+     * Méthode permettant de récupérer le Stage de la fenêtre SolarEdge.
+     */
     public Stage getSolarStage() {
         return this.solarEdgeBorderPane.getSolarStage(); // Suppose que solarEdgeBorderPane est initialisé
     }
 
-    // public Stage getAm107Stage() {
-    // return this.am107BorderPane != null ? this.am107BorderPane.getAm107Stage() :
-    // null;
-    // }
-
     /**
      * Méthode permettant la gestion du lancement du programme Python
      * Le main.py est appelé une fois pour les deux fenêtres SolarEdge et AM107
+     * Si les deux fenêtres sont fermées, le programme Python est arrêté
+     * Si le programme Python est déjà en cours d'exécution, on ne le relance pas
+     * Crée un environnement virtuel, installe les dépendances et lance le script Python
+     * Ici on utilise python3 mais il est possible de devoir changer vers python en fonction de la machine
      */
     public void gestionLancementPython() {
         System.out.println("Valeur de l'état fenêtre AM107 : " + this.getAm107Running());

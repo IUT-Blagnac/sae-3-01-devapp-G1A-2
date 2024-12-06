@@ -3,6 +3,9 @@ package model;
 import java.util.HashMap;
 import java.util.HashSet;
 
+/**
+ * Classe de configuration (permet de lire le fichier de configuration avec Jackson)
+ */
 public class Config {
     private HashSet<String> topic;
     private String server;
