@@ -159,22 +159,37 @@ image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/document
 
 === b) Sprint 1 (sem 47-48)
 
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/UC%20Sprint%201.jpg[width=800, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/UC%20Sprint%201.jpg"]
+
 ==== Connexion et déconnexion
 
-User Story : 
+User Story n°1: 
 
 En tant qu'utilisateur du site web, je veux pouvoir me connecter à mon compte et rester connecter X temps et me déconnecter afin de facilité et sécuriser l'accès à mon compte.
 
 Pages web concernées : +
 
 * header.php
+* footer.php
 * login.php
 * deconnexion.php
 * traitementLogin.php
 
+==== Visualisation des produits à la une
+
+User Story n°2: 
+
+En tant qu’utilisateur du site web, je veux pouvoir visualiser une liste de produits mis en avant (produits à la une), afin de découvrir rapidement les meilleures offres ou les nouveautés.
+
+Pages web concernées : +
+
+* header.php
+* footer.php
+* index.php
+
 ==== Création compte client
 
-User Story : 
+User Story n°3 : 
 
 En tant qu'utilisateur, je dois pouvoir me créer un compte client afin de m'y connecter, sauvegarder mon panier ou valide ma commande.
 
@@ -186,59 +201,71 @@ Pages web concernées : +
 
 === c) Sprint 2 (sem 49-50)
 
-==== Visualisation de la liste des produits (à la une)
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/UC%20Sprint%202.jpg[width=800, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/UC%20Sprint%202.jpg"]
 
-User Story : 
+==== Visualisation de la liste des produits
 
-En tant qu’utilisateur du site web, je veux pouvoir visualiser une liste de produits mis en avant (produits à la une), afin de découvrir rapidement les meilleures offres ou les nouveautés.
+User Story n°4 : 
+
+En tant qu’utilisateur du site web, je veux pouvoir visualiser mes produits recherchés dans une liste de produits.
 
 Pages web concernées : +
 
+* header.php
+* footer.php
 * index.php
 * listeProduits.php
 
 ==== Rechercher des produits par catégorie/sous-catégorie, mot-clé ou regroupement
 
-User Story : 
+User Story n°5 : 
 
 En tant qu’utilisateur, je souhaite rechercher des produits en fonction de catégories, sous-catégories, mots-clés ou regroupements afin de trouver facilement ce que je cherche.
 
 Pages web concernées : +
 
+* header.php
+* footer.php
 * index.php
 * listeProduits.php
 * produit.php
 
 ==== Visualiser le détail d’un produit
 
-User Story : 
+User Story n°6 : 
 
 En tant qu’utilisateur, je veux pouvoir visualiser le détail d’un produit (photos, avis & réponses, moyenne des notes des avis, photos de la communauté, stock disponible, catégorie et regroupements associés) afin d’évaluer si ce produit correspond à mes besoins.
 
 Pages web concernées : +
 
+* header.php
+* footer.php
 * detailProduit.php
 * produit.php
 
 ==== Tri de la liste de produits par prix croissant / décroissant
 
-User Story : 
+User Story n°7 : 
 
 En tant qu’utilisateur, je souhaite pouvoir trier la liste des produits par ordre de prix croissant ou décroissant afin de comparer les produits selon mon budget.
 
 Pages web concernées : +
 
+* header.php
+* footer.php
 * listeProduits.php
 * produit.php
 
 ==== Ajouter un produit affiché dans le panier / Gérer le panier
 
-User Story : 
+User Story n°8 : 
 
 En tant qu’utilisateur, je veux pouvoir ajouter un produit dans mon panier, afficher son contenu, modifier les quantités ou supprimer un produit afin de gérer mes achats avant de finaliser ma commande.
 
 Pages web concernées : +
 
+* header.php
+* footer.php
 * panier.php
 * listeProduits.php
 * produit.php
