@@ -1,0 +1,236 @@
+= Script Python pour l'application IoT
+:toc:
+:toc-title: Sommaire
+
+== **Équipe G1-A2 :**
+
+- Luca Gaches
+- Melvin Bouyssou
+- Robin Gourgues
+- Nicolas Ho
+
+== Présentation du script Python
+
+Le script Python : 
+
+Le main.py s'occupe de gérer la collecte des données des capteurs AM107 et SolarEdge via MQTT, le traitement des données et la génération de fichiers JSON pour l'interface JavaFX. Les résultats sont d'abord stockés dans des fichiers cache avant d'être écrits dans les fichiers resultatAM107.json et resultatSolar.json, en respectant les fréquences de rafraîchissement des données définies par l'utilisateur. 
+
+== Structure du code
+
+Le script est structuré en plusieurs fonctions principales pour assurer une modularité et une lisibilité du code :
+
+- **Chargement de la configuration** :
+
+
+La fonction config() s'occupe de charger les paramètres du fichier config.json ou génère une configuration par défaut si le fichier n'existe pas. Les paramètres incluent le serveur MQTT, les topics, les salles, les données souhaitées et la fréquence de rafraîchissement. 
+
+- **Vérification et création des fichiers nécessaires** :
+    - La fonction verifFichier() : Vérifie l'existence des fichiers de résultat, de cache et d'alerte, et les crée s'ils n'existent pas. 
+
+- **Gestion de la réception des messages MQTT** :
+    - La fonction on_message_print(type, message) : Traite les messages reçus en fonction du type de capteur (AM107 ou SolarEdge) et dirige le traitement vers les fonctions appropriées.
+
+- **Traitement des données des capteurs AM107** :
+    - La fonction ecrireCacheAm107(data, fichier) : Écrit les données reçues dans le fichier cache pour les capteurs AM107.
+    - La fonction alerteAM107(room, capteur, valeur) : Gère les alertes en cas de dépassement des seuils définis pour les capteurs AM107.
+
+- **Traitement des données des capteurs SolarEdge** :
+    - La fonction ecrireCacheSolaredge(data, fichier) : Écrit les données reçues dans le fichier cache pour les capteurs SolarEdge.
+
+- **Transfert des données du cache vers les fichiers de résultat** :
+    - La fonction appendCacheToResultatAm107(fichierCache, fichierResultat) : Transfère les données du cache AM107 vers le fichier de résultat : resultatAM107.json.
+    - La fonction appendCacheToResultatSolaredge(fichierCache, fichierResultat) : Transfère les données du cache SolarEdge vers le fichier de résultat resultatSolar.json.
+
+- **Gestion du cycle d'écriture des données** :
+    - La fonction ecriture() : Lance un timer basé sur la fréquence pour effectuer le transfert des données du cache vers les fichiers de résultat à intervalle régulier en fonction de la fréquence définie. (cette fonction s'occupe de la gestion des transferts des données du fichier cache vers les fichiers de résultat). 
+
+- **Abonnement aux topics MQTT** :
+    - La fonction thread_subscribe(type, topic) : S'abonne aux topics définis et crée un thread pour chaque abonnement.
+
+- **Gestion des signaux système** :
+    - La fonction sigterm_handler(signal, frame) : Gère l'arrêt du script en cas de réception d'un signal SIGTERM.
+
+
+== Exemple de structuration des données dans les fichiers JSON
+
+- **Fichier resultatAM107.json** :
+
+[source,json]
+
+{
+    "E007": {
+        "temperature": [
+            19.1
+        ],
+        "humidity": [
+            38
+        ],
+        "activity": [
+            0
+        ],
+        "co2": [
+            470
+        ],
+        "illumination": [
+            27
+        ],
+        "pressure": [
+            1002.8
+        ],
+        "timestamp": [
+            "2024-12-05 15:17:08"
+        ]
+    }
+}
+
+- **Fichier resultatSolar.json** :
+
+[source,json]
+
+{
+    "lastUpdateTime": [
+        "2024-12-04 15:12:34",
+        "2024-12-04 20:01:39",
+        "2024-12-05 15:05:19"
+    ],
+    "lifeTimeData": [
+        3445612,
+        3446238,
+        3455779
+    ],
+    "lastYearData": [
+        2964582,
+        2965208,
+        2974749
+    ],
+    "lastMonthData": [
+        30176,
+        30802,
+        40343
+    ],
+    "lastDayData": [
+        11397,
+        12023,
+        9541
+    ],
+    "currentPower": [
+        2173.4988,
+        0,
+        1539.8308
+    ]
+}
+
+- **Fichier config.json** :
+
+[source,json]
+
+
+{
+    "topic": [
+        "solaredge/blagnac/#",
+        "AM107/by-room/#"
+    ],
+    "server": "mqtt.iut-blagnac.fr",
+    "salle": [
+        "all"
+    ],
+    "data": {
+        "illumination": 2.0,
+        "activity": 0.0,
+        "co2": 2.0,
+        "temperature": 0.0,
+        "humidity": 0.0,
+        "pressure": 2.0
+    },
+    "frequence": 2
+}
+
+
+== Étapes d'installation
+
+1. **Prérequis** :
+    - Python 3.x avec `pip` installé.
+    - Bibliothèques Python nécessaires (définies dans requirements.txt).
+
+2. **Cloner le dépôt** :
+
+    git clone <URL_DU_DÉPÔT>
+    cd <NOM_DU_RÉPERTOIRE>/IoT/Python
+
+3. **Créer un environnement virtuel** :
+
+    python -m venv venv
+
+4. **Activer l'environnement virtuel** :
+
+    - Sous Windows :
+
+        venv\Scripts\activate
+
+    - Sous Linux/macOS :
+
+        source venv/bin/activate
+
+5. **Installer les dépendances** :
+
+    pip install -r requirements.txt
+
+6. **Vérifier la configuration** :
+    - Assurez-vous que le fichier config.json est présent et correctement configuré. Sinon, il sera généré automatiquement avec des valeurs par défaut lors de l'exécution du script.
+    - Assurer-vous que les dossiers cache et resultat sont bien présent dans le répertoire.
+
+== Étapes de lancement du code
+
+1. **Naviguer vers le répertoire du script** :
+
+    cd <NOM_DU_RÉPERTOIRE>/IoT/Python
+
+2. **Activer l'environnement virtuel** (si ce n'est pas déjà fait) :
+
+    - Sous Windows :
+
+        venv\Scripts\activate
+
+    - Sous Linux/macOS :
+
+        source venv/bin/activate
+
+3. **Lancer le script Python** :
+
+    python main.py
+
+4. **Surveillance de l'exécution** :
+    - Le script affichera des messages indiquant le chargement de la configuration, l'abonnement aux topics MQTT et la collecte des données.
+    - En cas d'erreur ou d'arrêt du script, des messages d'erreur seront affichés pour aider au diagnostic. (Les problèmes fréquents incluent une mauvaise arborescence des fichiers, une configuration incorrecte ou une connexion au serveur MQTT échouée).
+
+== Cas de tests
+
+=== Cas de fonctionnement nominal
+
+- **Collecte des données** :
+    - Le script doit collecter les données des capteurs définis dans config.json et les écrire dans les fichiers resultatAM107.json et resultatSolar.json à la fréquence spécifiée.
+    - *Capture d'écran* : Affichage en console de la réception des messages MQTT et des transferts de données.
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/screenshots/consolepython.png[title="Capture d'écran de la console Python", width=500]
+
+- **Gestion des alertes** :
+    - En cas de dépassement des seuils définis pour les capteurs AM107, le script doit écrire les alertes dans le fichier alerteAM107.json.
+
+=== Cas d'erreurs
+
+- **Absence de configuration** :
+    * Si le fichier config.json est absent, le script génère une configuration par défaut.
+    * *Capture d'écran* : Message indiquant la création d'une configuration par défaut.
+
+- **Erreur de connexion au serveur MQTT** :
+    * En cas d'impossibilité de se connecter au serveur MQTT, le script affiche un message d'erreur.
+    * *Capture d'écran* : Message d'erreur indiquant l'échec de la connexion au serveur MQTT.
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/screenshots/configmissing.png[title="Capture d'écran de l'erreur de configuration", width=500]
+
+- **Problème lors de la réception des messages** :
+    - Si un message reçu est invalide ou vide, le script affiche une erreur de réception.
+
+== Conclusion
+
+Le script Python main.py est une composante essentielle de l'application IoT, assurant la collecte et le traitement des données en temps réel. Grâce à une architecture modulaire et une gestion efficace des threads et des fichiers, il assure une communication fluide entre les capteurs et l'interface utilisateur JavaFX.
