@@ -56,7 +56,7 @@ Projet est réalisé par::
 Tuteur/tutrice enseignant(e) de l'équipe:: mailto:esther.pendaries@univ-tlse2.fr[Esther Pendaries]
 
 == Réalisations 
-- Release dernière version : https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/releases/tag/Release[Release V2]
+- Release dernière version : https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/releases/tag/ReleaseV2[Release V2]
 
 === Lien vers le backlog (issues et user stories)
 - https://github.com/orgs/IUT-Blagnac/projects/255/views/1[Version sur GitHub]
