@@ -143,6 +143,8 @@ public class Am107ViewController {
         Map<String, Float> mapCapteur = this.config.getData();
         List<String> capteurs = new ArrayList<String>();
 
+        System.out.println("Initialisation des graphiques pour les capteurs : " + mapCapteur.keySet());
+
         for (String key : mapCapteur.keySet()) {
             capteurs.add(key);
         }
@@ -484,5 +486,4 @@ public class Am107ViewController {
             return rawDate; // Retourne la date brute en cas d'échec
         }
     }
-
 }

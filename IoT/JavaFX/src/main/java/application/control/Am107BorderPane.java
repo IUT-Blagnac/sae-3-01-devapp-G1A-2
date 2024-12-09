@@ -10,6 +10,19 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.scene.layout.BorderPane;
 
+
+/* La classe Am107BorderPane sert de contrôleur pour la fenêtre AM107 dans l'application JavaFX. 
+ * Il gère le chargement de la vue AM107 (am107.fxml) à l'aide de FXMLLoader, configure la scène et 
+ * l'étape et lance un thread d'arrière-plan (MyRun) pour actualiser périodiquement les graphiques 
+ * affichés dans l'interface AM107.
+ * 
+ * L'Am107BorderPane initialise et contient une référence à l'Am107ViewController 
+ * lorsqu'il charge le fichier am107.fxml. L'Am107ViewController gère la logique de 
+ * l'interface utilisateur et les mises à jour dans la fenêtre AM107, tandis que l'Am107BorderPane 
+ * gère le cycle de vie de la fenêtre et orchestre les tâches en arrière-plan telles que l'actualisation des graphiques.
+ */
+
+
 /**
  * Classe de controleur de Dialogue de la fenêtre AM107.
  *

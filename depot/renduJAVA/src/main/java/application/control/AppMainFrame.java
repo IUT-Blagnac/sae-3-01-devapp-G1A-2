@@ -21,7 +21,6 @@ public class AppMainFrame extends Application {
     private Boolean isAm107Running = false;
     private Am107BorderPane am107BorderPane;
     private SolarEdgeBorderPane solarEdgeBorderPane;
-    // Ajoutez cette ligne en haut de votre classe
     private Process pythonProcess;
 
     /**
@@ -129,6 +128,12 @@ public class AppMainFrame extends Application {
     }
 
     /**
+     * Le script Python main.py est chargé de collecter les données des capteurs IoT à l'aide 
+     * de la communication MQTT. Il s'abonne aux sujets MQTT pertinents, 
+     * traite les données de capteur entrantes et écrit les résultats dans des fichiers 
+     * JSON tels que resultatAM107.json et alerteAM107.json. Ces fichiers sont ensuite 
+     * utilisés par l'application JavaFX pour afficher les lectures mises à jour des capteurs et des alertes à l'utilisateur.
+     * 
      * Méthode permettant la gestion du lancement du programme Python
      * Le main.py est appelé une fois pour les deux fenêtres SolarEdge et AM107
      * Si les deux fenêtres sont fermées, le programme Python est arrêté
