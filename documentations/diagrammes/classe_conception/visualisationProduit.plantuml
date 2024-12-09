@@ -1,0 +1,26 @@
+@startuml
+class InterfaceUtilisateurProduit {
+  + afficherDétailsProduit(produit : Produit) : void
+  + afficherAvis(avis : List<Avis>) : void
+}
+
+class Produit {
+  - nom : String
+  - description : String
+  - prix : Float
+  - photos : List<Image>
+  - caractéristiques : String
+  + getDétailsProduit() : String
+  + obtenirAvis() : List<Avis>
+}
+
+class Avis {
+  - note : int
+  - commentaire : String
+  - client : Client
+  + afficherAvis() : String
+}
+
+InterfaceUtilisateurProduit --> Produit : "affiche détails"
+Produit --> Avis : "affiche avis"
+@enduml

@@ -1,0 +1,24 @@
+@startuml
+actor Client
+participant "Page Produit" as Produit
+participant Panier
+participant Commande
+participant Paiement
+
+Client -> Produit : ConsulterDétails()
+Client -> Produit : AjouterAuPanier()
+Produit -> Panier : ajouterProduit()
+
+Client -> Panier : ConsulterPanier()
+Client -> Panier : ValiderPanier()
+Panier -> Commande : créerCommande()
+
+Client -> Commande : PasserCommande()
+Commande -> Paiement : effectuerPaiement()
+alt Paiement accepté
+  Paiement -> Commande : confirmerCommande()
+  Commande -> Client : confirmationCommande()
+else Paiement refusé
+  Paiement -> Client : affichageErreurPaiement()
+end
+@enduml
