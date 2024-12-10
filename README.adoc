@@ -119,6 +119,11 @@ Backlog ok; pour les issues il me manque encore les milestones par sprint, d'ail
 Odj et CR les plus récents datent du 14/11 !! Je n'ai pas ceux de la semaine 48 ou au moins 47 alors qu'ils sont annoncés. Eviter les réunions en télétravail ! ODJ : faire des rubriques avec intervenants et temps, et rôle (qui anime, qui fait le CR). Le CR doit reprendre l'ODJ et être rédigé avec un retour sur la réunion client et une analyse des réussites et echec . A faire cette semaine !!
 note : 0,7/3
 
+=== semaine 49
+Mettre un lien vers odj/CR actifs plutôt que vers le dossier ! Je n'ai que l'ODJ de la réunion client, rien sur la réunion d'équipe  alors qu'elle est annoncée pour le 5/12  !
+note : 0,2/3
+
+
 
 == Historique des journées de télétravail
 
