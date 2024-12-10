@@ -45,7 +45,7 @@ Bouyssou Melvin \- Secrétaire
 
 # **Notes prochaine réunion**
 
-* Planification de la prochaine réunion pour le 5 déc. 2024
+* Planification de la prochaine réunion pour le 4 déc. 2024
 
 * Présentation des progrès en fin de sprint
 
