@@ -1,0 +1,17 @@
+@startuml
+state "Commande Créée" as cree
+state "En Attente de Paiement" as attentePaiement
+state "Validée" as valide
+state "En Cours de Livraison" as livraison
+state "Livrée" as livree
+state "Annulée" as annulee
+
+[*] --> cree
+cree --> attentePaiement : PasserCommande()
+attentePaiement --> valide : PaiementRéussi()
+attentePaiement --> annulee : PaiementÉchoué()
+valide --> livraison : ExpédierCommande()
+livraison --> livree : LivraisonConfirmée()
+valide --> annulee : AnnulerCommande()
+
+@enduml
