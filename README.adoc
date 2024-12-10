@@ -79,8 +79,7 @@ Pour consolider sa position face à une concurrence accrue et aux attentes crois
 - https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/BD/BD_V3/Dictionnaire_des_donnees.adoc[Lien vers le dictionnaire de la BD]
 - https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/BD/BD_V3/SAE_script_version_admin.sql[Lien vers le script de création de la BD]
 - https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/tree/master/documentations/doc-client[Lien vers les doc PDF fournis par les clients]
-- https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/tree/master/documentations/Réunions/ODJ[Lien vers les ordres du jour]
-- https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/tree/master/documentations/Réunions/CR_Réu[Lien vers les comptes rendus de réunion]
+- https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/tree/master/documentations/R%C3%A9unions[Lien vers les ordres du jour et compte rendu de réunion]
 
 == Projet IoT
 
