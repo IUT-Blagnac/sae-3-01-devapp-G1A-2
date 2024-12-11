@@ -62,7 +62,7 @@ Les éléments suivants ont été finalisés ou planifiés :
 
 ### **Prochaines étapes**
 
-#### **Rendus de fin de sprint à préparer (5 décembre 2024\)**
+#### **Rendus de fin de sprint à préparer (8 décembre 2024\)**
 
 1. **JavaFX :**  
    * Documentation technique.  
@@ -80,7 +80,7 @@ Les éléments suivants ont été finalisés ou planifiés :
 
 #### **Prochaine réunion**
 
-* **Date :** 5 déc. 2024  
+* **Date :** 4 déc. 2024  
 * **Objectifs :**  
   * Avancement des rendus.  
   * Préparation des éléments pour la réunion backlog avec le client.
