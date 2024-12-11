@@ -127,7 +127,7 @@ note : 0,2/3
 == Historique des journées de télétravail
 
 === À venir
-  - - **12/12/2024** : de 9h30 à 12h30
+  - **12/12/2024** : de 9h30 à 12h30
 
 
 === Passées
