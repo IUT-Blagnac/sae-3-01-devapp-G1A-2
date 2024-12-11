@@ -111,7 +111,7 @@ Issues/Backlog :  Il faut une finalité dans certaines de vos US, et affecter un
 
 === Retour semaine 48 EP
 Backlog ok; pour les issues il me manque encore les milestones par sprint, d'ailleurs j'ai des difficultés à identifer quel est le sprint en cours. Peu de nouvelles issues /tasks créées. doc technique : organiser les UC par services. Tests: je devrais avoir les tests sur sprint 2 au moins écris.
-
+Note appel offre : 15,1/20
 == Retours communication par EP
 
 === semaine 48
