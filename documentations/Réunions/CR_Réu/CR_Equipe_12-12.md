@@ -80,9 +80,9 @@ L'objectif de cette réunion était de faire un point d'avancement sur les diff�
 
     Une idCommande à null dans Panier signifie que le panier est actif et non validé Une idCommande remplie dans Panier signifie que le panier a été commandé \- **Melvin**
 
-* Suppression de la table ADRESSELIVRAISON  
+  * Suppression de la table ADRESSELIVRAISON  
   	TYPEADRESSE est une contrainte check qui ne peut avoir que facturation ou livraison comme valeur  
-  Les champs nom et prénom ne sont pas les même que celui du compte car si il a prêté son compte et que la personne commande et se fait livrer chez elle le nom ne sera pas le bon  
+    Les champs nom et prénom ne sont pas les même que celui du compte car si il a prêté son compte et que la personne commande et se fait livrer chez elle le nom ne sera pas le bon  
   	Création de la table ADDRESSE  
   	Création de la table REGION  
   	Insertion de toutes les régions de france métropolitaine \+ DOM TOM dans la table REGION \- **Robin**
