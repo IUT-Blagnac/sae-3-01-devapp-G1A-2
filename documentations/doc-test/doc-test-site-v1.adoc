@@ -100,7 +100,7 @@ Le projet vise à développer un site e-commerce pour la vente de chaussures, ax
 | Visualiser le détail d’un type produit 
 | Cliquer sur un produit
 | La page du produit doit afficher sa photo, les avis (avec ou sans photo) et réponses, la moyenne des notes, son stock, sa catégorie et les produits qui lui sont associés.
-| En cours
+| Test réussi
 
 | Tri de la liste de produits par prix croissant/décroissant
 | Être sur la page de produits via une recherche ou une catégorie/sous-catégorie
@@ -110,11 +110,32 @@ Le projet vise à développer un site e-commerce pour la vente de chaussures, ax
 | Ajouter un produit affiché dans le panier
 | Cliquer sur le bouton ajouter au panier d'un produit et être connecté
 | Ajoute un nouveau produit dans le panier, si le produit était présent la quantité augmentera de 1.
-| En cours
+| Test réussi
+|===
+
+=== c) Sprint 3 (semaines 50-51)
+
+|===
+| Test(s) | Préconditions | Conditions nécessaires | Résultat(s)
 
 | Gérer le panier (afficher le panier, modifier quantité, supprimer un produit)
 | Cliquer sur l'icône du panier et être connecté
 | L'utilisateur peut afficher, modifier son panier avec tous les produits qu'il a ajoutés.
+| En cours - manque uniquement la quantité
+
+| Visualiser ses commandes passées (et saisir un avis sur un type produit acheté et livré, avec photos éventuelles)
+| Cliquer sur la section du panier et être connecté
+| L'utilisateur peut afficher ses commandes passées
+| En cours
+
+| Faire un achat / passer commande
+| Avoir un article dans le panier, être connecté (phase de paiement fictive)
+| L'utilisateur peut passer une commande avec les produits du panier courant
+| En cours
+
+| Dashboard du CRUD de l'admin
+| L'utilisateur doit être un administrateur
+| L'administrateur peut créer, modifier, supprimer un produit
 | En cours
 |===
 
