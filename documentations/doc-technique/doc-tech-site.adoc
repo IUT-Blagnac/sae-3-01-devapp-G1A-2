@@ -34,7 +34,7 @@ Pour séduire et fidéliser une clientèle diversifiée, le site devra proposer 
 === a) Architecture Générale
 
 Lien vers le site d'e-commerce : http://193.54.227.208/~R2024SAE3009/ +
-Le code en HTML, CSS, PHP est hébergé sur un serveur MobaXterm, la connexion du site web et certaines fonctionnalités utiliseront l'application phpMyAdmin permettant la gestion de la base de données SQL. +
+Le code en HTML, CSS, PHP est hébergé sur un serveur à l'IUT, la connexion du site web et certaines fonctionnalités utiliseront l'application phpMyAdmin permettant la gestion de la base de données SQL. +
 
 === b) Ressources externes
 
