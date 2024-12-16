@@ -37,9 +37,6 @@
 |2 jours
 |Must
 
-|Ajouter un produit affiché dans le panier / Gérer le panier (afficher le panier, modifier qté, supprimer un produit)
-|4 jours
-|Must
 |===
 
 == Liste des tâches à réaliser pour le Sprint 3
@@ -58,6 +55,10 @@
 
 |CRUD admin
 |5 jours
+|Must
+
+|Ajouter un produit affiché dans le panier / Gérer le panier (afficher le panier, modifier qté, supprimer un produit)
+|4 jours
 |Must
 |===
 
