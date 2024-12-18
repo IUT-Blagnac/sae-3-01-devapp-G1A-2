@@ -122,7 +122,9 @@ note : 0,7/3
 Mettre un lien vers odj/CR actifs plutôt que vers le dossier ! Je n'ai que l'ODJ de la réunion client, rien sur la réunion d'équipe  alors qu'elle est annoncée pour le 5/12  !
 note : 0,2/3
 
-
+=== semaine 50
+Je n'ai qu'un seul doc qui à priori fait office de ODJ et CR … ce n'est pas ce qui est demandé ! Je n'ai pas de lien directes vers docs à jour mais vers un dossier ! Manque analyse difficultés et réussites.
+Note: 1,56/3
 
 == Historique des journées de télétravail
 
