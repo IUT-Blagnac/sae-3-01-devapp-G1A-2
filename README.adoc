@@ -126,25 +126,72 @@ Style & Semelle, PME spécialisée dans la conception et la vente de chaussures,
 
 |===
 
-== Retours communication par EP
+== Analyses et retours de communication par EP
 |===
-| Date | Retour EP | Note /3 
+| Date | Analyse | Retour EP | Note /3 
 
-| Semaine 46    
+| Semaine 46   
+|
 | Issues/Backlog : Il faut une finalité dans certaines de vos US, et affecter une priorité et une estimation (à droite une fois l’US ouverte). Sinon bien. Les issues/task peuvent toutes être rattachées à une US (ex. initialisation php à Connexion par ex). DOC /Il manque les liens vers les docs dans le readme. J’ai uniquement la conception. Tests: J’ai les critères d’acceptabilité mais pas de lien vers le cahier de tests. release : Pas de release pour le sprint 1. 
 | 
 
 | Semaine 48    
+| Actions réalisées cette semaine +
+Partie IoT +
+- Finalisation de la documentation de conception V1. +
+- Mise en place de l'arborescence de l'application JavaFX/Python. +
+- Création et mise à jour du template du cahier de tests. +
+
+Partie Site Web +
+- Sauvegarde de la base de données actuelle dans le fichier `SAE301.sql` (incluant uniquement les inserts des produits et rôles). +
+- Mise à jour du dictionnaire des données de la base de données. +
+
+Difficultés rencontrées et solutions +
+*Difficulté* : Absence d’un serveur web pour les tests. + 
+*Solution* : Mise en place d’un serveur web local grâce à Docker. +
+
+Organisation de l'équipe +
+- **Nicolas Ho** : Scrum Master - Suivi du projet, coordination et gestion des réunions. +
+- **Luca Gaches** : Développeur - Mise en place du serveur web Docker et gestion des scripts BD. +
+- **Robin Gourgues** : Développeur - Finalisation des documents IoT et mise à jour du dictionnaire de données. +
+- **Melvin Bouyssou** : Product Owner - Revue des documents livrables et suivi des priorités. +
+
 | Backlog ok; pour les issues il me manque encore les milestones par sprint, d’ailleurs j’ai des difficultés à identifer quel est le sprint en cours. Peu de nouvelles issues /tasks créées. doc technique : organiser les UC par services. Tests: je devrais avoir les tests sur sprint 2 au moins écris. Note appel offre : 15,1/20 ODJ et CR les plus récents datent du 14/11 !! Je n’ai pas ceux de la semaine 48 ou au moins 47 alors qu’ils sont annoncés. Eviter les réunions en télétravail ! ODJ : faire des rubriques avec intervenants et temps, et rôle (qui anime, qui fait le CR). Le CR doit reprendre l’ODJ et être rédigé avec un retour sur la réunion client et une analyse des réussites et échec . A faire cette semaine !! 
 
 | Note : 0,7/3   
 
 | Semaine 49    
+| Actions réalisées cette semaine +
+Partie IoT + 
+- Finalisation de l'application de gestion en JavaFX et Python. + 
+- Création du fichier exécutable (`.jar`) et finalisation de l'arborescence. + 
+- Documentation technique achevée, incluant les parties système et Python. +
+
+Partie Site Web +
+- Intégration des fonctionnalités des sprints 1 et 2 (hors recherche filtrée, détail des commandes et fonctionnalités avancées du panier). +
+- Mise à jour des documents techniques, utilisateurs et des tests. + 
+- Actualisation des scripts de création et de gestion de la base de données. + 
+- Finalisation des comptes rendus et ordres du jour des réunions. + 
+- Revue et ajustement des issues/backlog. +
+
+2 - Difficultés rencontrées et solutions + 
+
+*Problème* : Gestion inadaptée des tailles, couleurs et quantités dans la base de données. +
+*Solution* : Modification et réorganisation de la structure de la base de données pour une meilleure prise en charge. + 
+
+3 - Organisation de l'équipe
+
+- *Nicolas Ho* : Scrum Master - Suivi du projet, coordination et gestion des réunions. + 
+- *Luca Gaches* : Développeur - Intégration des fonctionnalités site web et ajustements de la base de données. + 
+- *Robin Gourgues* : Développeur - Finalisation des livrables IoT et documentation associée. + 
+- *Melvin Bouyssou* : Product Owner - Revue des livrables et mise à jour des priorités dans le backlog. +
+
 | Mettre un lien vers odj/CR actifs plutôt que vers le dossier ! Je n’ai que l’ODJ de la réunion client, rien sur la réunion d’équipe alors qu’elle est annoncée pour le 5/12 ! 
 
 | Note : 0,2/3  
 
-| Semaine 50    
+| Semaine 50  
+|
 | J’ai des issues non affectées sans milestone de sprint, il manque les "tasks" techniques associées. ça reste confus …​ La doc USER est pour qui ? Privilégier le développement de l’aide pour l’administrateur, l’aide pour le client se fait surtout en ligne directement sur les pages ! Pas de nouvelle release !! Je n’ai qu’un seul doc qui à priori fait office de ODJ et CR … ce n’est pas ce qui est demandé ! Je n’ai pas de lien directes vers docs à jour mais vers un dossier ! Manque analyse difficultés et réussites. 
 
 | Note : 1,56/3 
