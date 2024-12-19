@@ -1,0 +1,23 @@
+@startuml
+class InterfaceUtilisateurPanier {
+  + afficherPanier(panier : Panier) : void
+  + ajouterAuPanier(produit : Produit) : void
+}
+
+class Produit {
+  - nom : String
+  - prix : Float
+  + getDétailsProduit() : String
+}
+
+class Panier {
+  - listeProduits : List<Produit>
+  - total : Float
+  + ajouterProduit(produit : Produit) : void
+  + calculerTotal() : Float
+  + afficherContenu() : String
+}
+
+InterfaceUtilisateurPanier --> Panier : "ajoute produit"
+Panier --> Produit : "contient"
+@enduml

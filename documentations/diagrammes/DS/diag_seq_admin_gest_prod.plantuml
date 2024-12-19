@@ -1,0 +1,16 @@
+@startuml
+actor Administrateur
+participant "Catalogue Produit" as ProduitCatalogue
+participant BaseDeDonnées
+
+Administrateur -> ProduitCatalogue : ouvrirCatalogue()
+Administrateur -> ProduitCatalogue : ajouterProduit()
+ProduitCatalogue -> BaseDeDonnées : sauvegarderNouveauProduit()
+
+Administrateur -> ProduitCatalogue : modifierProduit()
+ProduitCatalogue -> BaseDeDonnées : mettreAJourProduit()
+
+Administrateur -> ProduitCatalogue : supprimerProduit()
+ProduitCatalogue -> BaseDeDonnées : supprimerProduit()
+
+@enduml
