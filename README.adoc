@@ -136,7 +136,7 @@ Style & Semelle, PME spécialisée dans la conception et la vente de chaussures,
 | 
 
 | Semaine 48    
-| Actions réalisées cette semaine +
+| 1 - Actions réalisées cette semaine +
 Partie IoT +
 - Finalisation de la documentation de conception V1. +
 - Mise en place de l'arborescence de l'application JavaFX/Python. +
@@ -146,11 +146,11 @@ Partie Site Web +
 - Sauvegarde de la base de données actuelle dans le fichier `SAE301.sql` (incluant uniquement les inserts des produits et rôles). +
 - Mise à jour du dictionnaire des données de la base de données. +
 
-Difficultés rencontrées et solutions +
+2 - Difficultés rencontrées et solutions +
 *Difficulté* : Absence d’un serveur web pour les tests. + 
 *Solution* : Mise en place d’un serveur web local grâce à Docker. +
 
-Organisation de l'équipe +
+3 - Organisation de l'équipe +
 - **Nicolas Ho** : Scrum Master - Suivi du projet, coordination et gestion des réunions. +
 - **Luca Gaches** : Développeur - Mise en place du serveur web Docker et gestion des scripts BD. +
 - **Robin Gourgues** : Développeur - Finalisation des documents IoT et mise à jour du dictionnaire de données. +
@@ -161,7 +161,7 @@ Organisation de l'équipe +
 | Note : 0,7/3   
 
 | Semaine 49    
-| Actions réalisées cette semaine +
+| 1 - Actions réalisées cette semaine +
 Partie IoT + 
 - Finalisation de l'application de gestion en JavaFX et Python. + 
 - Création du fichier exécutable (`.jar`) et finalisation de l'arborescence. + 
