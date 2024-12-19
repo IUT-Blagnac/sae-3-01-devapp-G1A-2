@@ -1,0 +1,2 @@
+- backup de la BD actuelle dans le fichier SAE301.sql (il n'y a que les inserts de la table produits et les rôles et attention il faudrait split certain produit qui sont composés de plusieurs couleurs)
+- dico des données de la base de données mis à jour 

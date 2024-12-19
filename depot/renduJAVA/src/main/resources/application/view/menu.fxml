@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.CheckMenuItem?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox onMouseClicked="#afficheAttributs" prefHeight="496.0" prefWidth="789.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.AppMainFrameViewController">
+   <children>
+      <MenuBar VBox.vgrow="NEVER">
+         <menus>
+            <Menu mnemonicParsing="false" text="File">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Quit" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <VBox alignment="CENTER" prefHeight="49.0" prefWidth="640.0">
+         <children>
+            <VBox alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="27.0" prefWidth="71.0" text="Serveur :" textAlignment="CENTER">
+                           <padding>
+                              <Insets top="10.0" />
+                           </padding>
+                        </Label>
+                        <TextField fx:id="tfServer" editable="false" prefHeight="26.0" prefWidth="177.0" text="texte à chopper dans le config" />
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                     <children>
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#testConnection" text="Tester la connexion" />
+                        <Label fx:id="testResuLabel" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <HBox>
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="325.0" prefWidth="640.0">
+               <children>
+                  <Label contentDisplay="CENTER" text="AM107">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER" prefHeight="30.0" prefWidth="640.0">
+                     <children>
+                        <Label text="Choisir les salles par bâtiment :" />
+                     </children>
+                  </HBox>
+                  <MenuBar>
+                     <menus>
+                        <Menu fx:id="choixSalles" mnemonicParsing="false" text="Salles par Bâtiment">
+                           <items>
+                              <Menu mnemonicParsing="false" text="Bâtiment B">
+                                  <items>
+                                    <CheckMenuItem mnemonicParsing="false" text="B108" />
+                                    <CheckMenuItem mnemonicParsing="false" text="B203" />
+                                    <CheckMenuItem mnemonicParsing="false" text="B103" />
+                                    <CheckMenuItem mnemonicParsing="false" text="B110" />
+                                    <CheckMenuItem mnemonicParsing="false" text="B106" />
+                                    <CheckMenuItem mnemonicParsing="false" text="B001" />
+                                    <CheckMenuItem mnemonicParsing="false" text="B202" />
+                                    <CheckMenuItem mnemonicParsing="false" text="B201" />
+                                    <CheckMenuItem mnemonicParsing="false" text="B109" />
+                                    <CheckMenuItem mnemonicParsing="false" text="B002" />
+                                    <CheckMenuItem mnemonicParsing="false" text="B111" />
+                                    <CheckMenuItem mnemonicParsing="false" text="B105" />
+                                    <CheckMenuItem mnemonicParsing="false" text="B234" />
+                                    <CheckMenuItem mnemonicParsing="false" text="B113" />
+                                    <CheckMenuItem mnemonicParsing="false" text="B112" />
+                                    <CheckMenuItem mnemonicParsing="false" text="B217" />
+                                  </items>
+                              </Menu>
+                              <Menu mnemonicParsing="false" text="Bâtiment C">
+                                  <items>
+                                    <CheckMenuItem mnemonicParsing="false" text="C102" />
+                                    <CheckMenuItem mnemonicParsing="false" text="C006" />
+                                    <CheckMenuItem mnemonicParsing="false" text="C004" />
+                                    <CheckMenuItem mnemonicParsing="false" text="C001" />
+                                    <CheckMenuItem mnemonicParsing="false" text="C002" />
+                                  </items>
+                              </Menu>
+                              <Menu mnemonicParsing="false" text="Bâtiment E">
+                                  <items>
+                                    <CheckMenuItem mnemonicParsing="false" text="E007" />
+                                    <CheckMenuItem mnemonicParsing="false" text="E208" />
+                                    <CheckMenuItem mnemonicParsing="false" text="E210" />
+                                    <CheckMenuItem mnemonicParsing="false" text="E207" />
+                                    <CheckMenuItem mnemonicParsing="false" text="E101" />
+                                    <CheckMenuItem mnemonicParsing="false" text="E100" />
+                                    <CheckMenuItem mnemonicParsing="false" text="E102" />
+                                    <CheckMenuItem mnemonicParsing="false" text="E103" />
+                                    <CheckMenuItem mnemonicParsing="false" text="E106" />
+                                    <CheckMenuItem mnemonicParsing="false" text="E006" />
+                                    <CheckMenuItem mnemonicParsing="false" text="E209" />
+                                    <CheckMenuItem mnemonicParsing="false" text="E003" />
+                                    <CheckMenuItem mnemonicParsing="false" text="E001" />
+                                    <CheckMenuItem mnemonicParsing="false" text="E004" />
+                                  </items>
+                              </Menu>
+                              <Menu mnemonicParsing="false" text="Autres">
+                                  <items>
+                                    <CheckMenuItem mnemonicParsing="false" text="Foyer-etudiants-entrée" />
+                                    <CheckMenuItem mnemonicParsing="false" text="Local-velo" />
+                                    <CheckMenuItem mnemonicParsing="false" text="hall-amphi" />
+                                    <CheckMenuItem mnemonicParsing="false" text="Foyer-personnels" />
+                                    <CheckMenuItem mnemonicParsing="false" text="hall-entrée-principale" />
+                                    <CheckMenuItem mnemonicParsing="false" text="Salle-conseil" />
+                                    <CheckMenuItem mnemonicParsing="false" text="amphi1" />
+                                  </items>
+                              </Menu>
+                           <Menu mnemonicParsing="false" text="Tous">
+                              <items>
+                                <CheckMenuItem mnemonicParsing="false" text="all" />
+                              </items>
+                           </Menu>
+                           </items>
+                        </Menu>
+                     </menus>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </MenuBar>
+                  <GridPane alignment="CENTER">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <CheckBox fx:id="temperature" mnemonicParsing="false" text="Température">
+                           <GridPane.margin>
+                              <Insets left="5.0" />
+                           </GridPane.margin>
+                        </CheckBox>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="107.0" text="Seuil" GridPane.columnIndex="1" />
+                        <TextField fx:id="seuilTempField" GridPane.columnIndex="2">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin></TextField>
+                        <CheckBox fx:id="humidity" mnemonicParsing="false" prefHeight="18.0" prefWidth="108.0" text="Humidité" GridPane.rowIndex="1">
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </CheckBox>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="107.0" text="Seuil" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="seuilHumField" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin></TextField>
+                        <CheckBox fx:id="activity" mnemonicParsing="false" prefHeight="18.0" prefWidth="108.0" text="Activité" GridPane.rowIndex="2">
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </CheckBox>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="107.0" text="Seuil" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField fx:id="seuilActField" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin></TextField>
+                        <CheckBox fx:id="co2" mnemonicParsing="false" prefHeight="18.0" prefWidth="108.0" text="CO2" GridPane.rowIndex="3">
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </CheckBox>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="107.0" text="Seuil" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <TextField fx:id="seuilCo2Field" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin></TextField>
+                        <CheckBox fx:id="illumination" mnemonicParsing="false" prefHeight="18.0" prefWidth="108.0" text="Luminosité" GridPane.rowIndex="4">
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </CheckBox>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="107.0" text="Seuil" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <TextField fx:id="seuilIllField" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin></TextField>
+                        <CheckBox fx:id="pression" mnemonicParsing="false" prefHeight="18.0" prefWidth="108.0" text="Pression" GridPane.rowIndex="5">
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </CheckBox>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="107.0" text="Seuil" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <TextField fx:id="seuilPresField" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin></TextField>
+                     </children>
+                  </GridPane>
+                  <Button fx:id="launchAm107Btn" mnemonicParsing="false" onAction="#dochargeConfig" text="Valider la configuration reset le fichier resultat">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="launchAm107Btn" mnemonicParsing="false" onAction="#doLaunchAM107" text="Lancer">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+               <HBox.margin>
+                  <Insets top="20.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox alignment="TOP_CENTER">
+               <children>
+                  <Label contentDisplay="CENTER" text="SolarEdge">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER" prefHeight="30.0" prefWidth="640.0" />
+                  <Button fx:id="launchSolarEdgeBtn" mnemonicParsing="false" onAction="#doLaunchSolarEdge" text="Lancer">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+               <HBox.margin>
+                  <Insets top="20.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="fréquence (ms)" wrappingWidth="94.33666944503784">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Text>
+            <TextField fx:id="frequenceTextField" prefHeight="26.0" prefWidth="91.0" />
+         </children>
+      </HBox>
+   </children>
+</VBox>
