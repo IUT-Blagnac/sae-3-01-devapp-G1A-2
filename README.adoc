@@ -163,30 +163,6 @@ ifndef::env-github[]
 ++++
 endif::[]
 
-=== retour semaine 46  EP
-Issues/Backlog :  Il faut une finalité dans certaines de vos US, et affecter une priorité et une estimation (à droite une fois l'US ouverte). Sinon bien.  Les issues/task peuvent toutes être rattachées à une US (ex. initialisation php à Connexion par ex). DOC /Il manque les liens vers les docs dans le readme. J'ai uniquement la conception. Tests: J'ai les critères d'acceptabilité mais pas de lien vers le cahier de tests.  release : Pas de release pour le sprint 1.
-
-=== Retour semaine 48 EP
-Backlog ok; pour les issues il me manque encore les milestones par sprint, d'ailleurs j'ai des difficultés à identifer quel est le sprint en cours. Peu de nouvelles issues /tasks créées. doc technique : organiser les UC par services. Tests: je devrais avoir les tests sur sprint 2 au moins écris.
-Note appel offre : 15,1/20
-
-=== Retour semaine 50 EP
-J'ai des issues non affectées sans milestone de sprint, il manque les "tasks" techniques associées. ça reste confus ... La doc USER est pour qui ? Privilégier le développement de l'aide pour l'administrateur, l'aide pour le client se fait surtout en ligne directement sur les pages ! Pas de nouvelle release !!
-
-== Retours communication par EP
-
-=== semaine 48
-Odj et CR les plus récents datent du 14/11 !! Je n'ai pas ceux de la semaine 48 ou au moins 47 alors qu'ils sont annoncés. Eviter les réunions en télétravail ! ODJ : faire des rubriques avec intervenants et temps, et rôle (qui anime, qui fait le CR). Le CR doit reprendre l'ODJ et être rédigé avec un retour sur la réunion client et une analyse des réussites et echec . A faire cette semaine !!
-note : 0,7/3
-
-=== semaine 49
-Mettre un lien vers odj/CR actifs plutôt que vers le dossier ! Je n'ai que l'ODJ de la réunion client, rien sur la réunion d'équipe  alors qu'elle est annoncée pour le 5/12  !
-note : 0,2/3
-
-=== semaine 50
-Je n'ai qu'un seul doc qui à priori fait office de ODJ et CR … ce n'est pas ce qui est demandé ! Je n'ai pas de lien directes vers docs à jour mais vers un dossier ! Manque analyse difficultés et réussites.
-Note: 1,56/3
-
 == Historique des journées de télétravail
 === À venir
 - **19/12/2024** : de 9h30 à 12h30
