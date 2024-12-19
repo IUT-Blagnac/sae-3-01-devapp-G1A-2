@@ -80,6 +80,8 @@ Pour consolider sa position face à une concurrence accrue et aux attentes crois
 - https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/BD/BD_V3/SAE_script_version_admin.sql[Lien vers le script de création de la BD]
 - https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/tree/master/documentations/doc-client[Lien vers les doc PDF fournis par les clients]
 - https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/tree/master/documentations/R%C3%A9unions[Lien vers les ordres du jour et compte rendu de réunion]
+- https://docs.google.com/document/d/14rLV2mMhBnjof_PNVBQzRuyih3lTbgQB3ogdKu4lR3E/edit?tab=t.0[Lien Google Docs vers la fiche de conseils juridique et de sécurité]
+- https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/Fiche%20de%20conseils%20juridiques%20et%20de%20sécurité.pdf[Lien vers la fiche de conseils juridique et de sécurité en pdf]
 
 == Projet IoT
 
