@@ -145,7 +145,7 @@ image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-r
 
 Vous pouvez filtrer toutes les chaussures homme par 3 catégorie *"Chaussures de Sport"*, *"Chaussures de ville*", *"Chaussures décontractée"*
 
-image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/SelectPrixChaussures.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/SelectPrixChaussures.png"] 
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/selectCategorieChaussures.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/selectCategorieChaussures.png"] 
 
 
 Vous pouvez améliorer les filtres de vos recherche en précisant votre fourchette de prix que vous voulez :
