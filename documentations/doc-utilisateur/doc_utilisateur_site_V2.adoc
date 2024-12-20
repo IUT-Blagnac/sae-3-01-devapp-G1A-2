@@ -147,6 +147,10 @@ Vous pouvez filtrer toutes les chaussures homme par 3 catégorie *"Chaussures de
 
 image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/selectCategorieChaussures.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/selectCategorieChaussures.png"] 
 
+Vous pouvez selectionner la categorie par exemple *"Chaussures de Sport"*
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/SelectCategSport.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/SelectCategSport.png"] 
+
 
 Vous pouvez améliorer les filtres de vos recherche en précisant votre fourchette de prix que vous voulez :
 
@@ -161,6 +165,13 @@ Vous pouvez également faire des recherches de produit par mot clé :
 image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/MotClé.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/MotClé.png"] 
 
 
+Vous pouvez sélectionner un produit pour avoir accès a ses détail :
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/detailProduit.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/detailProduit.png"] 
+
+Vous pouvez ensuite l'ajouter dans le panier en sélectionnant une couleur et une taille du produit et en cliquand sur le bouton *"Ajouter au panier"*
+
+
 ==== Consulter son panier 
 
 Vous pouvez consulter votre panier en cliquant sur le logo du caddie.
@@ -169,4 +180,55 @@ image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-r
 
 Une fois que vous avez cliqué sur le caddie, vous êtes redirigé vers votre panier.
 
-image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/panier.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/panier.png"] 
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/panier.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/panier.png"] 
+
+Vous pouvez ensuite proceder a la commande de votre produit en cliquand sur *"Valider la commande *" 
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/valideCommande[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/valideCommande.png"]
+
+Vous devez ensuite renseignée une adresse de livraison , de facturation et un moyen de paiement. 
+
+
+vous pouvez sélectionner une adresse existante ou en crée une en choisant de crée une nouvelle adresse vous serez redirigé vers le formulaire de création d'adresse puis une fois valider vous serez ramener vers votre formulaire de commande
+
+adresse de livraison : 
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/SelectAdresseCommande.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/SelectAdresseCommande.png"] 
+
+adresse de facturation :
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/SelectCreeAdresseCommande.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/SelectCreeAdresseCommande.png"] 
+
+Moyen paiement : 
+
+Vous avez le choix entre 2 moyen de paiement 
+
+- Carte bancaire 
+- paypal
+
+lorsque vous sélectionner carte bancaire vous avez un formulaire qui apparait : 
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/CBcommande.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/CBcommande.png"] 
+
+lorsque vous sélectionner paypal vous avez un formulaire qui apparait : 
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/Paypalcommande.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/Paypalcommande.png"] 
+
+
+=== Utilisateur Admin 
+
+Un admin peut faire tout se que l'on a vue précédament de plus il a acces a un dashboard 
+
+==== Dashboard Admin
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/Dashboard.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/dashboard.png"] 
+
+
+===== Voir, modifier les produits du site 
+
+Pour voir les produit du site cliquer sur *"Voir les produits disponibles"*
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/Dashboard.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/dashboard.png"] 
+
+
+
