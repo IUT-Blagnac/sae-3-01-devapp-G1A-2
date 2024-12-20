@@ -1,0 +1,126 @@
+# Dictionnaire de données
+
+[cols="1,1,1,2", options="header"]
+|===
+| Table | Colonne | Type | Description
+
+.10+| *ADRESSE*
+| IDADRESSE | Entier | Identifiant unique de l'adresse
+| NOM | Varchar(255) | Nom associé à l'adresse
+| PRENOM | Varchar(255) | Prénom associé à l'adresse
+| ADRESSE | Varchar(255) | Détails de l'adresse (numéro, rue, etc.)
+| VILLE | Varchar(255) | Ville de l'adresse
+| CODEPOSTAL | Varchar(20) | Code postal de l'adresse
+| PAYS | Varchar(255) | Pays de l'adresse
+| IDREGION | Entier | Identifiant de la région associée
+| TELEPHONE | Varchar(20) | Numéro de téléphone associé
+| IDUTILISATEUR | Entier | Identifiant de l'utilisateur associé
+
+.4+| *CATEGORIE*
+| IDCATEGORIE | Entier | Identifiant unique de la catégorie
+| IDPARENT | Entier | Identifiant de la catégorie parente
+| NOMCATEGORIE | Varchar(30) | Nom de la catégorie
+| DESCCAT | Varchar(200) | Description de la catégorie
+
+.7+| *COMMANDE*
+| IDCOMMANDE | Entier | Identifiant unique de la commande
+| IDADRLIVRAISON | Entier | Identifiant de l'adresse de livraison
+| IDADRFACTURATION | Entier | Identifiant de l'adresse de facturation
+| IDUTILISATEUR | Entier | Identifiant de l'utilisateur ayant passé la commande
+| IDSTATUT | Entier | Identifiant du statut de la commande
+| IDMODEPAIEMENT | Entier | Identifiant du mode de paiement utilisé
+| DATECOMMANDE | DateTime | Date et heure de la commande
+
+.5+| *COMMENTAIRE*
+| IDCOMMENTAIRE | Entier | Identifiant unique du commentaire
+| IDPRODUIT | Entier | Identifiant du produit commenté
+| IDUTILISATEUR | Entier | Identifiant de l'utilisateur ayant écrit le commentaire
+| NOTE | Entier | Note attribuée au produit
+| COMMENTAIRE | Varchar(200) | Contenu du commentaire
+
+.2+| *COULEUR*
+| IDCOULEUR | Entier | Identifiant unique de la couleur
+| COULEUR | Varchar(40) | Nom de la couleur
+
+.3+| *IMAGE*
+| IDIMAGE | Entier | Identifiant unique de l'image
+| IDPRODUIT | Entier | Identifiant du produit associé à l'image
+| URL | Varchar(200) | URL de l'image
+
+.3+| *MARQUE*
+| IDMARQUE | Entier | Identifiant unique de la marque
+| NOMMARQUE | Varchar(20) | Nom de la marque
+| DESCMARQUE | Varchar(200) | Description de la marque
+
+.3+| *MODEPAIEMENT*
+| IDMODEPAIEMENT | Entier | Identifiant unique du mode de paiement
+| NOMPAIEMENT | Varchar(200) | Nom du mode de paiement
+| DESCPAIEMENT | Varchar(128) | Description du mode de paiement
+
+.4+| *PANIER*
+| IDPANIER | Entier | Identifiant unique du panier
+| IDUTILISATEUR | Entier | Identifiant de l'utilisateur propriétaire du panier
+| DATECREA | Date | Date de création du panier
+| IDCOMMANDE | Entier | Identifiant de la commande associée (si le panier est validé)
+
+.11+| *PRODUIT*
+| IDPRODUIT | Entier | Identifiant unique du produit
+| IDCATEGORIE | Entier | Identifiant de la catégorie du produit
+| IDMARQUE | Entier | Identifiant de la marque du produit
+| NOMPRODUIT | Varchar(128) | Nom du produit
+| DESCPRODUIT | Varchar(200) | Description du produit
+| PRIX | Decimal(10,2) | Prix du produit
+| ASPECTTECHNIQUE | Varchar(200) | Détails techniques du produit
+| COMPOSITION | Varchar(200) | Composition du produit
+| POIDS | Decimal(10,2) | Poids du produit
+| GENRE | Char(1) | Genre du produit (H, F, U)
+| SUPPRIME | Tinyint(1) | Indicateur si le produit est supprimé (1) ou actif (0)
+
+.5+| *PRODUITPANIER*
+| IDPRODUITPANIER | Entier | Identifiant unique du produit dans le panier
+| IDPANIER | Entier | Identifiant du panier associé
+| QTEPP | Entier | Quantité du produit dans le panier
+| PRIXACHAT | Decimal(10,2) | Prix d'achat unitaire du produit
+| IDPRODUIT_ATTR | Entier | Identifiant des attributs du produit (taille, couleur)
+
+.5+| *PRODUIT_ATTR*
+| IDPRODUIT_ATTR | Entier | Identifiant unique des attributs du produit
+| IDPRODUIT | Entier | Identifiant du produit
+| IDTAILLE | Entier | Identifiant de la taille du produit
+| IDCOULEUR | Entier | Identifiant de la couleur du produit
+| QTESTOCK | Entier | Quantité en stock pour cet attribut de produit
+
+.2+| *REGION*
+| IDREGION | Entier | Identifiant unique de la région
+| NOMREGION | Varchar(30) | Nom de la région
+
+.3+| *ROLE*
+| IDROLE | Entier | Identifiant unique du rôle
+| NOMROLE | Varchar(20) | Nom du rôle (e.g., Client, Administrateur)
+| DESCROLE | Varchar(128) | Description du rôle
+
+.3+| *STATUTCOMMANDE*
+| IDSTATUT | Entier | Identifiant unique du statut de la commande
+| NOMSTATUT | Varchar(200) | Nom du statut (e.g., En cours, Livrée)
+| DESCSTATUT | Varchar(128) | Description détaillée du statut
+
+.2+| *TAILLE*
+| IDTAILLE | Entier | Identifiant unique de la taille
+| TAILLE | Varchar(10) | Valeur de la taille (e.g., S, M, L, 38, 40)
+
+.9+| *UTILISATEUR*
+| IDUTILISATEUR | Entier | Identifiant unique de l'utilisateur
+| IDROLE | Entier | Identifiant du rôle de l'utilisateur
+| NOM | Varchar(128) | Nom de l'utilisateur
+| PRENOM | Varchar(128) | Prénom de l'utilisateur
+| EMAIL | Varchar(128) | Adresse email de l'utilisateur
+| PASSWORD | Varchar(128) | Mot de passe de l'utilisateur (hashé)
+| TELEPHONE | Char(10) | Numéro de téléphone de l'utilisateur
+| DATENAISSANCE | Date | Date de naissance de l'utilisateur
+| DATEINSCRIPTION | Date | Date d'inscription sur le site
+
+|===
+
+# Note
+
+Le fonctionnement des commandes et certaines descriptions peuvent évoluer en fonction des besoins du projet. Des ajustements futurs sont possibles pour refléter les changements dans la structure de la base de données ou les fonctionnalités du système.

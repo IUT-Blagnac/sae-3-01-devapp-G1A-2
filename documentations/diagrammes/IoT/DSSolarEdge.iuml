@@ -1,0 +1,38 @@
+@startuml
+
+hide footbox
+actor Utilisateur as User
+
+' Définition des participants
+participant "AppIoT\n[AppIoT.java]" as AppIoT
+participant "AppMainFrame\n[AppMainFrame.java]" as AppMainFrame
+participant "AppMainFrameViewController\n[AppMainFrameViewController.java]" as AppMainFrameVC
+participant "SolarEdgeBorderPane\n[SolarEdgeBorderPane.java]" as SolarEdgeBorderPane
+participant "SolarEdgeViewController\n[SolarEdgeViewController.java]" as SolarEdgeVC
+database "resultatSolar.json\n[IoT/resultat/resultatSolar.json]" as ResultatSolarJSON
+
+' Démarrage de l'application
+AppIoT -> AppMainFrame : runApp()
+AppMainFrame -> AppMainFrame : start(primaryStage)
+AppMainFrame -> AppMainFrameVC : initContext(primaryStage, this)
+AppMainFrameVC -> AppMainFrameVC : initialize()
+
+' Interaction utilisateur pour lancer SolarEdge
+User -> AppMainFrameVC : doLaunchSolarEdge()
+AppMainFrameVC -> AppMainFrame : solarDisplay()
+AppMainFrame -> SolarEdgeBorderPane : new SolarEdgeBorderPane(primaryStage)
+SolarEdgeBorderPane -> SolarEdgeVC : initContext(solarStage, this)
+SolarEdgeBorderPane -> SolarEdgeVC : displayDialog()
+SolarEdgeVC -> ResultatSolarJSON : loadUpdateHistoric()
+ResultatSolarJSON --> SolarEdgeVC : Données solaires
+SolarEdgeVC -> SolarEdgeVC : initializeGraphique()
+SolarEdgeVC -> User : Affichage du graphique
+
+' Rafraîchissement du graphique
+loop Toutes les X secondes
+    SolarEdgeBorderPane -> SolarEdgeVC : loadUpdateHistoric()
+    SolarEdgeVC -> ResultatSolarJSON : Charger les nouvelles données
+    ResultatSolarJSON --> SolarEdgeVC : Nouvelles données solaires
+    SolarEdgeVC -> SolarEdgeVC : Mise à jour du graphique
+end
+@enduml
