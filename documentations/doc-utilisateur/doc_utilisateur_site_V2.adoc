@@ -1,0 +1,166 @@
+= Documentation utilisateur site web
+:toc:
+:toc-title: Sommaire
+
+Version du site : 1 +
+
+Date : 27/11/2024 +
+
+Équipe : G1A2 +
+
+Client : Style & Semelle +
+
+Projet : Site d'e-commerce +
+
+<<<
+
+== 1. Description du Projet
+=== a) Equipe
+
+Product Owner : Melvin Bouyssou +
+Scrum Master : Nicolas +
+Développeurs : Luca Gaches et Robin Gourgues +
+
+=== b) Contexte du projet
+
+Style & Semelle est une entreprise française fondée en 2005 à Lyon par Clavel Simon, Raban Théo, Kwadjani Bilon, Guerrero Adrian et Théophile Adrien. Forte de ses valeurs éthiques et de son engagement pour une production locale, l’entreprise s’est imposée sur le marché national en proposant une gamme de chaussures tendance, confortables, et responsables. Cette offre inclut sa propre collection ainsi qu’une sélection de grandes marques comme Nike, Adidas, et Converse, attirant un large public. +
+
+Malgré une croissance continue et un chiffre d’affaires atteignant 12 millions d’euros en 2023, Style & Semelle doit faire face à un marché de la mode et de la chaussure extrêmement compétitif et à une montée en puissance des ventes en ligne. Pour consolider sa position et répondre aux attentes d’une clientèle de plus en plus digitale, l’entreprise souhaite moderniser son site e-commerce. Ce projet s’inscrit dans une stratégie globale visant à renforcer la visibilité de Style & Semelle, à redynamiser son image en ligne, et à offrir une expérience utilisateur à la hauteur des standards actuels. +
+
+=== c) Objectifs du projet
+
+L’objectif principal du projet est de développer un nouveau site web conforme à la charte graphique de Style & Semelle, qui reflète les valeurs de la marque tout en proposant une navigation fluide et agréable. Le site devra mettre en avant les deux axes clés de l’offre : les collections maison éthiques et les modèles des grandes marques internationales. +
+
+Le site sera conçu pour s’adresser à tous les profils de clients : des jeunes consommateurs habitués aux plateformes numériques aux utilisateurs moins technophiles recherchant une navigation simple. En plus de sa compatibilité mobile, le site devra garantir un processus de commande intuitif et sécurisé, et intégrer des fonctionnalités avancées comme la recherche multicritères, la personnalisation, et la gestion simplifiée du panier. +
+
+Enfin, ce projet vise à offrir une plateforme évolutive, capable d’intégrer des innovations futures, et de renforcer ainsi la compétitivité de Style & Semelle sur le marché de la chaussure en ligne.
+
+== 2. Consulter le site web
+=== a) Prérequis
+
+Pour pouvoir consulter le site web, vous devoir avoir à minima une connexion à Internet et un navigateur web pour pouvoir accéder au site de Style & Semelle. 
+Ensuite, pour accéder à toutes les fonctionnalités (non admin) il faut créer et posséder un compte.
+
+=== b) Aller sur le site
+
+http://193.54.227.208/~R2024SAE3009/index.php[Lien vers le site web]
+
+== 3. Utilisation du site web
+
+=== a) Explications des rôles
+
+Il y a 3 rôles différents pour les utilisateurs du site : +
+
+* *L'utilisateur sans compte/pas connecté* considéré comme un visiteur : il peut créer un compte, rechercher un ou plusieurs produits et visualiser le détail d'un produit  +
+* *L'utilisateur connecté* considéré comme un client : Il possède les mêmes actions qu'un visiteur mais avec des fonctionnalités en plus comme par exemple, consulter ses commandes passées, ses derniers produits consultés, la gestion de son panier. +
+* *L'administrateur* : Il peut afficher, supprimer, modifier et ajouter des produits dans le catalogue du site d'e-commerce via à un tableau de bord +
+
+=== b) Utilisateur non connecté et compte client
+
+Lorsque vous arrivez sur le site, vous arrivez sur cette page d'accueil.
+
+==== Page d'accueil
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/accueil.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/accueil.png"] 
+
+==== Connexion à un compte 
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/selectConnexion.png[width=800, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/selectConnexion.png"] 
+
+Pour créer un compte, il faut cliquer sur l'icône en haut à droite de la page puis sur *"Connexion"* :
+
+Ensuite que vous arrivez sur le formulaire de connexion : 
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/connexion.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/connexion.png"] 
+
+Lors de la validation de votre formulaire si votre l'adresse mail ou le mot de passe saisie est incorrect une erreur apparaitra pour vous le signaler.
+
+Si vous n'avez pas de compte cliquer sur *"Pas encore inscrit ?"* :
+  
+Vous arriverez sur la page d'inscription suivante :
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/inscription.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_Doc_UserV2/inscription.png"] 
+
+Tous les champs du formulaire doivent être remplis, le nom et le prénom ne peuvent pas contenir de chiffres ou de caractères spéciaux, l’adresse mail devra avoir le bon format et être disponible, le mot de passe doit respecter le minimum demandé et etc. Ensuite il faut cliquer sur "Valider" et si jamais une erreur est faite, un message explicatif s’affichera dans le cas contraire le compte sera créé et vous redirigera sur la page de connexion.
+
+Si vos informations sont bien toutes correct comme dans cette exemple : 
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/CréeCompteRempli.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/CréeCompteRempli.png"] 
+
+Ensuite que vous arrivez sur le formulaire de connexion remplissez-le avec un email valide et le bon mot de passe et cliquer sur *"Connexion"*. Vous pouvez aussi cocher sur *"Se souvenir de moi"* pour éviter de se connecter à chaque fois :
+  
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/connexionRempli.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/connexionRempli.png"] 
+
+Vous serez connecté sur le site et redirigé vers la page d'accueil, pour verifier que vous soyez bien connecté il vous suffit de cliquer sur le même logo que tout lorque vous avez cliquer sur connexion et vous verrez d'autres information :
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/accueilConnecté.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/accueilConnecté.png"] 
+
+===Utilisateur client 
+==== Consulter, modifier ses informations personnelles
+  
+Vous pouvez Regarder vos informations personnell en cliquand sur "Mon Profil"
+Vous serez redirigé vers la page contenant vos information personnelles : 
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/pagePerso.png[width=800, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/pagePerso.png"]
+
+Dans cette page vous pouvez changer vos informations personnelles : 
+
+Vous arrivez sur un formulaire sur le qu'elle les informations renseigné dans les champs seron les informations prise en compte a la modification des informations.
+  
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/modifierInfoPerso.png[width=800, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/modifierInfoPerso.png"]
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/modifPagePersoMod.png[width=800, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/modifPagePersoMod.png"]
+
+Si vous ne voulez finalement pas modifier vos informations cliquez sur *"Retourner sur mon compte"* sinon cliquer sur le bouton *"Valider*"
+  
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/pagePersoMod.png[width=800, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/pagePersoMod.png"]
+
+=== Consulter, ajouter une adresse le livraison, facturation
+
+Vous pouvez crée une adresse de livraison depuis votre pages contenant vos informations personnelles, pour cela il vous suffit de cliquer sur le bouton *"Nouvelle adresse"* et vous serez redirigé vers un formulaire de création d'adresse
+ 
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/CreeAdresse.png[width=800, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/CreeAdresse.png"]
+
+Remplisez votre formulaire avec vos inforamtions demandé : 
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/creeAdresseRemplie.png[width=800, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/creeAdresseRemplie.png"]
+
+Une fois le formulaire validé vous pouvez consulter vos différente adresse en les sélectionnant dans le menu déroulant *"Selectionner une adresse"*
+  
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/SelectAdresse.png[width=800, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/SelectAdresse.png"]
+
+==== Historique commandes 
+
+Vous pouvez consulter l'historique de vos commandes en cliquant sur le bouton *"Voir l'historique de vos commandes"* : 
+  
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/historiqueCommande.png[width=800, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/historiqueCommande.png"]
+
+
+==== Consulter les produit
+
+Cliquer sur une des 3 catégorie *"Homme"*, *"Femme"*, *"Enfant"* sur le haut de votre page 
+
+Une fois que vous avez cliquer sur une catégorie vous serez amener sur la liste des produit selon la catégorie choisi comme dans cette exemple categorie *"Homme"* :
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/listeProduit.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/listeProduit.png"] 
+
+Vous pouvez améliorer les filtres de vos recherche en précisant votre fourchette de prix que vous voulez :
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/listeProduit.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/listeProduit.png"] 
+
+Vous pouvez l'améliorer encore plus en sélectionnant la marque que vous voulez :
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/listeProduit.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/listeProduit.png"] 
+
+Vous pouvez également faire des recherches de produit par mot clé : 
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/listeProduit.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/listeProduit.png"] 
+
+
+==== Consulter son panier 
+
+Vous pouvez consulter votre panier en cliquant sur le logo du caddie.
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/panierButton.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/panierButton.png"] 
+
+Une fois que vous avez cliqué sur le caddie, vous êtes redirigé vers votre panier.
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/panier.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/panier.png"] 
