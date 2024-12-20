@@ -64,78 +64,93 @@ Feuille de style pour la liste de produits
 Feuille de style pour la page de connexion/création du compte
 ** *panier.css* + 
 Feuille de style pour le panier du client
+** *valideCommande.css* + 
+Feuille de style pour la validation de la commande
+** *modifierProd.css* + 
+Feuille de style pour la modification des produits
+** *dashboard.css* + 
+Feuille de style pour le tableau de bord
+** *filtrePrix.css* + 
+Feuille de style pour le filtre de prix
 
 * *images* +
-Ce dossier contient tous les images du site web notamment les images des produits, les images d'arrière-plans
+Ce dossier contient toutes les images du site web notamment les images des produits, les images d'arrière-plans.
 
-* *includes* + 
-Ce dossier contient tous les ressources qui seront inclus dans les différentes pages du site
-** *config.php* +
-Permet de configurer le site web avec le serveur MobaXterm
-** *connexionSecurisee.php* +
-Permet de vérifier que un utilisateur est connecté à son compte, donc restreindre certains accès à certaines fonctionnalités
-** *connexionSecuriseeAdmin.php* +
-Permet de vérifier la connexion d'un compte administrateur, donc accéder à toutes les fonctionnalités du site
-** *footer.php* +
-Pied de page du site web
+* *includes* +
+Ce dossier contient les fichiers inclus dans plusieurs pages du site.
 ** *header.php* +
-Entête du site web
+Entête commune à toutes les pages du site.
+** *footer.php* +
+Pied de page commun à toutes les pages du site.
+** *connexionSecurisee.php* +
+Script pour sécuriser les connexions des utilisateurs.
+** *headerDashboard.php* +
+Entête spécifique pour le tableau de bord.
+** *fonctionDetailCouleur.php* +
+Fonction pour obtenir les couleurs des produits.
 
-* *ajoutProduit.php* +
-Page pour ajouter de nouveau produit
-* *commande.php* +
-Page pour visualiser ses commandes
-* *compte.php* +
-Page du compte client
-* *connect.inc.php* +
-Permet d'établir une connexion entre la base de données SQL et le site web
-* *deconnexion.php* +
-Permet de déconnecter son compte client
-* *detailCommande.php* +
-  Permet de consulter les détails d'une commande spécifique.
-* *detailProduit.php* +
-  Affiche les détails d'un produit, incluant les images, descriptions, et avis des clients.
-* *historiqueCommande.php* +
-  Permet de consulter l'historique des commandes d'un utilisateur.
-* *index.php* +
-  Page principale du site, affichant les produits en vedette ou les promotions.
-* *inscription.php* + 
-  Page permettant à un nouvel utilisateur de créer un compte.
-* *listeProduits.php* + 
-  Affiche une liste de produits filtrables par catégorie, sous-catégorie ou recherche.
-* *login.php*  +
-  Page de connexion pour les utilisateurs enregistrés.
-* *mentionLegal.php*  +
-  Affiche les mentions légales et politiques de confidentialité du site.
-* *mettreAvis.php* + 
-  Permet à un utilisateur d'ajouter un avis sur un produit.
-* *modifCompte.php* + 
-  Page pour modifier les informations du compte utilisateur.
-* *paiement.php*  +
-  Gère la validation du paiement pour une commande.
-* *panier.php* + 
-  Affiche le contenu du panier de l'utilisateur avec les options de modification.
-* *produit.php*  +
-  Page générique pour afficher les produits d'une catégorie ou sous-catégorie.
-* *quiSommesNous.php* + 
-  Présente les informations sur l'équipe ou l'entreprise derrière le site.
-* *suprCompte.php* + 
-  Permet à un utilisateur de supprimer définitivement son compte.
-* *traitLogin.php*  +
-  Gère le traitement du formulaire de connexion.
-* *traitInscription.php*  +
-  Gère le traitement du formulaire d'inscription.
-* *dashboard.php*  +  
-  Tableau de bord pour les administrateurs avec des statistiques et outils de gestion.
-* *modifierProduit.php*  +
-  Permet de modifier les informations d'un produit existant (administrateurs).
-* *supprimerProduit.php* + 
-  Permet de supprimer un produit du catalogue (pour les administrateurs).
-* *modifierProduit.php* + 
-  Permet de modifier un produit du catalogue (pour les administrateurs).
-* *ajouterProduit.php* + 
-  Permet d'ajouter un produit du catalogue (pour les administrateurs).
-
+* *php* +
+Ce dossier contient les fichiers PHP pour les différentes fonctionnalités du site.
+** *ajoutProduit.php* +
+Script pour ajouter un produit au panier.
+** *commande.php* +
+Script pour gérer les commandes des utilisateurs.
+** *compte.php* +
+Page de gestion du compte utilisateur.
+** *connect.inc.php* +
+Script de connexion à la base de données.
+** *creeAdresse.php* +
+Page pour créer une nouvelle adresse.
+** *deconnexion.php* +
+Script pour déconnecter un utilisateur.
+** *detailCommande.php* +
+Page de détails d'une commande.
+** *detailProduit.php* +
+Page de détails d'un produit.
+** *historiqueCommande.php* +
+Page de l'historique des commandes.
+** *inscription.php* +
+Page d'inscription des utilisateurs.
+** *login.php* +
+Page de connexion des utilisateurs.
+** *mentionLegal.php* +
+Page des mentions légales.
+** *mettreAvis.php* +
+Page pour mettre un avis sur un produit.
+** *modifCompte.php* +
+Page pour modifier les informations du compte utilisateur.
+** *modifPassWord.php* +
+Page pour modifier le mot de passe utilisateur.
+** *paiement.php* +
+Page de paiement.
+** *panier.php* +
+Page du panier.
+** *produit.php* +
+Page de gestion des produits.
+** *quiSommesNous.php* +
+Page "Qui sommes-nous ?".
+** *restaurerProdAdmin.php* +
+Script pour restaurer un produit supprimé par un administrateur.
+** *supprimerProduitPanier.php* +
+Script pour supprimer un produit du panier.
+** *suprCompte.php* +
+Script pour supprimer un compte utilisateur.
+** *traitCommande.php* +
+Script de traitement des commandes.
+** *traitCreeAdresse.php* +
+Script de traitement de la création d'adresse.
+** *traitInscription.php* +
+Script de traitement de l'inscription des utilisateurs.
+** *zdashboard.php* +
+Tableau de bord pour les administrateurs.
+** *zmodifierProduit.php* +
+Page de modification des produits pour les administrateurs.
+** *zproduitDeleted.php* +
+Page des produits supprimés pour les administrateurs.
+** *zAjouterProduitAdmin.php* +
+Page pour ajouter un produit par un administrateur.
+** *zTraitAjouterProdAdmin.php* +
+Script de traitement pour ajouter un produit par un administrateur.
 
 === d) Diagramme de classe des données
 
@@ -153,11 +168,43 @@ image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-r
 
 image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/diagrammes/use_case/UC%20Client_Visiteur.png[width=800, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/diagrammes/use_case/UC%20Client_Visiteur.png"]
 
+== Actions possibles pour un visiteur
+
+  * Créer un compte client en s'inscrivant sur le site (login.php, inscription.php, traitInscription.php).
+
+  * Se connecter à un compte existant (login.php, deconnexion.php, traitementLogin.php).
+
+  * Visualiser les produits mis en avant sur la page d'accueil (index.php).
+
+  * Rechercher des produits par catégorie, sous-catégorie, mot-clé ou regroupement (index.php, listeProduits.php, produit.php).
+
+  * Visualiser le détail d'un produit, incluant photos, avis, notes moyennes, stock disponible, catégories et regroupements associés (detailProduit.php, produit.php).
+
+  * Trier la liste des produits par prix croissant ou décroissant (listeProduits.php, produit.php).
+
+== Actions possibles pour un client
+
+  * En plus des actions disponibles pour un visiteur, un client peut :
+
+  * Ajouter un produit au panier, afficher son contenu, modifier les quantités ou supprimer un produit (panier.php, listeProduits.php, produit.php).
+
+  * Passer une commande en validant le panier, choisir une adresse de livraison et un mode de paiement (panier.php, paiement.php, valideCommande.php).
+
+  * Suivre l'état de la commande (en préparation, expédiée, livrée) et consulter l'historique des commandes passées (compte.php, detailCommande.php, historiqueCommande.php).
+
+  * Laisser un avis sur un produit acheté pour partager son expérience avec les autres clients (detailProduit.php, mettreAvis.php).
+
+== Actions possibles pour un administrateur
+
+  * En plus des actions disponibles pour un client, un administrateur peut :
+
+  * Gérer le catalogue de produits dans le dashboard du CRUD de l'admin, incluant l'ajout, la modification ou la suppression de produits, et la consultation des données de commande associées (zAjouterProduitAdmin.php, zdashboard.php, zMenuDashboard.php, zmodifierProduit.php, zproduitDeleted.php, zTraitAjouterProdAdmin.php, ztraitProduitDashboard.php).
+
 * Administrateur +
 
 image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/diagrammes/use_case/UC_Admin.png[width=800, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/diagrammes/use_case/UC_Admin.png"]
 
-=== b) Sprint 1 (sem 47-48)
+=== b) Sprint 1 (semaine 46-47)
 
 image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/UC%20Sprint%201.jpg[width=800, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/UC%20Sprint%201.jpg"]
 
@@ -199,7 +246,7 @@ Pages web concernées : +
 * inscription.php
 * traitInscription.php
 
-=== c) Sprint 2 (sem 49-50)
+=== c) Sprint 2 (semaine 48-49)
 
 image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/UC%20Sprint%202.jpg[width=800, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/UC%20Sprint%202.jpg"]
 
@@ -256,6 +303,10 @@ Pages web concernées : +
 * listeProduits.php
 * produit.php
 
+=== d) Sprint 3 (semaine 50-51)
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/UC%20Sprint%203.jpg[width=800, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/UC%20Sprint%203.jpg"]
+
 ==== Ajouter un produit affiché dans le panier / Gérer le panier
 
 User Story n°8 : 
@@ -270,6 +321,59 @@ Pages web concernées : +
 * listeProduits.php
 * produit.php
 
+==== Passer une commande
 
+User Story n°9 : 
 
+En tant qu’utilisateur, je veux pouvoir passer une commande en validant mon panier, en choisissant une adresse de livraison et un mode de paiement afin de finaliser mon achat.
 
+Pages web concernées : +
+
+* header.php
+* footer.php
+* panier.php
+* paiement.php
+* valideCommande.php
+
+==== Suivre l’état de ma commande
+
+User Story n°10 : 
+
+En tant qu’utilisateur, je souhaite pouvoir suivre l’état de ma commande (en préparation, expédiée, livrée) et voir mes commandes passées.
+
+Pages web concernées : +
+
+* header.php
+* footer.php
+* compte.php
+* detailCommande.php
+* historiqueCommande.php
+
+==== Laisser un avis sur un produit
+
+User Story n°11 : 
+
+En tant qu’utilisateur, je veux pouvoir laisser un avis sur un produit que j’ai acheté afin de partager mon expérience avec les autres clients.
+
+Pages web concernées : +
+
+* header.php
+* footer.php
+* detailProduit.php
+* mettreAvis.php
+
+==== Dashboard administrateur
+
+User Story n°12 :
+
+En tant qu'administrateur, je souhaite gérer le catalogue de produits dans le dashboard du CRUD de l'admin afin de pouvoir ajouter, modifier, ou retirer des produits, et consulter les données de commande associées.
+
+Pages web concernées : +
+
+* zAjouterProduitAdmin.php
+* zdashboard.php
+* zMenuDashboard.php
+* zmodifierProduit.php
+* zproduitDeleted.php
+* zTraitAjouterProdAdmin.php
+* ztraitProduitDashboard.php
