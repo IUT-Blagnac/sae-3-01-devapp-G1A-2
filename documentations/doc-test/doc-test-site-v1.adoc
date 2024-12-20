@@ -121,17 +121,17 @@ Le projet vise à développer un site e-commerce pour la vente de chaussures, ax
 | Gérer le panier (afficher le panier, modifier quantité, supprimer un produit)
 | Cliquer sur l'icône du panier et être connecté
 | L'utilisateur peut afficher, modifier son panier avec tous les produits qu'il a ajoutés.
-| En cours - manque uniquement la quantité
+| Test réussi
 
 | Visualiser ses commandes passées (et saisir un avis sur un type produit acheté et livré, avec photos éventuelles)
 | Cliquer sur la section du panier et être connecté
 | L'utilisateur peut afficher ses commandes passées
-| En cours
+| En cours (manque partie avis client)
 
 | Faire un achat / passer commande
 | Avoir un article dans le panier, être connecté (phase de paiement fictive)
 | L'utilisateur peut passer une commande avec les produits du panier courant
-| En cours
+| Test réussi
 
 | Dashboard du CRUD de l'admin
 | L'utilisateur doit être un administrateur
