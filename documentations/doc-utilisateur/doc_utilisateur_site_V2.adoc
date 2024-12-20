@@ -2,9 +2,9 @@
 :toc:
 :toc-title: Sommaire
 
-Version du site : 1 +
+Version du site : 2 +
 
-Date : 27/11/2024 +
+Date : 20/12/2024 +
 
 Équipe : G1A2 +
 
@@ -55,12 +55,48 @@ Il y a 3 rôles différents pour les utilisateurs du site : +
 * *L'utilisateur connecté* considéré comme un client : Il possède les mêmes actions qu'un visiteur mais avec des fonctionnalités en plus comme par exemple, consulter ses commandes passées, ses derniers produits consultés, la gestion de son panier. +
 * *L'administrateur* : Il peut afficher, supprimer, modifier et ajouter des produits dans le catalogue du site d'e-commerce via à un tableau de bord +
 
-=== b) Utilisateur non connecté et compte client
+=== b) Utilisateur non connecté 
 
 Lorsque vous arrivez sur le site, vous arrivez sur cette page d'accueil.
 
-==== Page d'accueil
+==== c) Page d'accueil
 image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/accueil.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/accueil.png"] 
+
+==== Consulter les produit
+
+Cliquer sur une des 3 catégorie *"Homme"*, *"Femme"*, *"Enfant"* sur le haut de votre page 
+
+Une fois que vous avez cliquer sur une catégorie vous serez amener sur la liste des produit selon la catégorie choisi comme dans cette exemple categorie *"Homme"* :
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/listeProduit.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/listeProduit.png"] 
+
+Vous pouvez filtrer toutes les chaussures homme par 3 catégorie *"Chaussures de Sport"*, *"Chaussures de ville*", *"Chaussures décontractée"*
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/selectCategorieChaussures.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/selectCategorieChaussures.png"] 
+
+Vous pouvez selectionner la categorie par exemple *"Chaussures de Sport"*
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/SelectCategSport.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/SelectCategSport.png"] 
+
+
+Vous pouvez améliorer les filtres de vos recherche en précisant votre fourchette de prix que vous voulez :
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/SelectPrixChaussures.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/SelectPrixChaussures.png"] 
+
+Vous pouvez l'améliorer encore plus en sélectionnant la marque que vous voulez :
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/SelectMarqueChaussures.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/SelectMarqueChaussures.png"] 
+
+Vous pouvez également faire des recherches de produit par mot clé : 
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/MotClé.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/MotClé.png"] 
+
+
+Vous pouvez sélectionner un produit pour avoir accès a ses détail :
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/detailProduit.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/detailProduit.png"] 
+
+Mais lorsqu'il voudra ajouter le produit a son panier il sera redirigé vers la page de connexion car il faut être connecté a un compte pour pouvoir ajouter un produit a son panier.
 
 ==== Connexion à un compte 
 
@@ -90,11 +126,21 @@ Ensuite que vous arrivez sur le formulaire de connexion remplissez-le avec un em
   
 image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/connexionRempli.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/connexionRempli.png"] 
 
+
+=== Utilisateur client
+
 Vous serez connecté sur le site et redirigé vers la page d'accueil, pour verifier que vous soyez bien connecté il vous suffit de cliquer sur le même logo que tout lorque vous avez cliquer sur connexion et vous verrez d'autres information :
 
 image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/accueilConnecté.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/accueilConnecté.png"] 
 
-===Utilisateur client 
+==== Deconnexion 
+
+Vous pouver vous déconnecter en cliquand sur *"Deconnexion"* 
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/deconnexion.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/deconnexion.png"] 
+
+Lorsque vous cliquer sur déconnexion vous serais redirigé vers la page de connexion, si vous avez coché la cases se souvenir de moi, votre adresse mail est automatiquement rempli.
+
 ==== Consulter, modifier ses informations personnelles
   
 Vous pouvez Regarder vos informations personnell en cliquand sur "Mon Profil"
@@ -114,7 +160,12 @@ Si vous ne voulez finalement pas modifier vos informations cliquez sur *"Retourn
   
 image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/pagePersoMod.png[width=800, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/pagePersoMod.png"]
 
-=== Consulter, ajouter une adresse le livraison, facturation
+Vous pouvez également modifier votre mot de passe : 
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/modPassWord.png[width=800, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/modPassWord.png"]
+
+
+==== Consulter, ajouter une adresse le livraison, facturation
 
 Vous pouvez crée une adresse de livraison depuis votre pages contenant vos informations personnelles, pour cela il vous suffit de cliquer sur le bouton *"Nouvelle adresse"* et vous serez redirigé vers un formulaire de création d'adresse
  
@@ -171,7 +222,6 @@ image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-r
 
 Vous pouvez ensuite l'ajouter dans le panier en sélectionnant une couleur et une taille du produit et en cliquand sur le bouton *"Ajouter au panier"*
 
-
 ==== Consulter son panier 
 
 Vous pouvez consulter votre panier en cliquant sur le logo du caddie.
@@ -215,11 +265,17 @@ lorsque vous sélectionner paypal vous avez un formulaire qui apparait :
 image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/Paypalcommande.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/Paypalcommande.png"] 
 
 
-=== Utilisateur Admin 
+=== d)Utilisateur Admin 
 
 Un admin peut faire tout se que l'on a vue précédament de plus il a acces a un dashboard 
 
 ==== Dashboard Admin
+
+Pour acceder au dashbaord admin cliquer sur le logo user puis sur dashboard : 
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/AccesDashboard.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/Accesdashboard.png"] 
+
+Vous serez redirigé vers la page Dashboard : 
 
 image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/Dashboard.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/dashboard.png"] 
 
@@ -228,7 +284,17 @@ image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-r
 
 Pour voir les produit du site cliquer sur *"Voir les produits disponibles"*
 
-image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/Dashboard.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/dashboard.png"] 
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/listeProduitDashboard.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/listeProduitDashboard.png"] 
 
+Vous pouvez cliquer sur un produit pour pouvoir modifier ses information 
 
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/detailProduitDashboard.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/detailProduitDashboard.png"] 
+
+Vous pouvez également voir les produit insdisponible en cliquant sur *"Produit indisponible*"
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/produitNonDisponible.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/produitNonDisponible.png"] 
+
+Enfin vous pouvez Ajouter un produit en cliquand sur *"Ajouter un produit"*
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/AjoutProdDashboard.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/AjoutProdDashboard.png"] 
 
