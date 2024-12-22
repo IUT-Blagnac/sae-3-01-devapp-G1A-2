@@ -75,7 +75,7 @@ Pour consolider sa position face à une concurrence accrue et aux attentes crois
 - https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/doc-technique/doc-tech-site.adoc[Lien vers la doc technique du site web]
 - https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/doc-utilisateur/doc-utilisateur-site.adoc[Lien vers la doc utilisateur du site web]
 - https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/doc-conception/doc-concept-v1.adoc[Lien vers la doc conception (tous les diagrammes)]
-- https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/doc-test/doc-test-site-v1.adoc[Lien vers le cahier de tests du site web]
+- https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/doc-test/doc-test-site-v1.adoc[Lien vers le cahier de tests/recettes du site web]
 - https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/BD/BD_V3/Dictionnaire_des_donnees.adoc[Lien vers le dictionnaire de la BD]
 - https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/BD/BD_V3/SAE_script_version_admin.sql[Lien vers le script de création de la BD]
 - https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/tree/master/documentations/doc-client[Lien vers les doc PDF fournis par les clients]
