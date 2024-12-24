@@ -136,7 +136,7 @@ Le projet vise à développer un site e-commerce pour la vente de chaussures, ax
 | Dashboard du CRUD de l'admin
 | L'utilisateur doit être un administrateur
 | L'administrateur peut créer, modifier, supprimer un produit
-| En cours
+| Test réussi
 |===
 
 <<<
