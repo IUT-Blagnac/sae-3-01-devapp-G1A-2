@@ -1,0 +1,32 @@
+@startuml
+class "Utilisateur" {
+}
+class "Produit" {
+}
+class "Categorie" {
+}
+class "ModePaiement" {
+}
+class "Commande" {
+}
+class "StatutCommande" {
+}
+class "Panier" {
+}
+class "Adresse" {
+}
+class "Role" {
+}
+
+Commande "1" -- "0..*" Utilisateur
+Commande "1" -- "1..*" StatutCommande
+Commande "1" -- "1" ModePaiement
+Commande "0..*" -- "1" Adresse
+
+Utilisateur "1" -- "1" Panier
+Utilisateur "1" -- "0..*" Role
+
+Produit "1..*" -- "1" Categorie
+Produit "0..*" -- "0..*" Panier
+
+@enduml

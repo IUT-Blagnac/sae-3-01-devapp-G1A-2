@@ -1,0 +1,379 @@
+= Documentation technique site web
+:toc:
+:toc-title: Sommaire
+
+Version du site : 1 +
+Date : 27/11/2024 +
+Groupe : G1A2 +
+Client : Style & Semelle +
+Projet : Site d'e-commerce 
+
+<<<
+
+== 1. Description du Projet
+=== a) Équipe
+
+Product Owner : Melvin Bouyssou +
+Scrum Master : Nicolas +
+Développeurs : Luca Gaches et Robin Gourgues +
+
+=== b) Contexte du projet
+
+Style & Semelle est une entreprise française créée en 2005 à Lyon par les cofondateurs Clavel Simon, Raban Théo, Kwadjani Bilon, Guerrero Adrian et Théophile Adrien. Initialement spécialisée dans la fabrication de chaussures conçues localement, l’entreprise s’est rapidement développée grâce à une combinaison de design innovant et de valeurs éthiques. Aujourd’hui, elle est un acteur majeur sur le marché national, offrant une gamme diversifiée comprenant sa propre collection et des modèles de grandes marques internationales comme Nike, Adidas, et Converse. 
+
+Cependant, face à une concurrence accrue dans le secteur de la mode et à l’évolution des comportements d’achat vers le numérique, Style & Semelle a identifié une opportunité stratégique dans l’optimisation de son site e-commerce. Avec un chiffre d'affaires de 12 millions d’euros en 2023 et un objectif de 15 millions d’euros d’ici 2025, l’entreprise cherche à renforcer sa présence en ligne. Ce projet vise à moderniser et enrichir son site, à la fois pour améliorer l’expérience client et pour soutenir sa croissance dans un marché compétitif.
+
+=== c) Objectifs du projet
+
+Le projet a pour objectif de développer un site e-commerce performant et conforme à l’identité visuelle de Style & Semelle. Ce site devra refléter les valeurs de l’entreprise, notamment son engagement pour une mode éthique et responsable, tout en mettant en avant sa gamme variée de produits.
+
+Pour séduire et fidéliser une clientèle diversifiée, le site devra proposer une expérience utilisateur optimale, adaptée aussi bien aux jeunes générations adeptes de digital qu’aux consommateurs recherchant une navigation intuitive. Cela inclut un design ergonomique et moderne, une fonctionnalité de recherche avancée, ainsi qu’un processus de commande et de paiement sécurisé. L’intégration de nouvelles technologies et la compatibilité mobile seront également des priorités afin d’assurer un accès fluide et une expérience uniforme sur tous les supports.
+
+== 2. Architecture
+
+=== a) Architecture Générale
+
+Lien vers le site d'e-commerce : http://193.54.227.208/~R2024SAE3009/ +
+Le code en HTML, CSS, PHP est hébergé sur un serveur à l'IUT, la connexion du site web et certaines fonctionnalités utiliseront l'application phpMyAdmin permettant la gestion de la base de données SQL. +
+
+=== b) Ressources externes
+
+Pour en savoir plus pour connaître les différentes fonctionnalités du point de vue de l'utilisateur. + 
+Cliquer sur ce lien vers la doc utilisateur : https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/doc-utilisateur/doc-utilisateur-site.adoc +
+
+=== c) Structuration du code source
+Arborescence des fichiers :
+
+* *css* +
+Ce dossier contient tous les feuilles de style CSS.
+** *button.css* +
+Feuille de style pour les différents boutons sur le site 
+** *compte.css* +
+Feuille de style pour la page compte des clients
+** *detProd.css* +
+Feuille de style pour la page d'un produit avec ces détails 
+** *footer.css* +
+Feuille de style pour le pied de page du site 
+** *header.css* +
+Feuille de style pour l'entête du site
+** *index.css* +
+Feuille de style pour la page d'accueil du site web
+** *listeProduits.css* + 
+Feuille de style pour la liste de produits
+** *login.css* + 
+Feuille de style pour la page de connexion/création du compte
+** *panier.css* + 
+Feuille de style pour le panier du client
+** *valideCommande.css* + 
+Feuille de style pour la validation de la commande
+** *modifierProd.css* + 
+Feuille de style pour la modification des produits
+** *dashboard.css* + 
+Feuille de style pour le tableau de bord
+** *filtrePrix.css* + 
+Feuille de style pour le filtre de prix
+
+* *images* +
+Ce dossier contient toutes les images du site web notamment les images des produits, les images d'arrière-plans.
+
+* *includes* +
+Ce dossier contient les fichiers inclus dans plusieurs pages du site.
+** *header.php* +
+Entête commune à toutes les pages du site.
+** *footer.php* +
+Pied de page commun à toutes les pages du site.
+** *connexionSecurisee.php* +
+Script pour sécuriser les connexions des utilisateurs.
+** *headerDashboard.php* +
+Entête spécifique pour le tableau de bord.
+** *fonctionDetailCouleur.php* +
+Fonction pour obtenir les couleurs des produits.
+
+* *php* +
+Ce dossier contient les fichiers PHP pour les différentes fonctionnalités du site.
+** *ajoutProduit.php* +
+Script pour ajouter un produit au panier.
+** *commande.php* +
+Script pour gérer les commandes des utilisateurs.
+** *compte.php* +
+Page de gestion du compte utilisateur.
+** *connect.inc.php* +
+Script de connexion à la base de données.
+** *creeAdresse.php* +
+Page pour créer une nouvelle adresse.
+** *deconnexion.php* +
+Script pour déconnecter un utilisateur.
+** *detailCommande.php* +
+Page de détails d'une commande.
+** *detailProduit.php* +
+Page de détails d'un produit.
+** *historiqueCommande.php* +
+Page de l'historique des commandes.
+** *inscription.php* +
+Page d'inscription des utilisateurs.
+** *login.php* +
+Page de connexion des utilisateurs.
+** *mentionLegal.php* +
+Page des mentions légales.
+** *mettreAvis.php* +
+Page pour mettre un avis sur un produit.
+** *modifCompte.php* +
+Page pour modifier les informations du compte utilisateur.
+** *modifPassWord.php* +
+Page pour modifier le mot de passe utilisateur.
+** *paiement.php* +
+Page de paiement.
+** *panier.php* +
+Page du panier.
+** *produit.php* +
+Page de gestion des produits.
+** *quiSommesNous.php* +
+Page "Qui sommes-nous ?".
+** *restaurerProdAdmin.php* +
+Script pour restaurer un produit supprimé par un administrateur.
+** *supprimerProduitPanier.php* +
+Script pour supprimer un produit du panier.
+** *suprCompte.php* +
+Script pour supprimer un compte utilisateur.
+** *traitCommande.php* +
+Script de traitement des commandes.
+** *traitCreeAdresse.php* +
+Script de traitement de la création d'adresse.
+** *traitInscription.php* +
+Script de traitement de l'inscription des utilisateurs.
+** *zdashboard.php* +
+Tableau de bord pour les administrateurs.
+** *zmodifierProduit.php* +
+Page de modification des produits pour les administrateurs.
+** *zproduitDeleted.php* +
+Page des produits supprimés pour les administrateurs.
+** *zAjouterProduitAdmin.php* +
+Page pour ajouter un produit par un administrateur.
+** *zTraitAjouterProdAdmin.php* +
+Script de traitement pour ajouter un produit par un administrateur.
+
+=== d) Diagramme de classe des données
+
+Voici le diagramme de classe structurant la base de données :
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/diagramme-classes.png[width=800, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/diagramme-classes.png"]
+
+
+
+== 3. Fonctionnalités
+
+=== a) Les Use Case 
+
+* Client/Visiteur +
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/diagrammes/use_case/UC%20Client_Visiteur.png[width=800, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/diagrammes/use_case/UC%20Client_Visiteur.png"]
+
+== Actions possibles pour un visiteur
+
+  * Créer un compte client en s'inscrivant sur le site (login.php, inscription.php, traitInscription.php).
+
+  * Se connecter à un compte existant (login.php, deconnexion.php, traitementLogin.php).
+
+  * Visualiser les produits mis en avant sur la page d'accueil (index.php).
+
+  * Rechercher des produits par catégorie, sous-catégorie, mot-clé ou regroupement (index.php, listeProduits.php, produit.php).
+
+  * Visualiser le détail d'un produit, incluant photos, avis, notes moyennes, stock disponible, catégories et regroupements associés (detailProduit.php, produit.php).
+
+  * Trier la liste des produits par prix croissant ou décroissant (listeProduits.php, produit.php).
+
+== Actions possibles pour un client
+
+  * En plus des actions disponibles pour un visiteur, un client peut :
+
+  * Ajouter un produit au panier, afficher son contenu, modifier les quantités ou supprimer un produit (panier.php, listeProduits.php, produit.php).
+
+  * Passer une commande en validant le panier, choisir une adresse de livraison et un mode de paiement (panier.php, paiement.php, valideCommande.php).
+
+  * Suivre l'état de la commande (en préparation, expédiée, livrée) et consulter l'historique des commandes passées (compte.php, detailCommande.php, historiqueCommande.php).
+
+  * Laisser un avis sur un produit acheté pour partager son expérience avec les autres clients (detailProduit.php, mettreAvis.php).
+
+== Actions possibles pour un administrateur
+
+  * En plus des actions disponibles pour un client, un administrateur peut :
+
+  * Gérer le catalogue de produits dans le dashboard du CRUD de l'admin, incluant l'ajout, la modification ou la suppression de produits, et la consultation des données de commande associées (zAjouterProduitAdmin.php, zdashboard.php, zMenuDashboard.php, zmodifierProduit.php, zproduitDeleted.php, zTraitAjouterProdAdmin.php, ztraitProduitDashboard.php).
+
+* Administrateur +
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/diagrammes/use_case/UC_Admin.png[width=800, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/diagrammes/use_case/UC_Admin.png"]
+
+=== b) Sprint 1 (semaine 46-47)
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/UC%20Sprint%201.jpg[width=800, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/UC%20Sprint%201.jpg"]
+
+==== Connexion et déconnexion
+
+User Story n°1: 
+
+En tant qu'utilisateur du site web, je veux pouvoir me connecter à mon compte et rester connecter X temps et me déconnecter afin de facilité et sécuriser l'accès à mon compte.
+
+Pages web concernées : +
+
+* header.php
+* footer.php
+* login.php
+* deconnexion.php
+* traitementLogin.php
+
+==== Visualisation des produits à la une
+
+User Story n°2: 
+
+En tant qu’utilisateur du site web, je veux pouvoir visualiser une liste de produits mis en avant (produits à la une), afin de découvrir rapidement les meilleures offres ou les nouveautés.
+
+Pages web concernées : +
+
+* header.php
+* footer.php
+* index.php
+
+==== Création compte client
+
+User Story n°3 : 
+
+En tant qu'utilisateur, je dois pouvoir me créer un compte client afin de m'y connecter, sauvegarder mon panier ou valide ma commande.
+
+Pages web concernées : +
+
+* login.php
+* inscription.php
+* traitInscription.php
+
+=== c) Sprint 2 (semaine 48-49)
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/UC%20Sprint%202.jpg[width=800, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/UC%20Sprint%202.jpg"]
+
+==== Visualisation de la liste des produits
+
+User Story n°4 : 
+
+En tant qu’utilisateur du site web, je veux pouvoir visualiser mes produits recherchés dans une liste de produits.
+
+Pages web concernées : +
+
+* header.php
+* footer.php
+* index.php
+* listeProduits.php
+
+==== Rechercher des produits par catégorie/sous-catégorie, mot-clé ou regroupement
+
+User Story n°5 : 
+
+En tant qu’utilisateur, je souhaite rechercher des produits en fonction de catégories, sous-catégories, mots-clés ou regroupements afin de trouver facilement ce que je cherche.
+
+Pages web concernées : +
+
+* header.php
+* footer.php
+* index.php
+* listeProduits.php
+* produit.php
+
+==== Visualiser le détail d’un produit
+
+User Story n°6 : 
+
+En tant qu’utilisateur, je veux pouvoir visualiser le détail d’un produit (photos, avis & réponses, moyenne des notes des avis, photos de la communauté, stock disponible, catégorie et regroupements associés) afin d’évaluer si ce produit correspond à mes besoins.
+
+Pages web concernées : +
+
+* header.php
+* footer.php
+* detailProduit.php
+* produit.php
+
+==== Tri de la liste de produits par prix croissant / décroissant
+
+User Story n°7 : 
+
+En tant qu’utilisateur, je souhaite pouvoir trier la liste des produits par ordre de prix croissant ou décroissant afin de comparer les produits selon mon budget.
+
+Pages web concernées : +
+
+* header.php
+* footer.php
+* listeProduits.php
+* produit.php
+
+=== d) Sprint 3 (semaine 50-51)
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/UC%20Sprint%203.jpg[width=800, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/UC%20Sprint%203.jpg"]
+
+==== Ajouter un produit affiché dans le panier / Gérer le panier
+
+User Story n°8 : 
+
+En tant qu’utilisateur, je veux pouvoir ajouter un produit dans mon panier, afficher son contenu, modifier les quantités ou supprimer un produit afin de gérer mes achats avant de finaliser ma commande.
+
+Pages web concernées : +
+
+* header.php
+* footer.php
+* panier.php
+* listeProduits.php
+* produit.php
+
+==== Passer une commande
+
+User Story n°9 : 
+
+En tant qu’utilisateur, je veux pouvoir passer une commande en validant mon panier, en choisissant une adresse de livraison et un mode de paiement afin de finaliser mon achat.
+
+Pages web concernées : +
+
+* header.php
+* footer.php
+* panier.php
+* paiement.php
+* valideCommande.php
+
+==== Suivre l’état de ma commande
+
+User Story n°10 : 
+
+En tant qu’utilisateur, je souhaite pouvoir suivre l’état de ma commande (en préparation, expédiée, livrée) et voir mes commandes passées.
+
+Pages web concernées : +
+
+* header.php
+* footer.php
+* compte.php
+* detailCommande.php
+* historiqueCommande.php
+
+==== Laisser un avis sur un produit
+
+User Story n°11 : 
+
+En tant qu’utilisateur, je veux pouvoir laisser un avis sur un produit que j’ai acheté afin de partager mon expérience avec les autres clients.
+
+Pages web concernées : +
+
+* header.php
+* footer.php
+* detailProduit.php
+* mettreAvis.php
+
+==== Dashboard administrateur
+
+User Story n°12 :
+
+En tant qu'administrateur, je souhaite gérer le catalogue de produits dans le dashboard du CRUD de l'admin afin de pouvoir ajouter, modifier, ou retirer des produits, et consulter les données de commande associées.
+
+Pages web concernées : +
+
+* zAjouterProduitAdmin.php
+* zdashboard.php
+* zMenuDashboard.php
+* zmodifierProduit.php
+* zproduitDeleted.php
+* zTraitAjouterProdAdmin.php
+* ztraitProduitDashboard.php
