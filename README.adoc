@@ -56,7 +56,7 @@ Projet est réalisé par::
 Tuteur/tutrice enseignant(e) de l'équipe:: mailto:esther.pendaries@univ-tlse2.fr[Esther Pendaries]
 
 == Réalisations 
-- Release dernière version : https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/releases/tag/ReleaseV3[Release V3]
+- Release dernière version : https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/releases/tag/ReleaseV4[Release V4]
 
 === Lien vers le backlog (issues et user stories)
 - https://github.com/orgs/IUT-Blagnac/projects/255/views/1[Version sur GitHub]
@@ -214,7 +214,7 @@ endif::[]
 
 == Historique des journées de télétravail
 === À venir
-- ...
+- **07/01/2025** : de 9h30 à 12h30
 
 
 === Passées
