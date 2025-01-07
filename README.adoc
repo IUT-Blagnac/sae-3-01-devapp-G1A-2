@@ -199,6 +199,30 @@ Partie Site Web +
 | Note : 1,56/3 
 |===
 
+| Semaine 2
+| Difficultés rencontrées lors de la semaine 2 :
+Retard accumulé dans certaines fonctionnalités prioritaires :
+
+Explication : Le développement du CRUD Administrateur et la finalisation de la gestion des produits commandés ont pris plus de temps que prévu, en raison de l’intégration complexe entre les modules.
+Impact : Certaines tâches prévues pour la semaine ont été reportées, notamment la mise en place complète du système de points de fidélité et de la boutique associée.
+Justification : Nous avons priorisé la préparation des livrables clés (oraux, documentation utilisateur, et cahier de recettes) afin d’assurer une bonne soutenance.
+Complexité technique dans la gestion des avis clients sur les produits commandés :
+
+Problème : La liaison entre les commandes existantes et les avis clients a nécessité des ajustements non planifiés dans la base de données et le front-end.
+Solution envisagée : Simplification temporaire de la fonctionnalité pour valider un prototype fonctionnel, avec amélioration prévue en backlog post-soutenance.
+Répartition des issues et définition des tâches restantes :
+
+Difficulté : Le retard sur certaines tâches a réduit le temps disponible pour l’organisation et la priorisation des issues.
+Conséquence : Une partie des fonctionnalités secondaires (notifications de points gagnés et gestion des dernières consultations) sera réduite ou reportée.
+Charge additionnelle due aux livrables exceptionnels :
+
+Problème : La préparation du diaporama de la soutenance finale et la finalisation des documents utilisateur et cahier de recettes ont demandé une mobilisation importante de l’équipe.
+Solution : Réorganisation des priorités en limitant le développement à l’essentiel pour garantir des livrables de qualité.
+|
+
+| Note : 
+|===
+
 == Évaluations hebdomadaires
 Evaluation bi-hedomadaire 
 
