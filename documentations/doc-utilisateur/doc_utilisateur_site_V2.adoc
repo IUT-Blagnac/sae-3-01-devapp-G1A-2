@@ -1,6 +1,6 @@
-= Documentation utilisateur site web
+= Documentation utilisateur site web à destination de notre client
 
-== Guide des fonctionnalités à destination du client et d'utilisation du Dashboard administrateur
+== Guide des fonctionnalités et d'utilisation du Dashboard administrateur
 
 :toc:
 :toc-title: Sommaire
