@@ -126,7 +126,7 @@ Le projet vise à développer un site e-commerce pour la vente de chaussures, ax
 | Visualiser ses commandes passées (et saisir un avis sur un type produit acheté et livré, avec photos éventuelles)
 | Cliquer sur la section du panier et être connecté
 | L'utilisateur peut afficher ses commandes passées
-| En cours (manque partie avis client)
+| Test réussi
 
 | Faire un achat / passer commande
 | Avoir un article dans le panier, être connecté (phase de paiement fictive)
@@ -137,6 +137,22 @@ Le projet vise à développer un site e-commerce pour la vente de chaussures, ax
 | L'utilisateur doit être un administrateur
 | L'administrateur peut créer, modifier, supprimer un produit
 | Test réussi
+|===
+
+=== c) Sprint 4 (semaines 2-3)
+
+|===
+| Test(s) | Préconditions | Conditions nécessaires | Résultat(s)
+
+| Visualiser mes dernières consultations
+| Cliquer sur la section "Derniers produits consultés" ou cliquer sur le bouton utilisateur qui y redirige vers la page 
+| L'utilisateur peut afficher, trier, supprimer un ou plusieurs produits de l'historique de consultation
+| En cours
+
+| Gestion des points de fidélité
+| Cliquer sur le bouton utilisateur qui redirige vers la page
+| L'utilisateur peut regarder, utiliser ses points de fidélités contre des bons de réduction. Il doit être aussi notifier du nombre de points qu'il a gagner après une commande passée.
+| En cours
 |===
 
 <<<
