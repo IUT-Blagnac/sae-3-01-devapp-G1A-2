@@ -1,4 +1,7 @@
 = Documentation utilisateur site web
+
+== Guide des fonctionnalités à destination du client et d'utilisation du Dashboard administrateur
+
 :toc:
 :toc-title: Sommaire
 
@@ -265,7 +268,7 @@ lorsque vous sélectionner paypal vous avez un formulaire qui apparait :
 image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/Paypalcommande.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Image_DocUser_V2/Paypalcommande.png"] 
 
 
-=== d)Utilisateur Admin 
+=== d) Partie à destination des Utilisateurs Admin  
 
 Un admin peut faire tout se que l'on a vue précédament de plus il a acces a un dashboard 
 
