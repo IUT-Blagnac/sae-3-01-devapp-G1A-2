@@ -123,6 +123,8 @@ Style & Semelle, PME spécialisée dans la conception et la vente de chaussures,
 | 14/11/2024 | https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/R%C3%A9unions/ODJ/ODJ_Equipe_14-11.md[Lien vers l'ordre du jour] | https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/R%C3%A9unions/CR_R%C3%A9u/CR_hebdomadaire_14-11.md[Lien vers le compte-rendu]
 | 28/11/2024 | https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/R%C3%A9unions/ODJ/ODJ_Agence_28-11.md[Lien vers l'ordre du jour] | https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/R%C3%A9unions/CR_R%C3%A9u/CR_hebdomadaire_28-11.md[Lien vers le compte-rendu]
 | 12/12/2024 | https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/R%C3%A9unions/ODJ/ODJ_Equipe_12-12.md[Lien vers l'ordre du jour] | https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/R%C3%A9unions/CR_R%C3%A9u/CR_Equipe_12-12.md[Lien vers le compte-rendu]
+| 07/01/2025 | https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/Réunions/ODJ/ODJ_Equipe_07-01.md[Lien vers l'ordre du jour] | https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/Réunions/CR_Réu/CR_Equipe_07-01.md[Lien vers le compte-rendu]
+
 
 |===
 
