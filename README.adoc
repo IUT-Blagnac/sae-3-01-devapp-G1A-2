@@ -197,7 +197,6 @@ Partie Site Web +
 | J’ai des issues non affectées sans milestone de sprint, il manque les "tasks" techniques associées. ça reste confus …​ La doc USER est pour qui ? Privilégier le développement de l’aide pour l’administrateur, l’aide pour le client se fait surtout en ligne directement sur les pages ! Pas de nouvelle release !! Je n’ai qu’un seul doc qui à priori fait office de ODJ et CR … ce n’est pas ce qui est demandé ! Je n’ai pas de lien directes vers docs à jour mais vers un dossier ! Manque analyse difficultés et réussites. 
 
 | Note : 1,56/3 
-|===
 
 | Semaine 2
 | Difficultés rencontrées lors de la semaine 2 :
@@ -219,8 +218,8 @@ Charge additionnelle due aux livrables exceptionnels :
 Problème : La préparation du diaporama de la soutenance finale et la finalisation des documents utilisateur et cahier de recettes ont demandé une mobilisation importante de l’équipe.
 Solution : Réorganisation des priorités en limitant le développement à l’essentiel pour garantir des livrables de qualité.
 |
-
 | Note : 
+
 |===
 
 == Évaluations hebdomadaires
