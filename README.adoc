@@ -217,8 +217,9 @@ Charge additionnelle due aux livrables exceptionnels :
 
 Problème : La préparation du diaporama de la soutenance finale et la finalisation des documents utilisateur et cahier de recettes ont demandé une mobilisation importante de l’équipe.
 Solution : Réorganisation des priorités en limitant le développement à l’essentiel pour garantir des livrables de qualité.
-|
-| Note : 
+|ODJ manque qui fait quel thème et lieu. L'analyse doit être faite dans le CR pas dans ce tableau ! Pas de retour de la réunion client. Pensez à l'ODJ pour la semaine prochaine .
+
+| Note : 1,89/3
 
 |===
 
