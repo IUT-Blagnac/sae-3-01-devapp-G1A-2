@@ -125,7 +125,7 @@ Le projet vise à développer un site e-commerce pour la vente de chaussures, ax
 
 | Visualiser ses commandes passées (et saisir un avis sur un type produit acheté et livré, avec photos éventuelles)
 | Cliquer sur la section du panier et être connecté
-| L'utilisateur peut afficher ses commandes passées
+| L'utilisateur peut afficher ses commandes passées et saisir un avis sur les produits achetés
 | Test réussi
 
 | Faire un achat / passer commande
