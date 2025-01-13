@@ -1,0 +1,46 @@
+/* Style du filtre par prix : fourchette de prix */
+
+/* Container principal des outils de filtrage */
+.container.mt-5 {
+    margin-top: 0px !important; /* Distance entre le titre et le conteneur des filtres */
+    display: flex;
+    align-items: flex-start; /* aligement sur la gauche */
+}
+
+/* Distance entre tri par défaut et fourchette de prix */
+#triSelect.form-control.me-1 {
+    margin-bottom: 10px;
+}
+
+
+/* Personnalisation des curseurs */
+.noUi-handle {
+    width: 20px !important;
+    /* Définir une largeur fixe */
+    height: 20px !important;
+    /* Définir une hauteur fixe */
+    background-color: grey !important;
+    border: none !important;
+    border-radius: 50% !important;
+    cursor: pointer !important;
+    box-shadow: none !important;
+}
+
+/* Supprimer les éléments par défaut des curseurs */
+.noUi-handle:before,
+.noUi-handle:after {
+    content: none !important;
+}
+
+/* Personnaliser la barre du slider */
+.noUi-target {
+    height: 10px !important;
+    background-color: #ccc !important;
+    /* Couleur de la barre */
+    border-radius: 5px !important;
+}
+
+/* Personnaliser la partie entre les curseurs */
+.noUi-connect {
+    background-color: #62A87C !important;
+}

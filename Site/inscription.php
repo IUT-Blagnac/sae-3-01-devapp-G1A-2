@@ -1,3 +1,7 @@
+<?php
+require("includes/headerVide.php");
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -58,8 +62,6 @@
                     <!-- Bouton de validation -->
                     <button type="submit" class="btn btn-primary w-100">Valider</button>
                 </form>
-
-                <br>
                 <center><a href="login.php">Vous avez déjà un compte ? </a></center>
                 <center><a href="index.php">Retourner a l'accueil en tant qu'invité</a></center>
 

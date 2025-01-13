@@ -28,7 +28,7 @@ body {
 .product-card {
     background: white;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin-bottom: 2rem;
     transition: transform 0.3s ease;
     padding-top: 10px;
@@ -51,7 +51,7 @@ body {
 
 .product-card:hover {
     box-shadow: 0 8px 15px rgba(0,0,0,0.2); /* Accentuer l'ombre */
-    /* transform: none; /* Enlever translateY pour éviter le dépassement 
+/* transform: none; /* Enlever translateY pour éviter le dépassement 
 } */
 
 
@@ -59,8 +59,10 @@ body {
 /* Product Card Images */
 .product-card img {
     width: 100%;
-    height: 250px; /* Hauteur fixe pour uniformiser la taille des images */
-    object-fit: cover; /* Remplit le conteneur tout en recadrant */
+    height: 250px;
+    /* Hauteur fixe pour uniformiser la taille des images */
+    object-fit: cover;
+    /* Remplit le conteneur tout en recadrant */
     border-radius: 8px 8px 0 0;
 }
 
@@ -71,6 +73,10 @@ body {
 .product-info h3 {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
+}
+
+.card-title {
+    color: black;
 }
 
 .price {
@@ -89,29 +95,36 @@ body {
 .add-to-cart:hover {
     background-color: #222;
 }
+
 /* CSS global pour fixer le footer en bas */
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
-    height: 100%; /* Assurez-vous que html et body occupent toute la hauteur */
+    height: 100%;
+    /* Assurez-vous que html et body occupent toute la hauteur */
     display: flex;
-    flex-direction: column; /* Utilisez Flexbox pour structurer les enfants */
+    flex-direction: column;
+    /* Utilisez Flexbox pour structurer les enfants */
 }
 
 body {
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Écarte le contenu et place le footer en bas */
+    justify-content: space-between;
+    /* Écarte le contenu et place le footer en bas */
 }
 
 .main-content {
-    flex: 1; /* Permet au contenu principal d'occuper l'espace restant */
+    flex: 1;
+    /* Permet au contenu principal d'occuper l'espace restant */
 }
 
 .carousel-control-prev,
 .carousel-control-next {
-    width: 60px;  /* taille des deux conteneurs des fleches du carousel */
-    height: 60px; 
+    width: 60px;
+    /* taille des deux conteneurs des fleches du carousel */
+    height: 60px;
 }
 
 /* Modifier la position interne des icônes avec position:absolute */
@@ -123,7 +136,7 @@ body {
     width: 60px;
     height: 60px;
     position: absolute;
-    right: -15px; 
+    right: -15px;
     top: 180px;
 }
 
@@ -136,7 +149,7 @@ body {
     height: 60px;
     /* changer la position des fleches */
     position: absolute;
-    left: -15px; 
+    left: -15px;
     top: 180px;
 }
 
@@ -172,7 +185,7 @@ body {
     text-align: left;
     margin-left: 1rem;
     /* Bold */
-    font-weight: bold; 
+    font-weight: bold;
     /* Verticale alignement */
     align-items: center;
     vertical-align: top !important;
@@ -220,18 +233,19 @@ body {
 
 
 /* CSS global pour fixer le footer en bas */
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     height: 100%;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
 }
 
 body {
     display: flex;
     flex-direction: column;
-    justify-content: space-between; 
+    justify-content: space-between;
 }
 
 .main-content {

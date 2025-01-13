@@ -1,0 +1,57 @@
+body {
+    font-family: '-apple-system', 'BlinkMacSystemFont', sans-serif;
+}
+
+/* Couleur du texte dans le bouton */
+.btnlinkadmin {
+    text-decoration: none;
+    color: white;
+}
+
+/* Largeur des boutons */
+.btn-primary.btn-sm {
+    width: 130px;
+}
+
+/* Lien vers la page supprimer et modifier*/
+a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+/* Conteneur nom du produit, btn modifier et supprimer */
+.card-body.text-center.d-flex.flex-column.justify-content-between {
+    display: flex;
+    align-items: center;
+}
+
+.a.nav-link {
+    color: black !important;
+}
+
+/* Ajouter produit file */
+.form-wrapper {
+    width: 50%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Make labels bold and add space below them */
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Add space between the image and the form */
+.product-content .col-md-6:nth-child(1) {
+    margin-right: 30px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}

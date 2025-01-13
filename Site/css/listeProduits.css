@@ -1,13 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
-
 body {
-    font-family: "Poppins", sans-serif;
-    color: #444444;
-}
-
-a, a:hover {
-    text-decoration: none;
-    color: inherit;
+    font-family: '-apple-system', 'BlinkMacSystemFont', sans-serif;
 }
 
 .section-products {
@@ -27,7 +19,7 @@ a, a:hover {
 .section-products .header h2 {
     font-size: 2.2rem;
     font-weight: 400;
-    color: #444444; 
+    color: #444444;
 }
 
 .add-to-cart {
@@ -36,10 +28,12 @@ a, a:hover {
     border: none;
 }
 
+
 .add-to-cart:hover {
     background-color: #222;
 }
 
+/* Style du prix du produit */
 .price {
     color: #62A87C;
     font-weight: bold;
@@ -47,3 +41,7 @@ a, a:hover {
     margin-bottom: 1rem;
 }
 
+/* Couleur du nom du produit */
+.card-title {
+    color: black;
+}

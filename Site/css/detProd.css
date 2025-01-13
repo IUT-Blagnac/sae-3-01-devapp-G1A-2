@@ -1,38 +1,70 @@
- /* Style the form - display items horizontally */
- .form-inline {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-  }
-  
-  /* Add some margins for each label */
-  .form-inline label {
-    margin: 5px 10px 5px 0;
-  }
-  
-  /* Style the input fields */
-  .form-inline input {
-    vertical-align: middle;
-    margin: 5px 10px 5px 0;
-    padding: 10px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-  }
-  
-  /* Add responsiveness - display the form controls vertically instead of horizontally on screens that are less than 800px wide */
-  @media (max-width: 800px) {
-    .form-inline input {
-      margin: 10px 0;
-    }
-  
-    .form-inline {
-      flex-direction: column;
-      align-items: stretch;
-    }
-  } 
+.color-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  margin: 5px;
+  transition: transform 0.3s;
+}
 
+.color-circle:hover {
+  transform: scale(1.2);
+}
 
-  img {
-    width: 300px;   /* Définit la largeur à 300 pixels */
-    height: 200px;  /* Définit la hauteur à 200 pixels */
+.color-circle.selected {
+  transform: scale(1.5);
+}
+
+.size-button {
+  padding: 10px 15px;
+  margin: 5px;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  color: black;
+  transition: 0.3s;
+}
+
+.size-button:hover {
+  background-color: #ddd;
+  transition: 0.3s;
+}
+
+.size-button.disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.size-button.selected {
+  background-color: #62A87C;
+  color: white;
+  transform: scale(1.1);
+}
+
+#avis-clients {
+  margin-top: 20px;
+}
+
+.avis {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.avis strong {
+  font-size: 1.1em;
+}
+
+.avis span {
+  font-size: 0.9em;
+  color: #888;
+}
+
+.avis p {
+  font-size: 1em;
+  color: #333;
 }

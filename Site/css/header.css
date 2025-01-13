@@ -36,8 +36,25 @@
 
 .navbar-toggler {
     background-color: #62A87C;
+    color: black;
 }
 
 .search-container {
     padding-top: 1vh;
+}
+
+.bi{
+    transition: 0.3s;
+    padding: 5px;
+}
+
+.bi:hover {
+    transform: scale(1.9);
+    transition: 0.5s;
+    background-color: rgb(213, 213, 213);
+    border-radius: 10px;
+}
+
+.navbar {
+    color: #62A87C !important;
 }

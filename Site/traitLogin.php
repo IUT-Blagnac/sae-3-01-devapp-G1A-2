@@ -5,7 +5,7 @@ if (isset($_POST["email"]) && isset($_POST["password"])) {
 
     // En base de données
     require_once("connect.inc.php");
-    $verifLogs = $conn->prepare("SELECT * FROM UTILISATEUR WHERE email = :email");
+    $verifLogs = $conn->prepare("CALL GetUtilisateurByEmail(:email)");
     $verifLogs->bindParam(":email", $email);
     $verifLogs->execute();
     $user = $verifLogs->fetch(PDO::FETCH_ASSOC);
@@ -13,7 +13,7 @@ if (isset($_POST["email"]) && isset($_POST["password"])) {
     if ($user) {
         // Vérifiez le mot de passe en le comparant à celui stocké
         if (password_verify($_POST["password"], $user["PASSWORD"])) {
-            session_start();
+            session_start();    
             $_SESSION["is_logged_in"] = true;
             $_SESSION["user"] = $user;
             if (isset($_POST["remember"])) {
@@ -31,10 +31,12 @@ if (isset($_POST["email"]) && isset($_POST["password"])) {
 }
 
 ?>
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 </html>

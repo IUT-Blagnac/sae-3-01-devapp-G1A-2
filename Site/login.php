@@ -1,5 +1,5 @@
 <?php
-session_start();
+require("includes/headerVide.php");
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -27,7 +27,7 @@ session_start();
             <label for="password" class="form-label">Mot de passe</label>
                 <div class="input-group">
                     <input type="password" id="password" name="password" class="form-control" required>
-                    <button class="btn btn-outline-secondary" type="button" id="togglePassword">
+                    <button class="btn btn-outline-secondary" type="button" id="togglePassword" style="height: 38px;">
                     <i class="bi bi-eye-slash" id="eyeIcon"></i>
                     </button>
                 </div>

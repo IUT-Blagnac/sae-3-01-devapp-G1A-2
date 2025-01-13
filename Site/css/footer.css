@@ -11,11 +11,13 @@
 .footer {
     background-color: #373b3b;
     color: white;
-    padding: 1.5rem 0; /* Réduit la hauteur du padding */
+    padding: 1.5rem 0; 
     text-align: center;
-    position: relative; /* Pas de position absolue */
+    position: relative;
 }
 
-
-
-
+.footer .text-muted {
+    color: #ccc !important; 
+    font-size: 0.9rem;
+    margin-top: 1rem; 
+}

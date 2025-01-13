@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-container, .summary-container {
+    width: 48%;
+}
+
+#adresseExistante {
+    background-color: rgb(255, 255, 255);
+    color: #4c9a68;
+}

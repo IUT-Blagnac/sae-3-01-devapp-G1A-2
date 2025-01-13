@@ -16,14 +16,15 @@ include("connect.inc.php");
 
 if (isset($_GET['pIdCLient'])) {
     $idProduit = $_GET['pIdCLient'];
-    $surpProd = $conn->prepare("DELETE FROM UTILISATEUR WHERE IDUTILISATEUR = :IDUTILISATEUR");
+    $surpProd = $conn->prepare("CALL DeleteCompte(:IDUTILISATEUR)");
     $surpProd->bindParam(':IDUTILISATEUR', $idProduit);
 
     if ($surpProd->execute()) {
 
         echo '<script language="JavaScript" type="text/javascript">alert("Suppression effectuée !"); </script>';
-        echo '<script language="JavaScript" type="text/javascript"> window.location.replace("index.php"); </script>';
-        header("Location: index.php");
+        echo '<script language="JavaScript" type="text/javascript"> window.location.replace("deconnexion.php"); </script>';
+        header("Location: deconnexion.php");
         exit();
     }
+    $deleteAccount->closeCursor();
 }

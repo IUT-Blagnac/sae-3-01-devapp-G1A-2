@@ -3,6 +3,7 @@
     var_dump($_POST);
     if (isset($_POST['nom']) && isset($_POST['prenom']) && isset($_POST['password']) && isset($_POST['email']) && isset($_POST['telephone']) && isset($_POST['dateNaissance'])) {
         echo "2";
+        $idRole = 2;
         $nom = htmlentities($_POST['nom']);
         $prenom = htmlentities($_POST['prenom']);
         $mdp = htmlentities($_POST['password']);
@@ -34,7 +35,7 @@
             exit();
         }
 
-        $checkEmail = $conn->prepare("SELECT COUNT(*) FROM UTILISATEUR WHERE EMAIL = :email");
+        $checkEmail = $conn->prepare("CALL CheckEmailExists(:email)");
         $checkEmail->bindParam(':email', $email);
         $checkEmail->execute();
         $emailExists = $checkEmail->fetchColumn();
@@ -44,13 +45,15 @@
             exit();
         }
 
+        $checkEmail->closeCursor();
+
         // Préparation et exécution de l'insertion d'un utilisateur
-        $creaCompte = $conn->prepare("INSERT INTO UTILISATEUR (IDUTILISATEUR, IDROLE, NOM, PRENOM, EMAIL, PASSWORD, TELEPHONE, DATENAISSANCE, DATEINSCRIPTION) 
-                                    VALUES (NULL, 2, :nom, :prenom, :email, :pwd, :tel, :dtn, NOW())");
+        $creaCompte = $conn->prepare("CALL creeCompte(:idRole, :nom, :prenom, :mdp, :mail, :tel, :dtn)");
+        $creaCompte->bindParam(':idRole', $idRole);
         $creaCompte->bindParam(':nom', $nom);
         $creaCompte->bindParam(':prenom', $prenom);
-        $creaCompte->bindParam(':email', $email);
-        $creaCompte->bindParam(':pwd', $mdp);
+        $creaCompte->bindParam(':mail', $email);
+        $creaCompte->bindParam(':mdp', $mdp);
         $creaCompte->bindParam(':tel', $tel);
         $creaCompte->bindParam(':dtn', $dtn);
 
@@ -61,8 +64,7 @@
         $idUtilisateur = $conn->lastInsertId();
 
         // Préparation et exécution de l'insertion dans le panier
-        $creaPanier = $conn->prepare("INSERT INTO PANIER (IDPANIER, IDUTILISATEUR, DATECREA) 
-                                    VALUES (NULL, :idUtilisateur, NOW())");
+        $creaPanier = $conn->prepare("CALL CreePanier(:idUtilisateur)");
         $creaPanier->bindParam(':idUtilisateur', $idUtilisateur);
 
         if ($creaPanier->execute()) {
@@ -75,6 +77,9 @@
         } else {
         echo "Erreur lors de l'ajout de l'utilisateur.";
         }
+        $creaPanier->closeCursor();
+        $creaCompte->closeCursor();
+
     }
 ?>
 
