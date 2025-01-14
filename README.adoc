@@ -225,6 +225,13 @@ Solution : Réorganisation des priorités en limitant le développement à l’e
 |===
 
 == Évaluations hebdomadaires
+
+=== Vous m'avez effacé mes commentaires précédents !!
+Evaluation dernier sprint :
+Les tâches du dernier sprint ne sont pas closes ! Docs : il fallait faire la doc utilisateur pour l'admin uniquement. La doc technique manque d'extraits de codes commentés mais dans l'ensemble c'est bien.
+note GPO : 16,8/20
+Note  fiche conseils : 14/20
+ 
 Evaluation bi-hedomadaire 
 
 ifdef::env-github[]
