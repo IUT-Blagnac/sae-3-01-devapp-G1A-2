@@ -1,0 +1,171 @@
+= Documentation utilisateur site web
+:toc:
+:toc-title: Sommaire
+
+Version du site : 1 +
+
+Date : 27/11/2024 +
+
+Équipe : G1A2 +
+
+Client : Style & Semelle +
+
+Projet : Site d'e-commerce +
+
+<<<
+
+== 1. Description du Projet
+=== a) Equipe
+
+Product Owner : Melvin Bouyssou +
+Scrum Master : Nicolas +
+Développeurs : Luca Gaches et Robin Gourgues +
+
+=== b) Contexte du projet
+
+Style & Semelle est une entreprise française fondée en 2005 à Lyon par Clavel Simon, Raban Théo, Kwadjani Bilon, Guerrero Adrian et Théophile Adrien. Forte de ses valeurs éthiques et de son engagement pour une production locale, l’entreprise s’est imposée sur le marché national en proposant une gamme de chaussures tendance, confortables, et responsables. Cette offre inclut sa propre collection ainsi qu’une sélection de grandes marques comme Nike, Adidas, et Converse, attirant un large public. +
+
+Malgré une croissance continue et un chiffre d’affaires atteignant 12 millions d’euros en 2023, Style & Semelle doit faire face à un marché de la mode et de la chaussure extrêmement compétitif et à une montée en puissance des ventes en ligne. Pour consolider sa position et répondre aux attentes d’une clientèle de plus en plus digitale, l’entreprise souhaite moderniser son site e-commerce. Ce projet s’inscrit dans une stratégie globale visant à renforcer la visibilité de Style & Semelle, à redynamiser son image en ligne, et à offrir une expérience utilisateur à la hauteur des standards actuels. +
+
+=== c) Objectifs du projet
+
+L’objectif principal du projet est de développer un nouveau site web conforme à la charte graphique de Style & Semelle, qui reflète les valeurs de la marque tout en proposant une navigation fluide et agréable. Le site devra mettre en avant les deux axes clés de l’offre : les collections maison éthiques et les modèles des grandes marques internationales. +
+
+Le site sera conçu pour s’adresser à tous les profils de clients : des jeunes consommateurs habitués aux plateformes numériques aux utilisateurs moins technophiles recherchant une navigation simple. En plus de sa compatibilité mobile, le site devra garantir un processus de commande intuitif et sécurisé, et intégrer des fonctionnalités avancées comme la recherche multicritères, la personnalisation, et la gestion simplifiée du panier. +
+
+Enfin, ce projet vise à offrir une plateforme évolutive, capable d’intégrer des innovations futures, et de renforcer ainsi la compétitivité de Style & Semelle sur le marché de la chaussure en ligne.
+
+== 2. Consulter le site web
+=== a) Prérequis
+
+Pour pouvoir consulter le site web, vous devoir avoir à minima une connexion à Internet et un navigateur web pour pouvoir accéder au site de Style & Semelle. 
+Ensuite, pour accéder à toutes les fonctionnalités (non admin) il faut créer et posséder un compte.
+
+=== b) Aller sur le site
+
+http://193.54.227.208/~R2024SAE3009/index.php[Lien vers le site web]
+
+== 3. Utilisation du site web
+
+=== a) Explications des rôles
+
+Il y a 3 rôles différents pour les utilisateurs du site : +
+
+* *L'utilisateur sans compte/pas connecté* considéré comme un visiteur : il peut créer un compte, rechercher un ou plusieurs produits et visualiser le détail d'un produit  +
+* *L'utilisateur connecté* considéré comme un client : Il possède les mêmes actions qu'un visiteur mais avec des fonctionnalités en plus comme par exemple, consulter ses commandes passées, ses derniers produits consultés, la gestion de son panier. +
+* *L'administrateur* : Il peut afficher, supprimer, modifier et ajouter des produits dans le catalogue du site d'e-commerce via à un tableau de bord +
+
+=== b) Utilisateur non connecté et compte client
+
+Lorsque vous arrivez sur le site, vous arrivez sur cette page d'accueil.
+
+==== Page d'accueil
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Page-D'accueil.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Page-D'accueil.png"] 
+
+==== Connexion à un compte 
+
+Pour créer un compte, il faut cliquer sur l'icône en haut à droite de la page puis sur *"Connexion"* :
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/icôneUser.PNG[width=800, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/icôneUser.PNG"] 
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/boutonFormulaireConnexion.PNG[width=800, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/boutonFormulaireConnexion.PNG"] 
+
+Ensuite que vous arrivez sur le formulaire de connexion cliquer sur *"Pas encore inscrit ?"* :
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/lienInscription.PNG[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/lienInscription.PNG"] 
+
+Vous arriverez sur la page d'inscription suivante :
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/formulaireInscription.PNG[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/formulaireInscription.PNG"] 
+
+Tous les champs du formulaire doivent être remplis, le nom et le prénom ne peuvent pas contenir de chiffres ou de caractères spéciaux, l’adresse mail devra avoir le bon format et être disponible, le mot de passe doit respecter le minimum demandé et etc. Ensuite il faut cliquer sur "Valider" et si jamais une erreur est faite, un message explicatif s’affichera dans le cas contraire le compte sera créé et vous redirigera sur la page de connexion.
+
+==== Connexion/Déconnexion à un compte 
+
+Pour se connecter un compte, il faut cliquer sur l'icône en haut à droite de la page puis sur *"Connexion"* :
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/icôneUser.PNG[width=800, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/icôneUser.PNG"] 
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/boutonFormulaireConnexion.PNG[width=800, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/boutonFormulaireConnexion.PNG"] 
+
+Ensuite que vous arrivez sur le formulaire de connexion remplissez-le avec un email valide et le bon mot de passe et cliquer sur *"Connexion"*. Vous pouvez aussi cocher sur *"Se souvenir de moi"* pour éviter de se connecter à chaque fois :
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/connexionCompte.PNG[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/connexionCompte.PNG"] 
+
+==== Consulter une categorie
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Page-D'accueil-selectCateg.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/Page-D'accueil-selectCateg.png"] 
+
+Cliquez sur une des catégories pour accéder à la page contenant la liste des produits disponibles.
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/SelectCat.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/SelectCat.png"]
+
+=== B) Utilisateur client
+
+==== Se connecter 
+
+Pour se connecter, il faut remplir le formulaire avec l'email et le mot de passe. Si vous cliquez sur le bouton "Se souvenir de moi", lors de votre déconnexion, votre champ d'adresse email sera automatiquement rempli lors de votre prochaine reconnexion.
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/connexion.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/connexion.png"] 
+
+==== Se déconnecter 
+
+Pour se déconnecter d'un compte, il faut cliquer sur l'icône en haut à droite de la page puis sur *"Déconnexion"* :
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/boutonDeconnexion.PNG[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/boutonDeconnexion.PNG"] 
+
+
+==== Consulter ses informations personnelles 
+
+Vous pouvez voir vos informations personnelles en cliquant sur "Mon Compte" en haut à droite.
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/consultCompteButton.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/consultCompteButton.png"] 
+
+
+Une fois "Mon Compte" sélectionné, vous êtes redirigé vers la page contenant vos informations personnelles.
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/compte.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/compte.png"] 
+
+Sur la page contenant vos informations personnelles, vous pouvez modifier vos informations ou supprimer votre compte.
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/ModifCompteButton.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/ModifCompteButton.png"] 
+
+Lorsque vous cliquez sur le bouton "Modifier ses informations personnelles", vous serez redirigé vers un formulaire contenant toutes vos informations personnelles. Vous pouvez changer les informations souhaitées sur le formulaire, puis valider celui-ci.
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/modifCompte.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/modifCompte.png"] 
+
+
+Vous pouvez également annuler la modification si vous ne souhaitez pas valider, en cliquant sur le bouton "Retourner sur votre compte".
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/modifCompteRetour.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/modifCompteRetour.png"] 
+
+
+Vous pouvez supprimer votre compte en cliquant sur le bouton "Supprimer mon compte".
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/suprCompteButton.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/suprCompteButton..png"] 
+
+
+Lorsque vous cliquez, une première pop-up s'affiche pour vous demander si vous êtes sûr de vouloir supprimer votre compte.
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/suprCompte-PopUp1.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/suprCompte-PopUp1.png"] 
+
+
+Ensuite, un deuxième message de confirmation de suppression apparaît.
+
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/suprCompte-PopUp-2.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/suprCompte-PopUp-2.png"] 
+
+
+Une fois la suppression effectuée, vous êtes redirigé vers la page d'accueil.
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/RedirectionSuprCompte.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/RedirectionSuprCompte.png"] 
+
+==== Consulter son panier 
+
+Vous pouvez consulter votre panier en cliquant sur le logo du caddie.
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/panierButton.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/panierButton.png"] 
+
+Une fois que vous avez cliqué sur le caddie, vous êtes redirigé vers votre panier.
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/panier.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/images-ressources/panier.png"] 

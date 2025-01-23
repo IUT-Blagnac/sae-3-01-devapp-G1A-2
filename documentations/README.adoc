@@ -1,0 +1,78 @@
+= Backlog du projet
+
+== Liste des tâches à réaliser pour le Sprint 1
+
+[cols="1,1,1", options="header"]
+|===
+|Nom de la tâche |Durée Approx. |Priorité
+
+|Se connecter (avec cookie pour login) / se déconnecter
+|3 jours
+|Must
+
+|Création compte client
+|3 jours
+|Must
+
+|Visualisation de la liste des produits
+|5 jours
+|Must
+|===
+
+== Liste des tâches à réaliser pour le Sprint 2
+
+[cols="1,1,1", options="header"]
+|===
+|Nom de la tâche |Durée Approx. |Priorité
+
+|Rechercher de produits par catégorie/sous-catégorie ou mot-clé ou regroupement
+|3 jours
+|Must
+
+|Visualiser le détail d’un type produit (dont photos, avis & réponses, moyenne note avis, photos de la communauté, stock, catégorie et regroupement associés, …)
+|3 jours
+|Must
+
+|Tri de la liste de produits par prix croissant / décroissant
+|2 jours
+|Must
+
+|===
+
+== Liste des tâches à réaliser pour le Sprint 3
+
+[cols="1,1,1", options="header"]
+|===
+|Nom de la tâche |Durée Approx. |Priorité
+
+|Visualiser ses commandes passées (et saisir un avis sur un type produit acheté et livré, avec photos éventuelles)
+|3 jours
+|Must
+
+|Faire un achat / passer une commande
+|3 jours
+|Must
+
+|CRUD admin
+|5 jours
+|Must
+
+|Ajouter un produit affiché dans le panier / Gérer le panier (afficher le panier, modifier qté, supprimer un produit)
+|4 jours
+|Must
+|===
+
+== Liste des tâches à réaliser pour le Sprint 4
+
+[cols="1,1,1", options="header"]
+|===
+|Nom de la tâche |Durée Approx. |Priorité
+
+|Gérer des points fidélité (recommandé)
+|4 jours
+|Should
+
+|Visualiser mes dernières consultations de produits (recommandé)
+|3 jours
+|Should
+|===

@@ -1,0 +1,115 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.main-content {
+  flex: 1;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  max-width: 1460px;
+  margin: 2rem auto;
+}
+
+.card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  max-width: 460px;
+  text-align: center;
+}
+
+.card h2 {
+  color: #62a87c;
+  margin-bottom: 1rem;
+}
+
+.card .userTable {
+  width: 100%;
+  border-spacing: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.card .userInfo {
+  color: #333;
+  font-weight: bold;
+  text-align: left;
+}
+
+.card .userValue {
+  color: #555;
+  text-align: left;
+  word-break: break-word;
+}
+
+.card a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: white;
+  background-color: #62a87c;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+}
+
+.userTable tr {
+  height: 2.5rem;
+}
+
+.card a:hover {
+  background-color: #4a8563;
+}
+
+.delete-btn {
+  background-color: #d9534f !important;
+}
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+
+  .userInfo,
+  .userValue {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 0.9rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .userInfo,
+  .userValue {
+    font-size: 0.8rem;
+  }
+
+  .card a {
+    font-size: 0.8rem;
+  }
+}

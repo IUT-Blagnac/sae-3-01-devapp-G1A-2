@@ -1,0 +1,30 @@
+# Liens vers les différents documents en lien avec les réunions
+
+## Réunions en tant qu'Agence de développement
+[cols="1,1,1", options="header"]
+|===
+| Date | Ordre du jour | Compte-rendu
+| 7/11/2024 | https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/R%C3%A9unions/ODJ/ODJ_Agence_7-11.md[Lien vers l'ordre du jour] | https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/R%C3%A9unions/CR_R%C3%A9u/CR_Agence_7-11.md[Lien vers le compte-rendu]
+|4/12/2024 | https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/R%C3%A9unions/ODJ/ODJ_Client_4-12.md[Lien vers l'ordre du jour] | https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/R%C3%A9unions/CR_R%C3%A9u/CR_Client_4-12.md[Lien vers le compte-rendu]
+
+|===
+
+## Réunions en tant que Client
+[cols="1,1,1", options="header"]
+|===
+| Date | Ordre du jour | Compte-rendu
+| 8/11/2024 | https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/R%C3%A9unions/ODJ/ODJ_Client_8-11.md[Lien vers l'ordre du jour] | https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/R%C3%A9unions/CR_R%C3%A9u/CR_Client_8-11.md[Lien vers le compte-rendu]
+
+|===
+
+## Réunions internes à l'équipe
+[cols="1,1,1", options="header"]
+|===
+| Date | Ordre du jour | Compte-rendu
+| 7/11/2024 | https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/R%C3%A9unions/ODJ/ODJ_Equipe_7-11.md[Lien vers l'ordre du jour] | https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/R%C3%A9unions/CR_R%C3%A9u/CR_hebdomadaire_7-11.md[Lien vers le compte-rendu]
+| 14/11/2024 | https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/R%C3%A9unions/ODJ/ODJ_Equipe_14-11.md[Lien vers l'ordre du jour] | https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/R%C3%A9unions/CR_R%C3%A9u/CR_hebdomadaire_14-11.md[Lien vers le compte-rendu]
+| 28/11/2024 | https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/R%C3%A9unions/ODJ/ODJ_Agence_28-11.md[Lien vers l'ordre du jour] | https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/R%C3%A9unions/CR_R%C3%A9u/CR_hebdomadaire_28-11.md[Lien vers le compte-rendu]
+| 12/12/2024 | https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/R%C3%A9unions/ODJ/ODJ_Equipe_12-12.md[Lien vers l'ordre du jour] | https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/R%C3%A9unions/CR_R%C3%A9u/CR_Equipe_12-12.md[Lien vers le compte-rendu]
+| 15/01/2025 | https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/R%C3%A9unions/ODJ/ODJ%20Re%CC%81union%20post-mortem%20G1A-2.pdf[Lien vers l'ordre du jour] | [Lien vers le compte-rendu]
+
+|===

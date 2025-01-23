@@ -1,0 +1,75 @@
+@startuml
+class Produit {
+  - nom : String
+  - description : String
+  - taille : String
+  - couleur : String
+  - prix : Float
+  - disponibilite : Boolean
+  - photos : List<Image>
+  - caracteristiquesTechniques : String
+  + ajouterAuPanier() : void
+  + consulterDetails() : void
+}
+
+class Utilisateur {
+  - nom : String
+  - email : String
+  - adresse : String
+  + seConnecter() : Boolean
+  + creerCompte() : void
+}
+
+class Client {
+  - historiqueCommandes : List<Commande>
+  + passerCommande() : void
+  + laisserAvis() : void
+}
+Utilisateur <|-- Client
+
+class Administrateur {
+  + gererProduits() : void
+  + gererCommandes() : void
+}
+Utilisateur <|-- Administrateur
+
+class Commande {
+  - numeroCommande : String
+  - produits : List<Produit>
+  - client : Client
+  - statut : String
+  - dateCommande : Date
+  + suivreCommande() : void
+  + annulerCommande() : void
+}
+
+class Panier {
+  - listeProduits : List<Produit>
+  - total : Float
+  + ajouterProduit() : void
+  + retirerProduit() : void
+  + validerPanier() : void
+}
+
+class Avis {
+  - note : int
+  - commentaire : String
+  - client : Client
+  - produit : Produit
+  + laisserAvis() : void
+}
+
+class Paiement {
+  - montant : Float
+  - moyenPaiement : String
+  - statut : String
+  + effectuerPaiement() : Boolean
+}
+
+Produit --> Avis : "lié à"
+Produit --> Panier : "ajouté à"
+Client --> Commande : "passe"
+Commande --> Paiement : "lié à"
+Commande --> Panier : "provenant de"
+Panier --> Produit : "contient"
+@enduml

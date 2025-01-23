@@ -1,0 +1,13 @@
+@startuml
+state "Compte Créé" as compteCree
+state "Actif" as actif
+state "Suspendu" as suspendu
+state "Supprimé" as supprime
+
+[*] --> compteCree
+compteCree --> actif : ValidationCompte()
+actif --> suspendu : SuspendreCompte()
+suspendu --> actif : RéactiverCompte()
+actif --> supprime : SupprimerCompte()
+
+@endumls

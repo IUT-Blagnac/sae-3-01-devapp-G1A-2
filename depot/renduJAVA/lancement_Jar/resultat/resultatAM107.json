@@ -1,0 +1,191 @@
+{
+    "E006": {
+        "temperature": [
+            21.7
+        ],
+        "humidity": [
+            53.5
+        ],
+        "activity": [
+            23
+        ],
+        "co2": [
+            1121
+        ],
+        "illumination": [
+            61
+        ],
+        "pressure": [
+            1001
+        ],
+        "timestamp": [
+            "2024-12-06 15:33:39"
+        ]
+    },
+    "B113": {
+        "temperature": [
+            21.4
+        ],
+        "humidity": [
+            64
+        ],
+        "activity": [
+            28
+        ],
+        "co2": [
+            2603
+        ],
+        "illumination": [
+            65
+        ],
+        "pressure": [
+            1000.8
+        ],
+        "timestamp": [
+            "2024-12-06 15:33:41"
+        ]
+    },
+    "E209": {
+        "temperature": [
+            21.7
+        ],
+        "humidity": [
+            46.5
+        ],
+        "activity": [
+            0
+        ],
+        "co2": [
+            448
+        ],
+        "illumination": [
+            18
+        ],
+        "pressure": [
+            1000.6
+        ],
+        "timestamp": [
+            "2024-12-06 15:33:59"
+        ]
+    },
+    "E003": {
+        "temperature": [
+            23.2
+        ],
+        "humidity": [
+            44.5
+        ],
+        "activity": [
+            0
+        ],
+        "co2": [
+            456
+        ],
+        "illumination": [
+            339
+        ],
+        "pressure": [
+            1001.7
+        ],
+        "timestamp": [
+            "2024-12-06 15:34:38"
+        ]
+    },
+    "E106": {
+        "timestamp": [
+            "2024-12-06 15:35:36"
+        ]
+    },
+    "B217": {
+        "temperature": [
+            22
+        ],
+        "humidity": [
+            54.5
+        ],
+        "activity": [
+            0
+        ],
+        "co2": [
+            1243
+        ],
+        "illumination": [
+            38
+        ],
+        "pressure": [
+            1000.7
+        ],
+        "timestamp": [
+            "2024-12-06 15:35:37"
+        ]
+    },
+    "C002": {
+        "temperature": [
+            21.1
+        ],
+        "humidity": [
+            52
+        ],
+        "activity": [
+            33
+        ],
+        "co2": [
+            890
+        ],
+        "illumination": [
+            33
+        ],
+        "pressure": [
+            1001.5
+        ],
+        "timestamp": [
+            "2024-12-06 15:35:39"
+        ]
+    },
+    "B112": {
+        "temperature": [
+            22.2
+        ],
+        "humidity": [
+            59.5
+        ],
+        "activity": [
+            74
+        ],
+        "co2": [
+            2059
+        ],
+        "illumination": [
+            58
+        ],
+        "pressure": [
+            1000.9
+        ],
+        "timestamp": [
+            "2024-12-06 15:35:39"
+        ]
+    },
+    "E001": {
+        "temperature": [
+            21.8
+        ],
+        "humidity": [
+            59
+        ],
+        "activity": [
+            102
+        ],
+        "co2": [
+            1664
+        ],
+        "illumination": [
+            89
+        ],
+        "pressure": [
+            1002.1
+        ],
+        "timestamp": [
+            "2024-12-06 15:36:08"
+        ]
+    }
+}

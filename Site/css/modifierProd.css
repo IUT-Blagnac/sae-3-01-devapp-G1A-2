@@ -1,0 +1,28 @@
+/* Styles personnalisés pour le formulaire de modification du produit */
+.form-group label {
+    font-weight: bold;
+}
+
+h1,
+h2 {
+    color: #333;
+}
+
+.table th,
+.table td {
+    vertical-align: middle;
+}
+
+.btn {
+    min-width: 150px;
+}
+
+/* Ajustements pour que le style ressemble à detailProduit.php */
+.container {
+    margin-top: 50px;
+}
+
+.form-control,
+.form-control-file {
+    margin-bottom: 15px;
+}

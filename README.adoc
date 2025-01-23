@@ -1,4 +1,4 @@
-= SAÉ 3.01 2023-2024
+= SAÉ 3.01 2024-2025
 :icons: font
 :models: models
 :experimental:
@@ -29,90 +29,234 @@ ifdef::env-github[]
 endif::[]
 
 // /!\ A MODIFIER !!!
-:baseURL: https://github.com/IUT-Blagnac/sae3-01-template
+:baseURL: https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2
 
-// Tags
+// Tags TODO
 image:{baseURL}/actions/workflows/blank.yml/badge.svg[Bidon] 
 image:{baseURL}/actions/workflows/build.yml/badge.svg[Build] 
 image:{baseURL}/actions/workflows/tests.yml/badge.svg[Tests] 
 image:https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg[License: MPL-2.0, link="https://opensource.org/licenses/MPL-2.0"]
 //---------------------------------------------------------------
 
-TIP: Pensez à mettre à jour les infos dans ce fichier pour que les badges pointent sur les résultats effectifs de vos intégrations continue ou sur la bonne licence logicielle.
+// TIP: Pensez à mettre à jour les infos dans ce fichier pour que les badges pointent sur les résultats effectifs de vos intégrations continue ou sur la bonne licence logicielle.
 
-WARNING: Ce dépôt présente le projet à développer dans le cadre de la SAÉ 3.01 du BUT1 Informatique de l'IUT de Blagnac.
-
-Ce fichier `README.adoc` (dont vous lisez sûrement le rendu HTML automatiquement effectué par GitHUb), fait partie du dépôt initial cloné à partir du lien GitHub classroom qui vous a été donné en cours (https://classroom.github.com/a/fePVlfpN).
-Vous trouverez le dépôt "template" qui a servi de base ici : https://github.com/IUT-Blagnac/sae3-01-template. En complément du cours Moodle de la SAE 3.01 (cf. <<liensUtiles>>), ce dépôt template vous permet d'accéder à des exemples d'https://github.com/IUT-Blagnac/sae3-01-template/issues[issues], de https://github.com/IUT-Blagnac/sae3-01-template/releases[releases], ou d'autres artefacts à venir.
+WARNING: Ce dépôt présente le projet à développer dans le cadre de la SAÉ 3.01 du BUT2 Informatique de l'IUT de Blagnac.
 
 toc::[]
 
 == Equipe
 
 Projet est réalisé par::
+- https://github.com/NicodeH[Nicolas Ho] : Scrum Master
+- https://github.com/luca-gchs[Luca Gaches] : Développeur
+- https://github.com/summerflamme[Robin Gourgues] : Développeur
+- https://github.com/Melllvin[Melvin Bouyssou] : Product Owner
 
-- https://github.com/janeDoe[Jane Doe]
-- https://github.com/johnSmith[John Smith]
-...
 
-Tuteur/tutrice enseignant(e) de l'équipe:: mailto:jean-michel.bruel@univ-tlse2.fr[JMB]
-
-== Contexte général
-
-TIP: Cette partie de votre `README.adoc` peut être supprimée ou mise ailleurs.
-
-=== Dépôt initial
-
-Ce dépôt initial a été créé pour que tous les groupes de 2ème année aient les mêmes informations de départ.
-
-Vous y trouverez des fichiers qui peuvent être supprimés s'ils ne vous sont pas utiles :
-
-- `.gitignore` => un fichier minimaliste des éléments à ne pas pousser en général sur vos dépôts (utiliser la commande `git add -f` pour forcer l'ajout d'un fichier Jar qui ne bougera plus, pour archive par exemple).
-- `.github` => le répertoire qui contient des éléments de gestion de projet :
-** `workflows` => le repertoire qui contient les actions à lancer à chaque push sur votre repo. 
-*** `blank.yml` => un exemple bidon mais dont vous pourrez vérifier l’exécution correcte (1er tag)
-** `ISSUE_TEMPLATE` => le repertoire qui contient quelques templates pour vos issues.
-*** `us.yml` => Exemple de template pour les User Stories
-*** `bug.yml` => Exemple de template pour les issues de bug report
-
-TIP: Adaptez ces fichiers à votre projet et à votre organisation. Et inspirez-vous en pour en ajouter.
-
-[[liensUtiles]]
-=== Liens utiles
-
-- Le https://webetud.iut-blagnac.fr/course/view.php?id=841[cours Moodle] sur la SAE
-- Le dépôt https://github.com/IUT-Blagnac/sae3-01-template[template] qui sert de base à tous les dépôts étudiants.
-- Le lien https://classroom.github.com/a/OUF7gxEa[classroom] si besoin.
-
-TIP: Pensez à utiliser les salons Discord dédiés pour poser vos questions.
+Tuteur/tutrice enseignant(e) de l'équipe:: mailto:esther.pendaries@univ-tlse2.fr[Esther Pendaries]
 
 == Réalisations 
+- Release dernière version : https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/releases/tag/ReleaseV4[Release V4]
 
-TIP: Mettez ici toutes les informations nécessaire à l'utilisation de votre dépôt (comment on installe votre application, où sont les docs, etc.)
+=== Lien vers le backlog (issues et user stories)
+- https://github.com/orgs/IUT-Blagnac/projects/255/views/1[Version sur GitHub]
+- https://docs.google.com/document/d/1J_kucdoQiKU-orUsIV7MT6ZbSjl2neShu-Lsgn_EwIQ/edit?usp=sharing[Version Google Document]
 
-== Gestion de projet & Qualité
+== Projet Site Web
 
-Chaque sprint (semaine) vous devrez livrer une nouvelle version de votre application (release).
-Utilisez pour cela les fonctionnalités de GitHub pour les https://docs.github.com/en/repositories/releasing-projects-on-github[Releases].
+=== Contexte général
 
-De plus ce fichier `README.adoc` devra être à jour des informations suivantes :
+Style & Semelle est une entreprise française de chaussures, fondée en 2005 par cinq amis passionnés de mode et d’engagement éthique, qui allie fabrication locale et sélection de marques internationales pour offrir une gamme variée et responsable. Avec des boutiques dans les principales villes françaises et un site e-commerce performant, elle attire une clientèle large, entre amateurs de mode urbaine et consommateurs soucieux de l’impact environnemental. Son engagement pour une mode esthéque, grâce à une production artisanale et des matériaux durables, ainsi que sa stratégie marketing axée sur les réseaux sociaux, lui permettent de se distinguer dans un marché en pleine évolution.
 
-- Version courante : https://github.com/IUT-Blagnac/sae3-01-template/releases/tag/v0.1.2[v0.1.2]
-- Lien vers la doc technique
-- Lien vers la doc utilisateur
-- Liste des (ou lien vers les) User Stories (ToDo/Ongoing/Done) et % restant
-- Tests unitaires et plans de test
-- Indicateurs de qualité du code (dette technique)
-- ... tout autre élément que vous jugerez utiles pour démontrer la qualité de votre application
+Pour consolider sa position face à une concurrence accrue et aux attentes croissantes des clients pour le numérique, Style & Semelle souhaite rénover et optimiser son site e-commerce. L’appel d’offres lancé vise à créer une expérience utilisateur plus fluide, avec des fonctionnalités innovantes comme la personnalisation et un parcours client optimisé, pour fidéliser et attirer davantage de jeunes acheteurs en ligne. Le projet inclut la refonte de son design avec un CFDT (Cahier des Charges Fonctionnel Détaillé) précisant les besoins techniques et les exigences de performance. En renforçant ainsi son offre numérique, Style & Semelle aspire à capter de nouvelles parts de marché tout en affirmant son identité de marque responsable et moderne.
 
-Voici un exemple d'évaluation :
+=== Gestion de projet & Qualité
+- http://193.54.227.208/~R2024SAE3009/[Lien vers le site web]
+- https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/doc-technique/doc-tech-site.adoc[Lien vers la doc technique du site web]
+- https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/doc-utilisateur/doc_utilisateur_site_V2.adoc[Lien vers la doc utilisateur du site web]
+- https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/doc-conception/doc-concept-v1.adoc[Lien vers la doc conception (tous les diagrammes)]
+- https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/doc-test/doc-test-site.adoc[Lien vers le cahier de tests/recettes du site web]
+- https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/BD/BD_V3/Dictionnaire_des_donnees.adoc[Lien vers le dictionnaire de la BD]
+- https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/BD/BD_V3/SAE_script_version_admin.sql[Lien vers le script de création de la BD]
+- https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/tree/master/documentations/doc-client[Lien vers les doc PDF fournis par les clients]
+- https://docs.google.com/document/d/14rLV2mMhBnjof_PNVBQzRuyih3lTbgQB3ogdKu4lR3E/edit?tab=t.0[Lien Google Docs vers la fiche de conseils juridique et de sécurité]
+- https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/Fiche%20de%20conseils%20juridiques%20et%20de%20sécurité.pdf[Lien vers la fiche de conseils juridique et de sécurité en pdf]
+
+== Projet IoT
+
+=== Contexte général
+
+Style & Semelle, PME spécialisée dans la conception et la vente de chaussures, est implantée dans plusieurs grandes villes françaises et souhaite élargir son activité en lançant un site e-commerce pour toucher une clientèle plus large et rester compétitive. En parallèle, l’entreprise prévoit d’installer un réseau de capteurs dans ses magasins et entrepôts pour recueillir des données en temps réel, telles que la température, l’humidité, la qualité de l’air et la détection de présence, afin d'améliorer la sécurité et l’efficacité opérationnelle. Ces informations, transmises au serveur toutes les 10 minutes, permettront d’optimiser la gestion et la croissance de l’entreprise dans un marché en pleine expansion.
+
+=== Gestion de projet & Qualité
+- https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/doc-technique/doc-tech-iot-v2.adoc[Lien vers la doc technique du système IoT]
+- https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/doc-technique/doc-python.adoc[Lien vers la doc technique partie Python (IoT)]
+- https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/tree/master/IoT/Java[Lien vers le répertoire du code Java]
+- https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/tree/master/IoT/Python[Lien vers le répertoire du code Python]
+
+== ODJ / CR et analyse
+
+# Liens vers les différents documents en lien avec les réunions
+
+## Réunions en tant qu'Agence de développement
+[cols="1,1,1", options="header"]
+|===
+| Date | Ordre du jour | Compte-rendu
+| 7/11/2024 | https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/R%C3%A9unions/ODJ/ODJ_Agence_7-11.md[Lien vers l'ordre du jour] | https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/R%C3%A9unions/CR_R%C3%A9u/CR_Agence_7-11.md[Lien vers le compte-rendu]
+|4/12/2024 | https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/R%C3%A9unions/ODJ/ODJ_Client_4-12.md[Lien vers l'ordre du jour] | https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/R%C3%A9unions/CR_R%C3%A9u/CR_Client_4-12.md[Lien vers le compte-rendu]
+
+|===
+
+## Réunions en tant que Client
+[cols="1,1,1", options="header"]
+|===
+| Date | Ordre du jour | Compte-rendu
+| 8/11/2024 | https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/R%C3%A9unions/ODJ/ODJ_Client_8-11.md[Lien vers l'ordre du jour] | https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/R%C3%A9unions/CR_R%C3%A9u/CR_Client_8-11.md[Lien vers le compte-rendu]
+
+|===
+
+## Réunions internes à l'équipe
+[cols="1,1,1", options="header"]
+|===
+| Date | Ordre du jour | Compte-rendu
+| 7/11/2024 | https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/R%C3%A9unions/ODJ/ODJ_Equipe_7-11.md[Lien vers l'ordre du jour] | https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/R%C3%A9unions/CR_R%C3%A9u/CR_hebdomadaire_7-11.md[Lien vers le compte-rendu]
+| 14/11/2024 | https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/R%C3%A9unions/ODJ/ODJ_Equipe_14-11.md[Lien vers l'ordre du jour] | https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/R%C3%A9unions/CR_R%C3%A9u/CR_hebdomadaire_14-11.md[Lien vers le compte-rendu]
+| 28/11/2024 | https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/R%C3%A9unions/ODJ/ODJ_Agence_28-11.md[Lien vers l'ordre du jour] | https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/R%C3%A9unions/CR_R%C3%A9u/CR_hebdomadaire_28-11.md[Lien vers le compte-rendu]
+| 12/12/2024 | https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/R%C3%A9unions/ODJ/ODJ_Equipe_12-12.md[Lien vers l'ordre du jour] | https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/R%C3%A9unions/CR_R%C3%A9u/CR_Equipe_12-12.md[Lien vers le compte-rendu]
+| 07/01/2025 | https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/Réunions/ODJ/ODJ_Equipe_07-01.md[Lien vers l'ordre du jour] | https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/Réunions/CR_Réu/CR_Equipe_07-01.md[Lien vers le compte-rendu]
+| 15/01/2025 | https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/R%C3%A9unions/ODJ/ODJ%20Re%CC%81union%20post-mortem%20G1A-2.pdf[Lien vers l'ordre du jour de la réunion post-mortem] | https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/Réunions/CR_Réu/CR_PostMortem_15-01.pdf[Lien vers le compte-rendu]
+
+
+|===
+
+== Analyses et retours de communication par EP
+|===
+| Date | Analyse | Retour EP | Note /3 
+
+| Semaine 46   
+|
+| Issues/Backlog : Il faut une finalité dans certaines de vos US, et affecter une priorité et une estimation (à droite une fois l’US ouverte). Sinon bien. Les issues/task peuvent toutes être rattachées à une US (ex. initialisation php à Connexion par ex). DOC /Il manque les liens vers les docs dans le readme. J’ai uniquement la conception. Tests: J’ai les critères d’acceptabilité mais pas de lien vers le cahier de tests. release : Pas de release pour le sprint 1. 
+| 
+
+| Semaine 48    
+| 1 - Actions réalisées cette semaine +
+Partie IoT +
+- Finalisation de la documentation de conception V1. +
+- Mise en place de l'arborescence de l'application JavaFX/Python. +
+- Création et mise à jour du template du cahier de tests. +
+
+Partie Site Web +
+- Sauvegarde de la base de données actuelle dans le fichier `SAE301.sql` (incluant uniquement les inserts des produits et rôles). +
+- Mise à jour du dictionnaire des données de la base de données. +
+
+2 - Difficultés rencontrées et solutions +
+*Difficulté* : Absence d’un serveur web pour les tests. + 
+*Solution* : Mise en place d’un serveur web local grâce à Docker. +
+
+3 - Organisation de l'équipe +
+- **Nicolas Ho** : Scrum Master - Suivi du projet, coordination et gestion des réunions. +
+- **Luca Gaches** : Développeur - Mise en place du serveur web Docker et gestion des scripts BD. +
+- **Robin Gourgues** : Développeur - Finalisation des documents IoT et mise à jour du dictionnaire de données. +
+- **Melvin Bouyssou** : Product Owner - Revue des documents livrables et suivi des priorités. +
+
+| Backlog ok; pour les issues il me manque encore les milestones par sprint, d’ailleurs j’ai des difficultés à identifer quel est le sprint en cours. Peu de nouvelles issues /tasks créées. doc technique : organiser les UC par services. Tests: je devrais avoir les tests sur sprint 2 au moins écris. Note appel offre : 15,1/20 ODJ et CR les plus récents datent du 14/11 !! Je n’ai pas ceux de la semaine 48 ou au moins 47 alors qu’ils sont annoncés. Eviter les réunions en télétravail ! ODJ : faire des rubriques avec intervenants et temps, et rôle (qui anime, qui fait le CR). Le CR doit reprendre l’ODJ et être rédigé avec un retour sur la réunion client et une analyse des réussites et échec . A faire cette semaine !! 
+
+| Note : 0,7/3   
+
+| Semaine 49    
+| 1 - Actions réalisées cette semaine +
+Partie IoT + 
+- Finalisation de l'application de gestion en JavaFX et Python. + 
+- Création du fichier exécutable (`.jar`) et finalisation de l'arborescence. + 
+- Documentation technique achevée, incluant les parties système et Python. +
+
+Partie Site Web +
+- Intégration des fonctionnalités des sprints 1 et 2 (hors recherche filtrée, détail des commandes et fonctionnalités avancées du panier). +
+- Mise à jour des documents techniques, utilisateurs et des tests. + 
+- Actualisation des scripts de création et de gestion de la base de données. + 
+- Finalisation des comptes rendus et ordres du jour des réunions. + 
+- Revue et ajustement des issues/backlog. +
+
+2 - Difficultés rencontrées et solutions + 
+
+*Problème* : Gestion inadaptée des tailles, couleurs et quantités dans la base de données. +
+*Solution* : Modification et réorganisation de la structure de la base de données pour une meilleure prise en charge. + 
+
+3 - Organisation de l'équipe
+
+- *Nicolas Ho* : Scrum Master - Suivi du projet, coordination et gestion des réunions. + 
+- *Luca Gaches* : Développeur - Intégration des fonctionnalités site web et ajustements de la base de données. + 
+- *Robin Gourgues* : Développeur - Finalisation des livrables IoT et documentation associée. + 
+- *Melvin Bouyssou* : Product Owner - Revue des livrables et mise à jour des priorités dans le backlog. +
+
+| Mettre un lien vers odj/CR actifs plutôt que vers le dossier ! Je n’ai que l’ODJ de la réunion client, rien sur la réunion d’équipe alors qu’elle est annoncée pour le 5/12 ! 
+
+| Note : 0,2/3  
+
+| Semaine 50  
+|
+| J’ai des issues non affectées sans milestone de sprint, il manque les "tasks" techniques associées. ça reste confus …​ La doc USER est pour qui ? Privilégier le développement de l’aide pour l’administrateur, l’aide pour le client se fait surtout en ligne directement sur les pages ! Pas de nouvelle release !! Je n’ai qu’un seul doc qui à priori fait office de ODJ et CR … ce n’est pas ce qui est demandé ! Je n’ai pas de lien directes vers docs à jour mais vers un dossier ! Manque analyse difficultés et réussites. 
+
+| Note : 1,56/3 
+
+| Semaine 2
+| Difficultés rencontrées lors de la semaine 2 :
+Retard accumulé dans certaines fonctionnalités prioritaires :
+
+Explication : Le développement du CRUD Administrateur et la finalisation de la gestion des produits commandés ont pris plus de temps que prévu, en raison de l’intégration complexe entre les modules.
+Impact : Certaines tâches prévues pour la semaine ont été reportées, notamment la mise en place complète du système de points de fidélité et de la boutique associée.
+Justification : Nous avons priorisé la préparation des livrables clés (oraux, documentation utilisateur, et cahier de recettes) afin d’assurer une bonne soutenance.
+Complexité technique dans la gestion des avis clients sur les produits commandés :
+
+Problème : La liaison entre les commandes existantes et les avis clients a nécessité des ajustements non planifiés dans la base de données et le front-end.
+Solution envisagée : Simplification temporaire de la fonctionnalité pour valider un prototype fonctionnel, avec amélioration prévue en backlog post-soutenance.
+Répartition des issues et définition des tâches restantes :
+
+Difficulté : Le retard sur certaines tâches a réduit le temps disponible pour l’organisation et la priorisation des issues.
+Conséquence : Une partie des fonctionnalités secondaires (notifications de points gagnés et gestion des dernières consultations) sera réduite ou reportée.
+Charge additionnelle due aux livrables exceptionnels :
+
+Problème : La préparation du diaporama de la soutenance finale et la finalisation des documents utilisateur et cahier de recettes ont demandé une mobilisation importante de l’équipe.
+Solution : Réorganisation des priorités en limitant le développement à l’essentiel pour garantir des livrables de qualité.
+|ODJ manque qui fait quel thème et lieu. L'analyse doit être faite dans le CR pas dans ce tableau ! Pas de retour de la réunion client. Pensez à l'ODJ pour la semaine prochaine .
+
+| Note : 1,89/3
+
+|===
+
+== Évaluations hebdomadaires
+
+=== Vous m'avez effacé mes commentaires précédents !!
+Evaluation dernier sprint :
+Les tâches du dernier sprint ne sont pas closes ! Docs : il fallait faire la doc utilisateur pour l'admin uniquement. La doc technique manque d'extraits de codes commentés mais dans l'ensemble c'est bien.
+note GPO : 16,8/20
+Note  fiche conseils : 14/20
+ 
+Evaluation bi-hedomadaire 
 
 ifdef::env-github[]
-image:https://docs.google.com/spreadsheets/d/e/2PACX-1vTc3HJJ9iSI4aa2I9a567wX1AUEmgGrQsPl7tHGSAJ_Z-lzWXwYhlhcVIhh5vCJxoxHXYKjSLetP6NS/pubchart?oid=1850914734&amp;format=image[link=https://docs.google.com/spreadsheets/d/e/2PACX-1vTc3HJJ9iSI4aa2I9a567wX1AUEmgGrQsPl7tHGSAJ_Z-lzWXwYhlhcVIhh5vCJxoxHXYKjSLetP6NS/pubchart?oid=1850914734&amp;format=image]
+image:https://docs.google.com/spreadsheets/d/e/2PACX-1vSACcYeKaH_ims3faegSLAFJ9s5_Kd9Fbyi4ODEb8BTN5OnUXWenVGhlVPo84yQDhTkTj3f9nXiluh1/pubchart?oid=1232553383&amp;format=image[link=https://docs.google.com/spreadsheets/d/e/2PACX-1vSACcYeKaH_ims3faegSLAFJ9s5_Kd9Fbyi4ODEb8BTN5OnUXWenVGhlVPo84yQDhTkTj3f9nXiluh1/pubchart?oid=1232553383&amp;format=image]
 endif::[]
 
 ifndef::env-github[]
 ++++
-<iframe width="786" height="430" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTc3HJJ9iSI4aa2I9a567wX1AUEmgGrQsPl7tHGSAJ_Z-lzWXwYhlhcVIhh5vCJxoxHXYKjSLetP6NS/pubchart?oid=1850914734&amp;format=image"></iframe>
+<iframe width="786" height="430" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSACcYeKaH_ims3faegSLAFJ9s5_Kd9Fbyi4ODEb8BTN5OnUXWenVGhlVPo84yQDhTkTj3f9nXiluh1/pubchart?oid=1232553383&amp;format=interactive"></iframe>
 ++++
 endif::[]
+
+== Historique des journées de télétravail
+=== À venir
+- ...
+
+
+=== Passées
+- **06/11/2024** : de 9h30 à 12h30
+- **14/11/2024** : de 9h30 à 12h30
+- **21/11/2024** : de 8h00 à 12h30
+- **28/11/2024** : de 11h00 à 12h30
+- **3/12/2024** : de 8h00 à 17h15
+- **4/12/2024** : de 8h00 à 17h15
+- **12/12/2024** : de 9h30 à 12h30
+- **19/12/2024** : de 9h30 à 12h30
+- **20/12/2024** : de 8h00 à 17h15
+- **07/01/2025** : de 9h30 à 12h30

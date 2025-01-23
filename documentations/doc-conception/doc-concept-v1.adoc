@@ -1,0 +1,89 @@
+= Document de conception
+:toc:
+:toc-title: Sommaire
+
+Date : 19/11/2024 +
+
+Equipe : 1A-2 +
+
+Client : Style & Semelle +
+
+== Diagrammes
+
+Voici les diagrammes qui ont été réalisés dans le projet *(les images sont cliquables pour vous permettre de mieux les voir)* :
+
+=== Diagrammes de séquence
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/diagrammes/DS/diag_seq_admin_gest_prod.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/diagrammes/DS/diag_seq_admin_gest_prod.png"]
+
+*Description du diagramme séquence n°1 :*
+DS de l'administrateur et de la gestion de produits
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/diagrammes/DS/diag_seq_client.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/diagrammes/DS/diag_seq_client.png"]
+
+*Description du diagramme séquence n°2 :* 
+DS du client
+
+=== Diagramme de séquence système
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/diagrammes/DSS/gestion_produit_admin.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/diagrammes/DSS/gestion_produit_admin.png"]
+
+*Description du diagramme séquence système n°1 :*
+DSS de l'administrateur et de la gestion de produits
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/diagrammes/DSS/process_commande.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/diagrammes/DSS/process_commande.png"]
+
+*Description du diagramme séquence système n°2 :* 
+DSS du client
+
+=== Diagramme de classe conception
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/diagrammes/classe_conception/ajout_panier.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/diagrammes/classe_conception/ajout_panier.png"]
+
+*Description de classe conception n°1 :*
+Diagramme de classe conception pour la fonctionnalité "Ajouter panier"
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/diagrammes/classe_conception/recherche.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/diagrammes/classe_conception/recherche.png"]
+
+*Description de classe conception n°2 :*
+Diagramme de classe conception pour la fonctionnalité "Visualiser un produit"
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/diagrammes/classe_conception/visualisationProduit.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/diagrammes/classe_conception/visualisationProduit.png"]
+
+*Description de classe conception n°3 :*
+Diagramme de classe conception pour la fonctionnalité "Rechercher un/plusieurs produit(s)"
+
+=== Diagramme de classe métier
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/diagrammes/classe_metier/diag_class_metier.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/diagrammes/classe_metier/diag_class_metier.png"]
+
+*Description de classe métier :*
+Diagramme de classe métier du site web
+
+=== Diagramme d'état
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/diagrammes/etat_transition/commande.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/diagrammes/etat_transition/commande.png"]
+
+*Diagramme d'état n°1 :*
+Diagramme d'état durant une commande
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/diagrammes/etat_transition/compte_client.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/diagrammes/etat_transition/compte_client.png"]
+
+*Diagramme d'état n°2 :*
+Diagramme d'état d'un compte client
+
+=== Diagramme de Use Case
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/diagrammes/use_case/UC%20Client_Visiteur.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/diagrammes/use_case/UC%20Client_Visiteur.png"]
+
+*Diagramme d'un Use Case n°1 :*
+Use Case client et visiteur
+
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/diagrammes/use_case/UC_Admin.png[width=400, link="https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/diagrammes/use_case/UC_Admin.png"]
+
+*Diagramme du diagramme séquence n°2 :*
+Use Case administrateur
+
+=== Diagramme de navigation du site web
+image::https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/diagrammes/navigation/diagramme_navigation.png[width=1000]
+_Permets de visualiser la navigation entre les différentes pages du site web_

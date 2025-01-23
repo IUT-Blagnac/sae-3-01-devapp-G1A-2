@@ -1,0 +1,29 @@
+@startuml
+class SystèmeRecherche {
+  + rechercherProduit(critères : CritèreRecherche) : List<Produit>
+}
+
+class CritèreRecherche {
+  - nomProduit : String
+  - catégorie : String
+  - prixMin : Float
+  - prixMax : Float
+}
+
+class InterfaceUtilisateurRecherche {
+  + afficherChampRecherche() : void
+  + afficherRésultats(recherche : List<Produit>) : void
+}
+
+class Produit {
+  - nom : String
+  - catégorie : String
+  - description : String
+  - prix : Float
+  + getDetails() : String
+}
+
+InterfaceUtilisateurRecherche --> SystèmeRecherche : "soumet critères"
+SystèmeRecherche --> Produit : "recherche par critères"
+SystèmeRecherche --> CritèreRecherche : "utilise"
+@enduml

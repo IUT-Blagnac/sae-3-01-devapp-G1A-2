@@ -1,0 +1,28 @@
+@startuml
+class "Utilisateur" {
+  - IDUtilisateur : INTEGER
+  - Nom : VARCHAR(128)
+  - Prenom : VARCHAR(128)
+  - Email : VARCHAR(128)
+  - Password : VARCHAR(128)
+  - Telephone : CHAR(10)
+  - DateNaissance : DATE
+  - DateInscription : DATE
+  - IDRole : INTEGER
+  - IDPanier : INTEGER
+}
+
+class "Panier" {
+  - IDPanier : INTEGER
+  - DateCrea : DATE
+}
+
+class "Role" {
+  - IDRole : INTEGER
+  - NomRole : VARCHAR(20)
+  - DescRole : VARCHAR(128)
+}
+
+Utilisateur "1" -- "1" Panier
+Utilisateur "1" -- "0..*" Role
+@enduml

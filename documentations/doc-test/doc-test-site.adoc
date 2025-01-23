@@ -1,0 +1,163 @@
+= Cahier de Tests - Site web
+:toc:
+:toc-title: Sommaire
+
+Version de l'application : 1 +
+
+Date : 19/11/2024 +
+
+Equipe : 1A-2 +
+
+Client : Style & Semelle +
+
+Projet : Projet d'e-commerce +
+
+<<<
+
+== 1. Contexte Général
+
+Le projet vise à développer un site e-commerce pour la vente de chaussures, axé sur :
+
+- Une expérience utilisateur optimisée et une ergonomie intuitive.
+- Une navigation fluide grâce à un design responsive adapté à tous les types d’écrans (mobiles, tablettes, ordinateurs).
+- Une gestion simplifiée pour les administrateurs.
+
+**Principales caractéristiques :**
+
+- **Large éventail de produits :** Organisation en catégories et sous-catégories.  
+- **Technologies utilisées :** PHP, HTML5, CSS3, et MySQL.  
+- **Architecture modulaire :** Garantissant flexibilité et maintenabilité.  
+- **Dimension écoresponsable :** Adoption de pratiques d’écoconception pour minimiser l’impact environnemental.  
+
+== 2. Objectifs du Projet
+
+**a) Plateforme intuitive :**
+
+- Navigation simplifiée, adaptée aux utilisateurs novices ou expérimentés.  
+- Recherche efficace pour accéder rapidement aux produits.  
+
+**b) Gestion administrative :**
+
+- Tableau de bord pour gérer produits, commandes, clients et paramètres.  
+- Facilité de création et mise à jour des catégories et fiches produits.  
+
+**c) Design moderne et adaptable :**
+
+- Compatibilité avec divers appareils grâce au design responsive.  
+- Contenus visuels en haute résolution (images, icônes, vidéos).  
+
+**d) Robustesse technique :**
+
+- Architecture modulaire pour un développement évolutif.  
+- Compatibilité avec les navigateurs récents (Chrome, Firefox, Safari, Edge).  
+
+**e) Approche durable :**
+
+- Intégration de principes d’écoconception pour optimiser la consommation énergétique.  
+
+== 3. Test des Fonctionnalités Techniques
+
+=== a) Sprint 1 (semaines 46-47)
+
+[cols="1,1,1,1", options="header"]
+|===
+| Test(s) | Préconditions | Conditions nécessaires | Résultat(s)
+
+| Création d'un compte client
+| Ne pas être déjà connecté et être sur la page de création de compte
+| Affiche un formulaire de création. Affiche les erreurs comme : le nom, prénom, numéro de téléphone vide ou mail invalide. Insère le nouvel utilisateur dans la base de données.
+| Test réussi
+
+| Connexion d'un compte client
+| Ne pas être déjà connecté et être sur la page de connexion
+| Affiche un formulaire de connexion. Affiche les erreurs de connexion comme : compte inexistant, mauvais mot de passe. Possibilité de se connecter à un compte client et administrateur. Redirection vers l'index/la page d'accueil.
+| Test réussi
+
+| Déconnexion d'un compte client
+| Être connecté et cliquer sur le bouton de déconnexion
+| La session est détruite et l'utilisateur est redirigé vers l'index.
+| Test réussi
+
+| Visualiser la liste des produits (à la une)
+| Être sur la page d'accueil
+| Affiche les produits qui dépassent un certain nombre de commandes.
+| Test réussi
+|===
+
+<<<
+
+=== b) Sprint 2 (semaines 48-49)
+
+[cols="1,1,1,1", options="header"]
+|===
+| Test(s) | Préconditions | Conditions nécessaires | Résultat(s)
+
+| Recherche de produits par catégorie/sous-catégorie ou mot-clé ou regroupement
+| Cliquer sur une catégorie ou une sous-catégorie ou rechercher un mot clé dans la barre de recherche.
+| Affiche les produits d'une sous-catégorie ou d'une catégorie entière. Affiche les produits à partir de la barre de recherche.
+| Test réussi
+
+| Visualiser le détail d’un type produit 
+| Cliquer sur un produit
+| La page du produit doit afficher sa photo, les avis (avec ou sans photo) et réponses, la moyenne des notes, son stock, sa catégorie et les produits qui lui sont associés.
+| Test réussi
+
+| Tri de la liste de produits par prix croissant/décroissant
+| Être sur la page de produits via une recherche ou une catégorie/sous-catégorie
+| La liste trie les produits soit par prix croissant ou décroissant.
+| Test réussi
+
+| Ajouter un produit affiché dans le panier
+| Cliquer sur le bouton ajouter au panier d'un produit et être connecté
+| Ajoute un nouveau produit dans le panier, si le produit était présent la quantité augmentera de 1.
+| Test réussi
+|===
+
+=== c) Sprint 3 (semaines 50-51)
+
+|===
+| Test(s) | Préconditions | Conditions nécessaires | Résultat(s)
+
+| Gérer le panier (afficher le panier, modifier quantité, supprimer un produit)
+| Cliquer sur l'icône du panier et être connecté
+| L'utilisateur peut afficher, modifier son panier avec tous les produits qu'il a ajoutés.
+| Test réussi
+
+| Visualiser ses commandes passées (et saisir un avis sur un type produit acheté et livré, avec photos éventuelles)
+| Cliquer sur la section du panier et être connecté
+| L'utilisateur peut afficher ses commandes passées et saisir un avis sur les produits achetés
+| Test réussi
+
+| Faire un achat / passer commande
+| Avoir un article dans le panier, être connecté (phase de paiement fictive)
+| L'utilisateur peut passer une commande avec les produits du panier courant
+| Test réussi
+
+| Dashboard du CRUD de l'admin
+| L'utilisateur doit être un administrateur
+| L'administrateur peut créer, modifier, supprimer un produit
+| Test réussi
+|===
+
+=== c) Sprint 4 (semaines 2-3)
+
+|===
+| Test(s) | Préconditions | Conditions nécessaires | Résultat(s)
+
+| Visualiser mes dernières consultations
+| Cliquer sur la section "Derniers produits consultés" ou cliquer sur le bouton utilisateur qui y redirige vers la page 
+| L'utilisateur peut afficher, trier, supprimer un ou plusieurs produits de l'historique de consultation
+| En cours
+
+| Gestion des points de fidélité
+| Cliquer sur le bouton utilisateur qui redirige vers la page
+| L'utilisateur peut regarder, utiliser ses points de fidélités contre des bons de réduction. Il doit être aussi notifier du nombre de points qu'il a gagner après une commande passée.
+| En cours
+|===
+
+<<<
+
+== 4. Annexes
+
+- https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/doc-technique/doc-tech-site-v1.adoc[Lien vers la doc technique du site web]
+- https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/doc-utilisateur/doc-utilisateur-site.adoc[Lien vers la doc utilisateur du site web]

@@ -1,0 +1,16 @@
+@startuml
+actor Client
+participant Système
+
+Client -> Système : Consulter un produit
+Client -> Système : Ajouter produit au panier
+Client -> Système : Valider le panier
+Client -> Système : Passer la commande
+Client -> Système : Effectuer le paiement
+
+alt Paiement accepté
+    Système -> Client : Confirmation de la commande
+else Paiement refusé
+    Système -> Client : Affichage d'erreur de paiement
+end
+@enduml

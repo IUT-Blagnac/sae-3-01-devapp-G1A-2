@@ -1,0 +1,61 @@
+.btn {
+    background-color: #62A87C !important;
+    border-radius: 100px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    display: inline-block;
+    font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    transform: translateY(2px);
+    background-color: #4c9a68;
+}
+
+.btn:enabled:active {
+    transform: scale(1);
+    transform: translateY(10);
+    background-color: #3f7d56;
+}
+
+.form-check-input {
+    background-color: white;
+    color: black;
+}
+
+.form-check-input:checked {
+    background-color: #3f7d56;
+    /* Changez cette couleur selon vos besoins */
+    color: white;
+    /* Changez cette couleur selon vos besoins */
+}
+
+a {
+    color: #62A87C;
+    text-decoration: none;
+}
+
+.page-link {
+    color: #62A87C;
+}
+
+.page-item.active .page-link {
+    z-index: 3;
+    color: #fff;
+    background-color: #62A87C;
+    border-color: #62A87C;
+}
+
+.dropdown-item:active {
+    background-color: #62A87C !important;
+}

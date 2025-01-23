@@ -1,0 +1,10 @@
+@startuml
+actor Administrateur
+participant Système
+
+Administrateur -> Système : Ouvrir le catalogue produit
+Administrateur -> Système : Ajouter un nouveau produit
+Administrateur -> Système : Modifier un produit existant
+Administrateur -> Système : Supprimer un produit
+
+@enduml

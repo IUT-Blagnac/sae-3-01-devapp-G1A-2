@@ -1,0 +1,30 @@
+.custom-card {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #ccc;
+    transition: transform 0.2s;
+    margin-right: 75px;
+}
+
+.custom-card:hover {
+    transform: scale(1.05);
+}
+
+.custom-card .card-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container,
+.row {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-title {
+    text-align: center;
+    color: black !important;
+}
