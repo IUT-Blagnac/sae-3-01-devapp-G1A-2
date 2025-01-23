@@ -124,7 +124,7 @@ Style & Semelle, PME spécialisée dans la conception et la vente de chaussures,
 | 28/11/2024 | https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/R%C3%A9unions/ODJ/ODJ_Agence_28-11.md[Lien vers l'ordre du jour] | https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/R%C3%A9unions/CR_R%C3%A9u/CR_hebdomadaire_28-11.md[Lien vers le compte-rendu]
 | 12/12/2024 | https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/R%C3%A9unions/ODJ/ODJ_Equipe_12-12.md[Lien vers l'ordre du jour] | https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/R%C3%A9unions/CR_R%C3%A9u/CR_Equipe_12-12.md[Lien vers le compte-rendu]
 | 07/01/2025 | https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/Réunions/ODJ/ODJ_Equipe_07-01.md[Lien vers l'ordre du jour] | https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/Réunions/CR_Réu/CR_Equipe_07-01.md[Lien vers le compte-rendu]
-| 10/01/2025 | https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/R%C3%A9unions/ODJ/ODJ%20Re%CC%81union%20post-mortem%20G1A-2.pdf[Lien vers l'ordre du jour de la réunion post-mortem] | [Lien vers le compte-rendu]
+| 15/01/2025 | https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/R%C3%A9unions/ODJ/ODJ%20Re%CC%81union%20post-mortem%20G1A-2.pdf[Lien vers l'ordre du jour de la réunion post-mortem] | https://github.com/IUT-Blagnac/sae-3-01-devapp-G1A-2/blob/master/documentations/Réunions/CR_Réu/CR_PostMortem_15-01.pdf[Lien vers le compte-rendu]
 
 
 |===
